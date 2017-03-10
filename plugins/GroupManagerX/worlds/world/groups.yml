@@ -99,3 +99,21 @@ groups:
       build: false
       prefix: '&a[N]'
       suffix: ''
+  tester:
+    default: true
+    permissions:
+    
+    - -bukkit.command.kill
+    - automessage.receive.regular
+    - automessage.receive.json
+    - simpleprefix.Newbie
+    inheritance:
+    - g:groupmanager_Newbie
+    - g:bukkit_Newbie
+    - g:essentials_Newbie
+    - g:towny_Newbie
+    info:
+      build: false
+      prefix: '&a[N]'
+      suffix: ''
+ 
