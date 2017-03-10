@@ -1,0 +1,110 @@
+############################################################
+# +------------------------------------------------------+ #
+# |   Thank you for downloading Chat Tweaks by Zacky1!   | #
+# +------------------------------------------------------+ #
+############################################################
+# +------------------------------------------------------+ #
+# |                         NOTES                        | #
+# +------------------------------------------------------+ #
+# If you are getting errors in the console, please parse the file in a yaml parser.
+# I suggest: http://yaml-online-parser.appspot.com/
+# Enable "Count Tracker"s might create lag on big servers (100+ people) #
+# WARNING do NOT edit the version.
+Version: v2.7.1
+############################################################
+
+#####################<>Caps<>###########################
+Caps:
+    Enable: true
+    Minimum Characters: 5
+    Percent Caps: 60.0
+    To Lower Case: false
+
+#####################<>Replacers<>###########################
+Replace:
+    Duplicates: true
+    Whitespaces: true
+
+#####################<>Spam Rate<>###########################
+#Not enabled until v4.
+Rates:
+    #How many messages is the player allowed to send per second? (20ticks)
+    Messages: 3
+    
+    #Severe Filtering is a WIP.. thus not available until v4.
+    #Do you want to check if the messages are different from one another?
+    Filtering:
+        Enable: false
+        #The percentage needed to not consider the message as non-spam...
+        Percentage: 50 
+     
+#####################<>Swearing<>###########################
+Swearing:
+    Enable: true
+    
+    #If false: ChatTweaks will block the message.
+    #If true: ChatTweaks will replace it with "~".
+    Replace: true
+    
+    #Swear words should be in lowercase.
+    Swear Words:
+        - fuck
+        - pussy
+        - cunt
+        - shit
+        - faggot
+        - fag
+        - slut
+        - whore
+        - bitch
+        - manwhore
+        - nigger
+        - nigga
+        - ass
+        - hell
+        - damn
+        - penis
+        - vagina
+        - crap
+        - suck
+        - piss
+        - asshole
+        - crap
+        - wanker
+        - bastard
+        - goddamn
+        - fucking
+        - motherfucker
+        - motherfucking
+        - shitass
+
+#####################<>Links && IPs<>###########################
+LinksIPs:
+    Enable: true
+    #Colors which the links will appear.
+    Color: BLUE
+    ##############################################################################################
+    #Filtering will happen over 4 stages. They will each ascend up from each other. If CT finds a link on
+    #Filter lvl 1, it will not go on Filter lvl 2. If it finds a link on Filter lvl 2, it will not go to Lvl 3.
+    #Filtering Levels:
+    #0 = LinksIPs should be set to FALSE instead. **Important**
+    #1 = Will test for complete links 
+    #2 = Will test if a word contains (dot) or - | If it finds one, message will be cancelled
+    #3 = Will test if word contains "mc" or "www" followed by a word (with a space between it).
+    #NOTES: Levels 2 and 3 will mean the whole message is BLOCKED. I will not make it check if 
+    #that link is present in the whitelisted links list.
+    ##############################################################################################
+    Filtering: 1
+    #All links listed here will be ALLOWED to be typed in chat. All others will be blocked.
+    #Links should be in LOWERCASE and should NOT include http:// or https://
+    #LINKS ONLY! IPS WILL NOT WORK.
+    Whitelisted Links:
+        - "www.google.com"
+        - "www.yourwebsite.com"
+        - "www.youtube.com"
+    #If False, whole message will be cancelled. If true, link will be replaced with "ReplaceWith".
+    Replacer:
+        Enable: true
+        ReplaceWith: "www.yourwebsite.com"
+
+#You're done :D

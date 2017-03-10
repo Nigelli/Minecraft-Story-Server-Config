@@ -29,3 +29,8 @@ hs_err_pid*
 *.sqlite
 *.zip
 *.rar
+/world/
+/world_nether/
+/world_the_end/
+*.gz
+/data-storage/
