@@ -1,0 +1,61 @@
+#  ----------------------------------------------------
+#  AutoMessage Configuration File
+#  ----------------------------------------------------
+#  Message Configuration:
+#     Messages are handled in lists to allow for advanced customization!
+#     Feel free to add color codes by using & in your messages!
+#     To split a message onto multiple lines use the \n delimiter!
+#     Lines starting with / will be run as a command!
+#     To add single apostrophes into a message use ''.
+#     For a complete tutorial go to http://dev.bukkit.org/server-mods/automessage.
+#     If you are unfamiliar with YAML use the in-game commands: /am help
+
+settings:
+  enabled: true
+  min-players: 0
+  log-to-console: true
+message-lists:
+  json:
+    enabled: true
+    interval: 2500
+    expiry: -1
+    random: false
+    messages:
+    - |-
+      {
+        "text": "&eThis server is owned and built by &4Matthewpfc!",
+        "hoverEvent": {
+            "action": "show_text",
+            "value": [
+              {
+                "text": "UK Based owner on a UK based Server!",
+                "color": "blue"
+              }
+            ]
+        }
+      }
+    - |-
+      {
+        "text": "Click here to Do nothing !",
+        "clickEvent": {
+          "action": "run_command",
+          "value": "/say Lol, You clicked!"
+        }
+      }
+    - |-
+      {
+        "text": "Click here for Server Discord Page!",
+        "clickEvent": {
+          "action": "open_url",
+          "value": "https://discord.gg/cvB9QF3"
+        }
+      }
+  regular:
+    enabled: true
+    interval: 2000
+    expiry: -1
+    random: false
+    messages:
+    - '&eWe hope you enjoy our server. Please give feedback to a staff member or on
+      our discord Page.!'
+    - '&2Fill me in at a later date Matthewpfc'

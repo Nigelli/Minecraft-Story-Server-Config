@@ -1,0 +1,21 @@
+lastAccountName: matthewpfc
+timestamps:
+  login: 1489166406369
+  logout: 1489166324734
+  lastteleport: 1488987534530
+ipAddress: 127.0.0.1
+logoutlocation:
+  world: world
+  x: -806.6726626033849
+  y: 101.80361910258642
+  z: 1271.6837579598264
+  yaw: 254.38562
+  pitch: 35.700153
+lastlocation:
+  world: world
+  x: 304.5
+  y: 73.4294584629118
+  z: 968.5
+  yaw: -294.3304
+  pitch: 4.7999825
+afk: false

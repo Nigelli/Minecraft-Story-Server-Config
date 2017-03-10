@@ -1,0 +1,80 @@
+# 
+# These example files show you some VERY basic meta skills.
+# You can copy and expand them however you'd like.
+SmashAttack:
+  Cooldown: 8
+  Conditions:
+  - targetwithin 25
+  Skills:
+  - message{cooldown=30;m="<mob.name><&co> Hahahah! I will crush you, fool!"} @PlayersInRadius{r=40}
+  - teleport @target
+  - effect:sound{s=mob.endermen.portal;volume=1.0;pitch=0.5}
+  - delay 10
+  - damage{amount=5;ignorearmor=true} @PlayersInRadius{r=5}
+  - throw{velocity=10;velocityY=5} @PlayersInRadius{r=5}
+  - effect:explosion @Self
+SummonSkeletons:
+  Cooldown: 15
+  Skills:
+  - message{m="<mob.name><&co> Arise, my minions!"} @PlayersInRadius{r=40}
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=2;noise=5} @Self
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=2;noise=5} @Self
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=2;noise=5} @Self
+AngrySludgePoison:
+  Cooldown: 10
+  Skills:
+  - potion{type=POISON;lvl=2;duration=100} @PlayersInRadius{r=15}
+  - effect:particles{p=happyVillager;amount=1000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+#MichealJackson
+SummonThrillerArmy:
+   Cooldown: 20
+   Skills:
+   - message{m="<mob.name><&co> &CBecause it's Thriller! Bitch, Hee Hee!!"} @PlayersInRadius{r=40}
+   - delay 20
+   - summon{mob=Zombie;amount=8;noise=5} @Self
+   - delay 20
+   - summon{mob=Zombie;amount=8;noise=5} @Self
+   - delay 20
+   - summon{mob=Zombie;amount=8;noise=5} @Self
+#Mutant
+SummonSlimes:
+   Cooldown: 10
+   Skills:
+   - message{m="<mob.name><&co> &2Protect me, My Children! Protect your Master"} @PlayersInRadius{r=40}
+   - delay 20
+   - summon{mob=Slime;amount=10;noise=5} @Self
+   - delay 20
+   - summon{mob=slime;amount=10;noise=5} @Self
+   - delay 20
+   - summon{mob=Slime;amount=10;noise=5} @Self
+#Atlas
+SummonBabies:
+   Cooldown: 10
+   Skills:
+   - message{m="<mob.name><&co> &2Minions, Destroy them!"} @PlayersInRadius{r=40}
+   - delay 20
+   - summon{mob=baby_zombie;amount=10;noise=5} @Self
+   - delay 20
+   - summon{mob=baby_zombie;amount=10;noise=5} @Self
+   - delay 20
+   - summon{mob=baby_zombie;amount=10;noise=5} @SelfW
+HoldSky:
+   Cooldown: 30
+   Skills:
+   - message{m="<mob.name><&co> &2MAYBE YOU SHOULD TRY HOLING THE SKY!"} @PlayersInRadius{r=40}
+   - delay 20
+   - potion{type=BLINDNESS;duration=300;level=3} @PlayersInRadius{r=40}
+HeavyWeight:
+   Cooldown: 45
+   Skills:
+   - message{m="<mob.name><&co> &2DOES THE WEIGHT....DISORIENTATE YOU!?!"} @PlayersInRadius{r=40}
+   - delay 20
+   - potion{type=CONFUSION;duration=600;level=3} @PlayersInRadius{r=40}
+Ignite:
+   Cooldown: 60
+   Skills:
+   - message{m="<mob.name><&co> &2FEEL THE BURN OF THE SUN!?!"} @PlayersInRadius{r=40}
+   - ignite{ticks=100} @PlayersInRadius{r=40}
