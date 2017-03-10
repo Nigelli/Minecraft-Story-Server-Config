@@ -1,0 +1,336 @@
+Guardian:
+  Mobtype: skeleton
+  Display: '&6Temple Guardian Kanhuur'
+  Health: 2000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 2
+  Despawn: false
+  Skills:
+  - msg 30:'&4$boss_&2...Intruders...these...halls...must...not...be..disturbed...' o=1990 1
+  - msg 30:'&4$boss_&2...The...way...is...shut...' >0 0.003 guardianspeak:60
+  - msg 30:'&4$boss_&2...I...regret...nothing...' >0 0.003 guardianspeak:60
+  - msg 30:'&4$boss_&2...A...product...of...your...own..insolence...' >0 0.003 guardianspeak:60
+  - msg 30:'&4$boss_&2...None...may...enter...' >0 0.003 guardianspeak:60
+  - msg 30:'&4$boss_&2...Turn...back...' >0 0.003 guardianspeak:60
+  - msg 30:'&4$boss_&2...Sealed...away...' >0 0.003 guardianspeak:60
+  - msg 30:'&4$boss_&2...Forever...' >0 0.003 guardianspeak:60
+  - msg 30:'&4$boss_&2...You...are...young...and...foolish...' >0 0.003 guardianspeak:60
+  - msg 30:'&4$boss_&2...Truth...is...unknown...to...you...' >0 0.003 guardianspeak:60
+  - msg 30:'&4$boss_&2...Away...' >0 0.003 guardianspeak:60
+  - msg 30:'&4$boss_&2...No...entrance...' >0 0.003 guardianspeak:60
+  - msg 30:'&4$boss_&2...Purge...of....unauthorized...entities...' >0 0.003 guardianspeak:60
+  - msg 30:'&4$boss_&2...Annihilation...of...foreign...unit...' >0 0.003 guardianspeak:60
+  - msg 30:'&4$boss_&2...External...damage...!' o=500 1
+  - msg 30:'&4$boss_&2...Must...warn...the..maker...!' o=100 0.003
+  - msg 30:'&4$boss_&2...What...have...you...done...' =death 1
+  - cmd 'cast sand-tornado-npc-aoe $world,$player_x,$player_y,$player_z' 0 >0 0.1
+  - throw 5:4:4 >0 0.5
+  - throw 2:5:5 >0 1
+  - swarm tnt:1:10 >0 0.05
+  - potionboss SPEED:500:1 =spawn 1
+  - potionboss INCREASE_DAMAGE:9999:1 =spawn 1
+  - pack GuardianRebuff >0 0.3 grb:120
+  - swarm $Sands-Guardian1:3:5 =spawn 1
+  - swarm $Sands-Guardian2:3:5 =spawn 1
+  - swarm $Sands-Guardian3:3:5 =spawn 1
+  - cmd 'eb mob spawn Sands-Guardian1 2 SS1' 120 =spawn 1
+  - cmd 'eb mob spawn Sands-Guardian2 1 SS1' 120 =spawn 1
+  - cmd 'eb mob spawn Sands-Guardian1 3 SS2' 120 =spawn 1
+  - cmd 'eb mob spawn Sands-Guardian2 3 SS2' 120 =spawn 1
+  - cmd 'eb mob spawn Sands-Guardian1 3 SS3' 120 =spawn 1
+  - cmd 'eb mob spawn Sands-Guardian2 3 SS3' 120 =spawn 1
+  - cmd 'eb mob spawn Sands-Guardian1 5 SS4' 120 =spawn 1
+  - cmd 'eb mob spawn Sands-Guardian2 5 SS4' 120 =spawn 1
+  - cmd 'eb mob spawn Sands-Guardian1 2 SS5' 120 =spawn 1
+  - cmd 'eb mob spawn Sands-Guardian2 1 SS5' 120 =spawn 1
+  - potion 60:SLOW:20:2 >0 0.15
+  - swarm tnt:10:1 =death 1
+  - forcepullfar 64:6 >0 1
+  - cmd 'area toggle -w dungeon-world 662,25,574' 1 =spawn 1
+  - cmd 'eb mob kill Sektesh' =spawn 1
+  - cmd 'eb mob kill Sands-Guardian1' =spawn 1
+  - cmd 'eb mob kill Sands-Guardian2' =spawn 1
+  - cmd 'eb mob kill Sands-Guardian3' =spawn 1
+  - cmd 'eb mob kill Sands-Guardian4' =spawn 1
+  - cmd 'eb mob kill Keeper' =spawn 1
+  - cmd 'eb mob kill Sektesh' =death 1
+  - cmd 'eb mob kill Anraphet-the-keeper' 1 =spawn 1
+  - cmd 'eb mob spawn Keeper 1 shiftingsands-keeper' =death 1
+  - cmd 'broad &7The boat to the Shifting Sands has arrived.' =spawn 1
+  - swarm $LG:1:1 =spawn 0.0001 gremlincd:4200
+  - cmd 'eb mob spawn Sands-Guardian1 2 SS6' =0 1
+  - cmd 'eb mob spawn Sands-Guardian1 2 SS7' =0 1
+  - cmd 'eb mob spawn Sands-Guardian1 2 SS8' =0 1
+  - cmd 'eb mob spawn Sands-Guardian2 1 SS6' =0 1
+  - cmd 'eb mob spawn Sands-Guardian2 1 SS7' =0 1
+  - cmd 'eb mob spawn Sands-Guardian2 1 SS8' =0 1
+  - cmd 'cast biggolemhit $world,$boss_x,$boss_y,$boss_z' >0 0.5
+  - cmd 'cast generichit $world,$boss_x,$boss_y,$boss_z' >0 1
+  - consume 6:6:3:0 WOLF >0 0.3
+  Equipment:
+  - EgyptianGuardian
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+Keeper:
+  Mobtype: blaze
+  Display: '&6Anraphet the keeper'
+  Health: 4100
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  regen:
+    interval-seconds: 8
+    amount: 10
+  Damage: 70
+  Skills:
+  - msg 30:'&4$boss &2You will pay the price of death!' o=4098 1
+  - msg 30:'&4$boss &2Burn in the makers fire!' >0 0.003 keeperspeak:60
+  - msg 30:'&4$boss &2Dust to dust!' >0 0.003 keeperspeak:60
+  - msg 30:'&4$boss &2None may enter the masters sanctum!' >0 0.003 keeperspeak:60
+  - msg 30:'&4$boss &2You are softer than gold!' >0 0.003 keeperspeak:60
+  - msg 30:'&4$boss &2I will add your corpse to the pile!' >0 0.003 keeperspeak:60
+  - msg 30:'&4$boss &2Bound by fire!' >0 0.003 keeperspeak:60
+  - msg 30:'&4$boss &2This is MY domain!' >0 0.003 keeperspeak:60
+  - msg 30:'&4$boss &2Scream for me!' >0 0.003 keeperspeak:60
+  - msg 30:'&4$boss &2You smell of burning flesh!' >0 0.003 keeperspeak:60
+  - msg 30:'&4$boss &2FIRESTORM!' >0 0.003 keeperspeak:60
+  - msg 30:'&4$boss &2You will be buried by your greed!' >0 0.003 keeperspeak:60
+  - msg 30:'&4$boss &2I will take you all with me!!!' >0 0.003 keeperspeak:60
+  - msg 30:'&4$boss &2YOUR BLOOD SHAL DRAIN INTO THE SANNNDSSS!' =death 1
+  - cmd 'cast flame-ground-npc $world,$player_x,$player_y,$player_z' 0 >0 0.1 keeperfirefround:500
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 >700 0.05 keeperfire:40
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 <700 0.1 keeperfire:40
+  - cmd 'cast fireaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.01 keeperfire:40
+  - cmd 'cast fireaoel-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.006 keeperfire:40
+  - cmd 'area toggle -w dungeon-world 661,25,574' 1 =spawn 1
+  - cmd 'cast opendoor-sound $world,661,12,581' =spawn 1
+  - throw 5:2:2 >0 0.4
+  - forcepullfar 64:7 >0 1
+  - swarm silverfish:1:10 >0 0.1
+  - swarm silverfish:2:10 o=2000 1
+  - swarm silverfish:3:10 >0 0.02
+  - swarm silverfish:5:10 >0 0.01
+  - swarm silverfish:10:10 >0 0.01
+  - swarm silverfish:15:10 >0 0.002
+  - swarm silverfish:20:10 >0 0.001
+  - potionboss DAMAGE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - msg 30:'&4$boss &2Watch your step!' o=1000 1
+  - swarm silverfish:30:10 o=1000 1
+  - cmd 'area toggle -w dungeon-world 660,25,574' =spawn 1
+  - cmd 'area toggle -w dungeon-world 659,25,574' =death 1
+  - cmd 'eb mob kill Guardian' =death 1
+  - cmd 'eb mob kill Sektesh' =spawn 1
+  - cmd 'eb mob spawn Sektesh 1 shiftingsands-sektesh' =death 1
+  - cmd 'cast opendoor-sound $world,593,10,363' =death 1
+  - cmd 'eb mob spawn Sands-Guardian2 3 SS9' =death 1
+  - cmd 'eb mob spawn Sands-Guardian1 3 SS9' =death 1
+  - cmd 'eb mob spawn Sands-Rider 3 SS9' =death 1
+  - cmd 'eb mob spawn Sands-Guardian1 3 SS10' =death 1
+  - cmd 'eb mob spawn Sands-Guardian1 3 SS10' =death 1
+  - cmd 'eb mob spawn Sands-Royal-Guard 1 SS11' =death 1
+  - cmd 'eb mob spawn Sands-Rider 3 SS10' =death 1
+  Loot: []
+SSSilverfish:
+  Mobtype: silverfish
+  Display: ''
+  Health: 50
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 4
+  Skills:
+  - consume 5:5:3:0 SSSilverfish =death 1
+Sands-Royal-Guard:
+  Mobtype: skeleton
+  Display: ''
+  Health: 250
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 5
+  Skills:
+  - cmd 'cast sandaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 0.2 guard2aoes:120
+  - cmd 'area toggle -w dungeon-world 686,35,340' =spawn 1
+  - cmd 'area toggle -w dungeon-world 686,35,342' =death 1
+  - cmd 'cast opendoor-sound $world,688,5,341' =death 1
+  - cmd 'eb mob spawn Sands-Royal-Guard2 1 SS13' =death 1
+  - cmd 'eb mob spawn Sands-Guardian1 3 SS12' =death 1
+  - cmd 'eb mob spawn Sands-Guardian1 3 SS12' =death 1
+  - cmd 'eb mob spawn Sands-Guardian1 5 SS13' =death 1
+  - cmd 'eb mob spawn Sands-Guardian1 5 SS13' =death 1
+  Equipment:
+  - EgyptianRoyal
+Sands-Royal-Guard2:
+  Mobtype: skeleton
+  Display: ''
+  Health: 250
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 5
+  Skills:
+  - cmd 'cast sandaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 0.2 guard2aoes:120
+  - cmd 'area toggle -w dungeon-world 827,38,338' =spawn 100
+  - cmd 'area toggle -w dungeon-world 827,38,339' =death 100
+  - cmd 'cast opendoor-sound $world,906,30,334' =death 1
+  Equipment:
+  - EgyptianRoyal
+Sektesh-Rider:
+  Bosslist: Sektesh-Spider,Sektesh
+Sektesh:
+  Mobtype: witherskeleton
+  Display: '&6Sektesh'
+  Health: 3200
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 2
+  Despawn: false
+  regen:
+    interval-seconds: 8
+    amount: 10
+  Skills:
+  - msg 60:'&4$boss &2No king or queen rules forever! Only death is eternal!' o=3198 1
+  - msg 30:'&4$boss &2Death...is...close.' >0 0.003
+  - msg 30:'&4$boss &2You...are already dead.' >0 0.003
+  - msg 30:'&4$boss &2Your friends will abandon you.' >0 0.003
+  - msg 30:'&4$boss &2Your courage will fail.' >0 0.003
+  - msg 30:'&4$boss &2You...betray your allies.' >0 0.003
+  - msg 30:'&4$boss &2You...will...die.' >0 0.003
+  - msg 30:'&4$boss &2You...are weak.' >0 0.003
+  - msg 30:'&4$boss &2A thousand deaths.' >0 0.003
+  - msg 30:'&4$boss &2Your heart...will explode.' >0 0.003
+  - msg 30:'&4$boss &2They are coming for you.' >0 0.003
+  - msg 30:'&4$boss &2Give in to your fear.' >0 0.003
+  - msg 30:'&4$boss &2Powerless to act....' >0 0.003
+  - msg 30:'&4$boss &2They have turned against you.' >0 0.003
+  - msg 30:'&4$boss &2Eternal suffering awaits.' >0 0.003
+  - msg 30:'&4$boss &2Madness will consume you.' >0 0.003
+  - msg 30:'&4$boss &2Suffocate upon your own hate!' >0 0.003
+  - msg 30:'&4$boss &2Kill them all before they kill you.' >0 0.003
+  - msg 30:'&4$boss &2Tremble, mortals, before the coming of the end!' >0 0.003
+  - msg 30:'&4$boss &2Your petty quarrels only make me stronger!' o=1500 1
+  - msg 30:'&4$boss &2You look upon the true face of death!' >0 0.003
+  - msg 30:'&4$boss &2Your fate is sealed. Uulwi ifis halahs gag erh-ongg w-ssh' =death 1
+  - cmd 'cast sektesh-sandstorm $world,$player_x,$player_y,$player_z' >0 1 sekteshsands:160
+  - cmd 'cast sandaoes-npc $world,$player_x,$player_y,$player_z' >0 1 sekteshaoes:40
+  - cmd 'cast sandaoem-npc $world,$player_x,$player_y,$player_z' >0 1 sekteshaoem:80
+  - potionboss DAMAGE_RESISTANCE:9999:1 =spawn 1
+  - potionboss SPEED:600:3 =spawn 1
+  - potionboss SLOW:600:1 =spawn 1
+  - pack SekteshRebuff >0 0.3 srb:120
+  - consume 6:6:3:0 WOLF >0 0.3
+  - throw 5:8:8 >0 0.03
+  - throw 5:4:4 >0 0.4
+  - throw 20:2:1 <100 0.25
+  - throw 10:1.5:0.2 >75 0.1
+  - throw 50:0.5:0.2 >0 0.3
+  - swarm $Sands-Guardian1:2:5 o=111 1
+  - swarm $Sands-Guardian1:2:5 o=1300 1
+  - swarm $Sands-Guardian1:2:5 =spawn 1
+  - swarm $Sands-Guardian2:1:5 o=111 1
+  - swarm $Sands-Guardian2:1:15 o=1300 1
+  - swarm $Sands-Guardian2:1:15 =spawn 1
+  - swarm $Sands-Guardian3:1:15 o=111 1
+  - swarm $Sands-Guardian3:1:15 o=1300 1
+  - swarm $Sands-Guardian3:1:15 =spawn 1
+  - swarm $Sands-Guardian1:1:30 >0 1 sekteshguard:80
+  - swarm $Sands-Guardian2:1:30 >0 1 sekteshguard2:100
+  - swarm $Sands-Guardian3:1:30 >0 1 sekteshguard3:140
+  - cmd 'eb mob spawn SSSilverfish 15 SS14' >0 0.1 sekteshsf:60
+  - cmd 'eb mob kill Guardian' 0 =spawn 1
+  - cmd 'eb mob kill Guardian' 0 =death 1
+  - cmd 'eb mob kill SSSilverfish' 0 =death 1
+  - cmd 'eb mob kill Keeper' 5 =death 1
+  - cmd 'area toggle -w dungeon-world 827,38,336' =spawn 100
+  - cmd 'area toggle -w dungeon-world 827,38,337' =death 100
+  - cmd 'broad &7Sektesh has been slain, Great Job!' 6 =death 1
+  Equipment:
+  - Sektesh
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+  Effects:
+    shadow:
+      particle-name: smoke
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 72
+    ambient:
+      particle-name: mobSpellAmbient
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 32
+Royal-Spider:
+  Mobtype: spider
+  Display: '&fKheprachnia'
+  Health: 1200
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 15
+  Skills:
+  - potionboss SPEED:600:8 >0 1
+  - potionboss SLOW:600:1 >0 1
+Sands-Guardian1:
+  Mobtype: zombie
+  Display: ''
+  Health: 30
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 5
+  Skills:
+  - cmd 'cast sandaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 0.2 guard1aoes:120
+  Equipment:
+  - Egyptian
+Sands-Guardian2:
+  Mobtype: skeleton
+  Display: ''
+  Health: 30
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 5
+  Skills:
+  - cmd 'cast sandaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 0.2 guard2aoes:120
+  Equipment:
+  - Egyptian
+Sands-Guardian3:
+  Mobtype: skeleton
+  Display: ''
+  Health: 40
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 5
+  Skills:
+  - cmd 'cast sandaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 0.2 guard3aoes:120
+  Equipment:
+  - Egyptian
+Sands-Guardian4:
+  Mobtype: skeleton
+  Display: ''
+  Health: 30
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 5
+  Skills: []
+  Equipment:
+  - EgyptianRanged
+Sands-Rider:
+  Bosslist: Sands-Spider,Sands-Guardian4
+Sands-Spider:
+  Mobtype: spider
+  Display: ''
+  Health: 20
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 5
+  Skills: []

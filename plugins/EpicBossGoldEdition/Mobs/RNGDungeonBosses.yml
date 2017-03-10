@@ -1,0 +1,72 @@
+EpicBossDude1:
+  Mobtype: zombie
+  Display: '&aEpicBossDude1'
+  Health: 100
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 10
+  Skills: []
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+EpicBossDude2:
+  Mobtype: skeleton
+  Display: '&3EpicBossDude2'
+  Health: 100
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 10
+  Skills: []
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+EpicBossMidBoss1:
+  Mobtype: slime
+  Display: '&9EpicBossMidBoss1'
+  Health: 200
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 10
+  Skills: []
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+EpicBossMidBoss2:
+  Mobtype: pig
+  Display: '&cEpicBossMidBoss2'
+  Health: 200
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 10
+  Skills: []
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+EpicBossBoss1:
+  Mobtype: witherskeleton
+  Display: '&5EpicBossBoss1'
+  Health: 200
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 10
+  Skills: []
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+EpicBossBoss2:
+  Mobtype: pigzombie
+  Display: '&eEpicBossBoss2'
+  Health: 200
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 10
+  Skills: []
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0

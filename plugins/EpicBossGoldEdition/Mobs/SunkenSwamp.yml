@@ -1,0 +1,122 @@
+Gunk-Rider:
+  Bosslist: UndeadHost,Gunk
+Globstrocity-Rider:
+  Bosslist: UndeadHost,Globstrocity
+Gunk:
+  Mobtype: zombie
+  Display: '&6Gunk'
+  Health: 600
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 2
+  Skills:
+  - msg 30:'&4$boss &2My mabster mabe me preddy' o=590 1
+  - msg 30:'&4$boss &2Im awl poberful!' >0 0.005
+  - msg 30:'&4$boss &2Why abe you bmean to me?' >0 0.005
+  - msg 30:'&4$boss &2I'll.... eat you ub!' >0 0.005
+  - msg 30:'&4$boss &2Look a biece of my fell off!' >0 0.005
+  - msg 30:'&4$boss &2Haw haw, your bwords are weak bon my jelly!' >0 0.005
+  - msg 30:'&4$boss &2blraghh!' =death 1
+  - potion 4:POISON:30:1 >0 0.02
+  - throw 2:3:3 >0 0.4
+  - potion 4:SLOW:20:5 >0 0.02
+  - swarm $Splatter:1:1 >0 0.03
+  - swarm $Splatter:5:1 =death 1
+  - swarm $Splatter:5:1 =spawn 1
+  - cmd 'eb mob kill Globstrocity' =spawn 1
+  - cmd 'eb mob kill UndeadHost' =spawn 1
+  - cmd 'eb mob kill Globule' =spawn 1
+  - cmd 'eb mob kill UndeadHost' o=300 1
+  - cmd 'eb mob kill Globstrocity' o=300 1
+  - cmd 'eb mob spawn Globstrocity 1 sunkenswamp-globstrocity' =death 1
+  - cmd 'broad &7A foul stench eminates from the Sunken Swamp...' =spawn 1
+  - cmd 'area toggle -w dungeon-world -2519,38,1418' =spawn 1
+  - cmd 'eb mob spawn SwampyCorpse 5 sunkenswamp1' =spawn 1
+  - cmd 'eb mob spawn SwampyCorpse 5 sunkenswamp2' =spawn 1
+  - cmd 'eb mob spawn SwampyCorpse 5 sunkenswamp3' =spawn 1
+  - cmd 'eb mob spawn SwampyCorpse 5 sunkenswamp4' =spawn 1
+  Equipment:
+  - Abomination
+SwampyCorpse:
+  Mobtype: zombie
+  Display: '&fSoggy Corpse'
+  Health: 20
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 4
+  Skills: []
+  Equipment:
+  - SoggyCorpse
+Splatter:
+  Mobtype: slime
+  Display: '&fSplatter'
+  Health: 20
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 2
+  Skills:
+  - msg 30:'&4$boss &2Grabble grob' =20 1
+  - msg 30:'&4$boss &2blraghh!' =death 1
+  - potion 4:POISON:30:1 >0 0.02
+  - throw 2:3:3 >0 0.4
+  - potion 4:SLOW:20:5 >0 0.02
+  Tags:
+    Size: 1
+UndeadHost:
+  Mobtype: zombie
+  Display: '&fUndead Host'
+  Health: 99999
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 2
+  Skills: []
+Globstrocity:
+  Mobtype: magmacube
+  Display: '&6The Globstrocity'
+  Health: 1000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 6
+  Skills:
+  - msg 100:'&4$boss &2I AM THE GLOBSTROCITY' o=1000 1
+  - msg 30:'&4$boss &2Ive slimed things much bigger than the likes of you!' >0 0.005
+  - msg 30:'&4$boss &2My brains are made of goop, whats your excuse?' >0 0.005
+  - msg 30:'&4$boss &2Ill splat you flat!' >0 0.005
+  - msg 30:'&4$boss &2Its slime time!' >0 0.005
+  - msg 30:'&4$boss &2Noo! More will come...' =death 1
+  - swarm $Globule:1:1 >0 0.004
+  - fire 4:20 >0 0.02
+  - swarm blaze:1:2 >0 0.01
+  - throw 2:5:5 >0 0.2
+  - potion 4:SLOW:20:4 >0 0.15
+  - lightning 20:1 >0 0.01
+  - forcepullfar 64:8 >0 1
+  - cmd 'eb mob kill UndeadHost' 0 =death 1
+  - cmd 'eb mob kill Splatter' 6 =death 1
+  - cmd 'eb mob kill Globule' 12 =death 1
+  - cmd 'broad &7Globstrocity has been slain.' 1 =death 1
+  - cmd 'area toggle -w dungeon-world -2519,38,1419' 18 =death 1
+  - cmd 'eb mob spawn SwampyCorpse 5 sunkenswamp5' =spawn 1
+  - cmd 'eb mob spawn SwampyCorpse 5 sunkenswamp6' =spawn 1
+  Tags:
+    Size: 6
+Globule:
+  Mobtype: magmacube
+  Display: '&fGlobule'
+  Health: 20
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 2
+  Skills: []
+  Tags:
+    Size: 1
+Testblob:
+  Mobtype: slime
+  Display: '&fTestwither'
+  Health: 7000
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 2
+  Skills: []
+  Tags:
+    Size: 20

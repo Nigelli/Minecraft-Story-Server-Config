@@ -1,0 +1,491 @@
+Shard-Keeper-Rider1:
+  Bosslist: Sanctum-Cube,Shard-Keeper-Kaddal
+Shard-Keeper-Rider2:
+  Bosslist: Sanctum-Cube,Shard-Keeper-Zabel
+Shard-Keeper-Rider3:
+  Bosslist: Sanctum-Cube,Shard-Keeper-Viir
+Famine-Rider:
+  Bosslist: Black-Horse,Famine
+War-Rider:
+  Bosslist: Red-Horse,War-Boss
+Pestilence-Rider:
+  Bosslist: White-Horse,Pestilence
+Death-Rider:
+  Bosslist: Pale-Horse,Death
+Sanctum-Cube:
+  Mobtype: magmacube
+  Display: '&6Magma Cube'
+  Health: 300
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 26
+  Skills: []
+  Size: 1
+ShardSoldier:
+  Mobtype: skeleton
+  Display: ''
+  Health: 150
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 13
+  Skills:
+  - cmd 'cast slashaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 shardsoldieraoes:60
+  - potionboss SPEED:99999:3 o=150 1
+  - potionboss SPEED:99999:3 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=150 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - consume 400:400:20:0 War-Boss =death 1
+  - consume 400:400:10:0 ShardWarrior =death 1
+  Equipment:
+  - ShardSoldier
+ShardWarrior:
+  Mobtype: zombie
+  Display: ''
+  Health: 40
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 13
+  Skills:
+  - potionboss SPEED:99999:4 o=80 1
+  - potionboss FIRE_RESISTANCE:99999:5 o=80 1
+  - potionboss SPEED:99999:4 >0 1
+  - potionboss FIRE_RESISTANCE:99999:5 >0 1
+  - consume 400:400:20:0 War-Boss =death 1
+  - consume 400:400:10:0 ShardSoldier =death 1
+  Equipment:
+  - ShardWarrior
+Shard-Keeper-Kaddal:
+  Mobtype: pigzombie
+  Display: '&6Shard Keeper Kaddal'
+  Health: 200
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 22
+  Skills:
+  - msg 30:'&4$boss &2I guard the crystals!' =spawn 1
+  - msg 30:'&4$boss &2Your forces were.......stronger!' =death 1
+  - swarm $ShardSoldier:2:10 =spawn 1
+  - swarm $ShardWarrior:10:10 =spawn 1
+  - lightning 3:1 >0 0.011
+  - potionboss SPEED:60:2 >0 1
+  - consume 4:4:5:0 WOLF >0 0.3
+  - cmd 'cast 10damageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 kaddalphysical:30
+  - cmd 'eb mob kill Death' =spawn 1
+  - cmd 'eb mob kill Famine' =spawn 1
+  - cmd 'eb mob kill Pestilence' =spawn 1
+  - cmd 'eb mob kill War-Boss' =spawn 1
+  - cmd 'eb mob kill Pale-Horse' =spawn 1
+  - cmd 'eb mob kill Red-Horse' =spawn 1
+  - cmd 'eb mob kill Black-Horse' =spawn 1
+  - cmd 'eb mob kill White-Horse' =spawn 1
+  - cmd 'eb mob kill Shard-Keeper-Viir' =death 100
+  - cmd 'eb mob kill Shard-Keeper-Zabel' o=1 1
+  - potionboss SPEED:99999:4 =spawn 1
+  - potionboss FIRE_RESISTANCE:99999:1 o=80 1
+  - potionboss SPEED:99999:4 >0 1
+  - potionboss FIRE_RESISTANCE:99999:1 >0 1
+  - swarm $ShardWarrior:10:10 =spawn 1
+  - cmd 'eb mob spawn ShardWarrior 5 sanctum-1' =spawn 1
+  - cmd 'eb mob spawn ShardWarrior 5 sanctum-2' =spawn 1
+  - cmd 'eb mob spawn ShardWarrior 5 sanctum-3' =spawn 1
+  - cmd 'eb mob spawn Shard-Keeper-Zabel 1 crystal2' =death 1
+  - cmd 'area toggle -w dungeon-world -3235,98,2498' 0 =spawn 1
+  - cmd 'area toggle -w dungeon-world -3235,98,2498' 2 =spawn 1
+  - cmd 'area toggle -w dungeon-world -3234,98,2498' 4 =spawn 1
+  - cmd 'area toggle -w dungeon-world -3234,98,2498' 6 =spawn 1
+  - cmd 'area toggle -w dungeon-world -3233,98,2498' 8 =spawn 1
+  - cmd 'area toggle -w dungeon-world -3233,98,2498' 10 =spawn 1
+  - cmd 'area toggle -w dungeon-world -3235,97,2498' 0 =death 1
+  - cmd 'area toggle -w dungeon-world -3235,97,2498' 2 =death 1
+  - msg 100:'&4Sanctum of Nightmares &bThe first crystal has been deactivated. There are 2 more remaining.' 4 =death 1
+  - cmd 'broad &7A gate has been opened to the Sanctum of Nightmares.' 12 =spawn 1
+  - cmd 'cast deactivate-sanctum-crystal1 $world,-3430,64,2725' =death 1
+  - swarm $LG:1:1 =spawn 0.1 gremlincd:4200
+  Equipment:
+  - ShardKeeper
+Shard-Keeper-Zabel:
+  Mobtype: pigzombie
+  Display: '&6Shard Keeper Zabel'
+  Health: 200
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 22
+  Skills:
+  - msg 30:'&4$boss &2I guard the crystals!' =spawn 1
+  - msg 30:'&4$boss &2Your forces were.......stronger!' =death 1
+  - swarm $ShardSoldier:2:10 =spawn 1
+  - swarm $ShardWarrior:10:10 =spawn 1
+  - potionboss SPEED:99999:4 =spawn 1
+  - potionboss FIRE_RESISTANCE:99999:1 o=80 1
+  - potionboss SPEED:99999:4 >0 1
+  - potionboss FIRE_RESISTANCE:99999:1 >0 1
+  - lightning 3:1 >0 0.01
+  - cmd 'cast 10damageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 zabelphysical:30
+  - potionboss SPEED:60:2 >0 1
+  - consume 4:4:5:0 WOLF >0 0.3
+  - cmd 'area toggle -w dungeon-world -3234,98,2498' =spawn 1
+  - cmd 'area toggle -w dungeon-world -3234,97,2498' =death 1
+  - cmd 'eb mob spawn Shard-Keeper-Viir 1 crystal3' 0 =death 1
+  - msg 100:'&4Sanctum of Nightmares &bThe second crystal has been deactivated. There is 1 more remaining.' 6 =death 1
+  - cmd 'cast deactivate-sanctum-crystal1 $world,-3224,64,2911' =death 1
+  Equipment:
+  - ShardKeeper
+Shard-Keeper-Viir:
+  Mobtype: pigzombie
+  Display: '&6Shard Keeper Viir'
+  Health: 200
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 22
+  Skills:
+  - msg 30:'&4$boss &2I guard the crystals!' =spawn 1
+  - msg 30:'&4$boss &2Your forces were.......stronger!' =death 1
+  - swarm $ShardSoldier:2:10 =spawn 1
+  - potionboss SPEED:99999:4 =spawn 1
+  - potionboss FIRE_RESISTANCE:99999:1 o=80 1
+  - potionboss SPEED:99999:4 >0 1
+  - potionboss FIRE_RESISTANCE:99999:1 >0 1
+  - cmd 'cast 10damageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 viirphysical:30
+  - swarm $ShardWarrior:10:10 =spawn 1
+  - lightning 3:1 >0 0.008
+  - potionboss SPEED:60:2 >0 1
+  - cmd 'area toggle -w dungeon-world -3233,98,2498' 0 =spawn 1
+  - cmd 'area toggle -w dungeon-world -3233,98,2498' 2 =spawn 1
+  - cmd 'area toggle -w dungeon-world -3233,97,2498' 2 =death 1
+  - cmd 'area toggle -w dungeon-world -3233,97,2498' 4 =death 1
+  - cmd 'eb mob spawn Famine-Rider 1 apocalypse' 0 =death 1
+  - consume 4:4:5:0 WOLF >0 0.3
+  - msg 100:'&4Sanctum of Nightmares &bThe final crystal has been deactivated. The Apocalypse Prism has been lifed.' =death 1
+  - cmd 'cast deactivate-sanctum-crystal2 $world,-3034,64,2642' =death 1
+  - swarm $LG:1:1 =spawn 0.1 gremlincd:4200
+  Equipment:
+  - ShardKeeper
+Famine:
+  Mobtype: skeleton
+  Display: '&6Famine'
+  Health: 1000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 22
+  regen:
+    interval-seconds: 4
+    amount: 10
+  Skills:
+  - cmd 'cast 10damageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 faminephysical:30
+  - msg 100:'&4$boss &2Who dares summon us?! It is too soon you fools!' =spawn 1
+  - msg 30:'&4$boss &2Famine!' o=900 1
+  - msg 30:'&4$boss &2You will starve.' >0 0.02
+  - msg 30:'&4$boss &2I will sustain!' o=500 1
+  - msg 30:'&4$boss &2Your body is weak!' o=100 0.02
+  - msg 30:'&4$boss &2I will return' =death 1
+  - cmd 'cast damageaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 faminedamageaoes:40
+  - throw 4:4:4 >0 1
+  - potion 40:HUNGER:100:10 >0 1
+  - potionboss FIRE_RESISTANCE:60:3 >0 1
+  - consume 4:4:5:0 WOLF >0 0.3
+  - consume 4:4:5:0 IRON_GOLEM >0 0.3
+  - lightning 60:1 >0 0.008
+  - pack FamineConsume o=500 1
+  - cmd 'eb mob spawn War-Rider 1 apocalypse' 1 =death 1
+  - msg 50:'&dFamine has been slain. His Famine aura has fallen.' =death 1
+  - swarm $LG:1:1 =spawn 0.1 gremlincd:4200
+  Equipment:
+  - Famine
+Black-Horse:
+  Mobtype: horse
+  Display: '&6The Black Horse'
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 8
+  Skills:
+  - throw 5:10:10 >0 1
+  - throw 5:20:10 >0 0.2
+  - potionboss FIRE_RESISTANCE:60:3 >0 1
+  - consume 4:4:5:0 WOLF >0 0.3
+  - msg 50:'&dThe Black Horse has been slain.' =death 1
+  Tags:
+    Speed: 0.4
+    Saddled: false
+    Tamed: false
+    PlayerRidable: false
+    HorseColor: BLACK
+    HorseStyle: NONE
+War-Boss:
+  Mobtype: skeleton
+  Display: '&6War'
+  Health: 1500
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 22
+  Skills:
+  - msg 100:'&4$boss &2My undead armor will drag you down with us!' o=1000 1
+  - msg 30:'&4$boss &2War!' o=900 1
+  - msg 30:'&4$boss &2Our army will slice through you.' >0 0.003
+  - msg 30:'&4$boss &2We have supperior attack!' o=500 1
+  - msg 30:'&4$boss &2Our spirit will never fall!' o=100 0.003
+  - msg 30:'&4$boss &2You cannot kill an immortal...' =death 1
+  - cmd 'cast slashaoes-npc $world,$boss_x,$boss_y,$boss_z' >500 1 waroaoes:40
+  - cmd 'cast slashaoes-npc $world,$boss_x,$boss_y,$boss_z' <500 1 waroaoes:20
+  - cmd 'cast slashaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 waraoem:60
+  - throw 5:6:6 >0 1
+  - swarm $ShardSoldier:12:15 o=1000 1
+  - swarm $ShardWarrior:12:15 o=1000 1
+  - swarm $ShardSoldier:5:15 o=500 1
+  - swarm $ShardWarrior:5:15 o=500 1
+  - swarm $ShardSoldier:5:15 o=100 1
+  - swarm $ShardWarrior:5:15 o=100 1
+  - swarm $ShardSoldier:1:15 >1 1 warsummon:190
+  - swarm $ShardWarrior:1:15 >1 1 warsummons:190
+  - potionboss SPEED:9999:2 o=1000 1
+  - potionboss SPEED:9999:2 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=1000 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - lightning 60:1 >0 0.008
+  - consume 4:4:10:0 WOLF >0 0.3
+  - cmd 'eb mob spawn Pestilence-Rider 1 apocalypse' =death 1
+  - cmd 'eb mob kill ShardSoldier' =death 1
+  - cmd 'eb mob kill ShardWarrior' =death 1
+  - msg 50:'&dWar has been slain. His minions will retreat.' =death 1
+  - swarm $LG:1:1 =spawn 0.1 gremlincd:4200
+  Equipment:
+  - War
+Red-Horse:
+  Mobtype: horse
+  Display: '&6The Red Horse'
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 8
+  Skills:
+  - throw 5:10:10 >0 1
+  - throw 5:20:10 >0 0.2
+  - cmd 'cast flame-ground-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.01 redhorseground:600
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 redhorseaoes:40
+  - cmd 'cast fireaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 redhorseaoem:60
+  - cmd 'cast fireaoel-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 redhorseaoel:80
+  - potionboss DAMAGE_RESISTANCE:9999:2 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - msg 50:'&dThe Red Horse has been slain.' =death 1
+  Tags:
+    Speed: 0.4
+    Saddled: false
+    Tamed: false
+    PlayerRidable: false
+    HorseColor: CHESTNUT
+    HorseStyle: NONE
+  Effects:
+    fireaura:
+      particle-name: flame
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 1.5
+      vert-spread: 1.5
+      speed: 0.0
+      count: 72
+Pestilence:
+  Mobtype: skeleton
+  Display: '&6Pestilence'
+  Health: 1200
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  regen:
+    interval-seconds: 4
+    amount: 10
+  Damage: 22
+  Skills:
+  - msg 100:'&4$boss &2Graa! Your life will end in agonizing pain!' o=1000 1
+  - msg 30:'&4$boss &2Pestilence!' o=900 1
+  - msg 30:'&4$boss &2Disease will consume you!' >0 0.003 pestilencesay:40
+  - msg 30:'&4$boss &2Your skin will rot off your bones!' >0 0.003 pestilencesay:40
+  - msg 30:'&4$boss &2Your flesh will fall from your bones!' o=500 1
+  - msg 30:'&4$boss &2You cannot kill an immortal!' o=100 0.003
+  - msg 30:'&4$boss &2Death will take you!' =death 1
+  - cmd 'cast 15damageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 pestilencephysical:30
+  - cmd 'cast pestilence-npc $world,$boss_x,$boss_y,$boss_z' >0 1 pestilencebigaoe:180
+  - cmd 'cast damageaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 pestilenceaoes:40
+  - cmd 'cast damageaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 pestilenceaoem:70
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 o=1000 1
+  - swarm $StrongSilverfish:10:10 o=1000 1
+  - swarm $StrongSilverfish:10:10 o=500 1
+  - swarm $StrongSilverfish:10:10 o=100 1
+  - swarm $StrongSilverfish:3:10 >0 1 pestilencecall:80
+  - throw 4:12:12 <1000 0.01
+  - throw 4:6:6 >0 0.01
+  - throw 4:4:4 >0 1
+  - potion 4:BLINDNESS:30:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:4 o=3000 1
+  - potion 10:SLOW:30:3 >0 1
+  - potion 10:POISON:100:1 >0 0.01
+  - consume 4:4:4:0 WOLF >0 0.3
+  - consume 4:4:4:0 IRON_GOLEM >0 0.3
+  - potionboss FIRE_RESISTANCE:9999:1 o=1000 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - lightning 60:1 >0 0.008
+  - pack PestilenceConsume o=500 1
+  - cmd 'eb mob spawn Death-Rider 1 apocalypse' =death 1
+  - cmd 'eb mob kill StrongSilverfish' =death 1
+  - msg 50:'&dPestilence has been slain. His Pestilence aura has fallen.' =death 1
+  Equipment:
+  - Pestilence
+  Effects:
+    pestilence:
+      particle-name: depthsuspend
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 1.5
+      vert-spread: 1.5
+      speed: 0.0
+      count: 72
+White-Horse:
+  Mobtype: horse
+  Display: '&6The White Horse'
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 8
+  Skills:
+  - throw 5:10:10 >0 1
+  - throw 5:20:10 >0 0.2
+  - potionboss DAMAGE_RESISTANCE:9999:2 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 o=100 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=100 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - cmd 'cast damageaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 whitehorseaoe:20
+  - cmd 'cast damageaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 whitehorseaoe:20
+  - msg 50:'&dThe White Horse has been slain.' =death 1
+  Tags:
+    Speed: 0.4
+    Saddled: false
+    Tamed: false
+    PlayerRidable: false
+    HorseColor: WHITE
+    HorseStyle: NONE
+Death:
+  Mobtype: witherskeleton
+  Display: '&6Death'
+  Health: 3000
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 24
+  Skills:
+  - msg 100:'&4$boss &2Your lives are all mine!' =spawn 1
+  - msg 30:'&4$boss &2I will drag you all to the nether!' >0 0.02 deathtalk:60
+  - msg 30:'&4$boss &2Death!' >0 0.02 deathtalk:60
+  - msg 30:'&4$boss &2I will be the final revelation!' >0 0.02 deathtalk:60
+  - msg 30:'&4$boss &2You are fools if you do not see the power I wield!' >0 0.02 deathtalk:60
+  - msg 30:'&4$boss &2Death consumes all.' >0 0.02 deathtalk:60
+  - msg 30:'&4$boss &2You cannot defeat the likes of me!' o=500 1
+  - msg 30:'&4$boss &2Death is absolute!' o=100 0.02
+  - msg 30:'&4$boss &2You cannot kill death....' =death 1
+  - cmd 'cast 20damageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 deathhysical:30
+  - cmd 'cast pestilence-npc $world,$boss_x,$boss_y,$boss_z' >0 1 deathpestilenceaoe:500
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' >700 1 deathaoes:50
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 deathaoes:120
+  - cmd 'cast shadowaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 deathaoem:140
+  - cmd 'cast shadowaoel-npc $world,$boss_x,$boss_y,$boss_z' >0 1 deathaoel:160
+  - cmd 'cast damageaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 deathaoedmg:40
+  - cmd 'cast shadowaoesnipe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 deathsnipe:60
+  - potionboss SPEED:9999:3 >0 1
+  - potionboss INCREASE_DAMAGE:9999:3 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss INCREASE_DAMAGE:9999:3 =spawn 1
+  - potionboss SPEED:9999:2 =spawn 1
+  - swarm $DeathSoldier:5:5 =spawn 1
+  - swarm $DeathSoldier:5:5 o=2000 1
+  - swarm $DeathSoldier:5:5 o=1000 1
+  - swarm $DeathSoldier:5:5 o=500 1
+  - swarm $DeathSoldier:5:5 o=200 1
+  - swarm $DeathSoldier:2:5 >0 0.3 deathswarm:40
+  - shootskull 5 >0 0.05
+  - consume 4:4:30:30 WOLF >0 0.3
+  - consume 8:4:4:0 IRON_GOLEM >0 1
+  - throw 4:12:12 <1000 0.01
+  - throw 4:6:6 >0 0.01
+  - throw 4:4:4 >0 1
+  - potion 10:WITHER:10:1 >0 1
+  - potion 5:HARM:1:1 >0 0.05
+  - pack DeathConsume o=1500 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - lightning 60:1 >0 0.008
+  - mount 20:Pale-Horse >0 0.5
+  - vampire 80:player:200 >0 1
+  - cmd 'eb mob kill Pale-Horse' o=2000 1
+  - cmd 'eb mob kill DeathSoldier' =death 1
+  - cmd 'eb mob kill ShardWarrior' =death 1
+  - cmd 'broadcast Death has been returned to his prison in the Sanctum of Nightmares, Amazing Job!' =death 1
+  Equipment:
+  - Death
+  Effects:
+    shadow:
+      particle-name: smoke
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 15
+DeathSoldier:
+  Mobtype: zombie
+  Display: ''
+  Health: 180
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 25
+  Skills:
+  - potionboss INVISIBILITY:9999:1 o=180 1
+  - potionboss SPEED:9999:2 o=180 1
+  - potionboss SPEED:9999:2 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=180 1
+  Equipment:
+  - DeathSoldier
+Pale-Horse:
+  Mobtype: horse
+  Display: '&6A Pale Horse'
+  Health: 3000
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 8
+  Skills:
+  - potion 10:POISON:10:1 >0 1
+  - throw 5:10:10 >0 1
+  - throw 5:20:10 >0 0.2
+  - potionboss DAMAGE_RESISTANCE:9999:2 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 o=500 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=500 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - msg 50:'&dThe Pale Horse has been slain.' =death 1
+  Tags:
+    Speed: 0.4
+    Saddled: false
+    Tamed: false
+    PlayerRidable: false
+    HorseColor: BLACK
+    HorseType: SKELETON_HORSE
+    HorseStyle: NONE

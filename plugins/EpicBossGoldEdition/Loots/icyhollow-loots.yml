@@ -1,0 +1,46 @@
+FrozenMiner:
+  Loot:
+  - WhiteHat:4 0.3
+  - 397:0:1:4 0.3
+  - 79:0:0:4 1
+  - WhiteJacket:3 0.7
+  - WhitePants:2 1
+  - WhiteBoots:1 1
+  - 278:0:1:0 0.3
+  - 277:0:1:0 0.4
+  - 257:0:1:0 1
+FrozenSkeleton:
+  Loot:
+  - WhiteHat:4 0.3
+  - 397:0:1:4 0.3
+  - 79:0:0:4 1
+  - WhitePants:2 1
+  - WhiteBoots:1 1
+  - 278:0:1:0 0.1
+  - 277:0:1:0 0.1
+  - 257:0:1:0 0.1
+  - PunchBow:0 1
+FrozenCaptain:
+  Loot:
+  - PopsicleOrangeHat:4 0.3
+  - 397:0:1:4 0.3
+  - 79:0:0:4 1
+  - PopsicleOrangeJacket:3 0.7
+  - PopsicleOrangePants:2 1
+  - PopsicleOrangeBoots:1 1
+  - 386:0:1:0 0.2
+  - 276:0:1:0 0.3
+  - 50:0:1:0 1
+Glacius:
+  Loot:
+  - YetiHead:4 1
+  - 0:0:1:0 1
+  - WhiteJacket:3 1
+  - WhitePants:2 1
+  - WhiteBoots:1 1
+Spinal:
+  Loot:
+  - Chillrend:0 1
+  - IceborneHelmet:4 1
+  - IceborneLeggings:2 1
+  - IceborneBoots:1 1

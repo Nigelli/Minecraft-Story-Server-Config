@@ -1,0 +1,387 @@
+loot1:
+  Loot:
+  - Mask 1
+  - 264:0:20 1
+loot2:
+  Loot:
+  - 265:0:15 1
+loot3:
+  Loot:
+  - 266:0:10 1
+loot4:
+  Loot:
+  - 314:0:1:4 0.5
+  - 315:0:1:3 0.5
+  - 316:0:1:2 0.5
+  - 317:0:1:1 0.5
+FullGold:
+  Loot:
+  - 314:0:1:4 1
+  - 315:0:1:3 1
+  - 316:0:1:2 1
+  - 317:0:1:1 1
+BansheeGold:
+  Loot:
+  - BlazeHead:4 1
+  - 315:0:1:3 1
+  - 316:0:1:2 1
+  - 317:0:1:1 1
+loot5:
+  Loot:
+  - Mask:4 1
+  - Chest:3 1
+  - HoeOfSpeed:0 1
+Famine:
+  Loot:
+  - 397:3:1:4 1
+DarkHatcher:
+  Loot:
+  - WhitePants:2 1
+  - WhiteBoots:1 1
+  - 359:0:1:0 1
+War:
+  Loot:
+  - 310:0:1:4 1
+  - 311:0:1:3 1
+  - 312:0:1:2 1
+  - 313:0:1:1 1
+  - 279:0:1:0 1
+Pestilence:
+  Loot:
+  - 397:2:1:4 1
+  - 299:0:1:3 1
+  - 300:0:1:2 1
+  - 301:0:1:1 1
+  - 367:0:1:0 1
+Death:
+  Loot:
+  - DeathScythe:0 1
+JackoBones:
+  Loot:
+  - 257:0:1:0 1 KNOCKBACK:1
+Limbo:
+  Loot:
+  - 315:0:1:3 1
+  - 316:0:1:2 1
+  - 317:0:1:1 1
+FullDiamond:
+  Loot:
+  - 310:0:1:4 1
+  - 311:0:1:3 1
+  - 312:0:1:2 1
+  - 313:0:1:1 1
+Nitro:
+  Loot:
+  - 310:0:1:4 1
+  - 311:0:1:3 1
+  - 312:0:1:2 1
+  - 313:0:1:1 1
+  - 46:0:1:0 1
+DiamondHelmless:
+  Loot:
+  - 310:0:1:4 1
+  - 311:0:1:3 1
+  - 312:0:1:2 1
+  - 313:0:1:1 1
+  - 276:0:1:0 1
+Piper:
+  Loot:
+  - 299:0:1:3 1
+  - 300:0:1:2 1
+  - 301:0:1:1 1
+  - 280:0:1:0 1
+Gorelock:
+  Loot:
+  - 397:1:1:4 1
+  - GorelockChest:3 1
+  - GorelockLegs:2 1
+  - GorelockBoots:1 1
+  - WandOfGorelock:0 1
+Zombiemold:
+  Loot:
+  - ZombiemoldHead:4 1
+  - BlackChest:3 1
+  - BlackPants:2 1
+  - BlackBoots:1 1
+  - 276:0:1:0 1
+BlackholmeGear:
+  Loot:
+  - BlackholmeHood:4 0.7
+  - BlackholmeRobe:3 1
+  - BlackholmePants:2 1
+  - BlackholmeBoots:1 1
+  - 286:0:1:0 0.3
+  - 283:0:1:0 0.3
+  - 279:0:1:0 0.3
+  - 276:0:1:0 1
+BlackholmeGearSkele:
+  Loot:
+  - BlackholmeHood:4 0.7
+  - BlackholmeRobe:2 1
+  - BlackholmePants:1 1
+  - 286:0:1:0 0.3
+  - 283:0:1:0 0.3
+  - 279:0:1:0 0.3
+  - 276:0:1:0 1
+Putrid:
+  Loot:
+  - 276:0:1:0 1
+  - PutridChest:3 1
+  - PutridPants:2 1
+  - PutridBoots:1 1
+Skyhook:
+  Loot:
+  - Cutlass:0 1
+  - PirateHat:4 1
+  - PirateJacket:3 1
+  - PatchyPants:2 1
+  - 301:0:1:1 1
+GraveDigger:
+  Loot:
+  - 302:0:1:4 1
+  - 299:0:1:3 1
+  - 300:0:1:2 1
+  - 301:0:1:1 1
+  - 256:0:1:0 1
+AncientArmor:
+  Loot:
+  - AncientHelm:4 1
+  - AncientChest:3 1
+  - AncientLegs:2 1
+  - AncientBoots:1 1
+  - 267:0:1:0 1
+SoldierArmor:
+  Loot:
+  - 302:0:1:4 1
+  - 303:0:1:3 1
+  - 304:0:1:2 1
+  - 305:0:1:1 1
+  - 272:0:1:0 1
+Hellion:
+  Loot:
+  - EvilSkullhead:4 1
+  - 303:0:1:3 1
+  - 304:0:1:2 1
+  - 305:0:1:1 1
+  - 292:0:1:0 1
+RecruitArmor:
+  Loot:
+  - 298:0:1:4 1
+  - 299:0:1:3 1
+  - 300:0:1:2 1
+  - 301:0:1:1 1
+  - 268:0:1:0 1
+Cabal:
+  Loot:
+  - BlackholmeHood:4 1
+  - BlackChest:3 1
+  - BlackPants:2 1
+  - BlackBoots:1 1
+  - FireBow:0 1
+CabalMelee:
+  Loot:
+  - PirateHat:4 1
+  - BlackChest:3 1
+  - BlackPants:2 1
+  - BlackBoots:1 1
+  - 283:0:1:0 1
+IronSword:
+  Loot:
+  - 267:0:1:0 1
+IronAxe:
+  Loot:
+  - 258:0:1:0 1
+DiamondSword:
+  Loot:
+  - 276:0:1:0 1
+DiamondAxe:
+  Loot:
+  - 279:0:1:0 1
+EnchantedSword:
+  Loot:
+  - 276:0:1:0 0.5
+  - 267:0:1:0 1
+EnchantedAxe:
+  Loot:
+  - 258:0:1:0 0.5
+  - 279:0:1:0 1
+EnchantedWeapon:
+  Loot:
+  - 283:0:1:0 0.05
+  - 261:0:1:0 0.3
+  - 276:0:1:0 0.5
+  - 258:0:1:0 0.5
+  - 279:0:1:0 0.5
+  - 267:0:1:0 1
+Snort:
+  Loot:
+  - 314:0:1:4 1
+  - 315:0:1:3 1
+  - 316:0:1:2 1
+  - 317:0:1:1 1
+  - SnortAxe:0 1
+DeathSoldier:
+  Loot:
+  - TatteredHood:4 1
+  - BlackRags:3 1
+  - WoodScythe:0 1
+WitherSkullHead:
+  Loot:
+  - 397:1:1:4 0.5
+  - 397:3:1:4 0.5
+  - 397:2:1:4 0.5
+  - 397:0:1:4 1
+Nitroling:
+  Loot:
+  - 46:0:1:4 1
+  - 311:0:1:3 1
+  - 312:0:1:2 1
+  - 313:0:1:1 1
+Rokka:
+  Loot:
+  - 397:2:1:4 1
+  - BlackChest:3 1
+  - MaroonPants:2 1
+  - BlackBoots:1 1
+Rollzhar:
+  Loot:
+  - 397:1:1:4 1
+  - BlackChest:3 1
+  - TealPants:2 1
+  - BlackBoots:1 1
+Varkon:
+  Loot:
+  - VarkonChest:3 1
+  - BlackPants:2 1
+  - BlackBoots:1 1
+  - VarkonSword:0 1
+Etheria:
+  Loot:
+  - DarkLordSword:0 1
+SandZombie:
+  Loot:
+  - 12:1:0:4 0.5
+  - 12:0:0:4 1
+ShardWarrior:
+  Loot:
+  - DarkRedHat:4 0.3
+  - 397:1:1:4 1
+  - DarkRedJacket:3 0.7
+  - DarkRedPants:2 1
+  - DarkRedBoots:1 1
+  - 286:0:1:0 0.3
+  - 283:0:1:0 0.3
+  - 279:0:1:0 0.3
+  - 276:0:1:0 1
+WitherSkeleton:
+  Loot:
+  - 276:0:1:0 1
+Wraith:
+  Loot:
+  - 397:1:1:4 1
+  - BlackChest2:3 1
+  - 276:0:1:0 1
+Voltrox:
+  Loot:
+  - VoltroxSword:0 1
+SoulHusk:
+  Loot:
+  - 397:1:1:4 1
+  - 272:0:1:0 1
+Mimic:
+  Loot:
+  - 146:0:1:4 1
+  - 276:0:1:0 1
+BurningBones:
+  Loot:
+  - 272:0:1:0 1
+HeadlessKnight:
+  Loot:
+  - AncientChest:3 1
+  - AncientLegs:2 1
+  - AncientBoots:1 1
+  - 267:0:1:0 1
+  - 272:0:1:0 1
+HeadlessAdventurer:
+  Loot:
+  - 307:0:1:3 0.4
+  - 308:0:1:2 0.4
+  - 309:0:1:1 0.4
+  - 303:0:1:3 0.5
+  - 304:0:1:2 0.5
+  - 305:0:1:1 0.5
+  - 299:0:1:3 1
+  - 300:0:1:2 1
+  - 301:0:1:1 1
+  - 267:0:1:0 0.5
+  - 272:0:1:0 1
+Bomber:
+  Loot:
+  - 46:0:1:0 1
+  - 307:0:1:3 1
+  - 304:0:1:2 1
+  - 309:0:1:1 1
+AllWhite:
+  Loot:
+  - WhiteHat:4 1
+  - WhiteJacket:3 1
+  - WhitePants:2 1
+  - WhiteBoots:1 1
+BlackholmePirate:
+  Loot:
+  - DarkBrownHat:4 0.7
+  - DarkBrownCoat:3 1
+  - DarkBrownPants:2 1
+  - DarkBrownBoots:1 1
+  - 286:0:1:0 0.3
+  - 283:0:1:0 0.3
+  - 279:0:1:0 0.3
+  - 276:0:1:0 1
+BlackholmePirateSkele:
+  Loot:
+  - DarkBrownHat:4 0.7
+  - DarkBrownPants:2 1
+  - DarkBrownBoots:1 1
+  - 286:0:1:0 0.3
+  - 283:0:1:0 0.3
+  - 279:0:1:0 0.3
+  - IronCutlass:0 1
+BlackholmeEngineer:
+  Loot:
+  - 306:0:1:4 1
+  - DarkBrownCoat:3 0.7
+  - DarkBrownPants:2 1
+  - DarkBrownBoots:1 1
+  - 152:0:1:0 0.4
+  - 76:0:1:0 0.4
+  - 331:0:1:0 0.4
+  - 69:0:1:0 0.4
+  - 46:0:1:0 0.1
+  - 356:0:1:0 1
+SoggyCorpse:
+  Loot:
+  - DarkBrownHat:4 0.1
+  - 18:0:1:4 0.1
+  - 3:0:1:4 0.1
+  - 3:1:1:4 0.1
+  - 3:2:1:4 0.1
+  - 298:0:1:4 0.1
+  - DarkBrownCoat:3 0.1
+  - 299:0:1:3 0.1
+  - DarkBrownPants:2 0.1
+  - 300:0:1:2 0.1
+  - DarkBrownBoots:1 0.1
+  - 301:0:1:1 0.1
+  - 32:0:1:0 0.2
+  - 39:0:1:0 0.2
+  - 40:0:1:0 0.2
+Naked:
+  Loot:
+  - 0:0:1:0 1
+Wrethis:
+  Loot:
+  - 279:0:1:0 1
+Sigma:
+  Loot:
+  - MagmaSlimeHead:4 1
+  - 0:0:1:0 1

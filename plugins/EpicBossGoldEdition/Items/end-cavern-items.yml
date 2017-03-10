@@ -1,0 +1,9 @@
+ReaperBlade:
+  Id: 276
+  Data: 0
+  Amount: 1
+  Display: '&eReaper Blade'
+  Tags:
+    Health: 100
+  Enchants:
+  - DAMAGE_ALL:50

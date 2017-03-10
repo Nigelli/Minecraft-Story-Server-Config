@@ -1,0 +1,286 @@
+Maggie:
+  Mobtype: pig
+  Display: '&5Maggie'
+  Health: 8200
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 8
+  Skills:
+  - throw 3:1:1 >0 1
+  - ejectrider >0 0.4
+  - pack PigMudSplash <8199 0.3 pigskills:95
+  - pack PigKick <8199 0.3 pigskills:95
+  - pack PigHeadbutt <8199 0.3 pigskills:95
+  - cmd 'cast pigsqueel $world,$boss_x,$boss_y,$boss_z' >0 1 pignoise:40
+  - cmd 'forceemote $player dizzy' >0 0.1 pigemote1:60
+  - cmd 'forceemote $player mud' >0 0.1 pigemote2:60
+  - cmd 'forceemote $player dirt' >0 0.1 pigemote3:60
+  - cmd 'forceemote $player stumble' >0 0.1 pigemote4:60
+  - potionboss SPEED:9999:6 o=spawn 1
+  - potionboss FIRE_RESISTANCE:9999:6 o=spawn 1
+  - potionboss SPEED:9999:6 >0 1
+  - potionboss SLOW:9999:0 >0 1
+  - potionboss FIRE_RESISTANCE:9999:0 >0 1
+  - cmd 'megaphone LEVEL_UP 5' o=spawn 1
+  Tags:
+    Saddled: true
+    KnockbackRes: 1
+  Effects:
+    mud:
+      particle-name: blockcrack_3
+      y-offset: 0
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.0
+      speed: 1.5
+      count: 62
+    mud2:
+      particle-name: blockcrack_3
+      y-offset: 0
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.4
+      vert-spread: 0.4
+      speed: 1.5
+      count: 12
+    dust:
+      particle-name: explode
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.0
+      vert-spread: 0.0
+      speed: 1.5
+      count: 2
+Dooper:
+  Mobtype: pig
+  Display: '&5Dooper'
+  Health: 8200
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 8
+  Skills:
+  - throw 3:1:1 >0 1
+  - ejectrider >0 0.4
+  - pack PigMudSplash2 <8199 0.3 pigskills:95
+  - pack PigKick2 <8199 0.3 pigskills:95
+  - pack PigHeadbutt2 <8199 0.3 pigskills:95
+  - cmd 'cast pigsqueel $world,$boss_x,$boss_y,$boss_z' >0 1 pignoise:40
+  - cmd 'forceemote $player dizzy' >0 0.1 pigemote1:60
+  - cmd 'forceemote $player mud' >0 0.1 pigemote2:60
+  - cmd 'forceemote $player dirt' >0 0.1 pigemote3:60
+  - cmd 'forceemote $player stumble' >0 0.1 pigemote4:60
+  - potionboss SPEED:9999:6 o=spawn 1
+  - potionboss FIRE_RESISTANCE:9999:6 o=spawn 1
+  - potionboss SPEED:9999:6 >0 1
+  - potionboss SLOW:9999:0 >0 1
+  - potionboss FIRE_RESISTANCE:9999:0 >0 1
+  Tags:
+    Saddled: true
+    KnockbackRes: 1
+  Effects:
+    mud:
+      particle-name: blockcrack_3
+      y-offset: 0
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.0
+      speed: 1.5
+      count: 62
+    mud2:
+      particle-name: blockcrack_3
+      y-offset: 0
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.4
+      vert-spread: 0.4
+      speed: 1.5
+      count: 12
+    dust:
+      particle-name: explode
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.0
+      vert-spread: 0.0
+      speed: 1.5
+      count: 2
+Chud:
+  Mobtype: pig
+  Display: '&5Chud'
+  Health: 8200
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 8
+  Skills:
+  - throw 3:1:1 >0 1
+  - ejectrider >0 0.4
+  - pack PigMudSplash3 <8199 0.3 pigskills:95
+  - pack PigKick3 <8199 0.3 pigskills:95
+  - pack PigHeadbutt3 <8199 0.3 pigskills:95
+  - cmd 'cast pigsqueel $world,$boss_x,$boss_y,$boss_z' >0 1 pignoise:40
+  - cmd 'forceemote $player dizzy' >0 0.1 pigemote1:60
+  - cmd 'forceemote $player mud' >0 0.1 pigemote2:60
+  - cmd 'forceemote $player dirt' >0 0.1 pigemote3:60
+  - cmd 'forceemote $player stumble' >0 0.1 pigemote4:60
+  - potionboss SPEED:9999:6 o=spawn 1
+  - potionboss FIRE_RESISTANCE:9999:6 o=spawn 1
+  - potionboss SPEED:9999:6 >0 1
+  - potionboss SLOW:9999:0 >0 1
+  - potionboss FIRE_RESISTANCE:9999:0 >0 1
+  Tags:
+    Saddled: true
+    KnockbackRes: 1
+  Effects:
+    mud:
+      particle-name: blockcrack_3
+      y-offset: 0
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.0
+      speed: 1.5
+      count: 62
+    mud2:
+      particle-name: blockcrack_3
+      y-offset: 0
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.4
+      vert-spread: 0.4
+      speed: 1.5
+      count: 12
+    dust:
+      particle-name: explode
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.0
+      vert-spread: 0.0
+      speed: 1.5
+      count: 2
+Chanchito:
+  Mobtype: pig
+  Display: '&5Chancito'
+  Health: 8200
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 8
+  Skills:
+  - throw 3:1:1 >0 1
+  - ejectrider >0 0.4
+  - pack PigMudSplash4 <8199 0.3 pigskills:95
+  - pack PigKick4 <8199 0.3 pigskills:95
+  - pack PigHeadbutt4 <8199 0.3 pigskills:95
+  - cmd 'cast pigsqueel $world,$boss_x,$boss_y,$boss_z' >0 1 pignoise:40
+  - cmd 'forceemote $player dizzy' >0 0.1 pigemote1:60
+  - cmd 'forceemote $player mud' >0 0.1 pigemote2:60
+  - cmd 'forceemote $player dirt' >0 0.1 pigemote3:60
+  - cmd 'forceemote $player stumble' >0 0.1 pigemote4:60
+  - potionboss SPEED:9999:6 o=spawn 1
+  - potionboss FIRE_RESISTANCE:9999:6 o=spawn 1
+  - potionboss SPEED:9999:6 >0 1
+  - potionboss SLOW:9999:0 >0 1
+  - potionboss FIRE_RESISTANCE:9999:0 >0 1
+  Tags:
+    Saddled: true
+    KnockbackRes: 1
+  Effects:
+    mud:
+      particle-name: blockcrack_3
+      y-offset: 0
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.0
+      speed: 1.5
+      count: 62
+    mud2:
+      particle-name: blockcrack_3
+      y-offset: 0
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.4
+      vert-spread: 0.4
+      speed: 1.5
+      count: 12
+    dust:
+      particle-name: explode
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.0
+      vert-spread: 0.0
+      speed: 1.5
+      count: 2
+Poot:
+  Mobtype: pig
+  Display: '&5Poot'
+  Health: 8200
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 8
+  Skills:
+  - throw 3:1:1 >0 1
+  - ejectrider >0 0.4
+  - pack PigMudSplash4 <8199 0.3 pigskills:95
+  - pack PigKick4 <8199 0.3 pigskills:95
+  - pack PigHeadbutt4 <8199 0.3 pigskills:95
+  - cmd 'cast pigsqueel $world,$boss_x,$boss_y,$boss_z' >0 1 pignoise:40
+  - cmd 'forceemote $player dizzy' >0 0.1 pigemote1:60
+  - cmd 'forceemote $player mud' >0 0.1 pigemote2:60
+  - cmd 'forceemote $player dirt' >0 0.1 pigemote3:60
+  - cmd 'forceemote $player stumble' >0 0.1 pigemote4:60
+  - potionboss SPEED:9999:6 o=spawn 1
+  - potionboss FIRE_RESISTANCE:9999:6 o=spawn 1
+  - potionboss SPEED:9999:6 >0 1
+  - potionboss SLOW:9999:0 >0 1
+  - potionboss FIRE_RESISTANCE:9999:0 >0 1
+  Tags:
+    Saddled: true
+    KnockbackRes: 1
+  Effects:
+    mud:
+      particle-name: blockcrack_3
+      y-offset: 0
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.0
+      speed: 1.5
+      count: 62
+    mud2:
+      particle-name: blockcrack_3
+      y-offset: 0
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.4
+      vert-spread: 0.4
+      speed: 1.5
+      count: 12
+    dust:
+      particle-name: explode
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.0
+      vert-spread: 0.0
+      speed: 1.5
+      count: 2

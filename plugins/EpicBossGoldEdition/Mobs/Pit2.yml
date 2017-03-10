@@ -1,0 +1,15 @@
+PitSpawner:
+  Mobtype: slime
+  Display: ''
+  Health: 4
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 1
+  Skills:
+  - cmd 'area toggle -w dungeon-world 689,255,2409' 20 o=20 1
+  - cmd 'area toggle -w dungeon-world 677,255,2409' o=20 1
+  - cmd 'mm mobs spawn PitBomber1:1 1 dungeon-world,658,236,2420' =spawn 1
+  - cmd 'eb mob kill Drip' =spawn 1
+  - cmd 'eb mob kill Undersludge' =spawn 1
+  Tags:
+    Size: 1

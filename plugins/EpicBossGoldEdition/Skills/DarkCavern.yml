@@ -1,0 +1,63 @@
+InfectionSpread:
+  Skills:
+  - msg 80:'&4$player has died, spreading the infection!' >0 1
+  - swarm $Infected-Citizen:5:10
+Sigilusaoe:
+  Skills:
+  - msg 80:'&4$boss &4is preparing a MASSIVE burst of energy. RUN AWAY FROM HIM!' >0 1
+  - cmd 'cast skele-hit-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'cast sigilus-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast sigilus-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast sigilus-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast sigilus-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast sigilus-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast sigilus-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast sigilus-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast sigilus-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast sigilus-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast sigilus-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - msg 100:&6$boss &6has let out as massive burst of energy!' >0 1
+WailaraStun:
+  Skills:
+  - cmd 'cast ghastscreamstun-npc $world,$boss_x,$boss_y,$boss_z' >0 1
+  - msg 100:&4$boss has let out a piercing scream!' >0 1
+VarkonKillPlayer:
+  Skills:
+  - msg 80:'&4$boss &4has drained a dying players corpse of blood and has healed.' >0 1
+  - heal 400 >0 1
+SpawnGloboid:
+  Skills:
+  - msg 80:'&4$player has died, bursting into slimes!' >0 1
+  - swarm $Globoid:8:10
+Dancingflameaoe:
+  Skills:
+  - msg 80:'&4$boss &4will release a wave of fire which will kill anyone without a dancing buff! DANCE NOW!' >0 1
+  - cmd 'cast dancingflame-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast dancingflame-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast dancingflame-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast dancingflame-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast dancingflame-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast dancingflame-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast dancingflame-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast dancingflame-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast dancingflame-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast dancingflame-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - msg 100:'&6$boss &6has released a wave of fire! Dancers were not effected.' >0 1

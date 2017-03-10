@@ -1,0 +1,473 @@
+StubbornGremlin:
+  Mobtype: babyzombie
+  Display: '&5Stubborn Collector Loot Gremlin'
+  Health: 2900
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 28
+  Skills:
+  - throw 5:5:5 >0 0.5
+  - throw 6:2:2 >0 1
+  - fire 5:1 >0 1
+  - fire 5:3 >0 0.05
+  - fire 5:15 >0 0.05
+  - cmd 'cast dustbomb-npc $world,$player_x,$player_y,$player_z' >0 0.1 slgdb:100
+  - cmd 'cast dustbomb-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.1
+  - cmd 'cast dustbomb-npc $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - pack LG5Move1 <2850 0.1 PLGMove:700
+  - pack LG5Move2 <2850 0.15 PLGMove:700
+  - pack LG5Move3 <2850 0.2 PLGMove:700
+  - pack LG5Move4 <2850 0.25 PLGMove:700
+  - consume 1:1:1:0 $SCLGC >0 1
+  - cmd 'cast 20kickdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 rplg:55
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss HEALTH_BOOST:9999:5 =spawn 1
+  - eb mob kill SCLGC =death 1
+  - mount 50:SCLGC >0 0.5
+  - cmd 'cast death1-npc $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'eb mob kill SCLGC' =death 1
+  - cmd 'broad &a[Loot Gremlin] The Stubborn Collector Loot Gremlin has been slain.' =death 1
+  Equipment:
+  - StubbornGremlin
+  Effects:
+    pumpkins:
+      particle-name: explode
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 2
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+SCLGC:
+  Mobtype: ocelot
+  Display: '&fGilded War Cat'
+  Health: 7000
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 4
+  Skills:
+  - cmd 'cast dustbomb-npc $world,$player_x,$player_y,$player_z' >0 0.1 slgdb:100
+  - cmd 'cast dustbomb-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.1
+  - potionboss SPEED:9999:4 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss SPEED:9999:4 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+SCLG:
+  Bosslist: SCLGC,StubbornGremlin
+GildedGremlin:
+  Mobtype: babyzombie
+  Display: '&5Gilded Loot Gremlin'
+  Health: 2900
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 28
+  Skills:
+  - throw 5:5:5 >0 0.5
+  - throw 6:2:2 >0 1
+  - fire 5:1 >0 1
+  - fire 5:3 >0 0.05
+  - fire 5:15 >0 0.05
+  - cmd 'cast goldchest-npc $world,$player_x,$player_y,$player_z' >0 0.1 glggc:100
+  - cmd 'cast goldchest-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.1
+  - pack LG4Move1 <2850 0.1 PLGMove:700
+  - pack LG4Move2 <2850 0.15 PLGMove:700
+  - pack LG4Move3 <2850 0.2 PLGMove:700
+  - pack LG4Move4 <2850 0.25 PLGMove:700
+  - consume 1:1:1:0 $GLGC >0 1
+  - cmd 'cast 20kickdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 rplg:55
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss HEALTH_BOOST:9999:5 =spawn 1
+  - eb mob kill GLGC =death 1
+  - mount 50:GLGC >0 0.5
+  - cmd 'cast death1-npc $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'eb mob kill GLGC' =death 1
+  - cmd 'broad &a[Loot Gremlin] The Gilded Loot Gremlin has been slain.' =death 1
+  Equipment:
+  - GildedGremlin
+  Effects:
+    pumpkins:
+      particle-name: blockcrack_41
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 2
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+GLGC:
+  Mobtype: ocelot
+  Display: '&fGilded War Cat'
+  Health: 7000
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 4
+  Skills:
+  - potionboss SPEED:9999:4 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss SPEED:9999:4 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+GLG:
+  Bosslist: GLGC,GildedGremlin
+GemGremlin:
+  Mobtype: babyzombie
+  Display: '&5Gem Hoarder Loot Gremlin'
+  Health: 2900
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 28
+  Skills:
+  - throw 5:5:5 >0 0.5
+  - throw 6:2:2 >0 1
+  - fire 5:1 >0 1
+  - fire 5:3 >0 0.05
+  - fire 5:15 >0 0.05
+  - cmd 'cast gemchest-npc $world,$player_x,$player_y,$player_z' >0 0.04
+  - cmd 'cast gemchest-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.1
+  - pack LG3Move1 <2850 0.01 PLGMove:701
+  - pack LG3Move2 <2850 0.01 PLGMove:702
+  - pack LG3Move3 <2850 0.01 PLGMove:703
+  - pack LG3Move4 <2850 0.01 PLGMove:704
+  - consume 1:1:1:0 $GHLGC >0 1
+  - cmd 'cast 20kickdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 rplg:55
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss HEALTH_BOOST:9999:5 =spawn 1
+  - eb mob kill GHLGC =death 1
+  - mount 50:GHLGC >0 0.5
+  - cmd 'cast death1-npc $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'eb mob kill GHLGC' =death 1
+  - cmd 'broad &a[Loot Gremlin] The Gem Hoarder Loot Gremlin has been slain.' =death 1
+  Equipment:
+  - GemGremlin
+  Effects:
+    green:
+      particle-name: blockcrack_133
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.4
+      count: 5
+    dia:
+      particle-name: blockcrack_57
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.4
+      count: 5
+    white:
+      particle-name: instantSpell
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 5
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+GHLGC:
+  Mobtype: ocelot
+  Display: '&fOily War Cat'
+  Health: 7000
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 4
+  Skills:
+  - potionboss SPEED:9999:5 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss SPEED:9999:5 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+GHLG:
+  Bosslist: GHLGC,GemGremlin
+OilyGremlin:
+  Mobtype: babyzombie
+  Display: '&5Oil Covered Loot Gremlin'
+  Health: 2900
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 28
+  Skills:
+  - throw 5:5:5 >0 0.5
+  - throw 6:2:2 >0 1
+  - fire 5:1 >0 1
+  - fire 5:3 >0 0.05
+  - fire 5:15 >0 0.05
+  - cmd 'cast oilslick-npc $world,$player_x,$player_y,$player_z' >0 0.04
+  - cmd 'cast oilslick-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.1
+  - cmd 'cast oilslick-npc $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - pack LG2Move1 <2850 0.1 PLGMove:700
+  - pack LG2Move2 <2850 0.15 PLGMove:700
+  - pack LG2Move3 <2850 0.2 PLGMove:700
+  - pack LG2Move4 <2850 0.25 PLGMove:700
+  - consume 1:1:1:0 $OCLGC >0 1
+  - cmd 'cast 20kickdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 rplg:55
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss HEALTH_BOOST:9999:5 =spawn 1
+  - eb mob kill OCLGC =death 1
+  - mount 50:OCLGC >0 0.5
+  - cmd 'cast death1-npc $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'eb mob kill OCLGC' =death 1
+  - cmd 'broad &a[Loot Gremlin] The Oil Covered Loot Gremlin has been slain.' =death 1
+  Equipment:
+  - OilyGremlin
+  Effects:
+    pumpkins:
+      particle-name: blockcrack_173
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 15
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+OCLGC:
+  Mobtype: ocelot
+  Display: '&fOily War Cat'
+  Health: 7000
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 4
+  Skills:
+  - potionboss SPEED:9999:4 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss SPEED:9999:4 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+OCLG:
+  Bosslist: OCLGC,OilyGremlin
+LG:
+  Bosslist: War-Cat,Loot-Gremlin
+ELG:
+  Bosslist: War-Cat,Easter-Loot-Gremlin
+PLG:
+  Bosslist: PWC,Portal-Gremlin
+War-Cat:
+  Mobtype: ocelot
+  Display: '&fWar Cat'
+  Health: 2000
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 4
+  Skills:
+  - potionboss SPEED:9999:4 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss SPEED:9999:4 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+PWC:
+  Mobtype: ocelot
+  Display: '&fVicious War Cat'
+  Health: 7000
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 4
+  Skills:
+  - potionboss SPEED:9999:4 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss SPEED:9999:4 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+Portal-Gremlin:
+  Mobtype: babyzombie
+  Display: '&5Ravenous Loot Gremlin'
+  Health: 2900
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 28
+  Skills:
+  - throw 5:5:5 >0 0.5
+  - throw 6:2:2 >0 1
+  - fire 5:1 >0 1
+  - fire 5:3 >0 0.05
+  - fire 5:15 >0 0.05
+  - pack LG1Move1 >0 0.1 PLGMove:400
+  - pack LG1Move2 >0 0.15 PLGMove:400
+  - pack LG1Move3 >0 0.2 PLGMove:400
+  - pack LG1Move4 >0 0.25 PLGMove:400
+  - consume 1:1:1:0 $PWC >0 1
+  - cmd 'cast 20kickdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 rplg:55
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss HEALTH_BOOST:9999:5 =spawn 1
+  - eb mob kill PWC =death 1
+  - mount 50:PWC >0 0.5
+  - cmd 'cast death1-npc $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'broad &a[Loot Gremlin] The Ravenous Loot Gremlin has been slain.' =death 1
+  Effects:
+    shadow:
+      particle-name: happyVillager
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 12
+    ambient:
+      particle-name: mobSpellAmbient
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 12
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+Loot-Gremlin:
+  Mobtype: babyzombie
+  Display: '&5Loot Gremlin'
+  Health: 900
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 8
+  Skills:
+  - throw 5:5:5 >0 0.5
+  - fire 5:1 >0 1
+  - fire 5:3 >0 0.05
+  - fire 5:15 >0 0.05
+  - potionboss DAMAGE_RESISTANCE:9999:3 o=900 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss HEALTH_BOOST:9999:5 o=900 1
+  - eb mob kill War-Cat =death 1
+  - mount 50:War-Cat >0 0.5
+  - cmd 'cast death1-npc $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'eb mob kill War-Cat' =death 1
+  - cmd 'mail send Zombiemold A Loot Gremlin was killed' =death 1
+  Effects:
+    shadow:
+      particle-name: happyVillager
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 12
+    ambient:
+      particle-name: mobSpellAmbient
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 12
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+Easter-Loot-Gremlin:
+  Mobtype: babyzombie
+  Display: '&5Easter Loot Gremlin'
+  Health: 900
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 8
+  Skills:
+  - throw 5:5:5 >0 0.5
+  - fire 5:1 >0 1
+  - fire 5:3 >0 0.05
+  - fire 5:15 >0 0.05
+  - potionboss DAMAGE_RESISTANCE:9999:3 o=900 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss HEALTH_BOOST:9999:5 o=900 1
+  - consume 10:100:99999:0 $War-Cat o=5 1
+  - cmd 'cast death1-npc $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'mail send Zombiemold An Easter Loot Gremlin was killed' =death 1
+  Equipment:
+  - AllWhite
+  Effects:
+    shadow:
+      particle-name: reddust
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 2.0
+      count: 12
+    ambient:
+      particle-name: mobSpell
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 2.0
+      count: 12

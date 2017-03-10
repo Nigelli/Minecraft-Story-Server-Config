@@ -1,0 +1,12 @@
+SekteshRebuff:
+  Skills:
+  - msg 50:'&3$boss&3 powers up.' >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:600:3 >0 1
+  - potionboss SLOW:600:1 >0 1
+GuardianRebuff:
+  Skills:
+  - msg 50:'&3$boss&3 powers up.' >0 1
+  - potionboss SPEED:500:2 >0 1
+  - potionboss INCREASE_DAMAGE:9999:1 >0 1
+  - potionboss SLOW:600:1 >0 1

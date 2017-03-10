@@ -1,0 +1,170 @@
+TheGrinch:
+  Mobtype: zombie
+  Display: '&6The Grinch'
+  Health: 6000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 16
+  Skills:
+  - msg 120:'&4$boss &2I am the Grinch that stole Christmas!' =spawn 1
+  - msg 120:'&4$boss &2Its because Im green isnt it?' >0 0.01
+  - msg 120:'&4$boss &2One mans toxic sludge is another mans potpourri.' >0 0.01
+  - msg 120:'&4$boss &2Blast this Christmas music. Its joyful and triumphant.' >0 0.01
+  - msg 120:'&4$boss &2Were gonna die! Were gonna die! Im going to throw up, and then Im gonna die! Mommy, tell it to stop!' >0 0.01
+  - msg 120:'&4$boss &2Are you having a holly, jolly Christmas?' >0 0.01
+  - msg 120:'&4$boss &2is it cold in here, or is it just me?' >0 0.01
+  - msg 120:'&4$boss &2It came without ribbons. It came without tags. It came without packages, boxes, or bags.' >0 0.01
+  - msg 120:'&4$boss &2Maybe Christmas doesnt come from a store....' o=1000 1
+  - msg 120:'&4$boss &2And theyll feast, feast, feast, feast. Theyll eat their Who-Pudding and rare Who-Roast Beast. But thats something I just cannot stand in the least. Oh, no. IM SPEAKING IN RHYME!' o=500 1
+  - msg 120:'&4$boss &2Maybe Christmas...means a little bit more...' =death 1
+  - throw 3:1:1 >0 1
+  - throw 5:3:3 >0 0.4
+  - throw 5:3:10 >0 0.02
+  - pack GrinchMove1 <5990 0.01 xgrm1:1600
+  - pack GrinchMove2 <5990 0.01 xgrm2:2900
+  - pack GrinchMove3 <5990 0.01 xgrm3:3400
+  - cmd 'cast 20kickdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 hhs1phys2:85
+  - cmd 'cast iceaoes-npc $world,$boss_x,$boss_y,$boss_z' >2000 1 grinchaoes:70
+  - cmd 'cast iceaoes-npc $world,$boss_x,$boss_y,$boss_z' <2000 1 grinchaoes:50
+  - cmd 'cast iceaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 grinchaoem:160
+  - cmd 'cast iceaoel-npc $world,$boss_x,$boss_y,$boss_z' >0 1 grinchaoel:60
+  - cmd 'cast iceaoesnipe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 grinchaoesnipe:70
+  - cmd 'cast grinch-blizzard $world,$player_x,$player_y,$player_z' <3950 1 grinchblizzard:370
+  - cmd 'cast grinch-entomb $world,$boss_x,$boss_y,$boss_z' <3950 1 grinchentomb:240
+  - lightning 60:1 >0 0.02
+  - swarm tnt:1:10 >0 0.05
+  - swarm $Grinchling-Green:5:5 =spawn 1
+  - swarm $Grinchling-Red:5:5 =spawn 1
+  - swarm $Grinchling-Green:1:5 >0 0.03
+  - swarm $Grinchling-Red:1:5 >0 0.03
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 >0 1
+  - potionboss SPEED:9999:3 =spawn 1
+  - potionboss SPEED:9999:4 <3500 1
+  - potionboss SPEED:9999:3 >3500 1
+  - potionboss SLOW:9999:1 >0 1
+  - cmd 'eb mob kill Grinchling-Green' =death 1
+  - cmd 'eb mob kill Grinchling-Red' =death 1
+  Equipment:
+  - Grinch
+  Effects:
+    snowshovel:
+      particle-name: snowshovel
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.2
+      speed: 0.0
+      count: 5
+    snowshovel2:
+      particle-name: snowshovel
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.2
+      speed: 0.01
+      count: 5
+    magiccrit:
+      particle-name: magicCrit
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.2
+      speed: 0.01
+      count: 5
+  Tags:
+    KnockbackRes: 1
+    Followrange: 20.0
+Grinchling-Green:
+  Mobtype: babypigzombie
+  Display: ''
+  Health: 400
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 4
+  Skills: []
+  Equipment:
+  - GrinchlingGreen
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+Grinchling-Red:
+  Mobtype: babypigzombie
+  Display: ''
+  Health: 400
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 4
+  Skills: []
+  Equipment:
+  - GrinchlingRed
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+Yeti:
+  Mobtype: zombie
+  Display: '&9Yeti'
+  Health: 500
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 5
+  Skills:
+  - throw 3:1:1 >0 1
+  - throw 5:3:3 >0 0.4
+  - throw 5:3:10 >0 0.02
+  - msg 140:'&a[Xmas]&e $player is getting mauled by a Yeti!' o=490 1
+  - potionboss SPEED:9999:5 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:5 >0 1
+  - cmd 'cast 20kickdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 yetikick:85
+  Equipment:
+  - Yeti
+  Tags:
+    KnockbackRes: 1
+    Followrange: 20.0
+  Effects:
+    snowshovel:
+      particle-name: snowshovel
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.2
+      speed: 0.0
+      count: 3
+ShelfElf:
+  Mobtype: zombie
+  Display: '&9Elf on the Shelf'
+  Health: 500
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 5
+  Skills: []
+  Equipment:
+  - shelfelf
+  Tags:
+    KnockbackRes: 1
+    Followrange: 20.0
+  Effects:
+    snowshovel:
+      particle-name: snowshovel
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.2
+      speed: 0.0
+      count: 3

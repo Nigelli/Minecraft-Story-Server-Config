@@ -1,0 +1,51 @@
+PopsicleOrangeHat:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 255,219,168
+PopsicleOrangeJacket:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 255,219,168
+PopsicleOrangePants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 255,219,168
+PopsicleOrangeBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 255,219,168
+IceborneHelmet:
+  Id: 310
+  Data: 0
+  Amount: 1
+  Display: '&5Iceborne Helmet'
+IceborneChestplate:
+  Id: 311
+  Data: 0
+  Amount: 1
+  Display: '&5Iceborne Chestplate'
+IceborneLeggings:
+  Id: 312
+  Data: 0
+  Amount: 1
+  Display: '&5Iceborne Leggings'
+IceborneBoots:
+  Id: 313
+  Data: 0
+  Amount: 1
+  Display: '&5Iceborne Leggings'
+Chillrend:
+  Id: 276
+  Data: 0
+  Amount: 1
+  Display: '&5Chillrend'
+  Enchants:
+  - DAMAGE_ALL:3

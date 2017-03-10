@@ -1,0 +1,12 @@
+CabalCopy:
+  Skills:
+  - cmd 'tell zombiemold Cabal used his skill pack' >0 1
+  - cmd 'cast generic-magic-ability-effect-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - potion 80:BLINDNESS:2:1 >0 1
+  - msg 80:'&6[$boss -> You]&f Seeing... double?...' >0 0.4 cabalwhisper:5
+  - msg 80:'&6[$boss -> You]&f Slay my visions and I will absorb their power!' >0 0.4 cabalwhisper:5
+  - msg 80:'&6[$boss -> You]&f There can be more of me than of you!' >0 0.4 cabalwhisper:5
+  - msg 80:'&6[$boss -> You]&f Your mind is such a feeble thing...' >0 0.4 cabalwhisper:5
+  - swarm $C-Copy:5:1 >0 1
+  - delay 200
+  - cmd 'eb mob kill C-Copy' >0 1

@@ -1,0 +1,33 @@
+Egyptian:
+  Loot:
+  - 314:0:1:4 1
+  - Shendyt:2 1
+  - 286:0:1:0 0.5
+  - 283:0:1:0 1
+EgyptianRanged:
+  Loot:
+  - 314:0:1:4 1
+  - Shendyt:2 1
+  - 261:0:1:0 1
+EgyptianRoyal:
+  Loot:
+  - 314:0:1:4 1
+  - 315:0:1:3 1
+  - Shendyt:2 1
+  - 317:0:1:1 1
+  - 286:0:1:0 0.5
+  - 283:0:1:0 1
+Sektesh:
+  Loot:
+  - 314:0:1:4 1
+  - 315:0:1:3 1
+  - Shendyt:2 1
+  - 317:0:1:1 1
+  - SekteshSword:0 1
+EgyptianGuardian:
+  Loot:
+  - EgyptianGuardianHead:4 1
+  - 315:0:1:3 1
+  - Shendyt:2 1
+  - 317:0:1:1 1
+  - GoldGuardianSword:0 1

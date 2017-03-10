@@ -1,0 +1,366 @@
+Hatcher:
+  Mobtype: witherskeleton
+  Display: '&6The Hatcher'
+  Health: 2000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 15
+  Despawn: false
+  Skills:
+  - bossmsg 30:'&4$boss &2...The queen will desiccate your corpses...' >0 0.4 darkhatchertalk:30
+  - bossmsg 30:'&4$boss &2...The brood will tear you apart...' >0 0.4 darkhatchertalk:30
+  - bossmsg 30:'&4$boss &2...Hatch little ones, HATCH...' >0 0.4 darkhatchertalk:30
+  - bossmsg 30:'&4$boss &2...Endless, they are ENDLESS...' >0 0.4 darkhatchertalk:30
+  - bossmsg 30:'&4$boss &2...Gorelock needs these eggs! Stay away!...' >0 0.4 darkhatchertalk:30
+  - bossmsg 30:'&4$boss &2...My Queen's brood is endless...' > 0.4 darkhatchertalk:30
+  - bossmsg 30:'&4$boss &2...Everything I do, I do for my queen....' >0 0.4 darkhatchertalk:30
+  - bossmsg 30:'&4$boss &2...When I hatch these eggs, they will swarm you...' >0 0.4 darkhatchertalk:30
+  - bossmsg 30:'&4$boss &2...You will not interrupt my queen's work!...' =spawn 1
+  - bossmsg 30:'&4$boss &2...The mutations are complete...powering down...!' =death 1
+  - cmd 'cast slashaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 darkhatcherslash2:40
+  - cmd 'cast slashaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 darkhatcherslash2:60
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 =spawn 1
+  - potionboss SPEED:9999:4 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:4 >0 1
+  - potionboss INCREASE_DAMAGE:9999:2 =spawn 1
+  - swarm $PoisonSpitter:2:10 =spawn 1
+  - swarm $SpiderSoldier:2:10 =spawn 1
+  - swarm $SpiderWebSpinner:2:10 =spawn 1
+  - swarm $SpiderStalker:2:10 =spawn 1
+  - consume 4:4:2:0 WOLF >0 0.3
+  - throw 10:1:2 >0 0.5
+  - throw 2:0:1 >0 1
+  - swarm silverfish:20:10 =spawn 1
+  - swarm silverfish:1:10 >0 0.025
+  - swarm silverfish:2:10 >0 0.005
+  - swarm spider:1:12 >0 0.05
+  - swarm cavespider:1:1 >0 1 hatchercavespider:20
+  - forcepullranged 64:8 >0 1
+  - potion 60:SLOW:20:2 >0 0.15
+  - cmd 'eb mob spawn SpiderSoldier 2 hive1' =spawn 1
+  - cmd 'eb mob spawn SpiderStalker 2 hive1' =spawn 1
+  - cmd 'eb mob spawn PoisonSpitter 1 hive1' =spawn 1
+  - cmd 'eb mob spawn SpiderWebSpinner 1 hive1' =spawn 1
+  - cmd 'eb mob spawn SpiderSoldier 2 hive2' =spawn 1
+  - cmd 'eb mob spawn SpiderStalker 2 hive2' =spawn 1
+  - cmd 'eb mob spawn PoisonSpitter 1 hive2' =spawn 1
+  - cmd 'eb mob spawn SpiderWebSpinner 1 hive2' =spawn 1
+  - cmd 'eb mob spawn SpiderSoldier 2 hive3' =spawn 1
+  - cmd 'eb mob spawn SpiderStalker 2 hive3' =spawn 1
+  - cmd 'eb mob spawn PoisonSpitter 1 hive3' =spawn 1
+  - cmd 'eb mob spawn SpiderWebSpinner 1 hive3' =spawn 1
+  - cmd 'eb mob spawn SpiderSoldier 2 hive4' =spawn 1
+  - cmd 'eb mob spawn SpiderStalker 2 hive4' =spawn 1
+  - cmd 'eb mob spawn PoisonSpitter 1 hive4' =spawn 1
+  - cmd 'eb mob spawn SpiderWebSpinner 1 hive4' =spawn 1
+  - cmd 'eb mob spawn SpiderSoldier 2 hive5' =spawn 1
+  - cmd 'eb mob spawn SpiderStalker 2 hive5' =spawn 1
+  - cmd 'eb mob spawn PoisonSpitter 1 hive5' =spawn 1
+  - cmd 'eb mob spawn SpiderWebSpinner 1 hive5' =spawn 1
+  - cmd 'eb mob spawn SpiderSoldier 2 hive6' =death 1
+  - cmd 'eb mob spawn SpiderStalker 2 hive6' =death 1
+  - cmd 'eb mob spawn PoisonSpitter 1 hive6' =death 1
+  - cmd 'eb mob spawn SpiderWebSpinner 1 hive6' =death 1
+  - cmd 'eb mob spawn SpiderSoldier 2 hive7' =death 1
+  - cmd 'eb mob spawn SpiderStalker 2 hive7' =death 1
+  - cmd 'eb mob spawn PoisonSpitter 1 hive7' =death 1
+  - cmd 'eb mob spawn SpiderWebSpinner 1 hive7' =death 1
+  - cmd 'eb mob spawn SpiderSoldier 2 hive8' =death 1
+  - cmd 'eb mob spawn SpiderStalker 2 hive8' =death 1
+  - cmd 'eb mob spawn PoisonSpitter 1 hive8' =death 1
+  - cmd 'eb mob spawn SpiderWebSpinner 1 hive8' =death 1
+  - cmd 'eb mob spawn SpiderSoldier 2 hive9' =death 1
+  - cmd 'eb mob spawn SpiderStalker 2 hive9' =death 1
+  - cmd 'eb mob spawn PoisonSpitter 1 hive9' =death 1
+  - cmd 'eb mob spawn SpiderWebSpinner 1 hive9' =death 1
+  - cmd 'broad &7The sound of a thousand skittering creatures can be heard from a deep cave.' =spawn 1
+  - cmd 'area toggle -w dungeon-world -277,192,1519' 0 =spawn 1
+  - cmd 'eb mob kill Experiment-Sigma' =spawn 1
+  - cmd 'eb mob kill Enraged-SpiderQueen' =spawn 1
+  - cmd 'eb mob leashspawn Experiment-Sigma dungeon-world,-297,183,1572' =death 1
+  - swarm $LG:1:1 =spawn 0.0001 gremlincd:4200
+  Equipment:
+  - DarkHatcher
+  Effects:
+    webparticle:
+      particle-name: blockcrack_30
+      y-offset: 0
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.4
+      vert-spread: 0.2
+      speed: 0.0
+      count: 6
+    smoke:
+      particle-name: largesmoke
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.2
+      speed: 0.0
+      count: 3
+Experiment-Sigma:
+  Mobtype: skeleton
+  Display: '&6Experiement Sigma'
+  Health: 4300
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 18
+  Skills:
+  - msg 100:'&4$boss &2bbKbbI.b..LL MbbbEEE.' =spawn 1
+  - msg 100:'&4$boss &2Mbb..bby exb.istab..nce is exb..crubb.ci.ating!' >0 0.1 sigmatalk:80
+  - msg 100:'&4$boss &2Pb..b.LEASb...E!' >0 0.1 sigmatalk:80
+  - msg 100:'&4$boss &2Sb..AVE Mb..E...' >0 0.1 sigmatalk:80
+  - msg 100:'&4$boss &2I Wb..AS ONb..CE LIb...KE Yb..OU...' >0 0.1 sigmatalk:80
+  - msg 100:'&4$boss &2Mb.Y Lb..IFE IS JUb..ST BURNb..ING...' >0 0.1 sigmatalk:80
+  - msg 100:'&4$boss &2I WAb.S DISb..CARb..DED...' >0 0.1 sigmatalk:80
+  - msg 100:'&4$boss &2Tb.hank yob..u....' =death 1
+  - cmd 'cast magmafissure-ground-npc $world,$player_x,$player_y,$player_z' 0 >0 1 sigmamagmafissure:100
+  - cmd 'cast magmaaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 >700 1 sigmamagmaaoes:20
+  - cmd 'cast magmaaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 <700 1 sigmamagmaaoes:10
+  - cmd 'cast magmaaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 sigmamagmaaoem:20
+  - cmd 'cast magmaaoel-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 sigmamagmaaoel:20
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 =spawn 1
+  - potionboss SPEED:9999:4 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 >0 1
+  - potionboss SPEED:9999:4 >0 1
+  - consume 4:4:2:0 WOLF >0 0.3
+  - consume 4:4:4:0 IRON_GOLEMS >0 0.3
+  - throw 2:0:1 >0 1
+  - potion 60:SLOW:20:4 >0 0.2 sigmaslow:40
+  - swarm $Magmaspider:5:2 =spawn 1
+  - swarm $SigmaDrop:12:2 =spawn 1
+  - swarm $SigmaDrop:2:2 >0 0.2 sigmacall:70
+  - swarm $Magmaspider:1:2 >0 0.2 sigmacall2:40
+  - fire 3:20 >0 0.13
+  - mount 20:player >0 0.1 sigmamount:50
+  - unmount >0 0.2 sigmamount:50
+  - cmd 'eb mob kill Hatcher' =death 1
+  - cmd 'eb mob kill ConsumedSpider' =death 1
+  - cmd 'eb mob kill SigmaDrop' =death 1
+  - cmd 'eb mob kill Enraged-SpiderQueen' =spawn 1
+  - cmd 'eb mob leashspawn Enraged-SpiderQueen dungeon-world,-293,5,1558' =death 1
+  - swarm $LG:1:1 =spawn 0.0001 gremlincd:4200
+  Equipment:
+  - Sigma
+  Effects:
+    lava:
+      particle-name: lava
+      y-offset: 0
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.4
+      vert-spread: 0.2
+      speed: 0.0
+      count: 6
+    flame:
+      particle-name: flame
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.2
+      speed: 0.0
+      count: 3
+Magmaspider:
+  Bosslist: ConsumedSpider,SigmaDrop
+SigmaDrop:
+  Mobtype: magmacube
+  Display: ''
+  Health: 80
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 4
+  Skills: []
+  Tags:
+    Size: 1
+ConsumedSpider:
+  Mobtype: spider
+  Display: Spider Soldier
+  Health: 40
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 15
+  Skills:
+  - throw 6:7:7 >0 0.4
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  Tags:
+    KnockbackRes: 1
+Enraged-SpiderQueen:
+  Mobtype: spider
+  Display: '&6The Spider Queen'
+  Health: 6200
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 8
+  regen:
+    interval-seconds: 3
+    amount: 10
+  Skills:
+  - bossmsg 80:'&4$boss &2Fear not the spiders embrace >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2The spider I and you the fly!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2Slay them all!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2You force my hand!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2Feel the wrath of the swarm!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2No mercy!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2We are unending!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2Come children. Fight for your queen!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2I return!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2The swarm is the instrument of my will!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2This world is mine!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2I am beyond death!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2I will NOT be defeated!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2Your queen is under attack!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2I sense your fear!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2The hive cluster is under attack!' >0 0.4 sqtalk:20
+  - bossmsg 80:'&4$boss &2No! Not again!!!!' =death 1
+  - cmd 'cast cacoon-npc1-aoe $world,$boss_x,$boss_y,$boss_z' 0 >0 0.1 sqlcaccon:120
+  - cmd 'cast web-wall-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.003
+  - cmd 'cast damageaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 sqlaoes:20
+  - cmd 'cast damageaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 0.005 sqlaoem:30
+  - potionboss INCREASE_DAMAGE:9999:2 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss INCREASE_DAMAGE:9999:2 >0 1
+  - potionboss SPEED:9999:5 <3000 1
+  - potionboss SPEED:9999:3 >3000 1
+  - throw 5:1:1 >0 0.4
+  - pull 70:10 >0 0.1 sqlcaccon:120
+  - throw 30:1:50 >1100 0.01
+  - throw 30:1:50 <1100 0.02
+  - forcepullranged 64:10 >1000 1
+  - forcepullranged 64:8 <1000 1
+  - web 3:300 >0 0.1
+  - swarm $FirstBornSpider:1:1 o=6199 1
+  - consume 4:4:2:0 WOLF >0 0.3
+  - vampire 80:player:20 >0 1
+  - consume 4:4:4:0 IRON_GOLEMS >0 0.3
+  - swarm $BabySpider:1:15 >1100 0.01 sqlswarm1:140
+  - swarm $BabySpider:2:15 >1100 0.01 sqlswarm2:140
+  - swarm $BabySpider:3:15 >1100 0.01 sqlswar3:140
+  - swarm $BabySpider:5:15 >1100 0.01 sqlswarm4:140
+  - swarm $BabySpider:10:15 >1100 0.004 sqlswarm5:140
+  - swarm spider:2:15 >1100 0.02 sqlswarm6:140
+  - swarm spider:2:15 <1100 0.2 sqlswarm7:140
+  - swarm $BabySpider:5:15 <1100 0.05 sqlswarm:140
+  - swarm $SpiderSoldier:1:1 >0 0.4 sqlswarmbig:190
+  - swarm $SpiderStalker:1:1 >0 0.006
+  - swarm $SpiderWebSpinner:1:1 >0 0.006
+  - swarm $PoisonSpitter:1:1 >0 0.006
+  - swarm $SpiderSoldier:1:1 o=500 1
+  - swarm $SpiderStalker:1:1 o=500 1
+  - swarm $SpiderWebSpinner:1:1 o=500 1
+  - swarm $PoisonSpitter:1:1 o=500 1
+  - swarm $SpiderSoldier:1:1 o=4200 1
+  - swarm $SpiderStalker:1:1 o=4200 1
+  - swarm $SpiderWebSpinner:1:1 o=4200 1
+  - swarm $PoisonSpitter:1:1 o=4200 1
+  - potion 10:SLOW:20:6 >0 0.15
+  - potionboss INVISIBILITY:60:1 o=100 1
+  - cmd 'eb mob kill SpiderSoldier' =death 1
+  - cmd 'eb mob kill SpiderStalker' =death 1
+  - cmd 'eb mob kill PoisonSpitter' =death 1
+  - cmd 'eb mob kill SpiderWebSpinner' =death 1
+  - cmd 'eb mob kill BabySpider' =death 1
+  - cmd 'eb mob kill FirstBornSpider' =death 1
+  - cmd 'broad &8The Enraged SpiderQueen has been slain.' 0 =death 1
+  - cmd 'area toggle -w dungeon-world -278,192,1519' =death 1
+  - swarm $LG:1:1 o=2200 0.0001 gremlincd:4200
+  - cmd 'eb mob move Spider $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - bossmsg 180:'&4$boss &2We are under attack. Come, protect your mother!!' =spawn 1
+  - bossmsg 180:'&a[Hive]&e The Spider Queen has called all surviving Spiders to her aid!' =spawn 1
+  - pack sqlcan >0 0.2 eatspid:400
+  Tags:
+    KnockbackRes: 1
+  Effects:
+    angry:
+      particle-name: angryVillager
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 1
+    crit:
+      particle-name: crit
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 3
+FirstBornSpider:
+  Mobtype: cavespider
+  Display: '&fBaby Spider'
+  Health: 200
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 16
+  Skills:
+  - consume 20:20:3000:0 Enraged-SpiderQueen =spawn 1
+BabySpider:
+  Mobtype: cavespider
+  Display: '&fBaby Spider'
+  Health: 200
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 16
+  Skills:
+  - consume 40:40:100:0 Enraged-SpiderQueen >0 1
+SpiderSoldier:
+  Mobtype: spider
+  Display: Spider Soldier
+  Health: 400
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 16
+  Skills:
+  - throw 6:7:7 >0 0.4
+  Tags:
+    KnockbackRes: 1
+SpiderStalker:
+  Mobtype: spider
+  Display: '&fStalker'
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 16
+  Skills:
+  - potionboss INVISIBILITY:9999:2 o=200 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+SpiderWebSpinner:
+  Mobtype: cavespider
+  Display: '&fWebspinner'
+  Health: 200
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 16
+  Skills:
+  - cmd 'cast cacoon-npc2-aoe $world,$boss_x,$boss_y,$boss_z' 0 >0 0.03
+  - cmd 'cast web-wall-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.03
+PoisonSpitter:
+  Mobtype: cavespider
+  Display: '&fPoison Spitter'
+  Health: 300
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 0
+  Skills:
+  - potion 6:POISON:10:2 >0 0.5

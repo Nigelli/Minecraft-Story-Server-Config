@@ -1,0 +1,19 @@
+PotOGold:
+  Mobtype: babyzombie
+  Display: '&9Pot O Gold'
+  Health: 3000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 1
+  Skills:
+  - cmd 'cast scarecrowhit $world,$boss_x,$boss_y,$boss_z' >0 0.9 scnoise:3
+  - cmd 'cast hefireworks-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  - msg 12:'&a[Shamrock Day]&e $player has found a Pot O Gold! Smack it to shake out the gold!' o=2990 1
+  - potionboss INVISIBILITY:9999:1 =spawn 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  Equipment:
+  - PotOGold
+  Tags:
+    silent: true

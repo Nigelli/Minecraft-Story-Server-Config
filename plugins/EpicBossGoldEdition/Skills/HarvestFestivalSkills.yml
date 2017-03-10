@@ -1,0 +1,70 @@
+PigMudSplash:
+  Skills:
+  - msg 12:'&3**Maggie kicks mud in everyones face**' >0 1
+  - cmd 'cast PigMudSplash $world,$boss_x,$boss_y,$boss_z' >0 1
+  - potion 6:BLINDNESS:5:1 >0 1
+PigKick:
+  Skills:
+  - msg 12:'&3**Maggie flails, kicking everyone away**' >0 1
+  - cmd 'cast PigKick $world,$boss_x,$boss_y,$boss_z' >0 1
+  - throw 5:8:18 >0 1
+PigHeadbutt:
+  Skills:
+  - msg 12:'&3**Maggie smashes her head into nearby players**' >0 1
+  - cmd 'cast PigHeadbutt $world,$boss_x,$boss_y,$boss_z' >0 1
+PigMudSplash2:
+  Skills:
+  - msg 12:'&3**Dooper kicks mud in everyones face**' >0 1
+  - cmd 'cast PigMudSplash $world,$boss_x,$boss_y,$boss_z' >0 1
+  - potion 6:BLINDNESS:5:1 >0 1
+PigKick2:
+  Skills:
+  - msg 12:'&3**Dooper flails, kicking everyone away**' >0 1
+  - cmd 'cast PigKick $world,$boss_x,$boss_y,$boss_z' >0 1
+  - throw 5:8:8 >0 1
+PigHeadbutt2:
+  Skills:
+  - msg 12:'&3**Dooper smashes his head into nearby players**' >0 1
+  - cmd 'cast PigHeadbutt $world,$boss_x,$boss_y,$boss_z' >0 1
+PigMudSplash3:
+  Skills:
+  - msg 12:'&3**Chud kicks mud in everyones face**' >0 1
+  - cmd 'cast PigMudSplash $world,$boss_x,$boss_y,$boss_z' >0 1
+  - potion 6:BLINDNESS:5:1 >0 1
+PigKick3:
+  Skills:
+  - msg 12:'&3**Chud flails, kicking everyone away**' >0 1
+  - cmd 'cast PigKick $world,$boss_x,$boss_y,$boss_z' >0 1
+  - throw 5:8:8 >0 1
+PigHeadbutt3:
+  Skills:
+  - msg 12:'&3**Chud smashes his head into nearby players**' >0 1
+  - cmd 'cast PigHeadbutt $world,$boss_x,$boss_y,$boss_z' >0 1
+PigMudSplash4:
+  Skills:
+  - msg 12:'&3**Chanchito kicks mud in everyones face**' >0 1
+  - cmd 'cast PigMudSplash $world,$boss_x,$boss_y,$boss_z' >0 1
+  - potion 6:BLINDNESS:5:1 >0 1
+PigKick4:
+  Skills:
+  - msg 12:'&3**Chanchito flails, kicking everyone away**' >0 1
+  - cmd 'cast PigKick $world,$boss_x,$boss_y,$boss_z' >0 1
+  - throw 5:8:8 >0 1
+PigHeadbutt4:
+  Skills:
+  - msg 12:'&3**Chanchito smashes his head into nearby players**' >0 1
+  - cmd 'cast PigHeadbutt $world,$boss_x,$boss_y,$boss_z' >0 1
+PigMudSplash5:
+  Skills:
+  - msg 12:'&3**Poot kicks mud in everyones face**' >0 1
+  - cmd 'cast PigMudSplash $world,$boss_x,$boss_y,$boss_z' >0 1
+  - potion 6:BLINDNESS:5:1 >0 1
+PigKick5:
+  Skills:
+  - msg 12:'&3**Poot flails, kicking everyone away**' >0 1
+  - cmd 'cast PigKick $world,$boss_x,$boss_y,$boss_z' >0 1
+  - throw 5:8:8 >0 1
+PigHeadbutt5:
+  Skills:
+  - msg 12:'&3**Poot smashes his head into nearby players**' >0 1
+  - cmd 'cast PigHeadbutt $world,$boss_x,$boss_y,$boss_z' >0 1

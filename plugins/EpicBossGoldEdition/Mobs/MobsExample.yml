@@ -1,0 +1,138 @@
+test1:
+  Mobtype: zombie
+  Display: '&6Zombie King'
+  Health: 200
+  Damage: 10
+  ShowHealth: true
+  Despawn: false
+  Skills:
+  - pack TestPackSkill <19 1 testpackcd:500
+  - cmd 'cast skele-hit-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.5 spinalhit:20
+  - cmd 'cast skele-death-aoe $world,$boss_x,$boss_y,$boss_z' =0 1
+  Equipment:
+  - loot4
+test2:
+  Mobtype: skeleton
+  Display: '&dHardcore Boss'
+  Health: 100
+  Damage: 10
+  ShowHealth: true
+  Despawn: false
+  Skills:
+  - pack SwarmZombie =50 1
+  - swarm zombie:1:5 <0 0.2
+  Loot:
+  - loot1:1
+  - loot2:2
+  - loot3:3
+  Equipment:
+  - loot5
+test3:
+  Mobtype: sheep
+  Display: '&2Green Sheep'
+  Health: 500
+  Damage: 0
+  ShowHealth: true
+  Despawn: false
+  Skills:
+  - throw 5:0:10 >0 0.2
+  - throw 5:10:10 >0 0.2
+  - throw 5:20:10 >0 0.2
+  - throw 5:100:10 >0 0.2
+  - pull 100:20 >0 1
+  Tags:
+    Color: 10
+TestBoss:
+  Mobtype: zombie
+  Display: '&4Mr Zombie-tester'
+  Health: 100
+  Damage: 0
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Skills:
+  - msg 100:'&4$boss spawned' =spawn 1
+  - msg 100:'&4$boss died and threw a proper death event.' =death 1
+Test4:
+  Mobtype: slime
+  Display: '&6Test Slimer'
+  Health: 10
+  Damage: 0
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Skills:
+  - cmd 'area toggle -w dungeon-world -502,35,1515' 0 =10 1
+  - cmd 'area toggle -w dungeon-world -502,35,1515' 5 =10 1
+  - cmd 'area toggle -w dungeon-world -503,35,1515' 0 =0 1
+  - cmd 'area toggle -w dungeon-world -503,35,1515' 5 =0 1
+Test5:
+  Mobtype: witch
+  Display: '&6Test Kultar'
+  Health: 10
+  Damage: 0
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Skills:
+  - cmd 'area toggle -w dungeon-world -502,34,1515' =10 1
+  - cmd 'area toggle -w dungeon-world -502,34,1515' =9 1
+  - cmd 'area toggle -w dungeon-world -503,34,1515' =1 1
+  - cmd 'area toggle -w dungeon-world -503,34,1515' =0 1
+Test6:
+  Mobtype: irongolem
+  Display: '&6Test Guardian'
+  Health: 10
+  Damage: 0
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Skills:
+  - cmd 'area toggle -w dungeon-world 662,25,574' 0 =10 1
+  - cmd 'area toggle -w dungeon-world 662,25,574' 5 =10 1
+  - cmd 'area toggle -w dungeon-world 661,25,574' 0 =0 1
+  - cmd 'area toggle -w dungeon-world 661,25,574' 5 =0 1
+rider:
+  Bosslist: sheep,zombieking
+War-Rider-Test:
+  Bosslist: Red-Horse-Test,War-Test
+War-Test:
+  Mobtype: skeleton
+  Display: '&6War'
+  Health: 1000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 8
+  Skills:
+  - msg 100:'&4$boss &2My undead armor will drag you down with us!' =1000 1
+  - msg 30:'&4$boss &2War!' =900 1
+  - msg 30:'&4$boss &2Our army will slice through you.' >0 0.02
+  - msg 30:'&4$boss &2We have supperior attack!' =500 1
+  - msg 30:'&4$boss &2Our spirit will never fall!' =100 0.02
+  - msg 30:'&4$boss &2You cannot kill an immortal...' =0 1
+  - swarm $ShardSoldier:1:15 >0 0.1
+  - potionboss FIRE_RESISTANCE:60:3 >0 1
+  - pull 60:2 >75 0.1
+  - lightning 60:1 >0 0.15
+  Equipment:
+  - War
+Red-Horse-Test:
+  Mobtype: horse
+  Display: '&6The Red Horse'
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 8
+  Skills:
+  - throw 5:10:10 >0 1
+  - throw 5:20:10 >0 0.2
+  Tags:
+    Speed: 0.4
+    Saddled: true
+    Tamed: true
+    PlayerRidable: false
+    HorseColor: CHESTNUT
+    HorseStyle: NONE

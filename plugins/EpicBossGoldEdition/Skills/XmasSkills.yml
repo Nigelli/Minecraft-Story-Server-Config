@@ -1,0 +1,69 @@
+GrinchMove1:
+  Skills:
+  - title 350:&cThe_Grinch:&cis_stealing_presents_from_Santa's_Workshop!:4s:4s:4s >0 1
+  - msg 350:'&a[The Grinch]&c The Grinch is stealing presents from Santa's Workshop!' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move TheGrinch christmas-world,180,63,-36' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,180,63,-36' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,180,63,-36' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,180,63,-36' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,180,63,-36' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,180,63,-36' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,180,63,-36' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,180,63,-36' >0 1
+  - delay 10
+  - swarm $Grinchling-Green:5:5 >0 1
+  - swarm $Grinchling-Red:5:5 >0 1
+GrinchMove2:
+  Skills:
+  - title 350:&cThe_Grinch:&cis_stealing_presents_from_the_mountains_Xmas_Tree!:4s:4s:4s >0 1
+  - msg 350:'&a[The Grinch]&c The Grinch is stealing presents from the mountains Xmas Tree!' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move TheGrinch christmas-world,12,125,-5' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,12,125,-5' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,12,125,-5' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,12,125,-5' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,12,125,-5' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,12,125,-5' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,12,125,-5' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,12,125,-5' >0 1
+  - delay 10
+  - swarm $Grinchling-Green:5:5 >0 1
+  - swarm $Grinchling-Red:5:5 >0 1
+GrinchMove3:
+  Skills:
+  - title 350:&cThe_Grinch:&cis_making_his_way_to_the_Worlds_Warmth_Inn!:4s:4s:4s >0 1
+  - msg 350:'&a[The Grinch]&c The Grinch is making his way to the Worlds Warmth Inn!' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move TheGrinch christmas-world,91,63,-106' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,91,63,-106' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,91,63,-106' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,91,63,-106' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,91,63,-106' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,91,63,-106' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,91,63,-106' >0 1
+  - delay 10
+  - cmd 'eb mob move TheGrinch christmas-world,91,63,-106' >0 1
+  - delay 10
+  - swarm $Grinchling-Green:5:5 >0 1
+  - swarm $Grinchling-Red:5:5 >0 1

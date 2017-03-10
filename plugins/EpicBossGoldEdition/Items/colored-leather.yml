@@ -1,0 +1,378 @@
+GoldHat:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 255,217,0
+GoldChest:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 255,217,0
+GoldPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 255,217,0
+GoldBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 255,217,0
+LightGreyHat:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Display: '&aLightGrey Hat'
+  Tags:
+    Color: 222,222,222
+LightGreyJacket:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Display: '&aLightGrey Jacket'
+  Tags:
+    Color: 222,222,222
+LightGreyPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 222,222,222
+LightGreyBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Display: '&aLightGrey Boots'
+  Tags:
+    Color: 222,222,222
+WhiteHat:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Display: '&aWhite Hat'
+  Tags:
+    Color: 255,255,255
+WhiteJacket:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Display: '&aWhite Jacket'
+  Tags:
+    Color: 255,255,255
+WhitePants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 255,255,255
+WhiteBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Display: '&aWhite Boots'
+  Tags:
+    Color: 255,255,255
+DarkRedHat:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Display: '&aDarkRed Hat'
+  Tags:
+    Color: 150,0,22
+DarkRedJacket:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Display: '&aDarkRed Jacket'
+  Tags:
+    Color: 150,0,22
+DarkRedPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 150,0,22
+DarkRedBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Display: '&aDarkRed Boots'
+  Tags:
+    Color: 150,0,22
+BrightOrangePants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 255,156,0
+PumpkinJacket:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 212,108,0
+PumpkinPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 212,108,0
+PumpkinBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 212,108,0
+OrangeJacket:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 255,225,0
+BlueJeans:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 0,183,255
+OrangePants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 255,225,0
+OrangeBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 255,225,0
+GreenHat:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 0,255,76
+GreenCoat:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 0,255,76
+GreenPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 0,255,76
+GreenBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 0,255,76
+RedHat:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 204,0,0
+RedCoat:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 204,0,0
+RedPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 204,0,0
+RedBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 204,0,0
+DarkBlueHat:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 62,75,99
+DarkBlueCoat:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 62,75,99
+DarkBluePants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 62,75,99
+DarkBlueBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 62,75,99
+DarkBrownHat:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 74,30,0
+DarkBrownCoat:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 74,30,0
+DarkBrownPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 74,30,0
+DarkBrownBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 74,30,0
+BlackHat:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Display: '&9Black Hat'
+  Tags:
+    Color: 0,0,0
+BlackChest:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Display: '&9Black Jacket'
+  Tags:
+    Color: 0,0,0
+BlackChest2:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Display: '&9Black Jacket'
+  Tags:
+    Color: 0,0,0
+BlackJacket:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Display: '&9Black Jacket'
+  Tags:
+    Color: 0,0,0
+GrayChest:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Display: '&9Gray Jacket'
+  Tags:
+    Color: 66,66,66
+BlackPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Display: '&aBlack Pants'
+  Tags:
+    Color: 0,0,0
+BlackPants2:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Enchants:
+  - PROTECTION_ENVIRONMENTAL:5
+  Display: '&aBlack Pants'
+  Tags:
+    Color: 0,0,0
+LightBlueCoat:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 51,153,255
+LightPurpleCoat:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 204,102,255
+OffGreenPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 0,255,0
+WickerJacket:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 148,115,63
+WickerPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 148,115,63
+WickerBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 148,115,63
+DarkGreenJacket:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 30,56,19
+DarkGreenPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 30,56,19
+DarkGreenBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 30,56,19
+MummyHat:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 199,181,151
+MummyWraps:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 199,181,151
+MummyLegWraps:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 199,181,151
+MummyFeetWraps:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Tags:
+    Color: 199,181,151

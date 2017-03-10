@@ -1,0 +1,376 @@
+Psychoblade:
+  Mobtype: skeleton
+  Display: '&6Psychoblade'
+  Health: 1200
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 10
+  Skills:
+  - msg 100:'&4$boss &2You will suffer for this trespass!' o=2190 1
+  - msg 100:'&4$boss &2Tragic. To come so far, only to fail.' >0 0.003 psychoblademsg:30
+  - msg 100:'&4$boss &2Evicerate them!' >0 0.003 psychoblademsg:30
+  - msg 100:'&4$boss &2Ill cut ya!' >0 0.003 psychoblademsg:30
+  - msg 100:'&4$boss &2Do you know who I am? I will forge a thousand weapons before you can stop me !' >0 0.003 psychoblademsg:30
+  - msg 100:'&4$boss &2You waste my time!' >0 0.003 psychoblademsg:30
+  - msg 100:'&4$boss &2Who needs a guillatine when you have MY blade!' >0 0.003 psychoblademsg:30
+  - msg 100:'&4$boss &2I'll paint my face with your blood!' >0 0.003 psychoblademsg:30
+  - msg 100:'&4$boss &2Some things are better left alone!' >0 0.003 psychoblademsg:30
+  - msg 100:'&4$boss &2Shhhh, it will all be over soon.' o=1100 1
+  - msg 100:'&4$boss &2'Ill rip the secrets from your flesh!' o=500 1
+  - msg 100:'&4$boss &2Ill be back, with more weapons, to shred you uppp!...' =death 1
+  - cmd 'cast slashaoes-npc $world,$boss_x,$boss_y,$boss_z' <1100 1 psychobladeaoes:30
+  - cmd 'cast slashaoem-npc $world,$boss_x,$boss_y,$boss_z' <1100 1 psychobladeaoem:30
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-1' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-2' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-3' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-4' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-5' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-6' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-7' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-8' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-9' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-10' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-11' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-12' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-13' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-14' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-15' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-17' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-18' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-19' o=1200 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-20' o=1200 1
+  - cmd 'eb mob spawn SeveredHead 4 citadel-1' o=1200 1
+  - cmd 'eb mob spawn HeadlessAdventurer 4 citadel-1' o=1200 1
+  - cmd 'eb mob spawn SeveredHead 4 citadel-2' o=1200 1
+  - cmd 'eb mob spawn HeadlessAdventurer 4 citadel-2' o=1200 1
+  - cmd 'eb mob spawn SeveredHead 6 citadel-3' o=1200 1
+  - cmd 'eb mob spawn HeadlessAdventurer 6 citadel-3' o=1200 1
+  - cmd 'eb mob spawn SeveredHead 4 citadel-4' o=1200 1
+  - cmd 'eb mob spawn HeadlessAdventurer 4 citadel-4' o=1200 1
+  - cmd 'eb mob spawn SeveredHead 4 citadel-5' o=1200 1
+  - cmd 'eb mob spawn HeadlessAdventurer 4 citadel-5' o=1200 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 o=1200 1
+  - potionboss INCREASE_DAMAGE:9999:2 o=1200 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=1200 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:2 =spawn 1
+  - potionboss SPEED:9999:2 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - throw 5:3:3 >0 0.4
+  - throw 5:3:10 >0 0.02
+  - voxeffect skeletonbeast >0 0.3
+  - swarm $EnchantedWeapon:5:5 o=1200 1
+  - swarm $EnchantedWeapon:5:5 o=600 1
+  - swarm $EnchantedWeapon:5:5 o=100 1
+  - swarm $EnchantedWeapon:2:5 >0 1 psychobladesummon:80
+  - swarm $EnchantedWeapon:3:5 >0 0.03 psychobladesummon:80
+  - swarm $EnchantedWeapon:4:5 >0 0.01 psychobladesummon2:80
+  - consume 4:4:6:0 WOLF >0 0.3
+  - cmd 'eb mob kill Cabal' o=1200 1
+  - cmd 'eb mob kill Cabal-Copy' o=1200 1
+  - cmd 'eb mob kill Wither-Pet' o=1200 1
+  - cmd 'eb mob kill Wither-Flyer' o=1200 1
+  - cmd 'eb mob kill Astaroth' o=1200 1
+  - cmd 'area toggle -w dungeon-world -1780,63,2148' 0 o=1200 1
+  - cmd 'area toggle -w dungeon-world -1786,63,2152' 6 o=1200 1
+  - cmd 'area toggle -w dungeon-world -1786,63,2153' 0 =death 1
+  - cmd 'area toggle -w dungeon-world -1780,63,2145' 12 o=1200 1
+  - cmd 'eb mob leashspawn Cabal dungeon-world,-1826,6,2007' =death 1
+  - cmd 'eb mob kill EnchantedWeapon' 12 =death 1
+  - cmd 'eb mob spawn SeveredHead 6 citadel-7' =death 1
+  - cmd 'eb mob spawn SeveredHead 6 citadel-8' =death 1
+  - cmd 'broad &7Transport to the Citadel of Severed Horrors has docked.' o=1200 1
+  - msg 100:'&dThe West Wing of the Citadel of Severed Horrors has been opened.' =death 1
+  - swarm $LG:1:1 =spawn 0.1 gremlincd:4200
+  Equipment:
+  - Psychoblade
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+Astaroth-Rider:
+  Bosslist: Wither-Flyer,Astaroth
+Cabal:
+  Mobtype: skeleton
+  Display: '&6Cabal'
+  Health: 3200
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 44
+  regen:
+    interval-seconds: 3
+    amount: 10
+  Skills:
+  - msg 100:'&6$boss &2He was weak but I am much stronger!' =spawn 1
+  - msg 100:'&6[$boss -> You]&f I have entered your mind so easily...' o=3190 1
+  - msg 100:'&4$boss &2You are but simple toys!' >0 0.02 cabalmsg:30
+  - msg 100:'&4$boss &2Ill warp your reality!' >0 0.02 cabalmsg:30
+  - msg 100:'&4$boss &2Your concience will be mine!' >0 0.02 cabalmsg:30
+  - msg 100:'&4$boss &2Show me your magic!' >0 0.02 cabalmsg:30
+  - msg 100:'&4$boss &2I will sculpt your mind like clay!' >0 0.02 cabalmsg:30
+  - msg 100:'&4$boss &2Your memories are quite troubling!' >0 0.02 cabalmsg:30
+  - msg 100:'&4$boss &2No... Master! Help me...' =death 1
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' <6400 0.4 cabalsaoes:40
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' <6400 0.4 cabalfaoes:40
+  - cmd 'cast fireaoem-npc $world,$boss_x,$boss_y,$boss_z' <6400 0.4 cabalfaoem:70
+  - cmd 'cast fireaoesnipe-npc $world,$boss_x,$boss_y,$boss_z' <6400 0.4 cabalaoesnipe:20
+  - potionboss FIRE_RESISTANCE:60:3 >0 1
+  - teleport >0 0.4
+  - potionboss SPEED:9999:3 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - equip CabalMelee o=1650 1
+  - shootfireball 0:true:100 <8150 1 cabalfireball:40
+  - cmd 'cast 10damageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 cabalphysical:30
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 <3100 1 cabalshadowaoes:75
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 <700 1 cabalshadowaoes:40
+  - cmd 'cast shadowaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 <3100 1 cabalshadowaoem:70
+  - cmd 'cast shadowaoel-npc $world,$boss_x,$boss_y,$boss_z' 0 <3100 1  cabalshadowaoel:80
+  - throw 5:4:4 >0 0.4
+  - throw 5:12:4 >0 0.3
+  - voxeffect largeendermanhit >0 0.3
+  - pack CabalCopy <3150 1 shadowimages:500
+  - cmd 'eb mob kill C-Copy' =death 1
+  - cmd 'eb mob kill Astaroth' =spawn 1
+  - cmd 'eb mob kill EnchantedWeapon' =spawn 1
+  - cmd 'eb mob kill Wither-Flyer' =spawn 1
+  - cmd 'eb mob kill Wither-Pet' =spawn 1
+  - cmd 'eb mob leashspawn Astaroth dungeon-world,-1781,60,2035' 6 =death 1
+  - cmd 'area toggle -w dungeon-world -1781,63,2148' 0 =death 1
+  - cmd 'eb mob spawn SeveredHead 6 citadel-7' =death 1
+  - cmd 'eb mob spawn HeadlessAdventurer 6 citadel-7' =death 1
+  - cmd 'eb mob spawn SeveredHead 6 citadel-8' =death 1
+  - cmd 'eb mob spawn HeadlessAdventurer 6 citadel-8' =death 1
+  - cmd 'eb mob spawn SeveredHead 6 citadel-9' =death 1
+  - cmd 'eb mob spawn HeadlessAdventurer 6 citadel-9' =death 1
+  - cmd 'eb mob spawn SeveredHead 6 citadel-10' =death 1
+  - cmd 'eb mob spawn HeadlessAdventurer 6 citadel-10' =death 1
+  - cmd 'eb mob spawn SeveredHead 6 citadel-11' =death 1
+  - cmd 'eb mob spawn HeadlessAdventurer 6 citadel-11' =death 1
+  - cmd 'eb mob spawn SeveredHead 6 citadel-12' =death 1
+  - cmd 'eb mob spawn HeadlessAdventurer 6 citadel-12' =death 1
+  - cmd 'eb mob spawn SeveredHead 6 citadel-13' =death 1
+  - cmd 'eb mob spawn HeadlessAdventurer 6 citadel-13' =death 1
+  - cmd 'eb mob spawn SeveredHead 6 citadel-14' =death 1
+  - cmd 'eb mob spawn HeadlessAdventurer 6 citadel-14' =death 1
+  - cmd 'eb mob spawn SeveredHead 6 citadel-15' =death 1
+  - cmd 'eb mob spawn HeadlessAdventurer 6 citadel-15' =death 1
+  - msg 100:'&dThe North Wing of the Citadel of Severed Horrors has been opened.' =death 1
+  - swarm $LG:1:1 =spawn 0.1 gremlincd:4200
+  Equipment:
+  - Cabal
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+C-Copy:
+  Mobtype: witherskeleton
+  Display: '&6Cabal'
+  Health: 20
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 10
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:3 =spawn 1
+  - healboss 50:Cabal:30 >0 0.4
+  Equipment:
+  - Cabal
+CTester:
+  Mobtype: zombie
+  Display: '&fZombie'
+  Health: 30
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 0
+  Skills:
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-1' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-2' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-3' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-4' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-5' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-6' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-7' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-8' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-9' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-10' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-11' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-12' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-13' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-14' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-15' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-17' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-18' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-19' o=30 1
+  - cmd 'eb mob spawn HeadlessKnight 1 sr-20' o=30 1
+  Equipment:
+  - HeadlessKnight
+HeadlessKnight:
+  Mobtype: skeleton
+  Display: '&fHeadless Knight'
+  Health: 80
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 3
+  Skills:
+  - potionboss INVISIBILITY:9999:1 o=100 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=100 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - HeadlessKnight
+EnchantedWeapon:
+  Mobtype: skeleton
+  Display: '&fEnchanted Weapon'
+  Health: 300
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 4
+  Skills:
+  - potionboss INCREASE_DAMAGE:9999:1 o=100 1
+  - potionboss INVISIBILITY:9999:1 o=100 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=100 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - consume 4:4:1000:80 WOLF >0 0.3
+  Equipment:
+  - EnchantedWeapon
+Astaroth:
+  Mobtype: witherskeleton
+  Display: '&6Astaroth'
+  Health: 4500
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 4
+  Skills:
+  - msg 100:'&6$boss &2Finally the heroes arive!' =spawn 1
+  - msg 100:'&6$boss &2Defiance... a flaw of mortality.' o=4490 1
+  - msg 100:'&4$boss &2You thought to stand before the legions of death... and survive?' >0 0.003
+  - msg 100:'&4$boss &2The black blood of Gorelock courses through me! I. AM. UNSTOPPABLE!' >0 0.003
+  - msg 100:'&4$boss &2Your destruction will herald a new age of suffering!' >0 0.003
+  - msg 100:'&4$boss &2When my work is complete, you will beg for mercy -- and I will deny you.' >0 0.003
+  - msg 100:'&4$boss &2Your anguished cries will be testament to my unbridled power.' >0 0.003
+  - msg 100:'&4$boss &2Behold, now! Terror, absolute!' o=3250 1
+  - msg 100:'&4$boss &2Such insolance..such arrogance..must be PUNISHED!' >0 0.003
+  - msg 100:'&4$boss &2Oh, what horrors await....' =death 1
+  - cmd 'cast 15damageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 gorelockphysical:270
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 0.3 astarothaoes:190
+  - cmd 'cast shadowaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 0.3 astarothaoem:240
+  - cmd 'cast shadowaoel-npc $world,$boss_x,$boss_y,$boss_z' >0 0.3 astarothaoel:270
+  - cmd 'cast doom-npc $world,$player_x,$player_y,$player_z' >2000 0.02 astarothdoom:250
+  - cmd 'cast doom-npc $world,$player_x,$player_y,$player_z' <2000 1 astarothdoom:250
+  - cmd 'cast shadowaoesnipe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 astarothsnipe:60
+  - cmd 'cast 20kickdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 asphys1:45
+  - throw 5:4:3 >0 0.3
+  - pack AstarothRebuff >0 0.3 grb:120
+  - potionboss DAMAGE_RESISTANCE:9999:2 =spawn 1
+  - potionboss INCREASE_DAMAGE:9999:1 =spawn 1
+  - potionboss SPEED:9999:3 =spawn 1
+  - consume 12:12:10:0 IRON_GOLEM >0 1
+  - swarm $Wither-Pet:1:1 o=4000 1
+  - swarm $Wither-Pet:3:1 o=2000 1
+  - swarm $SeveredHead:15:15 =spawn 1
+  - swarm $EnchantedWeapon:5:15 =spawn 1
+  - swarm $SeveredHead:2:15 >0 0.4 astarothseveredhead:220
+  - swarm $EnchantedWeapon:1:15 >0 0.4 astarothenchantedweapon:240
+  - deathpack Astarothkillplayer 80 >0 1 astarothdeathpack:60
+  - cmd 'area toggle -w dungeon-world -1781,63,2145' 6 =death 1
+  - cmd 'eb mob kill Wither-Flyer' 12 =death 1
+  - cmd 'eb mob kill Wither-Pet' 18 =death 1
+  - cmd 'eb mob kill SeveredHead' 21 =death 1
+  - cmd 'eb mob kill EnchantedWeapon' 27 =death 1
+  - cmd 'cast witherskele-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'broad &7Astaroth has been slain.' =death 1
+  - swarm $LG:1:1 =spawn 0.1 gremlincd:4200
+  - voxeffect withercreaturehit >0 0.2
+  Equipment:
+  - Astaroth
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+SeveredHead:
+  Mobtype: zombie
+  Display: '&fSevered Head'
+  Health: 80
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 3
+  Skills:
+  - potionboss INVISIBILITY:9999:1 o=100 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=100 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - WitherSkullHead
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+HeadlessAdventurer:
+  Mobtype: zombie
+  Display: '&fHeadless Adventurer'
+  Health: 40
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 3
+  Skills:
+  - potionboss INVISIBILITY:9999:1 o=100 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=100 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - HeadlessAdventurer
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+Wither-Flyer:
+  Mobtype: wither
+  Display: '&6Wither'
+  Health: 700
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 8
+  Skills:
+  - cmd 'cast shadowaoe-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.5
+Wither-Pet:
+  Mobtype: wither
+  Display: '&6Wither'
+  Health: 400
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 8
+  Skills:
+  - cmd 'cast shadowaoe-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.5
+CabalHolder:
+  Mobtype: witch
+  Display: '&6The Wandering Witch'
+  Health: 400
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 8
+  Skills:
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 <3100 1 cabalshadowaoes:65
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 <700 1 cabalshadowaoes:30
+  - cmd 'cast shadowaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 <3100 1 cabalshadowaoem:60
+  - cmd 'cast shadowaoel-npc $world,$boss_x,$boss_y,$boss_z' 0 <3100 1  cabalshadowaoel:70
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 astarothaoes:60
+  - cmd 'cast shadowaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 astarothaoem:90
+  - cmd 'cast shadowaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 astarothaoel:140
+WanderingWitch:
+  Mobtype: witch
+  Display: '&6The Wandering Witch'
+  Health: 400
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 8
+  Skills:
+  - msg 100:'&6$boss &2Come for a taste of this witches brew?.' o=390 1
+  - msg 100:'&4$boss &2Double, double toil and... what was it?' >0 0.003
+  - msg 100:'&4$boss &2Care for some cookies dear?' >0 0.003
+  - msg 100:'&4$boss &2Fire burn, and caldron, uh... caldron...' >0 0.003
+  - msg 100:'&4$boss &2I like big wands and I cannot lie' >0 0.003
+  - msg 100:'&4$boss &2Sorry about that dear...' =death 1

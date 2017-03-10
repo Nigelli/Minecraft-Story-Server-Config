@@ -1,0 +1,24 @@
+CGuardian1:
+  Bosses: CavernGuardian
+  MaxAmount: 1
+  RespawnTime: 4500
+  WalkDistance: 1
+  Location: boss-world, 125, 4, 180
+CGuardian2:
+  Bosses: CavernGuardian
+  MaxAmount: 1
+  RespawnTime: 4500
+  WalkDistance: 1
+  Location: boss-world, 136, 4, 128
+CGuardian3:
+  Bosses: CavernGuardian
+  MaxAmount: 1
+  RespawnTime: 4500
+  WalkDistance: 1
+  Location: boss-world, 87, 4, 75
+CGuardian4:
+  Bosses: CavernGuardian
+  MaxAmount: 1
+  RespawnTime: 4500
+  WalkDistance: 1
+  Location: boss-world, 51, 2, 254

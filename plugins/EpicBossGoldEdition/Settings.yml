@@ -1,0 +1,99 @@
+# SaveInterval: how often it should save in minutes
+# TimerUpdate: How often in seconds should timers update
+# WalkUpdate: How often in seconds the walk should update
+SaveInterval: 1
+TimerUpdate: 1
+leash-timer-time: 35s
+WalkUpdate: 30
+health-api: ActionBarApi
+ShowHealth: '&8[&6EpicBoss&8] $boss &8[&4$percentage% left&8]'
+ShowHealthRadius: 25
+ShowBarAlive: $boss &4$health/$maxhealth
+ShowBarKilledBy: $boss &5killed by $killer
+ShowBarDead: $boss is dead
+ShowBarDistance: 40 - special sound mob.wither.hurt 1.0 1.5 - special sound mob.skeleton.hit 0.5 0.0 - special sound mob.skeleton.death 0.5 0.0 - special sound game.player.hurt.fall.big 1.0 1.0
+vox-effects:
+  basichurt:
+    sounds:
+      ENTITY_PLAYER_HURT:
+        volume: 1
+        pitch: 1.0
+  bigzombie:
+    sounds:
+      ENTITY_ZOMBIE_HURT:
+        volume: 2
+        pitch: 0.0
+      ENTITY_PLAYER_HURT:
+        volume: 1
+        pitch: 1.0
+  skeletonbeast:
+    sounds:
+      ENTITY_WITHER_HURT:
+        volume: 1
+        pitch: 1.5
+      ENTITY_SKELETON_HURT:
+        volume: 0.5
+        pitch: 0.0
+      ENTITY_SKELETON_DEATH:
+        volume: 0.5
+        pitch: 0.0
+      ENTITY_GENERIC_BIG_FALL:
+        volume: 1.0
+        pitch: 1.0
+  villager:
+    sounds:
+      ENTITY_VILLAGER_HURT:
+        volume: 1
+        pitch: 1.0
+  clownhit1:
+    sounds:
+      ENTITY_PLAYER_HURT:
+        volume: 1
+        pitch: 1.0
+      ENTITY_CHICKEN_EGG:
+        volume: 1
+        pitch: 0.0
+  clownhit2:
+    sounds:
+      ENTITY_VILLAGER_HURT:
+        volume: 1
+        pitch: 0.6
+  withercreaturehit:
+    sounds:
+      ENTITY_WITHER_HURT:
+        volume: 1.5
+        pitch: 0.5
+      ENTITY_ZOMBIE_HURT:
+        volume: 1.8
+        pitch: 0.5
+  withercreaturehit2:
+    sounds:
+      ENTITY_HORSE_ANGRY:
+        volume: 0.5
+        pitch: 0.5
+      ENTITY_WITHER_HURT:
+        volume: 1.5
+        pitch: 0.5
+      ENTITY_ZOMBIE_HURT:
+        volume: 1.8
+        pitch: 0.5
+  smallendermanhit:
+    sounds:
+      ENTITY_ENDERMEN_SCREAM:
+        volume: 2.0
+        pitch: 2.0
+  largeendermanhit:
+    sounds:
+      ENTITY_ENDERMEN_SCREAM:
+        volume: 2.0
+        pitch: 0.0
+  werewolfhit:
+    sounds:
+      ENTITY_WOLF_GROWL:
+        volume: 1.0
+        pitch: 0.6
+  werewolfhowl:
+    sounds:
+      ENTITY_WOLF_HOWL:
+        volume: 2.0
+        pitch: 0.4

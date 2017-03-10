@@ -1,0 +1,29 @@
+PitResetPack:
+  Skills:
+  - cmd 'area toggle -w dungeon-world 689,255,2409' >0 1
+  - cmd 'area toggle -w dungeon-world 677,255,2409' >0 1
+  - cmd 'area toggle -w dungeon-world 688,255,2409' >0 1
+  - cmd 'area toggle -w dungeon-world 687,255,2409' >0 1
+  - cmd 'area toggle -w dungeon-world 686,255,2409' >0 1
+  - cmd 'area toggle -w dungeon-world 685,255,2409' >0 1
+  - cmd 'area toggle -w dungeon-world 684,255,2409' >0 1
+  - cmd 'area toggle -w dungeon-world 683,255,2409' >0 1
+  - cmd 'area toggle -w dungeon-world 682,255,2409' >0 1
+  - cmd 'area toggle -w dungeon-world 681,255,2409' >0 1
+  - cmd 'area toggle -w dungeon-world 680,255,2409' >0 1
+  - cmd 'area toggle -w dungeon-world 679,255,2409' >0 1
+  - cmd 'area toggle -w dungeon-world 678,255,2409' >0 1
+  - cmd 'area toggle -w dungeon-world 677,254,2409' >0 1
+  - cmd 'eb mob kill Drip' >0 1
+  - cmd 'eb mob kill Undersludge' >0 1
+  - cmd 'eb mob kill PitBomber2' >0 1
+  - cmd 'eb mob kill PitBomber3' >0 1
+  - cmd 'eb mob kill PitBomber4' >0 1
+  - cmd 'eb mob kill PitBomber5' >0 1
+  - cmd 'eb mob kill PitBomber6' >0 1
+  - cmd 'eb mob kill PitBomber7' >0 1
+  - cmd 'eb mob kill PitBomber8' >0 1
+  - cmd 'eb mob kill PitBomber9' >0 1
+  - cmd 'eb mob kill PitBomber10' >0 1
+  - cmd 'eb mob kill PitBomber11' >0 1
+  - cmd 'broad &7Strange tremors can be felt deep underground.' >0 1

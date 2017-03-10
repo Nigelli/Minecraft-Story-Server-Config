@@ -1,0 +1,606 @@
+# 
+#  - potion 20:WITHER:20:1 >0 1
+Captain-Skyhook:
+  Mobtype: witherskeleton
+  Display: '&6Captain Skyhook'
+  Health: 2000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 22
+  Skills:
+  - msg 30:'&4$boss &2Yar! Haha!' >0 0.003 skyhookmsg:60
+  - msg 30:'&4$boss &2Dont you know who I am? What Ive done?' >0 0.003 skyhookmsg:60
+  - msg 30:'&4$boss &2Yer after me hook? I think not!' >0 0.003 skyhookmsg:60
+  - msg 30:'&4$boss &2Ill scratch your pretty little eyeballs out!' >0 0.003 skyhookmsg:60
+  - msg 30:'&4$boss &2You cant kill me twice!' >0 0.003 skyhookmsg:60
+  - msg 30:'&4$boss &2Come get em-boys!' >0 0.003 skyhookmsg:60
+  - msg 30:'&4$boss &2Keep them off the ship!' >0 0.003 skyhookmsg:60
+  - msg 30:'&4$boss &2He made me a deal I couldnt refuse!' >0 0.003 skyhookmsg:60
+  - msg 30:'&4$boss &2Our Airship fleet is endless!' >0 0.003 skyhookmsg:60
+  - msg 30:'&4$boss &2Dont touch my ship!' >0 0.003 skyhookmsg:60
+  - msg 30:'&4$boss &2Get over here! Haha!' >0 0.003 skyhookmsg:60
+  - msg 30:'&4$boss &2About time you showed up! Our master is waiting.' o=1999 1
+  - msg 30:'&4$boss &2He brought me back once, he will do it again...' =death 1
+  - cmd 'cast explosion-bomb-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.004
+  - cmd 'cast explosion-bomb-npc $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+  - cmd 'cast slashaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 skyhookaoes:60
+  - cmd 'cast slashaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 skyhookaoem:60
+  - msg 30:'&4$boss &2Get back here!' o=50 1
+  - swarm $Blackholme-Bruiser:2:1 =spawn 1
+  - swarm $Blackholme-Pirate1:5:15 =spawn 1
+  - swarm $Blackholme-Pirate2:5:15 2000 1
+  - swarm $Blackholme-Pirate1:1:15 >0 1 skyhookcall1:120
+  - swarm $Blackholme-Pirate2:1:15 >0 1 skyhookcall2:130
+  - swarm $Blackholme-Pirate1:5:15 o=600 1
+  - swarm $Blackholme-Pirate2:5:15 o=600 1
+  - msg 30:'&4$boss &2Come get em-boys!' o=600 1
+  - swarm $Blackholme-Pirate1:5:2 o=300 1
+  - swarm $Blackholme-Pirate2:5:2 o=300 1
+  - msg 30:'&4$boss &2Come get em-boys!' o=300 1
+  - swarm tnt:1:2 >0 0.02
+  - potion 5:HARM:1:1 >0 0.05
+  - consume 4:4:5:0 WOLF >0 1
+  - consume 4:4:5:0 IRON_GOLEMS >0 1
+  - throw 5:3:3 >0 1
+  - teleport >0 0.4
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 =spawn 1
+  - potionboss SPEED:500:4 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 >0 1
+  - potionboss SPEED:50:4 >0 1
+  - potionboss SLOW:50:1 >0 1
+  - cmd 'eb mob kill Shade-of-Gorelock' =spawn 100
+  - cmd 'eb mob kill Gorelock' =spawn 100
+  - cmd 'eb mob kill Alpha' =spawn 100
+  - cmd 'eb mob kill Experiment-Kappa' =spawn 100
+  - cmd 'eb mob kill Experiment-Epsilon' =spawn 100
+  - cmd 'eb mob kill Experiment-Delta' =spawn 100
+  - cmd 'eb mob kill Professor-Putrid' =spawn 100
+  - cmd 'eb mob kill Professor-Putrid' o=1000 100
+  - cmd 'eb mob spawn Professor-Putrid 1 blackholme-professor-putrid' =death 1
+  - cmd 'area toggle -w dungeon-world -1004,67,2154' =spawn 1
+  - swarm $LG:1:1 =spawn 0.1 gremlincd:4200
+  - cmd 'eb mob spawn Blackholme-Scientist1 1 bhscientist1' =death 1
+  - cmd 'eb mob spawn Blackholme-Scientist2 1 bhscientist2' =death 1
+  - cmd 'eb mob spawn Blackholme-Scientist3 1 bhscientist3' =death 1
+  - cmd 'eb mob spawn Blackholme-Scientist4 1 bhscientist4' =death 1
+  - cmd 'broad &7The zepplin to Blackholme is ready. Raise your weapons, and take the fight to the enemy.' =spawn 1
+  - cmd 'area toggle -w dungeon-world -766,63,2178' =spawn 1
+  - cmd 'area toggle -w dungeon-world -766,62,2178' =death 1
+  Equipment:
+  - Skyhook
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+Blackholme-Scientist1:
+  Mobtype: pigzombie
+  Display: Blackholme Scientist
+  Health: 250
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - swarm $Blackholme-Bruiser:1:1 o=spawn 1
+  - swarm $Blackholme-Pirate1:2:2 o=spawn 1
+  - swarm $Blackholme-Pirate2:2:2 o=spawn 1
+  - swarm $Blackholme-Slayer:2:2 o=spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=spawn 1
+  - potionboss SPEED:9999:1 o=spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:1 >0 1
+  - cmd 'cast opendoor-sound $world,-774,45,2180' =death 1
+  - cmd 'area toggle -w dungeon-world -766,63,2182' =spawn 1
+  - cmd 'area toggle -w dungeon-world -766,63,2181' =spawn 1
+  - cmd 'area toggle -w dungeon-world -766,63,2180' =spawn 1
+  - cmd 'area toggle -w dungeon-world -766,63,2179' =spawn 1
+  - cmd 'area toggle -w dungeon-world -766,62,2182' =death 1
+  Equipment:
+  - AllWhite
+Blackholme-Scientist2:
+  Mobtype: pigzombie
+  Display: Blackholme Scientist
+  Health: 250
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - cmd 'cast opendoor-sound $world,-789,45,2180' =death 1
+  - swarm $Blackholme-Bruiser:1:1 =spawn 1
+  - swarm $Blackholme-Pirate1:2:2 =spawn 1
+  - swarm $Blackholme-Pirate2:2:2 =spawn 1
+  - swarm $Blackholme-Slayer:2:2 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=150 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=150 1
+  - potionboss SPEED:9999:1 o=150 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:1 >0 1
+  - cmd 'area toggle -w dungeon-world -766,62,2181' =death 1
+  - cmd 'eb mob spawn Blackholme-Engineer 10 bhengineer1' =death 1
+  Equipment:
+  - AllWhite
+Blackholme-Scientist3:
+  Mobtype: pigzombie
+  Display: Blackholme Scientist
+  Health: 250
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - cmd 'cast opendoor-sound $world,-817,45,2180' =death 1
+  - swarm $Blackholme-Bruiser:1:1 =spawn 1
+  - swarm $Blackholme-Pirate1:2:2 =spawn 1
+  - swarm $Blackholme-Pirate2:2:2 =spawn 1
+  - swarm $Blackholme-Slayer:2:2 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=150 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=150 1
+  - potionboss SPEED:9999:1 o=150 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:1 >0 1
+  - cmd 'area toggle -w dungeon-world -766,62,2180' =death 1
+  Equipment:
+  - AllWhite
+Blackholme-Scientist4:
+  Mobtype: pigzombie
+  Display: Blackholme Scientist
+  Health: 250
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - cmd 'cast opendoor-sound $world,-912,47,2180' =death 1
+  - swarm $Blackholme-Bruiser:2:3 =spawn 1
+  - swarm $Blackholme-Scientist5:3:3 =spawn 1
+  - swarm $Blackholme-Bruiser:1:1 =spawn 1
+  - swarm $Blackholme-Pirate1:2:2 =spawn 1
+  - swarm $Blackholme-Pirate2:2:2 =spawn 1
+  - swarm $Blackholme-Slayer:2:2 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=150 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=150 1
+  - potionboss SPEED:9999:1 o=150 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:1 >0 1
+  - cmd 'area toggle -w dungeon-world -766,62,2179' =3 1
+  - cmd 'area toggle -w dungeon-world -766,62,2179' =2 1
+  - cmd 'area toggle -w dungeon-world -766,62,2179' =1 1
+  - cmd 'area toggle -w dungeon-world -766,62,2179' =0 1
+  - cmd 'area toggle -w dungeon-world -766,62,2179' =death 1
+  Equipment:
+  - AllWhite
+Blackholme-Scientist5:
+  Mobtype: pigzombie
+  Display: Blackholme Scientist
+  Health: 250
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=150 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=150 1
+  - potionboss SPEED:9999:1 o=150 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:1 >0 1
+  Equipment:
+  - AllWhite
+Blackholme-Recruit:
+  Mobtype: pigzombie
+  Display: ''
+  Health: 40
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=150 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=150 1
+  - potionboss SPEED:9999:3 o=150 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:3 >0 1
+  Equipment:
+  - BlackholmeGear
+Blackholme-Bruiser:
+  Mobtype: pigzombie
+  Display: ''
+  Health: 500
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=1000 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=1000 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - BlackholmeGear
+Blackholme-Engineer:
+  Mobtype: pigzombie
+  Display: ''
+  Health: 500
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=1000 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=1000 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - BlackholmeEngineer
+Professor-Putrid:
+  Mobtype: villagezombie
+  Display: '&6Professor Putrid'
+  Health: 4000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 8
+  Skills:
+  - msg 20:'&4$boss &2Bad news nobody! That hurt!' >0 0.003 putridtalk:60
+  - msg 20:'&4$boss &2Good news!' It's a suppository!' >0 0.003 putridtalk:60
+  - msg 20:'&4$boss &2Ill show them.. ILL SHOW THEM ALL!' >0 0.003 putridtalk:60
+  - msg 20:'&4$boss &2I had to do this! THEY RUINED ME!' >0 0.003 putridtalk:60
+  - msg 20:'&4$boss &2Oops! That might sting a little.' >0 0.003 putridtalk:60
+  - msg 20:'&4$boss &2SWEET ZOMBIE JESUS!' >0 0.003 putridtalk:60
+  - msg 20:'&4$boss &2Shut up, friends!' >0 0.003 putridtalk:60
+  - msg 20:'&4$boss &2Eh wha?!' >0 0.003 putridtalk:60
+  - msg 20:'&4$boss &2Hmm...' Interesting...' >0 0.003 putridtalk:60
+  - msg 20:'&4$boss &2That was unexpected!' >0 0.003 putridtalk:60
+  - msg 20:'&4$boss &2Science!' >0 0.003 putridtalk:60
+  - msg 20:'&4$boss &2Astounding!' >0 0.003 putridtalk:60
+  - msg 100:'&4$boss &2Good news everyone! Ive failed yet another experiement!' =spawn 1
+  - msg 20:'&4$boss &2Two oozes, one room! So many delightful possibilities...' o=1000 1
+  - msg 20:'&4$boss &2Bad news everyone! I don't think I'm going to make it...' o=100 1
+  - msg 20:'&4$boss &2Go get them Alpha!' Save your poor master!' o=3000 1
+  - msg 20:'&4$boss &2Terrible news everyone! Im dead.' =death 1
+  - cmd 'cast 10damageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 putridphysical:30
+  - cmd 'cast hacidfloor-npc $world,$player_x,$player_y,$player_z' 0 >2000 0.05
+  - cmd 'cast hacidfloor-npc $world,$player_x,$player_y,$player_z' 0 <2000 0.1
+  - cmd 'cast acidaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 putridaoes:70
+  - cmd 'cast acidaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 putridaoem:130
+  - cmd 'cast damageaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 putridaoe:40
+  - throw 5:4:4 >0 0.4
+  - teleport >0 0.4
+  - swarm $FailedExperiment:1:3 <4000 0.2 callfailed:200
+  - swarm $FailedExperiment:5:3 =spawn 1
+  - swarm $Experiment-Delta:1:1 =spawn 1
+  - swarm $Experiment-Delta:1:1 o=2000 1
+  - swarm $Experiment-Delta:1:1 >0 0.001
+  - swarm $Experiment-Epsilon:1:1 >0 0.001
+  - swarm $Experiment-Kappa:1:1 >0 0.001
+  - swarm $Experiment-Delta:1:1 o=1000 1
+  - swarm $Experiment-Epsilon:1:1 o=1000 1
+  - swarm $Alpha:1:1 o=3000 1
+  - swarm magmacube:1:1 >0 0.01
+  - consume 4:4:5:0 WOLF >0 0.3
+  - consume 4:4:5:0 IRON_GOLEMS >0 0.3
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 =spawn 1
+  - potionboss SPEED:500:6 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 >0 1
+  - potionboss SPEED:50:6 >0 1
+  - potionboss SLOW:50:1 >0 1
+  - cmd 'area toggle -w dungeon-world -939,62,2183' =spawn 1
+  - cmd 'area toggle -w dungeon-world -939,62,2182' =death 1
+  - cmd 'eb mob kill Shade-of-Gorelock' =spawn 1
+  - cmd 'eb mob kill Shade-of-Gorelock' o=1000 1
+  - cmd 'eb mob kill Gorelock' =spawn 1
+  - cmd 'eb mob kill Gorelock' o=2000 1
+  - cmd 'eb mob kill Experiment-Kappa' =death 100
+  - cmd 'eb mob kill Experiment-Epsilon' =death 100
+  - cmd 'eb mob kill Experiment-Delta' =death 100
+  - cmd 'eb mob spawn Gorelock 1 blackholme-gorelock' =death 100
+  - swarm $LG:1:1 =spawn 0.1 gremlincd:4200
+  - cmd 'eb mob move Blackholme-Engineer $world,$boss_x,$boss_y,$boss_z' o=2000 1
+  - cmd 'eb mob move Blackholme-Recruit $world,$boss_x,$boss_y,$boss_z' o=2000 1
+  - cmd 'eb mob move Blackholme-Slayer $world,$boss_x,$boss_y,$boss_z' o=2000 1
+  - msg 20:'&4$boss &2Get in you bums! What are you doing out there?!' o=2000 1
+  - msg 20:'&a[Blackholme]&e Professor Putrid has called any remaining forces in Blackholme to his aid.' o=2000 1
+  Equipment:
+  - Putrid
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+FailedExperiment:
+  Mobtype: villagezombie
+  Display: ''
+  Health: 200
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 15
+  Skills:
+  - potionboss DAMAGE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - Nothing
+  Effects:
+    infectionparticle:
+      particle-name: slime
+      y-offset: 1
+      ticks: 30
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.3
+      count: 2
+Alpha:
+  Mobtype: angrywolf
+  Display: '&5Alpha'
+  Health: 600
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 68
+  Skills:
+  - msg 30:'&4$boss &2AWOOOOOOO!' o=200 1
+  - msg 30:'&4$boss &2Arff?!' =death 1
+  - fire 5:20 >0 1
+  - potion 5:POISON:10:1 >0 1
+  - potion 5:CONFUSION:60:1 >0 1
+  - potion 5:SLOW:30:3 >0 1
+  - potion 5:HUNGER:40:1 >0 1
+  - potion 5:CONFUSION:20:1 >0 1
+  - potion 5:SLOW:20:4 >0 1
+Experiment-Kappa:
+  Mobtype: mushroomcow
+  Display: '&5Experiement Kappa'
+  Health: 300
+  ShowHealth: true
+  Damage: 8
+  Skills:
+  - msg 30:'&4$boss &2Moo aura active!' o=100 1
+  - msg 30:'&4$boss &2Mroooh! Moo aura deactivated!' =death 1
+  - potion 10:CONFUSION:600:1 >0 1
+  - potion 10:SLOW:600:3 >0 1
+  - potion 10:HUNGER:600:1 >0 1
+  - potion 10:CONFUSION:600:1 >0 1
+  - potion 10:SLOW:600:4 >0 1
+  - cmd 'cast masscleanse-npc-aoe $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+Experiment-Epsilon:
+  Mobtype: magmacube
+  Display: '&5Experiement Epsilon'
+  Health: 300
+  ShowHealth: true
+  Damage: 8
+  Skills:
+  - msg 30:'&4$boss &2Fire aura active!' o=100 1
+  - msg 30:'&4$boss &2Fire aura deactivated!' =death 1
+  - fire 10:20 >0 1
+  - swarm blaze:1:2 >0 0.01
+  - throw 2:0:1 >0 1
+  - potion 6:SLOW:600:4 >0 0.15
+  - cmd 'cast masscleanse-npc-aoe $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+Experiment-Delta:
+  Mobtype: slime
+  Display: '&5Experiement Delta'
+  Health: 100
+  ShowHealth: true
+  Damage: 8
+  Skills:
+  - msg 30:'&4$boss &2Poison aura active!' o=100 1
+  - msg 30:'&4$boss &2Poison aura deactivated!' =death 1
+  - potion 10:POISON:600:1 >0 1
+  - potion 10:SLOW:600:5 >0 0.15
+  - throw 2:0:1 >0 1
+  - cmd 'cast masscleanse-npc-aoe $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+Gorelock:
+  Mobtype: pigzombie
+  Display: '&6Gorelock'
+  Health: 2500
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 4
+  Skills:
+  - msg 20:'&4$boss &2This is only a taste of my masters power!' >0 0.04 gorelocktalk:20
+  - msg 20:'&4$boss &2I will melt your faces!' >0 0.04 gorelocktalk:20
+  - msg 20:'&4$boss &2You are all WEAK!' >0 0.04 gorelocktalk:20
+  - msg 20:'&4$boss &2Your hope is pathetic!' >0 0.04 gorelocktalk:20
+  - msg 20:'&4$boss &2My magic will destroy you!' >0 0.04 gorelocktalk:20
+  - msg 20:'&4$boss &2You waste time!' >0 0.04 gorelocktalk:20
+  - msg 20:'&4$boss &2Our dark god will destroy your goddess!' >0 0.04 gorelocktalk:20
+  - msg 20:'&4$boss &2We will break through the dark cavern!' >0 0.04 gorelocktalk:20
+  - msg 20:'&4$boss &2You will be consumed by my minons!' >0 0.04 gorelocktalk:20
+  - msg 20:'&4$boss &2This isnt even my final form!' >0 0.04 gorelocktalk:20
+  - msg 20:'&4$boss &2I will destroy you here while your city burns!' >0 0.04 gorelocktalk:20
+  - msg 20:'&4$boss &2Strike me down and you will pay!' >0 0.04 gorelocktalk:20
+  - msg 100:'&4$boss &2Your are fools to have come! Exactly what my master expected!' o=spawn 1
+  - cmd 'cast hflame-ground-npc $world,$player_x,$player_y,$player_z' 0 >0 0.05 ghflame:70
+  - cmd 'cast 20damageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 gorelockphysical:40
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' <6400 0.4 gorelockaoes:50
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' <6400 0.4 gorelockaoes:50
+  - cmd 'cast fireaoem-npc $world,$boss_x,$boss_y,$boss_z' <6400 0.4 gorelockaoem:70
+  - cmd 'cast shadowaoem-npc $world,$boss_x,$boss_y,$boss_z' <6400 0.4 gorelockaoem:70
+  - potionboss INCREASE_DAMAGE:9999:1 o=spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 o=spawn 1
+  - potionboss SPEED:9999:4 o=spawn 1
+  - potionboss FIRE_RESISTANCE:9999:2 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss SPEED:9999:8 <3500 1
+  - potionboss SPEED:9999:5 >3500 1
+  - shootskull 5 >0 0.04
+  - shootfireball 0:true:100 <8150 1 gorelockfireball:60
+  - consume 4:4:2:0 WOLF >0 0.3
+  - consume 4:4:2:0 IRON_GOLEMS >0 0.3
+  - throw 5:2:2 >0 0.4
+  - vampire 80:player:100 >0 1
+  - shootpotion POISON:40:1:25 >0 0.05
+  - lightning 60:1 >0 0.01
+  - potionboss SPEED:30:3 >0 1
+  - teleport >100 0.2
+  - swarm $Blackholme-Recruit:1:15 >0 1 gorelockcall:180
+  - swarm $Blackholme-Slayer:1:15 >0 1 gorelockcall2:230
+  - swarm $Blackholme-Guard1:2:12 o=spawn 1
+  - swarm $Blackholme-Guard2:2:12 o=spawn 1
+  - swarm $Blackholme-Recruit:3:12 o=3100 1
+  - swarm $Blackholme-Recruit:3:12 o=1000 1
+  - cmd 'cast witherskele-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'eb mob spawn Shade-of-Gorelock 1 blackholme-gorelock' =death 100
+  - cmd 'area toggle -w dungeon-world -1004,67,2154' =spawn 1
+  - swarm $LG:1:1 =spawn 0.1 gremlincd:4200
+  Equipment:
+  - Gorelock
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+  Effects:
+    mystic:
+      particle-name: witchMagic
+      y-offset: 1
+      ticks: 5
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.4
+      vert-spread: 0.2
+      speed: 0.0
+      count: 3
+    smoke:
+      particle-name: portal
+      y-offset: 1
+      ticks: 5
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 1.2
+      vert-spread: 0.7
+      speed: 0.0
+      count: 5
+Blackholme-Guard1:
+  Mobtype: witherskeleton
+  Display: ''
+  Health: 750
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 14
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=750 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=750 1
+  - potionboss SPEED:9999:1 o=150 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:1 >0 1
+  Equipment:
+  - BlackholmeGearSkele
+Blackholme-Guard2:
+  Mobtype: witherskeleton
+  Display: ''
+  Health: 750
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 14
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=750 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=750 1
+  - potionboss SPEED:9999:1 o=150 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:1 >0 1
+  Equipment:
+  - BlackholmeGearSkele
+Blackholme-Slayer:
+  Mobtype: witherskeleton
+  Display: ''
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 16
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=150 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=150 1
+  - potionboss SPEED:9999:2 o=150 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:2 >0 1
+  Equipment:
+  - BlackholmeGearSkele
+Blackholme-Pirate1:
+  Mobtype: skeleton
+  Display: ''
+  Health: 30
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 18
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss SPEED:9999:3 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:3 >0 1
+  Equipment:
+  - BlackholmePirateSkele
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+Blackholme-Pirate2:
+  Mobtype: pigzombie
+  Display: ''
+  Health: 30
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 18
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss SPEED:9999:3 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:3 >0 1
+  Equipment:
+  - BlackholmePirate
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+Shade-of-Gorelock:
+  Mobtype: wither
+  Display: '&6Shade of Gorelock'
+  Health: 9000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 22
+  Skills:
+  - msg 60:'&4$boss &2Witness my TRUE form!' =spawn 1
+  - msg 60:'&4$boss &2My gods will flows through me!' >0 0.01 shadegorelocktalk:20
+  - msg 60:'&4$boss &2I will consume your world in darkness!' >0 0.01 shadegorelocktalk:20
+  - msg 60:'&4$boss &2&kDeath&2!' >0 0.01 shadegorelocktalk:20
+  - msg 60:'&4$boss &2Death!' >0 0.01 shadegorelocktalk:20
+  - msg 60:'&4$boss &2Destruction!' >0 0.01 shadegorelocktalk:20
+  - msg 60:'&4$boss &2Suffering!' >0 0.01 shadegorelocktalk:20
+  - msg 60:'&4$boss &2No one will escape!' >0 0.01 shadegorelocktalk:20
+  - msg 60:'&4$boss &2No one is safe!' >0 0.01 shadegorelocktalk:20
+  - msg 60:'&4$boss &2Surely, this is a mistake? Master, they are too strong, I have to retreat. PUNISH THEM! &kAAA' =death 1
+  - potion 20:WITHER:1200:2 >0 1
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 shadeofgorelockaoes:20
+  - cmd 'cast shadowaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 shadeofgorelockaoem:30
+  - cmd 'cast shadowaoel-npc $world,$boss_x,$boss_y,$boss_z' >0 1 shadeofgorelockaoem:40
+  - cmd 'cast hflame-ground-npc $world,$player_x,$player_y,$player_z' 0 >0 0.04
+  - cmd 'cast 20damageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 gorelockphysical:30
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' <6400 0.4 gorelockaoes:40
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' <6400 0.4 gorelockaoes:40
+  - cmd 'cast fireaoem-npc $world,$boss_x,$boss_y,$boss_z' <6400 0.4 gorelockaoem:70
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - fire 20:2 >0 0.5
+  - throw 5:0:1 >0 0.01
+  - swarm $Blackholme-Recruit:1:15 >0 1 gorelockcall:180
+  - swarm $Blackholme-Slayer:1:15 >0 1 gorelockcall2:230
+  - swarm $Blackholme-Guard1:2:12 o=spawn 1
+  - swarm $Blackholme-Guard2:2:12 o=spawn 1
+  - swarm $Blackholme-Recruit:3:12 o=3100 1
+  - swarm $Blackholme-Recruit:3:12 o=1000 1
+  - lightning 60:1 >0 0.01 gorelocklightning:80
+  - potion 10:WITHER:5:2 >0 0.15
+  - potion 20:SLOW:30:3 >0 0.15
+  - throw 10:0:2 >0 0.15
+  - potion 10:HARM:1:1 >1100 0.15
+  - potion 10:HARM:1:2 <1100 0.15
+  - cmd 'area toggle -w dungeon-world -1004,67,2153' =death 1
+  - cmd 'eb mob kill Blackholme' =death 1
+  - cmd 'eb mob kill Blackholme-Pirate2' =death 1
+  - cmd 'eb mob kill Blackholme-Pirate1' =death 1
+  - cmd 'eb mob kill Blackholme-Scientist1' =death 1
+  - cmd 'eb mob kill Blackholme-Scientist2' =death 1
+  - cmd 'eb mob kill Blackholme-Scientist3' =death 1
+  - cmd 'broad &7Gorelock has retreated.' =death 1

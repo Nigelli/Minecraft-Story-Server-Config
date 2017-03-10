@@ -1,0 +1,4 @@
+MiniClownSwarm:
+  Skills:
+  - swarm $MiniCarnivalClown:2:1 <100 1
+  - cmd 'cast generic-firework1 $world,$boss_x,$boss_y,$boss_z' <100 1

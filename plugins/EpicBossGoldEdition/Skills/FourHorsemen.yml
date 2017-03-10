@@ -1,0 +1,16 @@
+FamineConsume:
+  Skills:
+  - msg 80:'&4$boss has feasted upon his horse!' >0 1
+  - consume 60:60:1000:300 Black-Horse >0 1
+WarConsume:
+  Skills:
+  - msg 80:'&4$boss has devoured his horse!' >0 1
+  - consume 60:60:1000:300 Red-Horse >0 1
+PestilenceConsume:
+  Skills:
+  - msg 80:'&4$boss has consumed his horse!' >0 1
+  - consume 60:60:1000:300 White-Horse >0 1
+DeathConsume:
+  Skills:
+  - msg 80:'&4$boss has consumed his horse!' >0 1
+  - consume 60:60:1000:300 Pale-Horse >0 1

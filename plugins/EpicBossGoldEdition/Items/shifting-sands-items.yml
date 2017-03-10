@@ -1,0 +1,25 @@
+GoldGuardianSword:
+  Id: 283
+  Data: 0
+  Amount: 1
+  Display: '&5Runeblade of the Guardian'
+  Enchants:
+  - DAMAGE_ALL:9
+  - KNOCKBACK:2
+  - FIRE_ASPECT:2
+SekteshSword:
+  Id: 283
+  Data: 0
+  Amount: 1
+  Display: '&5Sacred Blade of the Sands'
+  Enchants:
+  - DAMAGE_ALL:11
+  - KNOCKBACK:2
+  - FIRE_ASPECT:2
+Shendyt:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Display: '&5Ancient Shendyt'
+  Tags:
+    Color: 255,255,255

@@ -1,0 +1,380 @@
+LG1Move1:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill PWC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move Portal-Gremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move Portal-Gremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move Portal-Gremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move Portal-Gremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - swarm $PWC:1:1 >0 1
+  - delay 2
+  - mount 50:PWC >0 1
+LG1Move2:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill PWC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move Portal-Gremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move Portal-Gremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move Portal-Gremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move Portal-Gremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - swarm $PWC:1:1 >0 1
+  - delay 2
+  - mount 50:PWC >0 1
+LG1Move3:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill PWC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move Portal-Gremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move Portal-Gremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move Portal-Gremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move Portal-Gremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - swarm $PWC:1:1 >0 1
+  - delay 2
+  - mount 50:PWC >0 1
+LG1Move4:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill PWC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move Portal-Gremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move Portal-Gremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move Portal-Gremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move Portal-Gremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - swarm $PWC:1:1 >0 1
+  - delay 2
+  - mount 50:PWC >0 1
+LG2Move1:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill OCLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move OilyGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move OilyGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move OilyGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move OilyGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - swarm $OCLGC:1:1 >0 1
+  - delay 2
+  - mount 50:OCLGC >0 1
+LG2Move2:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill OCLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move OilyGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move OilyGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move OilyGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move OilyGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - swarm $OCLGC:1:1 >0 1
+  - delay 2
+  - mount 50:OCLGC >0 1
+LG2Move3:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill OCLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move OilyGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move OilyGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move OilyGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move OilyGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - swarm $OCLGC:1:1 >0 1
+  - delay 2
+  - mount 50:OCLGC >0 1
+LG2Move4:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill OCLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move OilyGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move OilyGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move OilyGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move OilyGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - swarm $OCLGC:1:1 >0 1
+  - delay 2
+  - mount 50:OCLGC >0 1
+LG3Move1:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill GHLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move GemGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move GemGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move GemGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move GemGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - swarm $GHLGC:1:1 >0 1
+  - delay 2
+  - mount 50:GHLGC >0 1
+LG3Move2:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill GHLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move GemGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move GemGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move GemGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move GemGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - swarm $GHLGC:1:1 >0 1
+  - delay 2
+  - mount 50:GHLGC >0 1
+LG3Move3:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill GHLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move GemGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move GemGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move GemGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move GemGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - swarm $GHLGC:1:1 >0 1
+  - delay 2
+  - mount 50:GHLGC >0 1
+LG3Move4:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill GHLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move GemGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move GemGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move GemGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move GemGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - swarm $GHLGC:1:1 >0 1
+  - delay 2
+  - mount 50:GHLGC >0 1
+LG4Move1:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill GLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move GildedGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move GildedGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move GildedGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move GildedGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - swarm $GLGC:1:1 >0 1
+  - delay 2
+  - mount 50:GLGC >0 1
+LG4Move2:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill GLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move GildedGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move GildedGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move GildedGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move GildedGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - swarm $GLGC:1:1 >0 1
+  - delay 2
+  - mount 50:GLGC >0 1
+LG4Move3:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill GLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move GildedGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move GildedGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move GildedGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move GildedGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - swarm $GLGC:1:1 >0 1
+  - delay 2
+  - mount 50:GLGC >0 1
+LG4Move4:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill GLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move GildedGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move GildedGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move GildedGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move GildedGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - swarm $GLGC:1:1 >0 1
+  - delay 2
+  - mount 50:GLGC >0 1
+LG5Move1:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill SCLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move StubbornGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move StubbornGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move StubbornGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - cmd 'eb mob move StubbornGremlin world,-4334,77,-1175' >0 1
+  - delay 5
+  - swarm $SCLGC:1:1 >0 1
+  - delay 2
+  - mount 50:SCLGC >0 1
+LG5Move2:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill SCLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move StubbornGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move StubbornGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move StubbornGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - cmd 'eb mob move StubbornGremlin world,-4407,85,-1220' >0 1
+  - delay 5
+  - swarm $SCLGC:1:1 >0 1
+  - delay 2
+  - mount 50:SCLGC >0 1
+LG5Move3:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill SCLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move StubbornGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move StubbornGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move StubbornGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - cmd 'eb mob move StubbornGremlin world,-4332,77,-1275' >0 1
+  - delay 5
+  - swarm $SCLGC:1:1 >0 1
+  - delay 2
+  - mount 50:SCLGC >0 1
+LG5Move4:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill SCLGC' >0 1
+  - title 60:_:&cThe_gremlin_teleported_nearby...:4s:4s:4s >0 1
+  - msg 350:'&a[Loot Gremlin]&c The gremlin teleported nearby...' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move StubbornGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move StubbornGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move StubbornGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - cmd 'eb mob move StubbornGremlin world,-4290,78,-1244' >0 1
+  - delay 5
+  - swarm $SCLGC:1:1 >0 1
+  - delay 2
+  - mount 50:SCLGC >0 1

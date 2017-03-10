@@ -1,0 +1,628 @@
+HHRBCallBoogeyMan:
+  Skills:
+  - swarm $HHRBBoogeyMan:1:1 1-22500 >0 1
+  - unmount >0 1
+  - delay 5
+  - cmd 'eb mob kill Daredevil' >0 1
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,4,2082' >0 1
+  - delay 5
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,4,2082' >0 1
+  - delay 4
+  - swarm $Daredevil:1:1 >0 1
+  - delay 1
+  - mount 10:Daredevil >0 1
+HHRBCallLumpkin:
+  Skills:
+  - swarm $HHRBLumpkin:1:1 1-22500 >0 1
+  - unmount >0 1
+  - delay 5
+  - cmd 'eb mob kill Daredevil' >0 1
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,4,2082' >0 1
+  - delay 5
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,4,2082' >0 1
+  - delay 4
+  - swarm $Daredevil:1:1 >0 1
+  - delay 1
+  - mount 10:Daredevil >0 1
+HHRBCallWickerman:
+  Skills:
+  - swarm $HHRBWickerman:1:1 1-22500 >0 1
+  - unmount >0 1
+  - delay 5
+  - cmd 'eb mob kill Daredevil' >0 1
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,4,2082' >0 1
+  - delay 5
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,4,2082' >0 1
+  - delay 4
+  - swarm $Daredevil:1:1 >0 1
+  - delay 1
+  - mount 10:Daredevil >0 1
+HHRBLeash:
+  Skills:
+  - unmount >0 1
+  - delay 5
+  - cmd 'eb mob kill Daredevil' >0 1
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,4,2082' >0 1
+  - delay 5
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,4,2082' >0 1
+  - delay 4
+  - swarm $Daredevil:1:1 >0 1
+  - delay 1
+  - mount 10:Daredevil >0 1
+HHRBBoogeyMan:
+  Skills:
+  - title 350:&cThe_Boogey_Man:&cis_collecting_souls_for_the_Horseman_in_the_cave._Stop_Him!:4s:4s:4s >0 1
+  - msg 350:'&a[Headless Horseman]&c The Boogey Man is collecting souls for the Horseman in the cave. Stop Him!' >0 1
+  - delay 1
+  - cmd 'eb mob move HHRBBoogeyMan hallows-eve-zone,1486,9,1970' >0 1
+  - delay 70
+  - cmd 'eb mob move HHRBBoogeyMan hallows-eve-zone,1486,9,1970' >0 1
+  - delay 900
+  - cmd 'tell zombiemold BoogeyMan healed HH' >0 1
+  - healboss 350:HHRaidBoss:2000 >0 1
+  - cmd 'eb mob kill HHRBBoogeyMan' >0 1
+  - msg 350:'&a[Headless Horseman]&c The Boogey Man collected souls for the Horseman, healing him!' >0 1
+HHRBWM:
+  Skills:
+  - title 350:&cThe_Wicker_Man:&cis_sacrificing_himself_to_the_Horseman.:4s:4s:4s >0 1
+  - msg 350:'&a[Headless Horseman]&c The Wicker Man is sacrificing himself to the Horseman at Hallowed Town. Stop him!' >0 1
+  - delay 1
+  - cmd 'eb mob move HHRBWickerman hallows-eve-zone,1595,18,2088' >0 1
+  - delay 70
+  - title 350:&c_:&cat_Hallowed_Town._Stop_him!:4s:4s:4s >0 1
+  - delay 1
+  - cmd 'eb mob move HHRBWickerman hallows-eve-zone,1595,18,2088' >0 1
+  - delay 900
+  - cmd 'tell zombiemold Wickerman healed HH' >0 1
+  - healboss 350:HHRaidBoss:2000 >0 1
+  - cmd 'eb mob kill HHRBWickerman' >0 1
+  - msg 350:'&a[Headless Horseman]&c The Wicker Man sacrificed himself to the Horseman, healing him!' >0 1
+HHRBLumpkin:
+  Skills:
+  - title 350:&cLumpkin:&cis_growing_troops_for_the_Horseman:4s:4s:4s >0 1
+  - msg 350:'&a[Headless Horseman]&c Lumpkin is growing troops for the Horseman at the pumpkin patch. Stop him!' >0 1
+  - delay 1
+  - cmd 'eb mob move HHRBLumpkin hallows-eve-zone,1374,16,2138' >0 1
+  - delay 70
+  - title 350:_:&cat_the_pumpkin_patch._Stop_him!:4s:4s:4s >0 1
+  - delay 1
+  - cmd 'eb mob move HHRBLumpkin hallows-eve-zone,1374,16,2138' >0 1
+  - delay 900
+  - cmd 'tell zombiemold Lumpkin supplied HH' >0 1
+  - healboss 350:HHRaidBoss:500 >0 1
+  - cmd 'eb mob spawn Little-Lumpkin2 5 hhgolem' >0 1
+  - cmd 'eb mob spawn Pumpkin-Beast 5 hhgolem' >0 1
+  - cmd 'eb mob kill HHRBLumpkin' >0 1
+  - msg 350:'&a[Headless Horseman]&c Lumpkin has grown pumpkin beasts for the horseman!' >0 1
+HHRBIntro1:
+  Skills:
+  - delay 20
+  - msg 80:'&4$boss&f:&2 Your attack has failed,*coughs* we.. we have won! My golem will squash you, *coughs* all, all of you, prepare to run!' >0 1
+  - title 50:_:&4Headless_Horseman&f_-_&2Your_attack_has_failed,:4s:2s:1s >0 1
+  - delay 40
+  - title 50:_:&2*coughs*:4s:2s:1s >0 1
+  - delay 10
+  - title 50:_:&2we.._we_have_won!:4s:2s:1s >0 1
+  - delay 40
+  - title 50:_:&2My_golem_will_squash_you,:4s:2s:1s >0 1
+  - delay 40
+  - title 50:_:&2*coughs*:4s:2s:1s >0 1
+  - delay 20
+  - title 50:_:&2all,_all_of_you,_prepare_to_run!:4s:2s:1s >0 1
+  - delay 40
+  - potionboss DAMAGE_RESISTANCE:1:1 >0 1
+HHRBIntro2:
+  Skills:
+  - delay 20
+  - msg 80:'&a[Headless Horseman]&e The Headless Horseman crumples into a lifeless scarecrow...' >0 1
+  - title 50:&cThe_Headless_Horseman:&ccrumples_into_a_lifeless_scarecrow...:4s:2s:1s >0 1
+HHRBIntro3:
+  Skills:
+  - delay 5
+  - swarm $Daredevil:1:1 >0 1
+  - delay 1
+  - mount 10:Daredevil >0 1
+  - delay 20
+  - msg 80:'&4$boss&f:&2 I am the Headless Horseman, you think you can beat ME?! Fall before the Dark Forces power, I will set your souls free!' >0 1
+  - title 50:_:&4Headless_Horseman&f_-_&2I_am_the_Headless_Horseman,:4s:2s:1s >0 1
+  - delay 55
+  - title 50:_:&2you_think_you_can_beat_ME?!:4s:2s:1s >0 1
+  - delay 65
+  - title 50:_:&2Fall_before_the_Dark_Force's_power,:4s:2s:1s >0 1
+  - delay 65
+  - title 50:_:&2I_will_set_your_souls_free!:4s:2s:1s >0 1
+HHRBSkill1:
+  Skills:
+  - unmount >0 1
+  - cmd 'eb mob kill Daredevil' >0 1
+  - delay 5
+  - unmount >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - msg 80:'&a[Headless Horseman]&e The Headless Horseman teleports to the controls of his golem.' >0 1
+  - title 50:&cThe_Headless_Horseman:&cteleports_to_the_controls_of_his_golem:4s:2s:1s >0 1
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,56,2070' >0 1
+  - delay 60
+  - msg 80:'&a[Headless Horseman]&c The golem launches explosives over the area.' >0 1
+  - swarm tnt:40:60 >0 1
+  - cmd 'cast scary-horse-sound hallows-eve-zone,1481,22,2075' >0 1
+  - delay 40
+  - swarm tnt:40:60 >0 1
+  - delay 40
+  - swarm tnt:40:60 >0 1
+  - delay 40
+  - swarm tnt:40:60 >0 1
+  - delay 40
+  - swarm tnt:40:60 >0 1
+  - cmd 'cast scary-horse-sound hallows-eve-zone,1481,22,2075' >0 1
+  - delay 40
+  - swarm tnt:40:60 >0 1
+  - delay 40
+  - swarm tnt:40:60 >0 1
+  - delay 40
+  - swarm tnt:40:60 >0 1
+  - cmd 'cast scary-horse-sound hallows-eve-zone,1481,22,2075' >0 1
+  - delay 40
+  - msg 80:'&a[Headless Horseman]&e The Headless Horseman has returned to the base of the golem' >0 1
+  - title 50:&cThe_Headless_Horseman:&chas_returned_to_the_base_of_the_golem:4s:2s:1s >0 1
+  - unmount >0 1
+  - cmd 'eb mob kill Daredevil' >0 1
+  - delay 1
+  - unmount >0 1
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,4,2082' >0 1
+  - cmd 'cast generic-magic-teleport hallows-eve-zone,1481,4,2082' >0 1
+  - delay 1
+  - cmd 'eb mob kill Daredevil' >0 1
+  - delay 4
+  - swarm $Daredevil:1:1 >0 1
+  - delay 1
+  - mount 10:Daredevil >0 1
+HHRBSkill2:
+  Skills:
+  - unmount >0 1
+  - delay 5
+  - cmd 'eb mob kill Daredevil' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - msg 80:'&a[Headless Horseman]&e The Headless Horseman teleports to the controls of his golem.' >0 1
+  - title 50:&cThe_Headless_Horseman:&cteleports_to_the_controls_of_his_golem:4s:2s:1s >0 1
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,56,2070' >0 1
+  - delay 60
+  - msg 80:'&a[Headless Horseman]&c Blazes spew from the mouth of the golem!' >0 1
+  - cmd 'eb mob spawn GolemBlaze 3 hhgolemmouth' >0 1
+  - cmd 'cast scary-horse-sound hallows-eve-zone,1481,22,2075' >0 1
+  - delay 40
+  - cmd 'eb mob spawn GolemBlaze 3 hhgolemmouth' >0 1
+  - delay 40
+  - cmd 'eb mob spawn GolemBlaze 3 hhgolemmouth' >0 1
+  - delay 40
+  - cmd 'eb mob spawn GolemBlaze 3 hhgolemmouth' >0 1
+  - delay 40
+  - cmd 'eb mob spawn GolemBlaze 3 hhgolemmouth' >0 1
+  - delay 40
+  - cmd 'eb mob spawn GolemBlaze 3 hhgolemmouth' >0 1
+  - delay 40
+  - cmd 'eb mob spawn GolemBlaze 3 hhgolemmouth' >0 1
+  - msg 80:'&a[Headless Horseman]&e The Headless Horseman has returned to the base of the golem' >0 1
+  - title 50:&cThe_Headless_Horseman:&chas_returned_to_the_base_of_the_golem:4s:2s:1s >0 1
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,4,2082' >0 1
+  - cmd 'cast generic-magic-teleport hallows-eve-zone,1481,4,2082' >0 1
+  - delay 1
+  - cmd 'eb mob kill Daredevil' >0 1
+  - delay 4
+  - swarm $Daredevil:1:1 >0 1
+  - delay 1
+  - mount 10:Daredevil >0 1
+HHRBSkill3:
+  Skills:
+  - unmount >0 1
+  - delay 5
+  - cmd 'eb mob kill Daredevil' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - msg 80:'&a[Headless Horseman]&e The Headless Horseman teleports to the controls of his golem.' >0 1
+  - title 50:&cThe_Headless_Horseman:&cteleports_to_the_controls_of_his_golem:4s:2s:1s >0 1
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,56,2070' >0 1
+  - delay 60
+  - msg 80:'&a[Headless Horseman]&c The golem stomps the ground violently!' >0 1
+  - cmd 'cast golemstomp-npc hallows-eve-zone,1481,4,2076' >0 1
+  - cmd 'cast scary-horse-sound hallows-eve-zone,1481,22,2075' >0 1
+  - delay 40
+  - cmd 'cast golemstomp-npc hallows-eve-zone,1481,4,2076' >0 1
+  - delay 40
+  - cmd 'cast golemstomp-npc hallows-eve-zone,1481,4,2076' >0 1
+  - delay 40
+  - cmd 'cast golemstomp-npc hallows-eve-zone,1481,4,2076' >0 1
+  - delay 40
+  - cmd 'cast golemstomp-npc hallows-eve-zone,1481,4,2076' >0 1
+  - delay 40
+  - cmd 'cast golemstomp-npc hallows-eve-zone,1481,4,2076' >0 1
+  - delay 40
+  - cmd 'cast golemstomp-npc hallows-eve-zone,1481,4,2076' >0 1
+  - cmd 'cast scary-horse-sound hallows-eve-zone,1481,22,2075' >0 1
+  - delay 40
+  - cmd 'cast golemstomp-npc hallows-eve-zone,1481,4,2076' >0 1
+  - delay 40
+  - cmd 'cast golemstomp-npc hallows-eve-zone,1481,4,2076' >0 1
+  - delay 40
+  - msg 80:'&a[Headless Horseman]&e The Headless Horseman has returned to the base of the golem' >0 1
+  - title 50:&cThe_Headless_Horseman:&chas_returned_to_the_base_of_the_golem:4s:2s:1s >0 1
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,4,2082' >0 1
+  - cmd 'cast generic-magic-teleport hallows-eve-zone,1481,4,2082' >0 1
+  - delay 1
+  - cmd 'eb mob kill Daredevil' >0 1
+  - delay 4
+  - swarm $Daredevil:1:1 >0 1
+  - delay 1
+  - mount 10:Daredevil >0 1
+HHRBSkill4:
+  Skills:
+  - unmount >0 1
+  - delay 5
+  - cmd 'eb mob kill Daredevil' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - msg 80:'&a[Headless Horseman]&e The Headless Horseman teleports to the controls of his golem.' >0 1
+  - title 50:&cThe_Headless_Horseman:&cteleports_to_the_controls_of_his_golem:4s:2s:1s >0 1
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,56,2070' >0 1
+  - delay 60
+  - msg 80:'&a[Headless Horseman]&c The golem unleashes beams from its eyes!' >0 1
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1478,67,2081' >0 1
+  - delay 1
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1484,67,2081' >0 1
+  - delay 1
+  - cmd 'cast scary-horse-sound hallows-eve-zone,1481,22,2075' >0 1
+  - delay 40
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1478,67,2081' >0 1
+  - delay 1
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1484,67,2081' >0 1
+  - delay 40
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1478,67,2081' >0 1
+  - delay 1
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1484,67,2081' >0 1
+  - delay 40
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1478,67,2081' >0 1
+  - delay 1
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1484,67,2081' >0 1
+  - delay 40
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1478,67,2081' >0 1
+  - delay 1
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1484,67,2081' >0 1
+  - delay 40
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1478,67,2081' >0 1
+  - delay 1
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1484,67,2081' >0 1
+  - delay 40
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1478,67,2081' >0 1
+  - delay 1
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1484,67,2081' >0 1
+  - delay 1
+  - cmd 'cast scary-horse-sound hallows-eve-zone,1481,22,2075' >0 1
+  - delay 40
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1478,67,2081' >0 1
+  - delay 1
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1484,67,2081' >0 1
+  - delay 40
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1478,67,2081' >0 1
+  - delay 1
+  - cmd 'cast golemeyebeam-npc hallows-eve-zone,1484,67,2081' >0 1
+  - delay 40
+  - msg 80:'&a[Headless Horseman]&e The Headless Horseman has returned to the base of the golem' >0 1
+  - title 50:&cThe_Headless_Horseman:&chas_returned_to_the_base_of_the_golem:4s:2s:1s >0 1
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob move HHRaidBoss hallows-eve-zone,1481,4,2082' >0 1
+  - cmd 'cast generic-magic-teleport hallows-eve-zone,1481,4,2082' >0 1
+  - delay 1
+  - cmd 'eb mob kill Daredevil' >0 1
+  - delay 4
+  - swarm $Daredevil:1:1 >0 1
+  - delay 1
+  - mount 10:Daredevil >0 1
+HHRBGrab:
+  Skills:
+  - msg 80:'&4$boss &2I see you trembling in fright, be sure to get used to the height!' >0 0.5 hhrbmsg:40
+  - cmd 'cast hhraidbossgrab-npc $world,$boss_x,$boss_y,$boss_z' >0 1
+HHRBPumpkin:
+  Skills:
+  - title 100:&cThe_Headless_Horseman:&cis_targetting_$player_with_hallowed_magic!:4s:4s:1s >0 1
+  - msg 100:'&a[Headless Horseman]&c The Headless Horseman is targetting $player with hallowed magic!' >0 1
+  - delay 500
+  - cmd 'cast hallowfireb-ground-npc $world,$player_x,$player_y,$player_z' >0 1
+  - msg 80:'&a[Headless Horseman]&c A blazing Jack-o-Lantern appears under $player.' >0 1
+  - delay 80
+  - cmd 'cast hallowfireb-ground-npc $world,$player_x,$player_y,$player_z' >0 1
+  - msg 80:'&a[Headless Horseman]&c A blazing Jack-o-Lantern appears under $player.' >0 1
+  - delay 80
+  - cmd 'cast hallowfireb-ground-npc $world,$player_x,$player_y,$player_z' >0 1
+  - msg 80:'&a[Headless Horseman]&c A blazing Jack-o-Lantern appears under $player.' >0 1
+  - delay 80
+  - msg 100:'&a[Headless Horseman]&c The Headless Horseman has finished his magical assault. Steer clear of the Blazing Jack-o-Lanterns!' >0 1
+CallHH2:
+  Skills:
+  - msg 80:'&4$boss &2Look upon us, hear our rhyme. There are 3 of me; you are out of time!' >0 1
+  - swarm $HH2:1:2 >0 1
+HHS1LoseHead:
+  Skills:
+  - potionboss INVISIBILITY:31:1 >0 1
+  - unequip 4 >0 1
+  - msg 40:'&a[Headless Horseman]&e The Headless Horseman has lost his head...' >0 1
+  - swarm $HHS1Head:1:1 >0 1
+  - delay 500
+  - msg 80:'&4$boss&f:&2 Get over here you idiot!' >0 1
+  - delay 100
+  - cmd 'eb mob kill
+  - equip HeadlessHorseman >0 1
+  - cmd 'eb mob kill HHS1Head' >0 1
+HHRBLoseHead:
+  Skills:
+  - potionboss INVISIBILITY:31:1 >0 1
+  - unequip 4 >0 1
+  - msg 40:'&a[Headless Horseman]&e The Headless Horseman has lost his head...' >0 1
+  - swarm $HHRBHead:1:1 >0 1
+  - delay 500
+  - msg 80:'&4$boss&f:&2 Get over here you idiot!' >0 1
+  - delay 100
+  - cmd 'eb mob kill
+  - equip HeadlessHorseman >0 1
+  - cmd 'eb mob kill HHRBHead' >0 1
+HHSpecial1Countdown:
+  Skills:
+  - delay 20
+  - cmd 'tell zombiemold HH countdown has started...' >0 1
+  - msg 80:'&4$boss&f:&2 I will take your head or you will run in fright, prepare now, for the endless night!' >0 1
+  - title 50:_:&4Headless_Horseman&f_-_&2I_will_take_your_head:4s:2s:1s >0 1
+  - delay 40
+  - title 50:_:&2or_you_will_run_in_fright,:4s:2s:1s >0 1
+  - delay 40
+  - title 50:_:&2prepare_now,_for_the_endless_night!:4s:2s:1s >0 1
+  - delay 150
+  - title 350:_:&cThe_Horseman_will_flee_the_Haven_if:4s:4s:4s >0 1
+  - delay 50
+  - title 350:_:&che_is_not_defeated_in_15_minutes:4s:4s:4s >0 1
+  - delay 9000
+  - cmd 'tell zombiemold HH countdown has reached 50%...' >0 1
+  - delay 2000
+  - title 350:_:&cThe_Horseman_will_flee_soon...:4s:4s:4s >0 1
+  - msg 350:'&a[Headless Horseman]&c The Headless Horseman will flee soon...' >0 1
+  - delay 3000
+  - swarm $HHMiniLoot:1:1 >0 1
+  - msg 350:'&a[Headless Horseman]&c The Headless Horseman has fled...' >0 1
+  - title 350:_:&cThe_Headless_Horseman_has_fled...:4s:4s:4s >0 1
+  - delay 5
+  - cmd 'eb mob kill HHSpecial1' >0 1
+  - cmd 'eb mob kill DDSpecial1' >0 1
+  - cmd 'tell zombiemold HH countdown has ended...' >0 1
+HHSpecial1RespawnHorse:
+  Skills:
+  - cmd 'eb mob kill DDSpecial1' >0 1
+  - delay 4
+  - swarm $DDSpecial1:1:1 >0 1
+  - delay 1
+  - mount 10:DDSpecial1 >0 1
+HHRaidBossRespawnHorse:
+  Skills:
+  - cmd 'eb mob kill Daredevil' >0 1
+  - delay 4
+  - swarm $Daredevil:1:1 >0 1
+  - delay 1
+  - mount 10:Daredevil >0 1
+HHSpecialMove1:
+  Skills:
+  - cmd 'eb mob spawn GolemEngineer1 3 hegolembox1' >0 1
+  - cmd 'eb mob spawn CandyMan 3 hegolembox1' >0 1
+  - cmd 'eb mob spawn CandyMan 3 hegolembox2' >0 1
+  - cmd 'eb mob spawn GolemEngineer1 3 hegolembox2' >0 1
+  - cmd 'eb mob spawn GolemEngineer2 3 hegolembox1' >0 1
+  - cmd 'eb mob spawn GolemEngineer2 3 hegolembox2' >0 1
+  - cmd 'eb mob spawn GolemForeman 1 hegolembox3' >0 1
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill DDSpecial1' >0 1
+  - title 350:&cThe_Headless_Horseman_:&chas_teleported_to_somewhere_in_the_Haven:4s:4s:4s >0 1
+  - msg 350:'&a[Headless Horseman]&c The Headless Horseman has teleported to somewhere in the Haven' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1346,25,2045' >0 1
+  - cmd 'eb mob kill HHSpecialIllusion' >0 1
+  - delay 10
+  - cmd 'eb mob spawn HHSpecialIllusion 1 hhs2' >0 1
+  - cmd 'eb mob spawn HHSpecialIllusion 1 hhs3' >0 1
+  - cmd 'tell zombiemold Headless Horseman moved to Farm' >0 1
+  - delay 20
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1346,25,2045' >0 1
+  - delay 20
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1346,25,2045' >0 1
+  - delay 20
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1346,25,2045' >0 1
+HHSpecialMove2:
+  Skills:
+  - cmd 'eb mob spawn GolemEngineer1 3 hegolembox1' >0 1
+  - cmd 'eb mob spawn GolemEngineer2 3 hegolembox1' >0 1
+  - cmd 'eb mob spawn GolemForeman 1 hegolembox3' >0 1
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill DDSpecial1' >0 1
+  - title 350:&cThe_Headless_Horseman_:&chas_teleported_to_somewhere_in_the_Haven:4s:4s:4s >0 1
+  - msg 350:'&a[Headless Horseman]&c The Headless Horseman has teleported to somewhere in the Haven' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1488,9,1970' >0 1
+  - cmd 'eb mob kill HHSpecialIllusion' >0 1
+  - delay 10
+  - cmd 'eb mob spawn HHSpecialIllusion 1 hhs1' >0 1
+  - cmd 'eb mob spawn HHSpecialIllusion 1 hhs3' >0 1
+  - cmd 'tell zombiemold Headless Horseman moved to Spider Cave' >0 1
+  - delay 20
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1488,9,1970' >0 1
+  - delay 20
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1488,9,1970' >0 1
+  - delay 20
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1488,9,1970' >0 1
+HHSpecialMove3:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill DDSpecial1' >0 1
+  - title 350:&cThe_Headless_Horseman_:&chas_teleported_to_somewhere_in_the_Haven:4s:4s:4s >0 1
+  - msg 350:'&a[Headless Horseman]&c The Headless Horseman has teleported to somewhere in the Haven' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1594,18,2081' >0 1
+  - cmd 'eb mob kill HHSpecialIllusion' >0 1
+  - delay 10
+  - cmd 'eb mob spawn HHSpecialIllusion 1 hhs2' >0 1
+  - cmd 'eb mob spawn HHSpecialIllusion 1 hhs1' >0 1
+  - cmd 'tell zombiemold Headless Horseman moved to Hallowed Town' >0 1
+  - delay 20
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1594,18,2081' >0 1
+  - delay 20
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1594,18,2081' >0 1
+  - delay 20
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1594,18,2081' >0 1
+HHSpecialMove5:
+  Skills:
+  - unmount >0 1
+  - delay 1
+  - cmd 'eb mob kill DDSpecial1' >0 1
+  - title 350:&cThe_Headless_Horseman_:&chas_teleported_to_his_Golem:4s:4s:4s >0 1
+  - msg 350:'&a[Headless Horseman]&c The Headless Horseman has teleported to his Golem' >0 1
+  - cmd 'cast generic-magic-teleport $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1481,4,2087' >0 1
+  - delay 20
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1481,4,2087' >0 1
+  - delay 20
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1481,4,2087' >0 1
+  - delay 20
+  - cmd 'eb mob move HHSpecial1 hallows-eve-zone,1481,4,2087' >0 1
+CallPK:
+  Skills:
+  - swarm $Pumpkin-Knight:5:5 >0 1
+  - msg 80:'&4$boss &2Soldiers arise, stand and fight! Bring victory at last to this fallen knight!' >0 1
+Wickermansummons:
+  Skills:
+  - swarm $Pumpkin-Soldier:8:17 >0 1
+  - swarm $Pumpkin-Torch-Holder:1:3 >0 1
+BMEye:
+  Skills:
+  - cmd 'cast demonhit $world,$boss_x,$boss_y,$boss_z' >0 0.3
+  - msg 50:'&a[Boogey Man]&c You feel a dark gaze upon you...' >0 1
+  - title 50:_:&cYou_feel_a_dark_gaze_upon_you...:4s:4s:4s >0 1
+  - potionboss SPEED:9999:8 >0 1
+  - swarm $DarkEye:1:5 >0 1
+  - potion 90:BLINDNESS:1800:1 >0 1
+  - potion 90:SLOW_DIGGING:1800:2 >0 1
+HHTalk1:
+  Skills:
+  - msg 380:'&4Headless Horseman&f:&2 Begone foul pests, what do you intend to save? Get them now Banshee, send them to their grave!' >0 1
+  - title 50:_:&4Headless_Horseman&f_-_&2Begone_foul_pests,:4s:2s:1s >0 1
+  - delay 60
+  - title 50:_:&2what_do_you_intend_to_save?:4s:2s:1s >0 1
+  - delay 50
+  - title 50:_:&2Get_them_now_Banshee,_send_them_to_their_grave!:4s:4s:1s >0 1
+  - delay 90
+  - msg 380:'&4$boss&f:&2 With pleasure my master! Come here little ones, I will burn you to ashes!' >0 1
+  - title 50:_:&9Banshee&f_-_&2With_pleasure_my_master!:4s:4s:1s >0 1
+  - delay 50
+  - title 50:_:&2Come_here_little_ones,:4s:4s:1s >0 1
+  - delay 50
+  - title 50:_:&2I_will_burn_you_to_ashes!:4s:4s:1s >0 1
+HHTalk2:
+  Skills:
+  - msg 380:'&4Headless Horseman&f:&2 Your bravery is sickening, your courage foul! Fear my dark creation, a wraith is on the prowl.' >0 1
+  - title 50:_:&4Headless_Horseman&f_-_&2Your_bravery_is_sickening,:4s:4s:1s >0 1
+  - delay 50
+  - title 50:_:&2your_courage_foul!:4s:4s:1s >0 1
+  - delay 50
+  - title 50:_:&2Fear_my_dark_creation,:4s:4s:1s >0 1
+  - delay 50
+  - title 50:_:&2a_wraith_is_on_the_prowl.:4s:4s:1s >0 1
+  - delay 80
+  - msg 380:'&4$boss&f:&2 Come heroes... let me take your ssssssoul.....' >0 1
+  - title 50:_:&9Banshee&f_-_&2Come_heroes...:4s:4s:1s >0 1
+  - delay 40
+  - title 50:_:&2let_me_take_your_ssssssoul.....:4s:4s:1s >0 1
+HHTalk3:
+  Skills:
+  - msg 380:'&4Headless Horseman&f:&2 We will strike you down, your spirit we will blight! Slay the interlopers... My dark Phantom Knight!' >0 1
+  - title 50:_:&4Headless_Horseman&f_-_&2We_will_strike_you_down,:4s:4s:1s >0 1
+  - delay 50
+  - title 50:_:&2your_spirit_we_will_blight!:4s:4s:1s >0 1
+  - delay 50
+  - title 50:_:&2Slay_the_interlopers...:4s:4s:1s >0 1
+  - delay 40
+  - title 50:_:&2My_dark_Phantom_Knight!:4s:4s:1s >0 1
+  - delay 80
+  - msg 380:'&4$boss&f:&2 Have at thee! I will heave the gorge on thy livings, insolent whelps!' >0 1
+  - title 50:_:&9$boss&f_-_&2Have_at_thee!:4s:4s:1s >0 1
+  - delay 40
+  - title 50:_:&2I_will_heave_the_gorge_on_thy_livings,:4s:4s:1s >0 1
+  - delay 40
+  - title 50:_:&2insolent_whelps!:4s:4s:1s >0 1
+HHTalk4:
+  Skills:
+  - msg 380:'&4Headless Horseman&f:&2 We will end your little rebellion! Breathe the dark gasses in, fight with my Hellion!' >0 1
+  - delay 80
+  - msg 380:'&4$boss&f:&2 I will flay them master...' >0 1
+HHTalk5:
+  Skills:
+  - msg 380:'&4Headless Horseman&f:&2 Your tyranny on this world will be overthrown! Cower in fear before Dreadbone!' >0 1
+  - title 50:_:&4Headless_Horseman&f_-_&2Your_tyranny_on_this_world:4s:4s:1s >0 1
+  - delay 40
+  - title 50:_:&2will_be_overthrown!:4s:4s:1s >0 1
+  - delay 40
+  - title 50:_:&2Cower_in_fear_before_Dreadbone!:4s:4s:1s >0 1
+  - delay 80
+  - msg 380:'&4$boss&f:&2 Aha aha! Master, we will kill them! Aha!' >0 1
+  - title 50:_:&9Dreadbone&f_-_&2Aha_aha!_Master,:4s:2s:1s >0 1
+  - delay 40
+  - title 50:_:&2we_will_kill_them!_Aha!:4s:2s:1s >0 1
+HHTalk6:
+  Skills:
+  - msg 380:'&9$boss&f:&2 Keep the intruders away from the golem while we load it up with the cargo!' >0 1
+  - delay 20
+  - title 50:_:&9Golem_Foreman&f_-_&2_Keep_the_intruders:4s:4s:1s >0 1
+  - delay 50
+  - title 50:_:&2away_from_the_golem_while_we_load:4s:4s:1s >0 1
+  - delay 50
+  - title 50:_:&2it_up_with_the_cargo!:4s:4s:1s >0 1
+HHBossTalk1:
+  Skills:
+  - msg 380:'&4Headless Horseman&f:&2 Your incursion was all part of the plan! Now, you will be torn to shreds by the Boogey Man!' >0 1
+  - title 50:_:&4Headless_Horseman&f_-_&2Your_incursion_was_all:4s:2s:1s >0 1
+  - delay 60
+  - title 50:_:&2part_of_the_plan!:4s:2s:1s >0 1
+  - delay 50
+  - title 50:_:&2Now,_you_will_be_torn_to_shreds:4s:4s:1s >0 1
+  - delay 50
+  - title 50:_:&2by_the_Boogey_Man!:4s:4s:1s >0 1
+  - delay 90
+  - msg 380:'&4$boss&f:&2 Master... I will hang them by their intenstines!' >0 1
+  - title 50:_:&6Boogey_Man&f_-_&2Master..._I_will_hang_them:4s:4s:1s >0 1
+  - delay 50
+  - title 50:_:&2by_their_intenstines!:4s:4s:1s >0 1
+HHBossTalk2:
+  Skills:
+  - msg 380:'&4Headless Horseman&f:&2 Tendrils from the grave, sprouting from the earth. Lumpkin will destroy you, so show me your worth!' >0 1
+  - title 50:_:&4Headless_Horseman&f_-_&2Tendrils_from_the_grave,:4s:2s:1s >0 1
+  - delay 50
+  - title 50:_:&2sprouting_from_the_earth.:4s:2s:1s >0 1
+  - delay 40
+  - title 50:_:&2Lumpkin_will_destroy_you,:4s:2s:1s >0 1
+  - delay 40
+  - title 50:_:&2so_show_me_your_worth!:4s:2s:1s >0 1
+  - delay 80
+  - msg 380:'&4$boss&f:&2 Daddy! Me choke them till they are ded!' >0 1
+  - title 50:_:&6Lumpkin&f_-_&2Daddy!_Me_choke_them_till_they_are_ded!:4s:2s:1s >0 1
+HHBossTalk3:
+  Skills:
+  - msg 380:'&4Headless Horseman&f:&2 Sticks and brambles, branches and wood. The wicker man will crush you, ending you for good!' >0 1
+  - title 50:_:&4Headless_Horseman&f_-_&2Sticks_and_brambles,:4s:2s:1s >0 1
+  - delay 40
+  - title 50:_:&2branches_and_wood.:4s:2s:1s >0 1
+  - delay 40
+  - title 50:_:&2The_wicker_man_will_crush_you,:4s:2s:1s >0 1
+  - delay 40
+  - title 50:_:&2ending_you_for_good!:4s:2s:1s >0 1
+  - delay 80
+  - msg 380:'&4$boss&f:&2 I will splinter you for the horseman, puny flesh golems!' >0 1
+  - title 50:_:&6Wicker_Man&f_-_&2I_will_splinter_you_for:4s:2s:1s >0 1
+  - delay 40
+  - title 50:_:&2the_horseman,_puny_flesh_golems!:4s:2s:1s >0 1

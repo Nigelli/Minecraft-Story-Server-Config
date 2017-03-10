@@ -1,0 +1,19 @@
+DragonKnight:
+  Loot:
+  - DragonHead:4 1
+  - AncientChest:3 1
+  - AncientLegs:2 1
+  - AncientBoots:1 1
+  - 276:0:1:0 1
+EnderSkeleton:
+  Loot:
+  - EndermanHead:4 1
+  - 276:0:1:0 1
+Vizmodeus:
+  Loot:
+  - VizmodeusHead:4 1
+  - 276:0:1:0 1
+SoulReaper:
+  Loot:
+  - 173:0:1:4 1
+  - ReaperBlade:0 1

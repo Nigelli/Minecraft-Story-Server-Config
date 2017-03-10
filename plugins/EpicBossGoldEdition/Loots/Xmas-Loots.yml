@@ -1,0 +1,35 @@
+Yeti:
+  Loot:
+  - YetiHead2:4 1
+  - 0:0:1:0 1
+  - WhiteJacket:3 1
+  - WhitePants:2 1
+  - WhiteBoots:1 1
+shelfelf:
+  Loot:
+  - ShelfElfHead:4 1
+  - 0:0:1:0 1
+  - RedCoat:3 1
+  - RedPants:2 1
+  - RedBoots:1 1
+GrinchlingRed:
+  Loot:
+  - 0:0:1:0 1
+  - RedHat:4 1
+  - RedCoat:3 1
+  - RedPants:2 1
+  - RedBoots:1 1
+GrinchlingGreen:
+  Loot:
+  - 0:0:1:0 1
+  - GreenHat:4 1
+  - GreenCoat:3 1
+  - GreenPants:2 1
+  - GreenBoots:1 1
+Grinch:
+  Loot:
+  - GrinchHead:4 1
+  - 0:0:1:0 1
+  - RedCoat:3 1
+  - RedPants:2 1
+  - RedBoots:1 1

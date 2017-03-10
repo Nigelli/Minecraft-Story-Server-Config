@@ -1,0 +1,68 @@
+DancingFlame:
+  Mobtype: blaze
+  Display: '&6Dancing Flame'
+  Health: 8200
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 8
+  Skills:
+  - msg 100:'&4$boss &2Strength must not only be matched by resolve, but also by courage.' >0 0.1 dancingflametalk:80
+  - msg 100:'&4$boss &2Dance is often coordinated, but you must always let yourself be free.' >0 0.1 dancingflametalk:80
+  - msg 100:'&4$boss &2Fire is unyieldy, skill is required.' >0 0.1 dancingflametalk:80
+  - msg 100:'&4$boss &2Great strike! Combat is a dance of risk and reward.' >0 0.1 dancingflametalk:80
+  - msg 100:'&4$boss &2Watch your footing, fire spreads quickly.' >0 0.1 dancingflametalk:80
+  - msg 100:'&4$boss &2Know when you back off, blind aggression will get you killed.' >0 0.1 dancingflametalk:80
+  - msg 100:'&4$boss &2Allies are your partners in dance, join them.' >0 0.1 dancingflametalk:80
+  - msg 100:'&4$boss &2Step, step, step, REPOSTE! Good!' >0 0.1 dancingflametalk:80
+  - msg 100:'&4$boss &2Find your inner music, and let your soul dance to it.' >0 0.1 dancingflametalk:80
+  - msg 100:'&4$boss &2Well done! Continue to master your art, summon me again whenever you need.' =death 1
+  - msg 100:'&4$boss &2Ah, Brave dancers! Your skills will be put to the test.' =spawn 1
+  - cmd 'cast flame-ground-npc $world,$player_x,$player_y,$player_z' 0 >0 0.1 dancingflamefirefloor:280
+  - vampire 100:player:10 >0 1
+  - pack Dancingflameaoe <7900 1 dancingflameaoe:840
+  - throw 5:3:3 >0 1
+  - throw 8:7:7 >0 0.05
+  - fire 5:1 >0 1
+  - fire 5:3 >0 0.05
+  - fire 25:30 >0 0.05
+  - swarm $MagmaDrop:30:1 =spawn 1
+  - swarm $MagmaDrop:3:1 >0 0.4 dancingflamemagamadrop:60
+  - swarm $MagmaDrop:2:1 <2000 1 dancingflamemagamadrop2:60
+  - swarm $MagmaDrop:30:1 o=4100 1
+  - cmd 'eb mob kill MagmaDrop' =death 1
+  - cmd 'eb mob kill Silverfish-Mount' 2 =death 1
+  - cmd 'broadcast The Dancing Flame only has 50% hp left!' o=4100 1
+  - cmd 'broadcast The Dancing Flames test has been passed, Great Job! Each participant has received a cut of the treasure.' =death 1
+  Effects:
+    personalmusic:
+      particle-name: note
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.5
+      count: 1
+MagmaDrop:
+  Mobtype: magmacube
+  Display: ''
+  Health: 80
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 4
+  Skills:
+  - mount 10:player >0 0.5
+  Tags:
+    Size: 1
+  Effects:
+    personalmusic:
+      particle-name: note
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.5
+      count: 1

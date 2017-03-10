@@ -1,0 +1,105 @@
+Jack-o-Bones:
+  Mobtype: skeleton
+  Display: '&6Jack O Bones'
+  Health: 400
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 8
+  Despawn: false
+  Skills:
+  - msg 30:'&4$boss &2People say I am a bit Boney!' >0 0.003 bonestalk:60
+  - msg 30:'&4$boss &2Gahaha!' >0 0.003 bonestalk:60
+  - msg 30:'&4$boss &2Ive got a bone to pick with you!' >0 0.003 bonestalk:60
+  - msg 30:'&4$boss &2I am all bare bones!' >0 0.003 bonestalk:60
+  - msg 30:'&4$boss &2My bones ache!' >0 0.003 bonestalk:60
+  - msg 30:'&4$boss &2Our king is strong!' =spawn 1
+  - msg 30:'&4$boss &2Grahahhaha!' o=350 1
+  - msg 30:'&4$boss &2No! Don't kill me again!' o=100 1
+  - msg 30:'&4$boss &2How could you? You monsters!' =death 1
+  - throw 1:1:1 >0 0.5
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - swarm zombievillager:12:20 =spawn 1
+  - swarm zombie:3:3 =spawn 1
+  - swarm zombie:1:3 >0 0.01
+  - consume 5:5:2:0 WOLVES >0 1
+  - consume 5:5:2:0 IRON_GOLEMS >0 1
+  - swarm zombie:3:3 =spawn 1
+  - potion 60:SLOW:20:2 >0 0.15
+  - cmd 'broad &7You can hear a ghouslish cry coming from the VB crypts.' 1 =spawn 1
+  - cmd 'eb mob spawn Limbo-the-Lifeless 1 crypt-limbo' 0 =death 100
+  - cmd 'area toggle -w dungeon-world -39,50,1090' =spawn 1
+  - cmd 'eb mob spawn ZombieCorpse 1 crypt1' =spawn 1
+  - cmd 'eb mob spawn ZombieCorpse 1 crypt2' =spawn 1
+  - cmd 'eb mob spawn ZombieCorpse 1 crypt3' =spawn 1
+  - cmd 'eb mob spawn ZombieCorpse 1 crypt4' =spawn 1
+  - cmd 'eb mob spawn VillagerCorpse 1 crypt1' =spawn 1
+  - cmd 'eb mob spawn VillagerCorpse 1 crypt2' =spawn 1
+  - cmd 'eb mob spawn VillagerCorpse 1 crypt3' =spawn 1
+  - cmd 'eb mob spawn VillagerCorpse 1 crypt4' =spawn 1
+  - cmd 'eb mob spawn SkeletonCorpse 1 crypt1' =spawn 1
+  - cmd 'eb mob spawn SkeletonCorpse 1 crypt2' =spawn 1
+  - cmd 'eb mob spawn SkeletonCorpse 1 crypt3' =spawn 1
+  - cmd 'eb mob spawn SkeletonCorpse 1 crypt4' =spawn 1
+  Equipment:
+  - JackoBones
+Limbo-the-Lifeless:
+  Mobtype: villagezombie
+  Display: '&6Limbo the Lifeless'
+  Health: 800
+  Showhp: true
+  use-boss-bar: true
+  Damage: 12
+  Despawn: false
+  Skills:
+  - msg 30:'&4$boss &2I am lifeless!' >0 0.003 limbotalk:60
+  - msg 30:'&4$boss &2We are his servants!' >0 0.003 limbotalk:60
+  - msg 30:'&4$boss &2We wait for his call!' >0 0.003 limbotalk:60
+  - msg 30:'&4$boss &2The Zombie King will rule!' >0 0.003 limbotalk:60
+  - msg 30:'&4$boss &2I am stuck in this world!' >0 0.003 limbotalk:60
+  - msg 30:'&4$boss &2You taste good!' >0 0.003 limbotalk:60
+  - msg 30:'&4$boss &2I serve the Zombie King!' o=799 1
+  - msg 30:'&4$boss &2Braiiiinnss!' o=350 1
+  - msg 30:'&4$boss &2I will eat your flesh!' o=100 1
+  - msg 30:'&4$boss &2I never truely die!' =death 1
+  - throw 2:1:5 >0 1
+  - swarm zombievillager:1:5 <800 0.05 limbosummon:60
+  - swarm zombievillager:5:1 =spawn 1 limbosummon:60
+  - consume 5:5:2:0 WOLVES >0 1
+  - consume 5:5:2:0 IRON_GOLEMS >0 1
+  - potion 2:SLOW:20:2 >0 0.02
+  - potion 2:POISON:2:1 >300 0.03
+  - potion 2:POISON:2:2 <300 0.05
+  - lightning 2:1 >0 1 limbolightning:180
+  - cmd 'broad &7Limbo the Lifeless has been slain.' =death 1
+  - cmd 'area toggle -w dungeon-world -39,50,1090' o=800 1
+  - cmd 'area toggle -w dungeon-world -39,51,1090' =death 1
+  Equipment:
+  - Limbo
+ZombieCorpse:
+  Mobtype: zombie
+  Display: ''
+  Health: 30
+  Showhp: false
+  use-boss-bar: false
+  Damage: 12
+  Skills: []
+  Equipment: []
+VillagerCorpse:
+  Mobtype: villagezombie
+  Display: ''
+  Health: 30
+  Showhp: false
+  use-boss-bar: false
+  Damage: 12
+  Skills: []
+  Equipment: []
+SkeletonCorpse:
+  Mobtype: skeleton
+  Display: ''
+  Health: 30
+  Showhp: false
+  use-boss-bar: false
+  Damage: 12
+  Skills: []
+  Equipment: []

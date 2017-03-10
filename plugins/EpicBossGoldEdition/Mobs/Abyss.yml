@@ -1,0 +1,211 @@
+DeepOne:
+  Mobtype: elderguardian
+  Display: '&6The Deep One'
+  Health: 4000
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 35
+  regen:
+    interval-seconds: 8
+    amount: 18
+  Skills:
+  - msg 100:'&6[$boss -> You]&f Come gaze into the abyss. It is the perpetuity in which they dwell.' =spawn 1
+  - msg 100:'&6[$boss -> You]&f They drink your fear. It is the blood of life.' >0 0.05 deeponetalk:60
+  - msg 100:'&6[$boss -> You]&f They are the whisper on the shivering wind.' >0 0.05 deeponetalk:60
+  - msg 100:'&6[$boss -> You]&f They do not die, they do not live. They are outside the cycle.' >0 0.05 deeponetalk:60
+  - msg 100:'&6[$boss -> You]&f Where one falls, many shall take its place.' >0 0.05 deeponetalk:60
+  - msg 100:'&6[$boss -> You]&f They who dine on lost souls know only hunger.' >0 0.05 deeponetalk:60
+  - msg 100:'&6[$boss -> You]&f They lie in wait, to draw in the innocent.' >0 0.05 deeponetalk:60
+  - msg 100:'&6[$boss -> You]&f They come from the deep, far beyond one's reach.' >0 0.05 deeponetalk:60
+  - msg 100:'&6[$boss -> You]&f They are beyond number, beyond comprehension.' >0 0.05 deeponetalk:60
+  - msg 100:'&6[$boss -> You]&f They steal secrets, all knowledge is knowable.' >0 0.05 deeponetalk:60
+  - msg 100:'&6[$boss -> You]&f I am but a vessel, reborn beyond sight...' =death 1
+  - cmd 'cast forcecast $player mind-rot' 0 >0 0.1 deeponemindrot:170
+  - cmd 'cast wateraoem2-npc $world,$boss_x,$boss_y,$boss_z' >0 0.3 deeponeaoem:8
+  - cmd 'cast poisonink-npc-npc $world,$boss_x,$boss_y,$boss_z' >0 0.2 deeponepoison:230
+  - cmd 'cast laserl-npc $world,$boss_x,$boss_y,$boss_z' >0 0.3 deeponelaser:285
+  - cmd 'cast wateraoem2-npc $world,$boss_x,$boss_y,$boss_z' <1500 0.6 deeponeaoem:8
+  - cmd 'cast aoeswimattackl-npc $world,$boss_x,$boss_y,$boss_z' >0 0.5 deeponeaoes:5
+  - cmd 'cast inkaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 deeponeinkaoe1:70
+  - cmd 'cast inkaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 deeponeinkaoe2:95
+  - swarm $Warden:2:6 >0 0.1 deeponecall:15
+  - swarm $Warden:15:12 =spawn 1
+  - swarm $Warden:15:12 o=1500 1
+  - swarm $Warden:15:5 o=500 1
+  - cmd 'eb mob spawn Warden 4 warden5' 0 =spawn 1
+  - cmd 'eb mob spawn Warden 4 warden6' 5 =spawn 1
+  - cmd 'eb mob spawn Warden 4 warden7' 10 =spawn 1
+  - cmd 'eb mob spawn Warden 4 warden8' 15 =spawn 1
+  - cmd 'eb mob spawn Warden 7 warden9' 20 =spawn 1
+  - cmd 'eb mob spawn Warden 7 warden10' 25 =spawn 1
+  - cmd 'eb mob spawn Drowned 5 drowned1' 130 =spawn 1
+  - cmd 'eb mob spawn Drowned-Rider 1 drowned1' 135 =spawn 1
+  - cmd 'area toggle -w dungeon-world -358,14,4017' =spawn 1
+  - cmd 'area toggle -w dungeon-world -358,15,4017' =death 1
+  - cmd 'eb mob kill Warden' =death 1
+  - cmd 'eb mob kill Drowned' =death 1
+  - cmd 'broad &7The Deep One has been slain, Great Job!' =death 1
+AbyssBoss1:
+  Mobtype: guardian
+  Display: '&6Watcher'
+  Health: 3000
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 25
+  regen:
+    interval-seconds: 10
+    amount: 6
+  Skills:
+  - cmd 'eb mob kill DeepOne' 1 =spawn 1
+  - cmd 'eb mob kill Warden' 1 =spawn 1
+  - cmd 'eb mob kill Drowned' 1 =spawn 1
+  - msg 100:'&6[$boss -> You]&f Let me see you!' o=2990 1
+  - msg 60:'&6[$boss -> You]&f Such a fleeting memory. It is mine now.' >0 0.2 watchertalk:60
+  - msg 60:'&6[$boss -> You]&f A story of love. Only puny minds like yourself would indulge such a foolish endeavor.' >0 0.2 watchertalk:60
+  - msg 60:'&6[$boss -> You]&f I see your fears...' >0 0.2 watchertalk:60
+  - msg 60:'&6[$boss -> You]&f I see your desires...' >0 0.2 watchertalk:60
+  - msg 60:'&6[$boss -> You]&f I see your weakness...' >0 0.2 watchertalk:60
+  - msg 60:'&6[$boss -> You]&f I see your grief...' >0 0.2 watchertalk:60
+  - msg 60:'&6[$boss -> You]&f I see your sorrows...' >0 0.2 watchertalk:60
+  - msg 60:'&6[$boss -> You]&f I see your aspirations...' >0 0.2 watchertalk:60
+  - msg 60:'&6[$boss -> You]&f You have envy within you. Such poison.' >0 0.2 watchertalk:60
+  - msg 60:'&6[$boss -> You]&f Your mind holds secrets. I will go deeper.' >0 0.2 watchertalk:60
+  - msg 60:'&6[$boss -> You]&f I will show the others what I have learned...' o=10 1
+  - cmd 'cast inkaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 watcheraoe1:100
+  - cmd 'cast inkaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 watcheraoe2:120
+  - cmd 'cast aoeswimattackl-npc $world,$boss_x,$boss_y,$boss_z' >0 0.3 wateraoe3:22
+  - cmd 'cast stunespore-npc $world,$boss_x,$boss_y,$boss_z' >0 0.2 darkwatcherspore:50
+  - cmd 'cast stunespore-npc $world,$boss_x,$boss_y,$boss_z' <500 0.5 darkwatcherspore:40
+  - swarm $Warden:6:6 >0 0.05 watchercall:10
+  - cmd 'eb mob spawn WardenDoor1 1 warden1' =spawn 1
+  - cmd 'eb mob spawn WardenDoor2 1 warden1' =spawn 1
+  - cmd 'area toggle -w dungeon-world -358,15,4021' 0 =spawn 1
+  - cmd 'area toggle -w dungeon-world -358,15,4020' 5 =spawn 1
+  - cmd 'area toggle -w dungeon-world -358,14,4018' 15 =spawn 1
+  - cmd 'area toggle -w dungeon-world -358,14,4021' 0 =death 1
+  - cmd 'area toggle -w dungeon-world -358,14,4020' 5 =death 1
+  - cmd 'area toggle -w dungeon-world -358,15,4018' 15 =death 1
+  - cmd 'area toggle -w dungeon-world -358,15,4019' 20 =death 1
+  - cmd 'eb mob spawn DeepOne 1 deepone' =death 1
+  - cmd 'broad &7Something stirs in the dark depths of the Abyss...' =spawn 1
+  - cmd 'cast waterdoor-sound $world,-292,31,3973' =death 1
+  - msg 100:'&4[The Abyss] &bDark Watcher has sealed his chamber, however other doors within the temple have been opened...' =death 1
+  Effects:
+    angryVillager:
+      particle-name: angryVillager
+      y-offset: 0
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.6
+      vert-spread: 0.6
+      speed: 0.0
+      count: 1
+    largesmoke:
+      particle-name: largesmoke
+      y-offset: 0
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.1
+      vert-spread: 0.1
+      speed: 0.0
+      count: 10
+Warden:
+  Mobtype: guardian
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 38
+  Skills:
+  - swarm Warden:1:6 >0 0.001
+  Loot:
+  - wardenloot
+WardenDoor1:
+  Mobtype: guardian
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 38
+  Skills:
+  - cmd 'area toggle -w dungeon-world -358,14,4016' 40 o=100 1
+  - cmd 'area toggle -w dungeon-world -358,15,4016' =death 1
+  - cmd 'cast waterdoor-sound $world,-319,4,3998' =death 1
+  - msg 100:'&4[The Abyss] &bA Door Warden was slain, and a tunnel has been unlocked.' =death 1
+  - cmd 'eb mob spawn Warden 5 warden1' 120 =spawn 1
+  - cmd 'eb mob spawn Warden 4 warden2' 120 =spawn 1
+  - cmd 'eb mob spawn Warden 4 warden3' 120 =spawn 1
+  - cmd 'eb mob spawn Warden 4 warden4' 120 =spawn 1
+  Loot:
+  - wardenloot
+WardenDoor2:
+  Mobtype: guardian
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 38
+  Skills:
+  - cmd 'area toggle -w dungeon-world -358,14,4015' o=100 1
+  - cmd 'area toggle -w dungeon-world -358,15,4015' =death 1
+  - cmd 'cast waterdoor-sound $world,-319,4,4035' =death 1
+  - msg 100:'&4[The Abyss] &bA Door Warden was slain, and a tunnel has been unlocked.' =death 1
+  Loot:
+  - wardenloot
+Drowned-Rider:
+  Bosslist: Drowned,Warden
+Drowned:
+  Mobtype: zombie
+  Display: '&fDrowned Ghoul'
+  Health: 500
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 69
+  Skills:
+  - potionboss SPEED:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - consume 12:12:400:0 Warden =death 1
+  Equipment:
+  - Drowned
+  Effects:
+    watersplash:
+      particle-name: splash
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.2
+      speed: 0.0
+      count: 8
+    suspended:
+      particle-name: suspended
+      y-offset: 1
+      ticks: 8
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.2
+      speed: 0.0
+      count: 5
+    dripWater:
+      particle-name: dripWater
+      y-offset: 1
+      ticks: 12
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.1
+      vert-spread: 0.1
+      speed: 0.0
+      count: 2
+  Loot:
+  - wardenloot

@@ -1,0 +1,90 @@
+DragonBreathe:
+  Skills:
+  - msg 200:'&a[Ender Dragon]&c Is breathing in the flames...' >0 1
+  - title 200:_:&cThe_dragon_is_breathing_in_the_flames...:4s:4s:4s >0 1
+  - delay 200
+  - consume 120:120:60:25 BLAZE >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - msg 200:'&a[Ender Dragon]&c Finished breathing in the flames.' >0 1
+  - title 200:_:&cThe_dragon_finished_breathing_in_the_flames.:4s:4s:4s >0 1
+DragonBreathe2:
+  Skills:
+  - msg 200:'&a[Ender Dragon]&c Is consuming the souls of its allies...' >0 1
+  - title 200:_:&cThe_dragon_is_consuming_the_souls_of_its_allies...:4s:4s:4s >0 1
+  - delay 200
+  - consume 120:120:60:25 BLAZE >0 1
+  - consume 120:120:60:25 ENDERMAN >0 1
+  - consume 120:120:50:25 WITHER_SKELETON >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - consume 120:120:60:25 ENDERMAN >0 1
+  - consume 120:120:50:25 WITHER_SKELETON >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - consume 120:120:60:25 ENDERMAN >0 1
+  - consume 120:120:50:25 WITHER_SKELETON >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - consume 120:120:60:25 ENDERMAN >0 1
+  - consume 120:120:50:25 WITHER_SKELETON >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - consume 120:120:60:25 ENDERMAN >0 1
+  - consume 120:120:50:25 WITHER_SKELETON >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - consume 120:120:60:25 ENDERMAN >0 1
+  - consume 120:120:50:25 WITHER_SKELETON >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - consume 120:120:60:25 ENDERMAN >0 1
+  - consume 120:120:50:25 WITHER_SKELETON >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - consume 120:120:60:25 ENDERMAN >0 1
+  - consume 120:120:50:25 WITHER_SKELETON >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - consume 120:120:60:25 ENDERMAN >0 1
+  - consume 120:120:50:25 WITHER_SKELETON >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - consume 120:120:60:25 ENDERMAN >0 1
+  - consume 120:120:50:25 WITHER_SKELETON >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - consume 120:120:60:25 ENDERMAN >0 1
+  - consume 120:120:50:25 WITHER_SKELETON >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - consume 120:120:60:25 ENDERMAN >0 1
+  - consume 120:120:50:25 WITHER_SKELETON >0 1
+  - delay 20
+  - consume 120:120:60:25 BLAZE >0 1
+  - consume 120:120:60:25 ENDERMAN >0 1
+  - consume 120:120:50:25 WITHER_SKELETON >0 1
+  - msg 200:'&a[Ender Dragon]&c Finishing consuming souls.' >0 1
+  - title 200:_:&cThe_dragon_finished_consuming_souls.:4s:4s:4s >0 1

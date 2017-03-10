@@ -1,0 +1,1538 @@
+Plaguelord:
+  Mobtype: villagezombie
+  Display: '&6The Plaguelord'
+  Health: 8200
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 46
+  Skills:
+  - msg 80:'&4$boss &2The infection spreads...' >0 0.05 plaguelordtalk:20
+  - msg 80:'&4$boss &2A recipe of undeath...' >0 0.05 plaguelordtalk:20
+  - msg 80:'&4$boss &2It filles your bloodstream...' >0 0.05 plaguelordtalk:20
+  - msg 80:'&4$boss &2Let the gasses overcome you...' >0 0.05 plaguelordtalk:20
+  - msg 80:'&4$boss &2Taste of the infection...' >0 0.05 plaguelordtalk:20
+  - msg 80:'&4$boss &2How... are you feeling now?' >0 0.05 plaguelordtalk:20
+  - msg 80:'&4$boss &2Ah, a smell so sweet...' >0 0.05 plaguelordtalk:20
+  - msg 80:'&4$boss &2Breathe deep...' >0 0.05 plaguelordtalk:20
+  - msg 80:'&4$boss &2Take some home... with you' >0 0.05 plaguelordtalk:20
+  - msg 80:'&4$boss &2Your body and mind will warp alike...' >0 0.05 plaguelordtalk:20
+  - msg 80:'&4$boss &2You... are a petri dish of dna..' >0 0.05 plaguelordtalk:20
+  - msg 80:'&4$boss &2Dust to... dus...t' =death 1
+  - teleport >100 0.3
+  - consume 5:5:5:0 WOLVES >0 0.4
+  - consume 5:5:5:0 IRON_GOLEMS >0 0.4
+  - throw 4:12:12 <1000 0.01
+  - throw 4:6:6 >0 0.01
+  - throw 5:1:15 >0 0.02
+  - deathpack InfectionSpread 80 >0 1
+  - cmd 'eb mob kill Infected-Citizen' =death 1
+  - swarm $Infected-Citizen:5:10 =spawn 1
+  - swarm $Infected-Citizen:5:10 o=4100 1
+  - swarm $Infected-Citizen:1:10 >0 0.05 plaguelordspawn:70
+  - cmd 'broadcast The Plaguelord only has 50% hp left!' o=4100 1
+  - cmd 'broadcast The Plaguelord has been slain, Good Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Equipment:
+  - Plaguelord
+  Effects:
+    infectionparticle:
+      particle-name: slime
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.3
+      count: 2
+    mystic:
+      particle-name: witchMagic
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 2
+Infected-Citizen:
+  Mobtype: villagezombie
+  Display: '&fInfected Citizen'
+  Health: 200
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 96
+  Skills:
+  - potionboss DAMAGE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - potionboss SLOW:9999:2 =spawn 1
+  - potion 80:POISON:15:4 =death 1
+  - potion 80:SLOW:15:5 =death 1
+  - potion 80:WEAKNESS:15:5 =death 1
+  - potion 80:SLOW_DIGGING:15:5 =death 1
+  - potion 80:HUNGER:15:5 =death 1
+  - healboss 50:Plaguelord:130 =death 1
+  - swarm $InfectedCitizen:1:1 =death 0.5
+  - msg 80:'&4An infected citizen was killed, spreading its infection into the air.' =death 1
+  - cmd 'cast plaguegas $world,$boss_x,$boss_y,$boss_z' =death 1
+  Equipment:
+  - Nothing
+  Effects:
+    infectionparticle:
+      particle-name: slime
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.3
+      count: 2
+Sigilus:
+  Mobtype: skeleton
+  Display: '&6Sigilus'
+  Health: 8200
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 20
+  Skills:
+  - bossmsg 100:'&4$boss &2Krahaha! Welcome to my display of POWER!' o=8190 1
+  - bossmsg 100:'&4$boss &2Ghraaa!' >0 0.04  sigilustalk:200
+  - bossmsg 100:'&4$boss &2Take THIS!' >0 0.04  sigilustalk:200
+  - bossmsg 100:'&4$boss &2My magics have no rival!' >0 0.04  sigilustalk:200
+  - bossmsg 100:'&4$boss &2You will be but a pile of dust when I am done with you' >0 0.04  sigilustalk:200
+  - bossmsg 100:'&4$boss &2Dont run away from me!!!' >0 0.04  sigilustalk:200
+  - bossmsg 100:'&4$boss &2Theres no hope! My mentor is but the great Gorelock!' >0 0.04  sigilustalk:200
+  - bossmsg 100:'&4$boss &2Come closer. No, CLOSER!' >0 0.04  sigilustalk:200
+  - bossmsg 100:'&4$boss &2I drink from the streams of all magical creation.' >0 0.04  sigilustalk:200
+  - bossmsg 100:'&4$boss &2Once you abandon flesh, you can ascend by the masters will!' >0 0.04  sigilustalk:200
+  - bossmsg 100:'&4$boss &2NOO! You are all HACKERS! HACKERS I TELL YOU!!!' =death 1
+  - pack Sigilusaoe <7500 1 sigilusaoe:840
+  - consume 5:5:5:0 WOLVES >0 0.4
+  - consume 5:5:5:0 IRON_GOLEMS >0 0.4
+  - throw 4:6:6 >0 0.01
+  - throw 4:4:4 >0 1
+  - teleport >100 0.3
+  - shootfireball 0:true:100 <8150 1 sigilusfireball:40
+  - cmd 'cast single-mysticaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 sigilusaoesmall:5
+  - vampire 80:player:100 >0 1
+  - cmd 'broadcast Sigilus only has 50% hp left!' o=4100 1
+  - cmd 'broadcast Sigilus has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Effects:
+    mystic:
+      particle-name: witchMagic
+      y-offset: 1
+      ticks: 5
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.4
+      vert-spread: 0.2
+      speed: 0.0
+      count: 5
+    smoke:
+      particle-name: portal
+      y-offset: 1
+      ticks: 5
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 1.2
+      vert-spread: 0.7
+      speed: 0.0
+      count: 12
+  Equipment:
+  - Sigilus
+Mimic:
+  Mobtype: skeleton
+  Display: '&6Mimic'
+  Health: 4200
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 78
+  Skills:
+  - bossmsg 100:'&4$boss &2Haha, thought I was treasure? ACTING!' o=4190 1
+  - bossmsg 100:'&4$boss &2I wait wait wait, then I BITE YOU!' >0 0.003  wailaratalk:200
+  - bossmsg 100:'&4$boss &2No, you out trixed me!' =death 1
+  - cmd 'cast forcecast $player searingflesh' <7500 0.1 mimicspell:200
+  - cmd 'broadcast Mimic only has 50% hp left!' o=2100 1
+  - cmd 'broadcast Mimic has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Effects:
+    mystic:
+      particle-name: witchMagic
+      y-offset: 1
+      ticks: 5
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.4
+      vert-spread: 0.2
+      speed: 0.0
+      count: 2
+  Equipment:
+  - Mimic
+MimicCopy:
+  Mobtype: skeleton
+  Display: ''
+  Health: 40
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 5
+  Skills:
+  - potionboss INCREASE_DAMAGE:99999:2 o=150 1
+  - potionboss INCREASE_DAMAGE:99999:2 >0 1
+  - potionboss SPEED:9999:2 o=100 1
+  - potionboss SPEED:9999:2 >0 1
+  Effects:
+    mystic:
+      particle-name: witchMagic
+      y-offset: 1
+      ticks: 5
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.4
+      vert-spread: 0.2
+      speed: 0.0
+      count: 1
+  Equipment:
+  - Mimic
+Wailara:
+  Mobtype: ghast
+  Display: '&6Wailara'
+  Health: 8200
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 35
+  Skills:
+  - bossmsg 100:'&4$boss &2The nether is but a taste of the flames we conjure!' o=8190 1
+  - bossmsg 100:'&4$boss &2Burn, BURN you fools hahaha!' >0 0.003  wailaratalk:200
+  - bossmsg 100:'&4$boss &2You havent seen anything yet...' >0 0.003  wailaratalk:200
+  - bossmsg 100:'&4$boss &2A thousand firey deaths await you all in the nether!' >0 0.003  wailaratalk:200
+  - bossmsg 100:'&4$boss &2Your flesh will MELT AWAY!' >0 0.003  wailaratalk:200
+  - bossmsg 100:'&4$boss &2You will be but BONES when I am done with you.' >0 0.003  wailaratalk:200
+  - bossmsg 100:'&4$boss &2You are but BUGS drawn to the flame!' >0 0.003  wailaratalk:200
+  - bossmsg 100:'&4$boss &2The Dark Force was right to be rid of your ignorance!' >0 0.003  wailaratalk:200
+  - bossmsg 100:'&4$boss &2Your puny spells weak, WEAK!' >0 0.003  wailaratalk:200
+  - bossmsg 100:'&4$boss &2BURN!' >0 0.003  wailaratalk:200
+  - bossmsg 100:'&4$boss &2Hahahaha! Look at you run in horrow from my FLAMES!' >0 0.003  wailaratalk:200
+  - bossmsg 100:'&4$boss &2Your armor will melt into your FLESH!' >0 0.003  wailaratalk:200
+  - bossmsg 100:'&4$boss &2You burn so NICELY!' >0 0.003  wailaratalk:200
+  - bossmsg 100:'&4$boss &2Hahaha! Look at you BURN!!' >0 0.003  wailaratalk:200
+  - bossmsg 100:'&4$boss &2No! This is IMPOSSIBLE! Master... have you abandoned me?' =death 1
+  - potionboss DAMAGE_RESISTANCE:9999:4 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:4 >0 1
+  - cmd 'eb mob spawn BurningBones 1 $world,$player_x,$player_y,$player_z' <8100 1 burningbones:20
+  - cmd 'cast forcecast $player searingflesh' <7500 1 wailaraflesh:100
+  - cmd 'cast flame-ground-npc $world,$player_x,$player_y,$player_z' 0 >0 0.01 wailarafirefloor:30
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 >4700 0.05 wailarafire1:2
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 <4700 0.1 wailarafire2:2
+  - cmd 'cast fireaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.01 wailarafire3:5
+  - cmd 'cast fireaoel-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.006 wailarafire4:2
+  - pack WailaraStun <7500 1 wailarastun:940
+  - cmd 'broadcast Wailara only has 50% hp left!' o=4100 1
+  - cmd 'broadcast Wailara has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Effects:
+    shadow:
+      particle-name: flame
+      y-offset: 1
+      ticks: 5
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 2.5
+      vert-spread: 2.3
+      speed: 0.0
+      count: 12
+BurningBones:
+  Mobtype: skeleton
+  Display: ''
+  Health: 40
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 5
+  Skills:
+  - potionboss SPEED:9999:2 o=100 1
+  - potionboss SPEED:9999:2 >0 1
+  Equipment:
+  - BurningBones
+  Effects:
+    shadow:
+      particle-name: flame
+      y-offset: 1
+      ticks: 5
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.3
+      speed: 0.0
+      count: 12
+OPBoss:
+  Bosslist: Silverfish-Mount,Sinder-Rider,Nitro
+SpiderQueen:
+  Mobtype: spider
+  Display: '&6Spider Queen'
+  Health: 4200
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 16
+  Skills:
+  - msg 20:'&4$boss &2Fear not the spiders embrace' >0 0.003
+  - msg 20:'&4$boss &2Get them! Eat them my babies! Hahaha!' >0 0.003
+  - msg 20:'&4$boss &2Yesss, yessss!' >0 0.003
+  - msg 20:'&4$boss &2The spider I and you the fly!' >0 0.003
+  - msg 20:'&4$boss &2Hush now!' >0 0.003
+  - msg 20:'&4$boss &2Ah the tangled webs we weave!' o=4198 1
+  - msg 20:'&4$boss &2Partake of my poison!' o=1100 1
+  - msg 20:'&4$boss &2I can feel your fear!' o=100 1
+  - msg 20:'&4$boss &2I will be back, and my babies will tear you all apart! Come....face me in MY lair!' =death 1
+  - cmd 'cast cacoon-npc1-aoe $world,$boss_x,$boss_y,$boss_z' 0 >0 0.005
+  - cmd 'cast web-wall-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.003
+  - throw 5:1:1 >0 0.4
+  - throw 4:12:12 <1000 0.01
+  - throw 4:4:4 >0 0.01
+  - throw 4:3:3 >0 1
+  - web 3:300 >0 0.1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 o=4200 1
+  - vampire 80:player:20 >0 1
+  - swarm cavespider:1:1 >1100 0.01
+  - swarm cavespider:2:1 >1100 0.01
+  - swarm cavespider:3:1 >1100 0.01
+  - swarm cavespider:5:1 >1100 0.01
+  - swarm cavespider:10:1 >1100 0.004
+  - swarm spider:2:1 >1100 0.02
+  - swarm spider:2:1 <1100 0.2
+  - swarm cavespider:5:1 <1100 0.05
+  - swarm $SpiderSoldier:1:1 >0 0.006
+  - swarm $SpiderStalker:1:1 >0 0.006
+  - swarm $SpiderWebSpinner:1:1 >0 0.006
+  - swarm $PoisonSpitter:1:1 >0 0.006
+  - swarm $SpiderSoldier:1:1 o=500 1
+  - swarm $SpiderStalker:1:1 o=500 1
+  - swarm $SpiderWebSpinner:1:1 o=500 1
+  - swarm $PoisonSpitter:3:1 o=500 1
+  - swarm $SpiderSoldier:3:1 o=4200 1
+  - swarm $SpiderStalker:3:1 o=4200 1
+  - swarm $SpiderWebSpinner:3:1 o=4200 1
+  - swarm $PoisonSpitter:1:1 o=4200 1
+  - potion 10:SLOW:20:6 >0 0.15
+  - cmd 'broadcast SpiderQueen only has 50% hp left!' o=2100 1
+  - cmd 'broadcast SpiderQueen has been slain, Good Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+PowerSpider:
+  Mobtype: spider
+  Display: ''
+  Health: 40
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 18
+  Tags:
+    KnockbackRes: 1
+PowerSpider2:
+  Mobtype: spider
+  Display: ''
+  Health: 40
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 16
+  Tags:
+    KnockbackRes: 1
+PowerSupressor:
+  Mobtype: zombie
+  Display: ''
+  Health: 40
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 16
+  Skills:
+  - potionboss INVISIBILITY:9999:2 o=40 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  Tags:
+    KnockbackRes: 1
+  Equipment:
+  - EnchantedWeapon
+Magus:
+  Mobtype: skeleton
+  Display: '&6Magus'
+  Health: 2000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 66
+  Skills:
+  - msg 30:'&4$boss &2You will be consumed by my Illusions!' o=1980 1
+  - msg 30:'&4$boss &2I am one and I am many!' >0 0.003
+  - msg 30:'&4$boss &2Your attacks are feeble!' >0 0.003
+  - msg 30:'&4$boss &2Your eyes are lying!' >0 0.003
+  - msg 30:'&4$boss &2Death becomes you!' >0 0.003
+  - msg 30:'&4$boss &2You are all lesser beings!' >0 0.003
+  - msg 30:'&4$boss &2My magic is superior!' >0 0.003
+  - msg 30:'&4$boss &2Magic? Against me? Hahahaha!!' >0 0.003
+  - msg 30:'&4$boss &2I will be rid of you!' >0 0.003
+  - msg 30:'&4$boss &2You will not succeed while I draw breath!' >0 0.003
+  - msg 30:'&4$boss &2How very naive!' >0 0.003
+  - msg 30:'&4$boss &2Your effors are in vain!' >0 0.003
+  - msg 30:'&4$boss &2You careless mortals!' >0 0.003
+  - msg 30:'&4$boss &2I will teach you ignorant children just how little you know of magic!' >0 0.003
+  - msg 30:'&4$boss &2Your cause is lost!' >0 0.003
+  - msg 30:'&4$boss &2My power is infinite!' >0 0.003
+  - msg 30:'&4$boss &2Few have experienced the pain I will now inflict apon you!' >0 0.003
+  - msg 30:'&4$boss &2Your pathetic magic betrays you!' >0 0.003
+  - msg 30:'&4$boss &2Enough! I tire of these games!' >0 0.003
+  - msg 30:'&4$boss &2I will be back, in more numbers!' =death 1
+  - teleport >1 0.05
+  - teleport <50 0.1
+  - teleport o=50 1
+  - lightning 15:2 >50 0.1
+  - lightning 15:4 <100 0.1
+  - lightning 15:1 o=50 0.5
+  - swarm giant:1:10 >0 0.05
+  - swarm giant:2:10 >0 0.03
+  - pull 30:1:1 >0 0.2
+  - throw 20:0.1:0.1 >0 0.4
+  - potion 30:WITHER:1200:2 o=200 1
+  - potionboss SPEED:30:3 >0 1
+  - potion 5:SLOW:30:3 >0 0.03
+  - potion 5:HUNGER:40:1 >0 0.03
+  - potion 5:SLOW:20:4 >0 0.03
+  - cmd 'broadcast Magus has been slain, Great Job!' =death 1
+Bean:
+  Mobtype: witherskeleton
+  Display: '&6Bean'
+  Health: 6400
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 17
+  Skills:
+  - msg 20:'&4$boss &2I squash you!' >0 0.003 beanmsg:30
+  - msg 20:'&4$boss &2Fee fi fo fum!' >0 0.003 beanmsg:30
+  - msg 20:'&4$boss &2Ghra!' >0 0.003 beanmsg:30
+  - msg 20:'&4$boss &2Little Pests!' >0 0.003 beanmsg:30
+  - msg 20:'&4$boss &2Bean Angry!' >0 0.003 beanmsg:30
+  - msg 20:'&4$boss &2No Hurt Bean!' >0 0.003 beanmsg:30
+  - msg 20:'&4$boss &2Bean deaded!' =death 1
+  - cmd 'cast golemstomp-npc $world,$boss_x,$boss_y,$boss_z' >0 0.3 beanstomp:90
+  - potionboss INCREASE_DAMAGE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:4 =spawn 1
+  - potionboss SPEED:9999:4 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 =spawn 1
+  - throw 8:0:2 >0 0.15
+  - throw 8:5:5 >0 0.7
+  - throw 8:12:12 >0 0.06
+  - throw 5:3:3 >0 0.4
+  - throw 5:3:10 >0 0.02
+  - throw 5:10:10 >0 0.01
+  - lightning 60:1 >0 0.02
+  - voxeffect bigzombie >0 0.3
+  - voxeffect basichurt >0 1
+  - cmd 'broadcast Bean only has 50% hp left!' o=3200 1
+  - cmd 'broadcast Bean has been slain, Good Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+  Equipment:
+  - Bean
+WitchDoctor:
+  Mobtype: witch
+  Display: '&6Witch Doctor'
+  Health: 8200
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 78
+  Skills:
+  - bossmsg 100:'&4$boss &2Mix mix, swirl mix' >0 0.003  witchdoctortalk:200
+  - bossmsg 100:'&4$boss &2A delicious mixture!' >0 0.003  witchdoctortalk:200
+  - bossmsg 100:'&4$boss &2Drink of the brew!' >0 0.003  witchdoctortalk:200
+  - bossmsg 100:'&4$boss &2Down the hatch!' >0 0.003  witchdoctortalk:200
+  - bossmsg 100:'&4$boss &2Your death approaches!' >0 0.003  witchdoctortalk:200
+  - bossmsg 100:'&4$boss &2Your end is inevitable!' >0 0.003  witchdoctortalk:200
+  - bossmsg 100:'&4$boss &2Care for a drink?' >0 0.003  witchdoctortalk:200
+  - bossmsg 100:'&4$boss &2How did that taste?!' >0 0.003  witchdoctortalk:200
+  - bossmsg 100:'&4$boss &2I did not come this far to fail!' >0 0.003  witchdoctortalk:200
+  - bossmsg 100:'&4$boss &2Ghreahg!' =death 1
+  - cmd 'cast lava-fountain-npc $world,$player_x,$player_y,$player_z' <8100 1 wdfountain1:400
+  - cmd 'cast smoke-fountain-npc $world,$player_x,$player_y,$player_z' <7700 1 wdfountain2:500
+  - swarm babyvillagezombie:1:15 >0 0.01
+  - swarm babyvillagezombie:3:15 >0 0.01
+  - swarm babyvillagezombie:10:15 >0 0.003
+  - throw 4:12:12 <1000 0.01
+  - throw 4:6:6 >0 0.01
+  - throw 4:4:4 >0 1
+  - potionboss INVISIBILITY:60:1 <4000 1 wdinvisdrink:2500
+  - cmd 'broadcast WitchDoctor only has 50% hp left!' o=4100 1
+  - cmd 'broadcast WitchDoctor has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  - voxeffect villager >0 0.3
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+Nitro:
+  Mobtype: pigzombie
+  Display: '&6Nitro'
+  Health: 7500
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 4
+  Skills:
+  - msg 20:'&4$boss &2Wahahahaha! *snort*' >0 0.003
+  - msg 20:'&4$boss &2Mwahahahaha! *snort*' >0 0.003
+  - msg 20:'&4$boss &2Boom! Boom!' >0 0.003
+  - msg 20:'&4$boss &2Im gonna blow this place to bits! *snort*' >0 0.003
+  - msg 20:'&4$boss &2Why do booms hurt so much?' >0 0.003
+  - msg 20:'&4$boss &2Maybe me should stop booming?' >0 0.003
+  - msg 20:'&4$boss &2Me go with a bang!' =death 1
+  - potionboss FIRE_RESISTANCE:60:3 >0 1
+  - potionboss INCREASE_DAMAGE:60:1 >2500 1
+  - potionboss INCREASE_DAMAGE:60:3 <2500 1
+  - swarm tnt:20:1 =death 1
+  - potion 20:CONFUSION:10:3 >1400 0.05
+  - potion 20:CONFUSION:15:3 <1400 0.05
+  - potion 20:SLOW:15:1 >1400 0.05
+  - potion 20:SLOW:15:3 <1400 0.05
+  - swarm $Nitroling:1:1 >0 0.015
+  - swarm tnt:1:1 >0 0.025
+  - swarm tnt:4:10 >0 0.005
+  - swarm tnt:3:10 >0 0.0025
+  - swarm tnt:5:10 >0 0.0005
+  - cmd 'eb mob kill Nitroling' =death 1
+  - cmd 'broadcast Nitro only has 50% hp left!' o=3750 1
+  - cmd 'broadcast Nitro has been slain, Good job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Equipment:
+  - Nitro
+Nitroling:
+  Mobtype: babypigzombie
+  Display: ''
+  Health: 20
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 1
+  Skills:
+  - cmd 'cast explosion-bomb-npc $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+  Equipment:
+  - Nitroling
+ThePiper:
+  Mobtype: villagezombie
+  Display: '&6The Piper'
+  Health: 4000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 16
+  Skills:
+  - msg 80:'&4$boss &2L Listen to my s-s-s-song!' o=1980 1
+  - msg 80:'&4$boss &2Get them m-m-my fishies!' >0 0.003
+  - msg 80:'&4$boss &2*Plays Flute*' >0 0.003
+  - msg 80:'&4$boss &2K k-k-kill them all!' >0 0.003
+  - msg 80:'&4$boss &2Listen to my s-s-s-song my lovelies!' >0 0.003
+  - msg 80:'&4$boss &2Swarm them! Swarm them!' >0 0.003
+  - msg 80:'&4$boss &2Get that one! That one!' >0 0.003
+  - msg 80:'&4$boss &2Silver FISH!' >0 0.003
+  - msg 80:'&4$boss &2Chew their little t-t-t-toes off!' >0 0.003
+  - msg 80:'&4$boss &2Lots of little silverfish y-y-y-yes!' >0 0.003
+  - msg 80:'&4$boss &2You cant kill th-th-them all!' >0 0.003
+  - msg 80:'&4$boss &2W-w-w-watch your feet! HahAhahA!' >0 0.003
+  - msg 80:'&4$boss &2They will feast on your c-c-c-carcass!' >0 0.003
+  - msg 80:'&4$boss &2They will burrow beneath your s-s-s-skin!' >0 0.003
+  - msg 80:'&4$boss &2They will g-g-g-naw your f-f-f-flesh off!' >0 0.003
+  - msg 80:'&4$boss &2S-s-s-stop hurting us!' o=500 1
+  - msg 80:'&4$boss &2I will j-j-j-just call more!' o=100 0.003
+  - msg 80:'&4$boss &2NooooO! Who will take care of my b-b-b-b-babies?!' =death 1
+  - potionmobs 80:INVISIBILITY:300:1 StrongSilverfish >0 1 cloaksilverfish:1200
+  - potionboss FIRE_RESISTANCE:9999:1 o=4000 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 o=4000 1
+  - potionboss SPEED:9999:4 =spawn 1
+  - potionboss SPEED:9999:4 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - cmd 'cast musicaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 piperaoes:30
+  - cmd 'cast musicaoel-npc $world,$boss_x,$boss_y,$boss_z' >0 1 piperaoel:40
+  - throw 5:5:5 >0 1 piperthrow:50
+  - throw 5:2:2 >0 1
+  - swarm $StrongSilverfish:1:1 >0 0.4
+  - swarm $StrongSilverfish:5:2 >0 0.03 pipersilverfishswarm:60
+  - msg 30:'&4$boss &2A mighty silverfish army at my beck and call!' o=1000 1
+  - consume 5:5:5:0 WOLVES >0 1
+  - consume 5:5:5:0 IRON_GOLEMS >0 1
+  - swarm $StrongSilverfish:30:15 o=500 1 piperfishcontrol:70
+  - swarm $StrongSilverfish:30:15 o=1000 1 piperfishcontrol:70
+  - swarm $StrongSilverfish:20:15 o=1500 1 piperfishcontrol:70
+  - swarm $StrongSilverfish:30:15 o=2000 1 piperfishcontrol:70
+  - swarm $StrongSilverfish:10:15 o=2500 1 piperfishcontrol:70
+  - swarm $StrongSilverfish:30:15 o=3000 1 piperfishcontrol:70
+  - swarm $StrongSilverfish:20:15 o=3500 1 piperfishcontrol:70
+  - swarm $StrongSilverfish:30:15 o=4000 1 piperfishcontrol:70
+  - cmd 'eb mob kill StrongSilverfish' =death 1
+  - cmd 'broadcast ThePiper has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Equipment:
+  - Piper
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+  Effects:
+    shadow:
+      particle-name: note
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.3
+      count: 2
+StrongSilverfish:
+  Mobtype: silverfish
+  Display: ''
+  Health: 50
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 4
+  Skills:
+  - consume 400:400:5:0 ThePiper =death 1
+  - consume 5:5:5:0 StrongSilverfish =death 1
+OathKeeper:
+  Mobtype: witherskeleton
+  Display: '&6Oath Keeper'
+  Health: 2000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 16
+  Skills:
+  - msg 30:'&4$boss &2I bringeth an army of horrors you cannot comprehend!' o=1980 1
+  - msg 30:'&4$boss &2Our forces are endless!' >0 0.003
+  - msg 30:'&4$boss &2Tear them up!' >0 0.003
+  - msg 30:'&4$boss &2We will muder every last one of you!' >0 0.003
+  - msg 30:'&4$boss &2We will taste your blood!' >0 0.003
+  - msg 30:'&4$boss &2No retreat! No surrender!' >0 0.003
+  - msg 30:'&4$boss &2Your life is forfeit!' >0 0.003
+  - msg 30:'&4$boss &2You fight like children!' >0 0.003
+  - msg 30:'&4$boss &2You call that a sword? THIS is a sword!' >0 0.003
+  - msg 30:'&4$boss &2We will sunder your armor!' >0 0.003
+  - msg 30:'&4$boss &2We are legion!' >0 0.003
+  - msg 30:'&4$boss &2Your soul will be ours!' >0 0.003
+  - msg 30:'&4$boss &2Your gates will fall!' >0 0.003
+  - msg 30:'&4$boss &2A thousand blades at my cmd!' >0 0.003
+  - msg 30:'&4$boss &2Hear our thunderous war cry!' >0 0.003
+  - msg 30:'&4$boss &2Our numbers are unmatched!' >0 0.003
+  - msg 30:'&4$boss &2Your forces were.......stronger!' =death 1
+  - swarm $WitherSoldier:5:15 o=1999 1
+  - swarm $WitherSoldier:1:15 >0 0.1
+  - swarm $WitherSoldier:1:15 >0 0.03
+  - swarm $WitherSoldier:2:15 >0 0.01
+  - swarm $WitherSoldier:3:15 >0 0.005
+  - swarm $PigmanSoldier:1:15 >0 0.03
+  - swarm ghast:1:5 >0 0.001
+  - throw 2:2:0.1 0.5
+  - potion 20:WITHER:20:1 >0 0.3
+  - potionboss SPEED:30:3 >0 1
+  - potion 5:SLOW:30:3 >0 0.03
+  - potion 5:HUNGER:40:1 >0 0.03
+  - potion 5:SLOW:20:4 >0 0.03
+  - cmd 'eb mob kill PigmanSoldier' 0 =death 1
+  - cmd 'eb mob kill WitherSoldier' 2 =death 1
+  - cmd 'broadcast Oath Keeper only has 50% hp left!' 3 o=1000 1
+  - cmd 'broadcast DeathKeeper has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token.' 4 =death 1
+  Equipment:
+  - Psychoblade
+WitherSoldier:
+  Mobtype: witherskeleton
+  Display: '&fWither Soldier'
+  Health: 150
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 4
+  Skills: []
+PigmanSoldier:
+  Mobtype: pigzombie
+  Display: '&fPigman Soldier'
+  Health: 150
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 4
+  Skills: []
+  Equipment:
+  - FullDiamond
+Slate:
+  Mobtype: witherskeleton
+  Display: '&6Slate'
+  Health: 4200
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 8
+  Skills:
+  - msg 80:'&4$boss &2No!' >0 0.003
+  - msg 80:'&4$boss &2I will mask you in shadow!' >0 0.003
+  - msg 80:'&4$boss &2Haha!' >0 0.003
+  - msg 80:'&4$boss &2You are weak!' >0 0.003
+  - msg 80:'&4$boss &2Only darkness...' o=3180 1
+  - msg 80:'&4$boss &2No! Get off me you filth!' o=1600 1
+  - msg 80:'&4$boss &2I will take you with me!' o=200 1
+  - msg 80:'&4$boss &2Master... I cant...' =death 1
+  - fire 20:2 >0 0.5
+  - throw 2:1:1 >0 1
+  - swarm bat:5:1 >0 0.04
+  - swarm bat:10:1 =death 1
+  - swarm skeleton:1:5 >0 0.05
+  - swarm skeleton:2:5 >0 0.01
+  - swarm skeleton:3:5 >0 0.005
+  - lightning 60:1 >0 0.03
+  - potion 5:WITHER:5:2 >0 0.04
+  - potion 20:SLOW:30:3 >0 0.04
+  - potion 70:BLINDNESS:40:3 o=4100 1
+  - potion 10:BLINDNESS:40:3 >0 0.001
+  - potion 20:POISON:10:2 o=1600 1
+  - swarm skeleton:10:10 <600 0.003
+  - cmd 'broadcast Slate only has 50% hp left!' o=2100 1
+  - cmd 'broadcast &5Slate&a has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+ZombieKing:
+  Mobtype: zombie
+  Display: '&6Zombie King'
+  Health: 3700
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 16
+  Skills:
+  - msg 30:'&4$boss &2Jump on my sword!' >0 0.003
+  - msg 30:'&4$boss &2I will cut you down!' >0 0.003
+  - msg 30:'&4$boss &2Filth!' >0 0.003
+  - msg 30:'&4$boss &2You will bow to me!' o=690 1
+  - msg 30:'&4$boss &2Filthy peasants!' o=350 1
+  - msg 30:'&4$boss &2You will not interfere!' o=100 1
+  - msg 30:'&4$boss &2I will rise again and again!' =death 1
+  - throw 2:1:1 >0 1
+  - swarm villagezombie:1:3 >0 0.15
+  - swarm villagezombie:2:3 >0 0.05
+  - potion 60:SLOW:20:2 >0 0.15
+  - potion 10:POISON:2:1 >700 0.15
+  - potion 10:POISON:2:2 <350 0.15
+  - cmd 'broadcast ZombieKing only has 50% hp left!' o=1850 1
+  - cmd 'broadcast ZombieKing has been slain, Good Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+Snort:
+  Mobtype: pigzombie
+  Display: '&6Snort'
+  Health: 4700
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 16
+  Skills:
+  - msg 30:'&4$boss &2*snort*!' >0 0.003
+  - msg 30:'&4$boss &2Ghrahha!' >0 0.003
+  - msg 30:'&4$boss &2You cant beat me! *snort*' >0 0.003
+  - msg 30:'&4$boss &2I'm gonna bust you up reeeeeeeeal good!' o=1700 1
+  - msg 30:'&4$boss &2Cocky little freaks!' o=850 1
+  - msg 30:'&4$boss &2This cant be happening!' o=100 1
+  - msg 30:'&4$boss &2Noooooo! *cough*' =death 1
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 >700 0.05 snortfireaoes:40
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 <700 0.1 snortfireaoes:40
+  - cmd 'cast fireaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.01 snortfireaoem:40
+  - cmd 'cast fireaoel-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.006 snortfireaoel:40
+  - potionboss FIRE_RESISTANCE:9999:1 o=3000 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=3000 1
+  - potionboss SPEED:9999:2 o=3000 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:5 <1500 1
+  - potionboss SPEED:9999:2 >1500 1
+  - shootfireball 5:false:0 o=200 1
+  - throw 4:5:5 >0 1
+  - throw 10:15:15 >0 0.008
+  - swarm $PigzombieSoldier:1:15 >0 0.03
+  - swarm $PigzombieSoldier:2:15 >0 0.01
+  - swarm $PigzombieSoldier:3:15 >0 0.01
+  - swarm $PigzombieSoldier:4:15 >0 0.01
+  - swarm $Sindling:2:5 >0 0.008
+  - cmd 'eb mob kill PigzombieSoldier' =death 1
+  - cmd 'eb mob kill silding' =death 1
+  - cmd 'broadcast Snort only has 50% hp left!' o=2350 1
+  - cmd 'broadcast Snort has been slain, Good Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Equipment:
+  - Snort
+  Effects:
+    flame:
+      particle-name: flame
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 15
+    magma:
+      particle-name: magma
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 1
+PigzombieSoldier:
+  Mobtype: pigzombie
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 8
+  Skills:
+  - consume 400:400:10:0 Snort =death 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=100 1
+  - potionboss SPEED:9999:1 o=100 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - ShardWarrior
+GraveDigger:
+  Mobtype: villagezombie
+  Display: '&6Grave Digger'
+  Health: 4800
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 15
+  Skills:
+  - msg 80:'&4$boss &2Fill the ground with them!' >0 0.003
+  - msg 80:'&4$boss &2I will bury you alive!' >0 0.003
+  - msg 80:'&4$boss &2Join me in eternity!' >0 0.003
+  - msg 80:'&4$boss &2Live bodies are so fragile!' >0 0.003
+  - msg 80:'&4$boss &2You will make splendid corpses!' >0 0.003
+  - msg 80:'&4$boss &2Death is the gift I offer!' o=3799 1
+  - msg 80:'&4$boss &2The last breath is sweetest!' o=1400 1
+  - msg 80:'&4$boss &2Life slips away!' o=100 1
+  - msg 80:'&4$boss &2You will remember me!' =death 1
+  - cmd 'cast earthquake-npc $world,$boss_x,$boss_y,$boss_z' >0 1 gravediggerearthquake:460
+  - cmd 'cast dirtaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 grivediggeraoes:10
+  - cmd 'cast dirtaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 0.5 grivediggeraoem:20
+  - cmd 'cast dirtaoel-npc $world,$boss_x,$boss_y,$boss_z' >0 0.5 grivediggeraoel:40
+  - potionboss FIRE_RESISTANCE:9999:1 o=4800 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=4800 1
+  - potionboss SPEED:9999:2 o=4800 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:5 <1500 1
+  - potionboss SPEED:9999:2 >1500 1
+  - swarm $AnimatedCorpse:3:5 >0 1 gravediggercall:80
+  - swarm $AnimatedBones:3:5 >0 1 gravediggercall:80
+  - swarm $AnimatedCorpse:15:5 o=4800 1
+  - swarm $AnimatedCorpse:1:5 >0 0.005
+  - swarm $AnimatedBones:1:5 >0 0.005
+  - swarm $AnimatedBones:15:5 o=4800 1
+  - potionboss FAST DIGGING:60:1 >0 0.001
+  - cmd 'eb mob kill AnimatedBones' =death 1
+  - cmd 'eb mob kill AnimatedCorpse' =death 1
+  - cmd 'broadcast GraveDigger only has 50% hp left!' o=1900 1
+  - cmd 'broadcast GraveDigger has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Equipment:
+  - GraveDigger
+DeadVillager:
+  Mobtype: villagezombie
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 8
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=100 1
+  - potionboss SPEED:9999:1 o=100 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+AnimatedCorpse:
+  Mobtype: villagezombie
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 8
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=100 1
+  - potionboss SPEED:9999:1 o=100 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+AnimatedBones:
+  Mobtype: zombie
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 8
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=100 1
+  - potionboss SPEED:9999:1 o=100 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+Spitebone:
+  Mobtype: skeleton
+  Display: '&6Spitebone'
+  Health: 2700
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 8
+  Skills:
+  - msg 80:'&4$boss &2I am over here!' >0 0.003
+  - msg 80:'&4$boss &2That tickled my funny bone!' >0 0.003
+  - msg 80:'&4$boss &2Going somewhere?' >0 0.003
+  - msg 80:'&4$boss &2Ghrahaha!' >0 0.003
+  - msg 80:'&4$boss &2Eternity we shal spend together!' >0 0.003
+  - msg 80:'&4$boss &2No one can save you!' >0 0.003
+  - msg 80:'&4$boss &2Death would be too simple for the likes of you!' o=2699 1
+  - msg 80:'&4$boss &2Nobody escapes!' o=1400 1
+  - msg 80:'&4$boss &2Its over when I say!' o=100 1
+  - msg 80:'&4$boss &2Ghrack nooooo!' =death 1
+  - throw 20:1:1 0.5
+  - teleport swap >0 0.5
+  - potionboss SPEED:60:2 >0 0.05
+  - potionboss INVISIBILITY:10:1 o=100 1
+  - potion 60:SLOW:20:3 >0 0.05
+  - potion 60:INVISIBILITY:5:1 >0 0.05
+  - potion 60:POISON:3:1 >0 0.05
+  - potion 60:POISON:5:2 <350 0.05
+  - potion 4:CONFUSION:16:1 >0 0.05
+  - cmd 'broadcast Spitebone only has 50% hp left!' o=1350 1
+  - cmd 'broadcast Spitebone has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+Sindling:
+  Mobtype: blaze
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 4
+  Skills: []
+Silverfish-Mount:
+  Mobtype: silverfish
+  Display: '&6Blaze Flyer'
+  Health: 99999
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 4
+  Skills:
+  - potionboss INVISIBILITY:9999:1 o=99999 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=99999 1
+  - potionboss DAMAGE_RESISTANCE:9999:5 o=99999 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:5 >0 1
+Banshee:
+  Mobtype: ghast
+  Display: '&6Banshee'
+  Health: 1000
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 16
+  Skills:
+  - msg 80:'&4$boss &2You Dare?!' >0 0.003
+  - msg 80:'&4$boss &2Doomed for eternity!' >0 0.003
+  - msg 80:'&4$boss &2I shal devour you all!' >0 0.003
+  - msg 80:'&4$boss &2You will not leave here!' >0 0.003
+  - msg 80:'&4$boss &2You dare look upon the banshee?!' o=1000 1
+  - msg 80:'&4$boss &2Your soul will be mine!' o=500 1
+  - msg 80:'&4$boss &2DAMNATION!' o=100 1
+  - msg 80:'&4$boss &2NoooooOOono no no no no NOOOO!!!!!' =death 1
+  - swarm creeper:1:3 >0 0.05
+  - swarm bat:10:3 =death 1
+  - fire 20:20 >300 0.15
+  - fire 25:10 <600 0.35
+  - fire 10:120 =death 1
+  - lightning 60:1 >0 0.15
+  - potion 5:HARM:1:1 >1100 0.15
+  - potion 5:HARM:1:2 <1100 0.15
+  - potion 5:WITHER:5:2 >0 0.05
+  - potion 20:SLOW:30:3 >0 0.05
+  - potion 20:BLINDNESS:40:3 >0 0.2
+  - cmd 'broadcast Banshee only has 50% hp left!' o=500 1
+  - cmd 'broadcast Banshee has been slain, Good Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+SandGiant:
+  Mobtype: giant
+  Display: '&6Sand Giant'
+  Health: 4000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 48
+  Skills:
+  - msg 80:'&4$boss &2The wind and the sands are in my favor!' >0 0.003 sangianttalk:30
+  - msg 80:'&4$boss &2Ill dry you up!' >0 0.003 sangianttalk:30
+  - msg 80:'&4$boss &2There is no escape!' >0 0.003 sangianttalk:30
+  - msg 80:'&4$boss &2The earth will swallow you up!' >0 0.003 sangianttalk:30
+  - msg 80:'&4$boss &2You anger me!' >0 0.003 sangianttalk:30
+  - msg 80:'&4$boss &2I control the sands!' o=3980 1
+  - msg 80:'&4$boss &2No! You will not win!' o=1000 1
+  - msg 80:'&4$boss &2NOOOOooooooOoo!' =death 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=3000 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 o=3000 1
+  - potionboss SPEED:9999:2 o=3000 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss SPEED:9999:5 <1500 1
+  - potionboss SPEED:9999:2 >1500 1
+  - cmd 'cast earthquake-npc $world,$boss_x,$boss_y,$boss_z' >0 1 sandgiantearthquake:160
+  - cmd 'cast sektesh-sandstorm $world,$boss_x,$boss_y,$boss_z' >0 1 sandgiantsandstorm:120
+  - cmd 'cast sandaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 sandgiantaoes:10
+  - cmd 'cast sandaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 0.5 sandgiantaoem:20
+  - throw 75:2:2 >0 1
+  - throw 70:9:2.1 >0 0.5
+  - throw 70:6:2.1 >0 0.3
+  - throw 70:2:2 <100 0.25
+  - swarm $SandZombie:3:5 >2000 1 sandgiantcorpse:180
+  - swarm $SandZombie:6:25 <2000 1 sandgiantcorpse3:120
+  - swarm $SandZombie:12:25 <1000 1 sandgiantcorpse2:180
+  - swarm $SandZombie:25:25 <1000 1 sandgiantcorpse2:280
+  - consume 175:188:188:1 HORSE >0 1
+  - consume 175:188:188:1 HORSES >0 1
+  - consume 5:5:5:0 WOLVES >0 1
+  - consume 5:5:5:0 IRON_GOLEMS >0 1
+  - cmd 'eb mob kill SandZombie' =death 1
+  - cmd 'broadcast The Sand Giant only has 50% hp left!' o=2000 1
+  - cmd 'broadcast The Sand Giant has been slain, Good Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+SandZombie:
+  Mobtype: zombie
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 14
+  Skills:
+  - potionboss SPEED:9999:2 o=100 1
+  - consume 175:188:188:1 HORSE >0 1
+  - consume 175:188:188:1 HORSES >0 1
+  Drops: []
+  Equipment:
+  - SandZombie
+AncientArmor:
+  Mobtype: zombie
+  Display: '&6Ancient Armor'
+  Health: 5500
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 17
+  Skills:
+  - msg 80:'&4$boss &2Die with thy honor knave!' >0 0.003
+  - msg 80:'&4$boss &2Taste my cold hard steal!' >0 0.003
+  - msg 80:'&4$boss &2Thou art no match for me swine!' >0 0.01
+  - msg 80:'&4$boss &2You shall be as empty as me!' >0 0.003
+  - msg 80:'&4$boss &2I shall smite all of you!' o=5500 1
+  - msg 80:'&4$boss &2You will not best me in battle!' o=2750 1
+  - msg 80:'&4$boss &2If I die... I die with honor!' o=100 1
+  - msg 80:'&4$boss &2Thou has slain me... for now' =death 1
+  - cmd 'cast slashaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 ancientarmoraoes:30
+  - cmd 'cast slashaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 ancientarmoraoem:30
+  - potionboss INVISIBILITY:600:1 o=5500 1
+  - potionboss INVISIBILITY:600:1 >0 1
+  - potionboss SPEED:30:3 >0 1
+  - potionboss INCREASE DAMAGE:60:1 o=300 0.01
+  - potionboss INCREASE DAMAGE:60:4 o=100 0.01
+  - throw 5:5:5 >0 0.4
+  - throw 5:1:1 >0 1
+  - swarm $Soldier:1:5 >0 1 ancientarmor:80
+  - swarm $Recruit:1:5 >0 1 ancientrecruit:80
+  - swarm $EnchantedWeapon:1:5 >0 1 ancientarmorweapon:120
+  - cmd 'broadcast Ancient Armor only has 50% hp left!' o=2750 1
+  - cmd 'eb mob kill Soldier' =death 1
+  - cmd 'eb mob kill Recruit' =death 1
+  - cmd 'eb mob kill EnchantedWeapon' =death 1
+  - cmd 'broadcast Ancient Armor has been slain, Good job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Equipment:
+  - AncientArmor
+Soldier:
+  Mobtype: zombie
+  Display: '&fSoldier Armor'
+  Health: 150
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 2
+  Skills:
+  - consume 400:400:50:0 AncientArmor =death 1
+  - potionboss INVISIBILITY:600:1 o=150 1
+  - potionboss INVISIBILITY:600:1 >0 1
+  - throw 5:4:4 >0 0.4
+  Equipment:
+  - SoldierArmor
+Recruit:
+  Mobtype: zombie
+  Display: '&fRecruit Armor'
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 1
+  Skills:
+  - consume 400:400:50:0 AncientArmor =death 1
+  - potionboss INVISIBILITY:600:1 o=150 1
+  - potionboss INVISIBILITY:600:1 >0 1
+  - throw 5:4:4 >0 0.4
+  Equipment:
+  - RecruitArmor
+Spectre:
+  Mobtype: witherskeleton
+  Display: '&6Spectre'
+  Health: 2600
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 16
+  Skills:
+  - msg 80:'&4$boss &2Dont blink even for a second!' >0 0.003
+  - msg 80:'&4$boss &2I will get you with your back turned!' >0 0.003
+  - msg 80:'&4$boss &2Look into my eyes... I dare you!' >0 0.003
+  - msg 80:'&4$boss &2You are fools to challenge Spectre!' o=2580 1
+  - msg 80:'&4$boss &2How can you see past my ruse?' o=1250 1
+  - msg 80:'&4$boss &2Such skills but can you finish me?' o=300 1
+  - msg 80:'&4$boss &2Keep out of my sights!' =death 1
+  - lightning 60:1 >0 0.15
+  - fire 20:2 >0 0.5
+  - swarm enderman:2:3 >0 0.004
+  - potion 5:HARM:1:1 >1300 0.15
+  - potion 5:HARM:1:2 <1300 0.15
+  - potionboss SPEED:60:1 >0 0.15
+  - cmd 'broadcast Spectre only has 50% hp left!' o=1300 1
+  - cmd 'broadcast Spectre has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token. =death 1
+Colossus:
+  Mobtype: irongolem
+  Display: '&6Colossus'
+  Health: 6500
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 12
+  Skills:
+  - msg 80:'&4$boss &2You must leave!' >0 0.003
+  - msg 80:'&4$boss &2My body is unbreakable!' >0 0.003
+  - msg 80:'&4$boss &2Your attacks are weak!' >0 0.003
+  - msg 80:'&4$boss &2My masters want you gone!' >0 0.003
+  - msg 80:'&4$boss &2I will crush you!' >0 0.003
+  - msg 80:'&4$boss &2Master says you have to die!' o=3450 1
+  - msg 80:'&4$boss &2I am eternal!' o=1750 1
+  - msg 80:'&4$boss &2My magic weakens!' o=400 1
+  - msg 80:'&4$boss &2He will bring me back!' =death 1
+  - throw 5:12:12 >0 0.01
+  - throw 5:4:4 >0 1
+  - throw 8:8:8 >0 0.005
+  - potionboss SPEED:60:2 >0 0.05
+  - lightning 4:1 >0 0.004
+  - potionboss REGENERATION:80:1 o=5000 1
+  - potionboss REGENERATION:80:1 o=3000 1
+  - potionboss REGENERATION:80:1 o=2000 1
+  - potionboss REGENERATION:80:1 o=1000 1
+  - potionboss REGENERATION:80:1 o=100 1
+  - potion 60:SLOW:70:3 >0 0.01
+  - potion 60:HUNGER:40:1 >0 0.01
+  - cmd 'broadcast Colossus only has 50% hp left!' o=3250 1
+  - cmd 'broadcast Colossus has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+ShadowSkeleton:
+  Mobtype: skeleton
+  Display: ''
+  Health: 150
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 1
+  Skills:
+  - potionboss INVISIBILITY:600:1 o=150 1
+  - potionboss INVISIBILITY:600:1 >0 1
+  - throw 5:4:4 >0 0.4
+  Equipment: []
+  Effects:
+    shadow:
+      particle-name: smoke
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 50
+Glutton:
+  Mobtype: giant
+  Display: '&6Glutton'
+  Health: 4000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 16
+  Skills:
+  - msg 20:'&4$boss &2ALL OF YOU, GET IN MY BELLEH!' o=3990 1
+  - msg 20:'&4$boss &2PLENTY OF SPACE FOR YOU IN MY GUT' >0 0.1 gluttontalk:80
+  - msg 20:'&4$boss &2*slurps* YOU LOOK SO TASTEY!' >0 0.1 gluttontalk:80
+  - msg 20:'&4$boss &2MORSELS!' >0 0.1 gluttontalk:80
+  - msg 20:'&4$boss &2IM FAMISHED!' >0 0.1 gluttontalk:80
+  - msg 20:'&4$boss &2I HUNGER!' >0 0.1 gluttontalk:80
+  - msg 20:'&4$boss &2YOU SHOULDNT PLAY WITH YOUR FOOD, BUT ITS SO FUN!' >0 0.1 gluttontalk:80
+  - msg 20:'&4$boss &2I WILL EAT YOU ALL!' >0 0.1 gluttontalk:80
+  - msg 20:'&4$boss &2DIDNT EAT...enough...!' =death 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=4000 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 o=4000 1
+  - potionboss SPEED:9999:2 o=4000 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 >3000 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 <3000 1
+  - potionboss SPEED:9999:8 <3500 1
+  - potionboss SPEED:9999:5 >3500 1
+  - cmd 'cast stompaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 gluttonstompaoes:60
+  - throw 5:5:5 >0 1
+  - throw 8:12:12 >0 0.005
+  - throw 8:20:20 >0 0.002
+  - throw 8:30:30 >0 0.003
+  - swarm $TastyCow:1:1 >0 0.003 gluttonspawnsmall:60
+  - swarm $TastySheep:1:1 >0 0.003 gluttonspawnsmall:60
+  - swarm $TastyPig:1:1 >0 0.003 gluttonspawnsmall:60
+  - swarm $TastyChicken:1:1 >0 0.003 gluttonspawnsmall:60
+  - pack GluttonBitePlayer1 >0 0.001 gluttonbite:60
+  - pack GluttonBitePlayer2 >0 0.001 gluttonbite:60
+  - pack GluttonSpawnMobs >0 1 gluttonspawnmobs:500
+  - consume 80:60:300:80 TastyChicken >0 0.05
+  - cmd 'eb mob kill Tasty' =death 1
+  - cmd 'broadcast Glutton only has 50% hp left!' o=2000 1
+  - cmd 'broadcast Glutton has been slain, Good Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Tags:
+    KnockbackRes: 4.0
+    Followrange: 70.0
+TastyCow:
+  Mobtype: cow
+  Display: '&fTasty Cow'
+  Health: 300
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 0
+  Skills: []
+TastyPig:
+  Mobtype: pig
+  Display: '&fTasty Pig'
+  Health: 90
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 0
+  Skills: []
+TastySheep:
+  Mobtype: sheep
+  Display: '&fTasty Sheep'
+  Health: 50
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 0
+  Skills: []
+TastyChicken:
+  Mobtype: chicken
+  Display: '&fTasty Chicken'
+  Health: 40
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 0
+  Skills: []
+Slogoroth:
+  Mobtype: slime
+  Display: '&6Slogoroth'
+  Health: 6000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 12
+  Skills:
+  - msg 20:'&4$boss &2I WILL ABSORB YOU!' o=5990 1
+  - msg 20:'&4$boss &2WE WILL BECOME BUT 1 SLIME' >0 0.003
+  - msg 20:'&4$boss &2YES, JOIN MY JELLY' >0 0.003
+  - msg 20:'&4$boss &2JIGGLE WITH ME' >0 0.003
+  - msg 20:'&4$boss &2DONT BE JELLY LITTLE ONES' >0 0.003
+  - msg 20:'&4$boss &2GET IN MY JELLY' >0 0.003
+  - msg 20:'&4$boss &2SO SO SLIMY' >0 0.003
+  - msg 20:'&4$boss &2I WILL COME BACK EVENTUALLY!' =death 1
+  - cmd 'cast acidfloor-npc $world,$player_x,$player_y,$player_z' >0 0.1
+  - cmd 'cast 10damageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 slog1:30
+  - cmd 'cast hacidfloor-npc $world,$player_x,$player_y,$player_z' 0 >2000 0.05
+  - cmd 'cast hacidfloor-npc $world,$player_x,$player_y,$player_z' 0 <2000 0.1
+  - cmd 'cast acidaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 slog2:70
+  - cmd 'cast acidaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 slog3:130
+  - cmd 'cast damageaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 slog4:40
+  - potionboss FIRE_RESISTANCE:600:1 >0 1
+  - pull 140:1 >0 0.2
+  - potionboss DAMAGE_RESISTANCE:600:1 >0 1
+  - swarm $Globoid:22:3 o=1000 1
+  - swarm $Globoid:22:3 o=2000 1
+  - swarm $Globoid:5:3 o=4000 1
+  - swarm $Globoid:55:15 =spawn 1
+  - swarm $Globoid:1:3 >0 0.003
+  - swarm $Slimefinger:3:3 >0 0.01
+  - throw 5:1:1 >0 1
+  - throw 8:8:8 >0 0.005
+  - vampire 80:player:5 >0 1
+  - cmd 'eb mob kill Globoid' =death 1
+  - cmd 'broadcast Slogoroth only has 50% hp left!' o=3000 1
+  - cmd 'broadcast Slogoroth has been slain, Good Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Tags:
+    Size: 40
+Slimefinger:
+  Mobtype: zombie
+  Display: '&fSlime Finger'
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 15
+  Skills:
+  - pull 12:1 >0 0.3
+  - potionboss SPEED:9999:2 >0 1
+  Equipment:
+  - SlimeFinger
+Abomination:
+  Mobtype: zombie
+  Display: '&6Abomination'
+  Health: 6000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 4
+  Skills:
+  - msg 20:'&4$boss &2professor....said I was perfect...to...KILL YOU!' o=5998 1
+  - msg 20:'&4$boss &2Grahahahahaha! Your...FLESH WILL...melt..away' >0 0.003
+  - msg 20:'&4$boss &2AACHK! you...are..DISGUISTING..yes...!' >0 0.003
+  - msg 20:'&4$boss &2I CANT STAND... to...look at YOU!' >0 0.003
+  - msg 20:'&4$boss &2HORRIBLE CREATURES!'>0 0.003
+  - msg 20:'&4$boss &2watch..those..pretty...TOES!' >0 0.003
+  - msg 20:'&4$boss &2you scratch me..I..regenerate...IT ALLLLL' o=2000 1
+  - msg 20:'&4$boss &2Im...in..need OF MORE ACIIIDDDD!' o=1000 1
+  - msg 20:'&4$boss &2NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NOO...no!' =death 1
+  - cmd 'cast acidfloor-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.002
+  - cmd 'cast forcecast $player radioactive-ooze' 0 >0 0.006
+  - potionboss FIRE_RESISTANCE:600:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:600:4 >0 1
+  - deathpack SpawnGloboid 80 >0 1
+  - swarm creeper:1:5 >0 0.005
+  - swarm $Globoid:12:3 o=1000 1
+  - swarm $Globoid:12:3 o=2000 1
+  - swarm $Globoid:5:3 o=4000 1
+  - swarm $Globoid:25:3 =spawn 1
+  - swarm $Globoid:1:3 >0 0.003
+  - throw 5:1:1 >0 1
+  - throw 8:8:8 >0 0.005
+  - vampire 80:player:5 >0 1
+  - cmd 'eb mob kill Globoid' 6 =death 1
+  - cmd 'broadcast Abomination only has 50% hp left!' o=3000 1
+  - cmd 'broadcast Abomination has been slain, Good Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Equipment:
+  - Abomination
+Globoid:
+  Mobtype: slime
+  Display: '&fGloboid'
+  Health: 20
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 1
+  Skills:
+  - cmd 'cast oozepop-npc-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  - potion 4:POISON:30:1 =death 1
+  - potion 4:SLOW:20:5 =death 1
+  Tags:
+    Size: 1
+Zombie-Mount:
+  Mobtype: zombie
+  Display: ''
+  Health: 99999
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 4
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=99999 1
+  - potionboss DAMAGE_RESISTANCE:9999:5 o=99999 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:5 >0 1
+  - potionboss SPEED:99999:2 o=99999 1
+Rokka_And_Rollzhar:
+  Mobtype: zombie
+  Display: '&6Rokka'
+  Health: 4000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 4
+  Skills:
+  - msg 80:'&4$boss &2Break yourself on this jam!' >0 0.001
+  - msg 80:'&4$boss &2The gates of nether are right in front of you, baby!!' >0 0.001
+  - msg 80:'&4$boss &2As if I could afford to die even more, baby!!' >0 0.001
+  - msg 80:'&4$boss &2Ha ha ha!! I like that look on your face right now. It really suits you!' >0 0.001
+  - msg 80:'&4$boss &2A rotting zombie is still a zombie, as they say! Ha ha ha!!' >0 0.001
+  - msg 80:'&4$boss &2Eat that!' >0 0.001
+  - msg 80:'&4$boss &2Let my shouts drive you crazy, baby!!' >0 0.001
+  - msg 80:'&4$boss &2You feel so good when Im cutting you up!' >0 0.001
+  - msg 80:'&4$boss &2You should thank me. That broken face is very becoming on you.' >0 0.001
+  - msg 80:'&4$boss &2Hey! Rollzhar, you ready for this?' o=3995 1
+  - msg 80:'&6Rollzhar &2Oh yea, its show time!' o=3994 1
+  - msg 80:'&4$boss &2What are you, a heckler? Ha ha ha!!' o=2000 1
+  - msg 80:'&4$boss &2This is The End!!!' o=500 1
+  - msg 80:'&4$boss &2All I wanted was an encore...' =death 1
+  - cmd 'cast firework_bigshow1-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.002
+  - cmd 'cast firework_show1-npc-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.3 rokkaaoe:40
+  - cmd 'cast firework_show2-npc-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.3 rokkaaoe:40
+  - cmd 'cast firework_show3-npc-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.3 rokkaaoe:40
+  - cmd 'cast firework_show4-npc-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.3 rokkaaoe:40
+  - cmd 'cast fire-npc-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.05 rokkaaoe:40
+  - potionboss FIRE_RESISTANCE:9999:2 o=3000 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=3000 1
+  - potionboss FIRE_RESISTANCE:9999:2 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - consume 4:4:2:0 WOLF >0 0.3
+  - throw 5:5:5 >0 0.4
+  - potionboss SPEED:60:3 >0 1
+  - pack RokkaPull >0 0.007
+  - pack RokkaHeal1 >0 0.3
+  - pack RokkaHeal2 >0 0.3
+  - swarm $Rollzhar:1:2 o=4000 1
+  - cmd 'broadcast Rokka only has 50% hp left!' o=2000 1
+  - cmd 'broadcast Rokka has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Equipment:
+  - Rokka
+Rollzhar:
+  Mobtype: zombie
+  Display: '&6Rollzhar'
+  Health: 3000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 4
+  Skills:
+  - msg 80:'&4$boss &2Everyone has to die sometime! I just speed it up for them!' >0 0.001
+  - msg 80:'&4$boss &2Hey you! Get up! Dont die yet! The funs just beginning!' >0 0.001
+  - msg 80:'&4$boss &2Yeah, I get a lot of people telling me Ive got quite the spine!!' >0 0.001
+  - msg 80:'&4$boss &2Im dead and loving it!' >0 0.001
+  - msg 80:'&4$boss &2I need backup to get in the mood... More scream!!' >0 0.001
+  - msg 80:'&4$boss &2Scream in harmony with the masters choir!' >0 0.001
+  - msg 80:'&4$boss &2What? Go to the nether!? I just came back from there!!' >0 0.001
+  - msg 80:'&4$boss &2You had no past, now you have no future!' >0 0.001
+  - msg 80:'&4$boss &2Shut up! Youre supposed to be dead!' o=750 1
+  - msg 80:'&4$boss &2Nope, no good! Your beat just doesnt have any life to it!' o=200 1
+  - msg 80:'&4$boss &2The beat just wasnt good enough...' =death 1
+  - cmd 'cast firework_bigshow1-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.002
+  - cmd 'cast firework_show1-npc-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.3 rollzharaoe:40
+  - cmd 'cast firework_show2-npc-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.3 rollzharaoe:40
+  - cmd 'cast firework_show3-npc-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.3 rollzharaoe:40
+  - cmd 'cast firework_show4-npc-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.3 rollzharaoe:40
+  - cmd 'cast fire-npc-aoe $world,$boss_x,$boss_y,$boss_z' >0 0.05 rollzharaoe:40
+  - consume 4:4:2:0 WOLF >0 0.3
+  - potionboss FIRE_RESISTANCE:9999:2 o=3000 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=3000 1
+  - potionboss FIRE_RESISTANCE:9999:2 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - throw 5:5:5 >0 0.4
+  - potionboss SPEED:60:3 >0 1
+  - pack RollzharPull >0 0.05
+  - pack RollzharHeal1 >0 0.3
+  - pack RollzharHeal2 >0 0.3
+  - cmd 'broadcast Rollzhar only has 50% hp left!' o=1500 1
+  Equipment:
+  - Rollzhar
+Lord_Varkon:
+  Mobtype: villagezombie
+  Display: '&6Lord Varkon'
+  Health: 3000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 8
+  Skills:
+  - msg 80:'&4$boss &2...What a boring little sideshow you are. Hardly worthy of my noble presence.' o=2995 1
+  - msg 80:'&4$boss &2An excessive dream can cost you more than you might think!' >0 0.001
+  - msg 80:'&4$boss &2Dont be upset. You brought this on yourself!' >0 0.001
+  - msg 80:'&4$boss &2Absolute power does exist. I am it.' >0 0.001
+  - msg 80:'&4$boss &2A duel to the death.. the greatest form of entertainment.' >0 0.001
+  - msg 80:'&4$boss &2Finished already? But the night has only begun!' >0 0.001
+  - msg 80:'&4$boss &2Fake powers cannot stand up to the real thing!' >0 0.001
+  - msg 80:'&4$boss &2...You disgust me!' >0 0.001
+  - msg 80:'&4$boss &2I am the one who is worthy of ruling over the darkness and shadow.' >0 0.001
+  - msg 80:'&4$boss &2Like a flower of blood blossoming in the shadow.. I shall tend to you.' >0 0.001
+  - msg 80:'&4$boss &2Oh, roses of crimson blood! Blossom with chaotic frenzy!' >0 0.001
+  - msg 80:'&4$boss &2When your ambitions are too high, you pay the ultimate price...' >0 0.001
+  - msg 80:'&4$boss &2Savior the chaotic lessons of the darkness.' >0 0.001
+  - msg 80:'&4$boss &2Fool! There can be only one true lord of the night!!' o=1500 1
+  - msg 80:'&4$boss &2Your blood is even weaker than you! I will not let it stain my lips!' o=700 1
+  - msg 80:'&4$boss &2It wasnt supposed to be like this...' =death 1
+  - cmd 'cast forcecast $player necrotic-plague' 0 >0 0.004
+  - cmd 'cast forcecast $player necrotic-plague' 0 o=400 1
+  - cmd 'cast forcecast $player necrotic-plague' 0 o=1500 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=3000 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=3000 1
+  - potionboss SPEED:9999:2 o=3000 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:5 <1500 1
+  - potionboss SPEED:9999:2 >1500 1
+  - deathpack VarkonKillPlayer 80 >0 1
+  - throw 5:5:5 >0 0.2
+  - throw 5:2:2 >0 0.8
+  - pack VarkonDarkness1 >0 0.0002
+  - pack VarkonDarkness2 >0 0.0002
+  - pack VarkonDarkness3 o=700 1
+  - swarm bat:1:1 >0 0.04
+  - swarm bat:10:1 o=2998 1
+  - swarm bat:10:1 =death 1
+  - consume 5:5:5:0 WOLVES >0 1
+  - consume 5:5:5:0 IRON_GOLEMS >0 1
+  - cmd 'cast death1-npc $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+  - cmd 'broadcast Lord Varkon only has 50% hp left!' o=1500 1
+  - cmd 'broadcast Lord Varkon has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Equipment:
+  - Varkon
+Devourer-Rider:
+  Bosslist: Enderman-Mount,Devourer
+Devourer:
+  Mobtype: enderdragon
+  Display: '&6Voratus Omnia'
+  Health: 3000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 8
+  Skills:
+  - msg 80:'&4$boss &2...What a boring little sideshow you are. Hardly worthy of my noble presence.' o=2995 1
+  - msg 80:'&4$boss &2An excessive dream can cost you more than you might think!' >0 0.001
+  - msg 80:'&4$boss &2Savior the chaotic lessons of the darkness.' >0 0.001
+  - msg 80:'&4$boss &2Fool! There can be only one true lord of the night!!' o=1500 1
+  - msg 80:'&4$boss &2Your blood is even weaker than you! I will not let it stain my lips!' o=700 1
+  - msg 80:'&4$boss &2It wasnt supposed to be like this...' =death 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=3000 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=3000 1
+  - potionboss SPEED:9999:2 o=3000 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:5 <1500 1
+  - potionboss SPEED:9999:2 >1500 1
+  - vampire 80:player:400 >0 1
+  - throw 5:2:2 >0 0.4
+  - cmd 'cast death1-npc $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+  - cmd 'broadcast Voratus Omnia only has 50% hp left!' o=1500 1
+  - cmd 'broadcast Voratus Omnia the Devourer has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Equipment: []
+Enderman-Mount:
+  Mobtype: enderman
+  Display: '&6Blaze Flyer'
+  Health: 99999
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 4
+  Skills:
+  - potionboss INVISIBILITY:9999:1 o=99999 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=99999 1
+  - potionboss DAMAGE_RESISTANCE:9999:5 o=99999 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:5 >0 1
+Harvester:
+  Mobtype: skeleton
+  Display: '&6The Harvester'
+  Health: 4000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 8
+  Skills:
+  - msg 80:'&4$boss &2...What a boring little sideshow you are. Hardly worthy of my noble presence.' o=2995 1
+  - msg 80:'&4$boss &2An excessive dream can cost you more than you might think!' >0 0.001
+  - msg 80:'&4$boss &2Savior the chaotic lessons of the darkness.' >0 0.001
+  - msg 80:'&4$boss &2Fool! There can be only one true lord of the night!!' o=1500 1
+  - msg 80:'&4$boss &2Your blood is even weaker than you! I will not let it stain my lips!' o=700 1
+  - msg 80:'&4$boss &2It wasnt supposed to be like this...' =death 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=3000 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=3000 1
+  - potionboss SPEED:9999:2 o=3000 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:5 <1500 1
+  - potionboss SPEED:9999:2 >1500 1
+  - vampire 80:player:100 >0 1
+  - throw 5:2:2 >0 0.4
+  - cmd 'cast death1-npc $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+  - cmd 'broadcast The Harvester only has 50% hp left!' o=2000 1
+  - cmd 'broadcast The Harvester the Devourer has been slain, Great Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  Equipment:
+  - Scarecrow
+Strawman:
+  Mobtype: zombie
+  Display: '&fStrawman'
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 4
+  Skills:
+  - potionboss INVISIBILITY:9999:1 o=99999 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  Equipment:
+  - Strawman

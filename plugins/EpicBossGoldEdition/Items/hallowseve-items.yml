@@ -1,0 +1,21 @@
+HHIronChestplate:
+  Id: 307
+  Data: 0
+  Amount: 1
+  Enchants:
+  - DURABILITY:10
+  - THORNS:4
+HHIronLeggings:
+  Id: 308
+  Data: 0
+  Amount: 1
+  Enchants:
+  - DURABILITY:10
+  - THORNS:4
+HHIronBoots:
+  Id: 309
+  Data: 0
+  Amount: 1
+  Enchants:
+  - DURABILITY:10
+  - THORNS:4

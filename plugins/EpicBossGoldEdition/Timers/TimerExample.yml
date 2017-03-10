@@ -1,0 +1,72 @@
+ShiftingSands:
+  Bosses: Guardian
+  MaxAmount: 1
+  RespawnTime: 4900
+  WalkDistance: 1
+  Location: dungeon-world, 662, 4, 610
+VBS:
+  Bosses: Slimer
+  MaxAmount: 1
+  RespawnTime: 3600
+  WalkDistance: 1
+  Location: dungeon-world, -507, 5, 1630
+IcyHollow:
+  Bosses: Sabrewulf
+  MaxAmount: 1
+  RespawnTime: 4800
+  WalkDistance: 1
+  Location: dungeon-world, -31, 51, 1996
+Crypt:
+  Bosses: Jack-o-Bones
+  MaxAmount: 1
+  RespawnTime: 2600
+  WalkDistance: 1
+  Location: dungeon-world, -11, 50, 1097
+Sanctum:
+  Bosses: Shard-Keeper-Kaddal
+  MaxAmount: 1
+  RespawnTime: 6600
+  WalkDistance: 1
+  Location: dungeon-world, -3421, 43, 2725
+Blackholme:
+  Bosses: Captain-Skyhook
+  MaxAmount: 1
+  RespawnTime: 5300
+  WalkDistance: 1
+  Location: dungeon-world, -747, 39, 2169
+Hive:
+  Bosses: Hatcher
+  MaxAmount: 1
+  RespawnTime: 4400
+  WalkDistance: 1
+  Location: dungeon-world, -227, 84, 1464
+Citadel:
+  Bosses: Psychoblade
+  MaxAmount: 1
+  RespawnTime: 5600
+  WalkDistance: 1
+  Location: dungeon-world, -1451, 12, 2153
+WanderingWitch:
+  Bosses: WanderingWitch
+  MaxAmount: 1
+  RespawnTime: 4600
+  WalkDistance: 1
+  Location: dungeon-world, -1752, 4, 2404
+SunkenSwamp:
+  Bosses: Gunk
+  MaxAmount: 1
+  RespawnTime: 3000
+  WalkDistance: 1
+  Location: dungeon-world, -2526, 17, 1316
+Abyss1:
+  Bosses: AbyssBoss1
+  MaxAmount: 1
+  RespawnTime: 6400
+  WalkDistance: 1
+  Location: dungeon-world, -292, 33, 3954
+Pit2:
+  Bosses: PitSpawner
+  MaxAmount: 1
+  RespawnTime: 3000
+  WalkDistance: 1
+  Location: dungeon-world, 658, 236, 2420

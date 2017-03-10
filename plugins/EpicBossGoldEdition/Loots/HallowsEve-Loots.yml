@@ -1,0 +1,145 @@
+SpookyScarySkeleton:
+  Loot:
+  - Skellington:4 1
+  - 0:0:1:0 1
+SpookySkeleton:
+  Loot:
+  - EvilSkullhead:4 1
+  - 0:0:1:0 1
+HHHead:
+  Loot:
+  - HeadlessHorsemanHead:4 1
+  - 0:0:1:0 1
+CandyMan:
+  Loot:
+  - CandyManHead:4 1
+  - WhiteJacket:3 1
+  - BrightOrangePants:2 1
+  - WhiteBoots:1 1
+  - 0:0:1:0 1
+GolemEngineer:
+  Loot:
+  - 86:0:1:4 1
+  - BlackJacket:3 0.5
+  - PumpkinJacket:3 0.5
+  - BlackPants:2 0.7
+  - PumpkinPants:2 0.7
+  - PumpkinBoots:1 0.7
+  - BlackBoots:1 1
+  - 152:0:1:0 0.4
+  - 76:0:1:0 0.4
+  - 331:0:1:0 0.4
+  - 69:0:1:0 0.4
+  - 46:0:1:0 0.1
+  - 356:0:1:0 1
+WartFace:
+  Loot:
+  - BlackJacket:3 0.5
+  - PumpkinJacket:3 0.5
+  - BlackPants:2 0.7
+  - PumpkinPants:2 0.7
+  - BlackBoots:1 0.7
+  - PumpkinBoots:1 1
+  - 152:0:1:0 0.4
+  - 76:0:1:0 0.4
+  - 331:0:1:0 0.4
+  - 69:0:1:0 0.4
+  - 46:0:1:0 0.1
+  - 356:0:1:0 1
+HeadlessHorseman:
+  Loot:
+  - 276:0:1:0 1
+  - HeadlessHorsemanHead:4 1
+  - HHIronChestplate:3 1
+  - HHIronLeggings:2 1
+  - HHIronBoots:1 1
+BoogeyMan:
+  Loot:
+  - BoogeyManHead:4 1
+  - BlackChest:3 1
+  - 276:0:1:0 1
+BoogeyMan2:
+  Loot:
+  - BoogeyManHead:4 1
+  - 0:0:1:0 1
+  - BlackJacket:3 1
+  - BlackPants:2 1
+  - BlackBoots:1 1
+WickerMan:
+  Loot:
+  - WickerManHead:4 1
+  - WickerJacket:3 1
+  - WickerPants:2 1
+  - WickerBoots:1 1
+  - 270:0:1:0 1
+Scarecrow:
+  Loot:
+  - 86:0:1:4 1
+  - WickerJacket:3 1
+  - BlueJeans:2 1
+  - DarkBrownBoots:1 1
+  - 290:0:1:0 1
+Lumpkin:
+  Loot:
+  - LumpkinHead:4 1
+  - PumpkinJacket:3 1
+  - PumpkinPants:2 1
+  - DarkGreenBoots:1 1
+  - 256:0:1:0 1
+LittleLumpkin:
+  Loot:
+  - LumpkinHead:4 1
+  - PumpkinJacket:3 1
+  - PumpkinPants:2 1
+  - DarkGreenBoots:1 1
+PumpkinKnight:
+  Loot:
+  - 86:0:1:4 1
+  - 272:0:1:0 1
+WitherPumpkinKnight:
+  Loot:
+  - 86:0:1:4 1
+  - 267:0:1:0 1
+PumpkinGardener:
+  Loot:
+  - 86:0:1:4 1
+  - 359:0:1:0 1
+PumpkinRaider:
+  Loot:
+  - 86:0:1:4 1
+  - 0:0:1:0 1
+UnripeRaider:
+  Loot:
+  - 103:0:1:4 1
+  - 0:0:1:0 1
+PumpkinSoldier:
+  Loot:
+  - 86:0:1:4 1
+  - 272:0:1:0 1
+PumpkinTorchHolder:
+  Loot:
+  - 91:0:1:4 1
+  - 50:0:1:0 1
+EffigyTorchLoot:
+  Loot:
+  - effigytorchitem 1
+Shears:
+  Loot:
+  - 359:0:3:0 1
+Mummy:
+  Loot:
+  - MummyHead:4 1
+  - MummyWraps:3 1
+  - MummyLegWraps:2 1
+  - MummyFeetWraps:1 1
+  - 0:0:1:0 1
+Ghost:
+  Loot:
+  - GhostHead:4 1
+  - 0:0:1:0 1
+Dreadbone:
+  Loot:
+  - 267:0:1:0 1
+  - EvilWitherHead:4 1
+  - 316:0:1:2 1
+  - 317:0:1:1 1

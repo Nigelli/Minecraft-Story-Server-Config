@@ -1,0 +1,197 @@
+TakenBoss:
+  Bosslist: TakenHorse,Wrethis
+Wrethis:
+  Mobtype: witherskeleton
+  Display: '&6Wrethis - Herald of Oryx'
+  Health: 8200
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 46
+  Skills:
+  - msg 80:'&4$boss &2WE WILL TAKE YOU...' >0 0.005
+  - msg 80:'&4$boss &2GIVE ME YOUR LIGHT!' >0 0.005
+  - msg 80:'&4$boss &2YOUR LIGHT WILL DIE!' >0 0.005
+  - msg 80:'&4$boss &2YOU ARE THE LAST HOPE OF THE LIGHT?!' >0 0.005
+  - msg 80:'&4$boss &2YOU WILL BOW!' >0 0.005
+  - msg 80:'&4$boss &2INFECTION! YOUR LIGHT DIES HERE!' >0 0.005
+  - msg 80:'&4$boss &2LIGHT! GIVE YOUR WILL TO ME!' >0 0.005
+  - msg 80:'&4$boss &2YOU ARE NOT WORTHY!' >0 0.005
+  - msg 80:'&4$boss &2Yorshull Gor-ital Sho-ol!' >0 0.005
+  - cmd 'broadcast Wrethis - Herald of Oryx only has 50% hp left!' o=4100 1
+  - cmd 'broadcast Wrethis - Herald of Oryx has been slain, Good Job! Each participant has received a cut of the treasure as well as 1 conquest token.' =death 1
+  - cmd 'cast forcecast $player takendebuff' 0 >0 0.1 wrethistaken:100
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 0.3 wrethisshadowaoes:90
+  - cmd 'cast shadowaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 0.3 wrethisshadowaoem:210
+  - cmd 'cast shadowaoel-npc $world,$boss_x,$boss_y,$boss_z' >0 0.3 wrethisshadowaoel:270
+  - cmd 'cast doom-npc $world,$boss_x,$boss_y,$boss_z' 0 >2000 0.02 wrethisdoom:200
+  - cmd 'cast doom-npc $world,$boss_x,$boss_y,$boss_z' 0 <2000 1 wrethisdoom:200
+  - cmd 'cast shadowaoesnipe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 wrethissnipe:20
+  - swarm $TakenSkeleton:12:10 =spawn 1
+  - swarm $TakenSkeleton:1:10 <8100 0.1 takenspawn1:30
+  - swarm $TakenCreeper:1:10 <8100 0.1 takenspawn2:50
+  - swarm $TakenEye:1:10 <8100 0.1 takenspawn3:70
+  - swarm $TakenCreeper:3:10 =spawn 1
+  - swarm $TakenEye:2:10 =spawn 1
+  - throw 4:12:12 <1000 0.01
+  - throw 4:6:6 >0 0.01
+  - throw 4:4:4 >0 1
+  Equipment:
+  - Wrethis
+  Effects:
+    black:
+      particle-name: largesmoke
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.5
+      speed: 0.0
+      count: 6
+    white:
+      particle-name: explode
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.5
+      speed: 0.0
+      count: 6
+TakenEye:
+  Mobtype: skeleton
+  Display: '&fEye of Oryx'
+  Health: 300
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 36
+  Skills:
+  - potionboss INVISIBILITY:9999:1 o=100 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - consume 4:4:1000:80 WOLF >0 0.3
+  - cmd 'cast generichit $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'cast alienthit $world,$boss_x,$boss_y,$boss_z' >0 0.5
+  Equipment:
+  - FloatingEye
+  Tags:
+    silent: true
+  Effects:
+    black:
+      particle-name: largesmoke
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.5
+      speed: 0.0
+      count: 4
+    white:
+      particle-name: explode
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.5
+      speed: 0.0
+      count: 4
+TakenHorse:
+  Mobtype: horse
+  Display: '&fTaken Horse'
+  Health: 3000
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 8
+  Tags:
+    Speed: 0.4
+    Saddled: false
+    Tamed: false
+    PlayerRidable: false
+    HorseColor: BLACK
+    HorseType: SKELETON_HORSE
+    HorseStyle: NONE
+  Effects:
+    black:
+      particle-name: largesmoke
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.6
+      vert-spread: 0.5
+      speed: 0.0
+      count: 6
+    white:
+      particle-name: explode
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.6
+      vert-spread: 0.5
+      speed: 0.0
+      count: 6
+TakenSkeleton:
+  Mobtype: skeleton
+  Display: '&fTaken Skeleton'
+  Health: 40
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 36
+  Skills:
+  - swarm $TakenSkeleton:1:1 <39 0.4 thrallsplit:20
+  - consume 400:400:20:0 Wrethis =death 1
+  Equipment:
+  - Naked
+  Effects:
+    black:
+      particle-name: largesmoke
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.5
+      speed: 0.0
+      count: 6
+    white:
+      particle-name: explode
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.5
+      speed: 0.0
+      count: 6
+TakenCreeper:
+  Mobtype: creeper
+  Display: '&fTaken Creeper'
+  Health: 40
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 66
+  Effects:
+    black:
+      particle-name: largesmoke
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.5
+      speed: 0.0
+      count: 6
+    white:
+      particle-name: explode
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.5
+      speed: 0.0
+      count: 6

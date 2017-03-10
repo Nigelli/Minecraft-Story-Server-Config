@@ -1,0 +1,73 @@
+Bean:
+  Loot:
+  - 397:2:1:4 1
+  - 307:0:1:3 1
+  - DarkGreenPants:2 1
+  - DarkGreenBoots:1 1
+  - 0:0:1:0 1
+SandZombie:
+  Loot:
+  - 12:1:0:4 0.5
+  - 12:0:0:4 1
+Scarecrow:
+  Loot:
+  - 86:0:1:4 1
+  - OrangeJacket:3 1
+  - BlueJeans:2 1
+  - 292:0:1:0 1
+Strawman:
+  Loot:
+  - 170:0:1:4 1
+  - OrangeJacket:3 1
+  - OrangePants:2 1
+  - OrangeBoots:1 1
+  - 296:0:1:0 1
+TheGrinch:
+  Loot:
+  - RedHat:4 1
+  - GreenCoat:3 1
+  - GreenPants:2 1
+  - GreenShoes:1 1
+  - 46:0:1:0 1
+GreenGrinchling:
+  Loot:
+  - GreenHat:4 1
+  - GreenCoat:3 1
+  - GreenPants:2 1
+  - GreenShoes:1 1
+RedGrinchling:
+  Loot:
+  - RedHat:4 1
+  - RedCoat:3 1
+  - RedPants:2 1
+  - RedShoes:1 1
+Santa:
+  Loot:
+  - RedHat:4 1
+  - RedCoat:3 1
+  - RedPants:2 1
+  - 301:0:1:1 1
+  - 339:0:1:0 1
+Sigilus:
+  Loot:
+  - 314:0:1:4 1
+  - 283:0:1:0 1
+Abomination:
+  Loot:
+  - 165:0:1:4 1
+  - GreenCoat:3 1
+  - GreenPants:2 1
+  - GreenShoes:1 1
+SlimeFinger:
+  Loot:
+  - 165:0:1:4 1
+  - GreenCoat:3 1
+  - GreenPants:2 1
+  - GreenShoes:1 1
+  - 276:0:1:0 1
+Plaguelord:
+  Loot:
+  - 285:0:1:0 1
+  - PutridChest:3 1
+  - BlackPants:2 1
+  - PutridBoots:1 1

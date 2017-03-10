@@ -1,0 +1,24 @@
+Yeti1:
+  Bosses: Yeti
+  MaxAmount: 1
+  RespawnTime: 4500
+  WalkDistance: 1
+  Location: christmas-world, 63, 68, -200
+Yeti2:
+  Bosses: Yeti
+  MaxAmount: 1
+  RespawnTime: 4500
+  WalkDistance: 1
+  Location: christmas-world, -209, 76, -60
+Yeti3:
+  Bosses: Yeti
+  MaxAmount: 1
+  RespawnTime: 4500
+  WalkDistance: 1
+  Location: christmas-world, 144, 95, 173
+Yeti4:
+  Bosses: Yeti
+  MaxAmount: 1
+  RespawnTime: 4500
+  WalkDistance: 1
+  Location: christmas-world, -118, 66, 175

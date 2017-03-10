@@ -1,0 +1,219 @@
+DragonRespawnCrystals:
+  Skills:
+  - cmd 'endcrystalspawn world_the_end,-18,75,6' >0 1
+  - cmd 'endcrystalspawn world_the_end,-43,104,20' >0 1
+  - cmd 'endcrystalspawn world_the_end,22,75,-30' >0 1
+  - cmd 'endcrystalspawn world_the_end,9,95,-48' >0 1
+  - cmd 'endcrystalspawn world_the_end,29,86,45' >0 1
+  - cmd 'endcrystalspawn world_the_end,48,72,-33' >0 1
+  - cmd 'endcrystalspawn world_the_end,42,86,-51' >0 1
+  - cmd 'endcrystalspawn world_the_end,-9,92,-60' >0 1
+  - cmd 'endcrystalspawn world_the_end,-43,74,43' >0 1
+DragonKnightPull:
+  Skills:
+  - msg 80:'&4A $boss &4 has appeared, and is pushing away all enemies!' >0 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+  - delay 80
+  - throw 80:4:4 >200 1
+VizPull1:
+  Skills:
+  - msg 80:'&4$boss &4is conjuring a massive vortex!' >0 1
+  - cmd 'cast sigilus-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast sigilus-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast sigilus-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast sigilus-pre-aoe $world,$boss_x,$boss_y,$boss_z' >0 1
+  - delay 20
+  - cmd 'cast vizflooor-npc $world,$boss_x,$boss_y,$boss_z' >0 1
+  - msg 100:&6$boss &6has conjured a massive vortex!' >0 1
+  - delay 40
+  - pull 140:1 >0 1
+  - delay 40
+  - pull 140:1 >0 1
+  - delay 40
+  - pull 140:1 >0 1
+  - delay 40
+  - pull 140:1 >0 1
+  - delay 40
+  - pull 140:1 >0 1
+  - delay 40
+  - pull 140:1 >0 1
+  - delay 40
+  - pull 140:1 >0 1
+  - delay 40
+  - pull 140:1 >0 1
+  - delay 40
+  - pull 140:1 >0 1
+  - delay 40
+  - pull 140:1 >0 1
+  - delay 40
+  - pull 140:1 >0 1
+Banishment:
+  Skills:
+  - msg 80:'&4$boss &2Ill banish you to the depths!' >0 0.2 voltroxmessage:40
+  - msg 80:'&4$boss &2Into the void wil you all!' >0 0.2 voltroxmessage:40
+  - cmd 'eb mob spawn SoulHusk 8 end-prison' >0 1
+  - cmd 'eb mob spawn SoulHusk 4 end-prison2' >0 1
+  - cmd 'eb mob spawn SoulHusk 1 end-prison3' >0 1
+  - cmd 'cast banishment-npc $world,$boss_x,$boss_y,$boss_z' >0 1
+VoltroxKillPlayer1:
+  Skills:
+  - msg 80:'&4$boss &2Another soul added to our collection!' >0 0.2 voltroxkillmessage:40
+  - msg 80:'&4$boss &2Ill add your corpse to the pile!' >0 0.2 voltroxkillmessage:40
+  - msg 80:'&4$boss &2How many deaths till you have learned?!' >0 0.2 voltroxkillmessage:40
+  - msg 80:'&4$boss &2May your death be a reminder!' >0 0.2 voltroxkillmessage:40
+  - heal 300 >0 1
+VoltroxKillPlayer2:
+  Skills:
+  - swarm $SoulHusk:1:1 >0 1
+SoulReaper:
+  Skills:
+  - msg 80:'&4$boss has summoned a Soul Reaper! Kill it quickly!' >0 1
+  - swarm $SoulReaper:1:1 >0 1
+VoltroxTempInvuln:
+  Skills:
+  - swarm $SoulHusk:5:1 >0 1
+  - swarm $VolitileSoulHusk:3:1 >0 1
+  - msg 80:'&4$boss &2Your attacks are meaningless against my power!' >0 0.2 voltroxinvulnmessage:40
+  - msg 80:'&4$boss &2Your weapons shatter against my magic!' >0 0.2 voltroxinvulnmessage:40
+  - msg 80:'&4$boss &2My barrier is impenetrable!' >0 0.2 voltroxinvulnmessage:40
+  - msg 80:'&4$boss has shielded themself from physical attacks!' >10000 1
+  - potionboss DAMAGE_RESISTANCE:40:5 >0 1
+EtheriaKillPlayer:
+  Skills:
+  - msg 80:'&4$boss &2Another hero falls!' >0 0.2 etheriakillmessage:40
+  - msg 80:'&4$boss &2Not good enough!' >0 0.2 etheriakillmessage:40
+  - msg 80:'&4$boss &2Such a pity!' >0 0.2 etheriakillmessage:40
+  - heal 400 >0 1
+FireyCoreSummon:
+  Skills:
+  - msg 80:'&4$boss &2UNTAMED POWER!' >0 0.2  etheriamessage:40
+  - msg 80:'&4$boss &2FEEL MY POWER!' >0 0.2  etheriamessage:40
+  - msg 80:'&4$boss is attempting to re-absorb her power cores!' >0 1
+  - swarm $Firey-Core-Rider:1:1 >0 1
+  - swarm $Firey-Core-Rider:1:1 >0 1
+  - swarm $Firey-Core-Rider:1:1 >0 1
+  - delay 400
+  - consume 300:300:8000:300 Firey-Core >0 1
+  - delay 20
+  - consume 300:300:8000:300 Firey-Core >0 1
+  - delay 40
+  - cmd 'eb mob kill Core-Mount' >0 1
+  - cmd 'eb mob kill Firey-Core' >0 1
+SilenceDDebuff:
+  Skills:
+  - msg 80:'&4$boss &2Suffer mortals, as your pathetic magic betrays you!' >0 0.2 etheriamessage:40
+  - msg 80:'&4$boss &2Silence you fools!!' >0 0.2 etheriamessage:40
+  - cmd 'cast forcecast $player silenceaura-npc' 0 >0 1
+DeathShadow:
+  Skills:
+  - msg 80:'&4$boss &2Do you feel the dark hand of death, upon your hearts!' >0 0.2 etheriamessage:40
+  - msg 80:'&4$boss &2Feel the void CONSUME YOU!' >0 0.2 etheriamessage:40
+  - cmd 'cast deathaura-npc $world,$boss_x,$boss_y,$boss_z' >0 1
+EtheriaEnrage:
+  Skills:
+  - msg 30:'&4$boss has been engaged. Good luck!' >0 1
+  - cmd 'tell Zombiemold Etheria has been engaged by players' >0 1
+  - cmd 'tell latingoddess Etheria has been engaged by players' >0 1
+  - delay 72000
+  - msg 30:'&4$boss has enraged!' >0 1
+  - msg 30:'&4$boss &2Enough! I tire of these games!' >0 1
+  - cmd 'tell Zombiemold Etheria has enraged after 1 hour 30 minutes.' >0 1
+  - cmd 'tell latingoddess Etheria has enraged after 1 hour.' >0 1
+  - potionboss INCREASE_DAMAGE:99999:20 >0 1
+etheriacomet:
+  Skills:
+  - msg 80:'&4$boss&4 used Voidcomet!' >0 1
+  - saveloc $player:comet >0 1
+  - cmd 'cast comet-npc-ground-start end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 1
+  - cmd 'cast comet-npc-ground end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 4
+  - cmd 'cast comet-npc-ground end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 4
+  - cmd 'cast comet-npc-ground end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 4
+  - cmd 'cast comet-npc-ground end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 4
+  - cmd 'cast comet-npc-ground end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 4
+  - cmd 'cast comet-npc-start1 end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 5
+  - cmd 'cast comet-npc-start2 end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 5
+  - cmd 'cast comet-npc-start3 end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 5
+  - cmd 'cast comet-npc-start4 end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 5
+  - cmd 'cast comet-npc-start5 end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 5
+  - cmd 'cast comet-npc-start6 end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 5
+  - cmd 'cast comet-npc-start7 end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 5
+  - cmd 'cast comet-npc-start8 end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 5
+  - cmd 'cast comet-npc-start9 end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 5
+  - cmd 'cast comet-npc-start10 end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 5
+  - cmd 'cast comet-npc-start11 end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 5
+  - cmd 'cast comet-npc-start12 end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 5
+  - cmd 'cast comet-npc-start13 end-cavern,$comet_x,$comet_y,$comet_z' >0 1
+  - delay 5
+  - cmd 'cast comet-aoe-damage end-cavern,$comet_x,$comet_y,$comet_z' >0 1

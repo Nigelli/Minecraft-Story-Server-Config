@@ -1,0 +1,243 @@
+PitSpawner:
+  Mobtype: slime
+  Display: ''
+  Health: 20
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 1
+  Skills:
+  - cmd 'area toggle -w dungeon-world 689,255,2409' 20 o=20 1
+  - cmd 'area toggle -w dungeon-world 677,255,2409' o=20 1
+  - cmd 'eb mob spawn PitBomber1 1 pit1' 200 o=20 1
+  - cmd 'eb mob kill Drip' o=20 1
+  - cmd 'eb mob kill Undersludge' o=20 1
+  Tags:
+    Size: 1
+PitBomber1:
+  Mobtype: villagezombie
+  Display: '&fBomber'
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 3
+  Skills:
+  - pack PitResetPack =spawn 1
+  - cmd 'area toggle -w dungeon-world 689,254,2409' =death 1
+  - cmd 'cast massive-explode $world,671,235,2429' =death 1
+  - cmd 'eb mob spawn PitBomber2 1 pit2' =death 1
+  - cmd pack TestPackSkill =spawn 1
+  - cmd 'eb mob kill Drip' o=20 1
+  - cmd 'eb mob kill Undersludge' =spawn 1
+  - cmd 'eb mob kill PitBomber2' =spawn 1
+  - cmd 'eb mob kill PitBomber3' =spawn 1
+  - cmd 'eb mob kill PitBomber4' =spawn 1
+  - cmd 'eb mob kill PitBomber5' =spawn 1
+  - cmd 'eb mob kill PitBomber6' =spawn 1
+  - cmd 'eb mob kill PitBomber7' =spawn 1
+  - cmd 'eb mob kill PitBomber8' =spawn 1
+  - cmd 'eb mob kill PitBomber9' =spawn 1
+  - cmd 'eb mob kill PitBomber10' =spawn 1
+  - cmd 'eb mob kill PitBomber11' =spawn 1
+  Equipment:
+  - Bomber
+PitBomber2:
+  Mobtype: villagezombie
+  Display: '&fBomber'
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 3
+  Skills:
+  - cmd 'area toggle -w dungeon-world 688,254,2409' =death 1
+  - cmd 'cast massive-explode $world,671,214,2429' =death 1
+  - cmd 'eb mob spawn PitBomber3 1 pit3' =death 1
+  - swarm zombie:1:12 =spawn 1
+  - swarm skeleton:1:12 =spawn 1
+  Equipment:
+  - Bomber
+PitBomber3:
+  Mobtype: villagezombie
+  Display: '&fBomber'
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 3
+  Skills:
+  - cmd 'area toggle -w dungeon-world 687,254,2409' =death 1
+  - cmd 'cast massive-explode $world,671,193,2429' =death 1
+  - cmd 'eb mob spawn PitBomber4 1 pit4' =death 1
+  - swarm zombie:2:12 =spawn 1
+  - swarm skeleton:2:12 =spawn 1
+  Equipment:
+  - Bomber
+PitBomber4:
+  Mobtype: villagezombie
+  Display: '&fBomber'
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 3
+  Skills:
+  - cmd 'area toggle -w dungeon-world 686,254,2409' =death 1
+  - cmd 'cast massive-explode $world,671,171,2429' =death 1
+  - cmd 'eb mob spawn PitBomber5 1 pit5' =death 1
+  - swarm zombie:2:4 =spawn 1
+  - swarm skeleton:2:4 =spawn 1
+  - swarm spider:2:4 =spawn 1
+  Equipment:
+  - Bomber
+PitBomber5:
+  Mobtype: villagezombie
+  Display: '&fBomber'
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 2
+  Skills:
+  - cmd 'area toggle -w dungeon-world 685,254,2409' =death 1
+  - cmd 'cast massive-explode $world,671,149,2429' =death 1
+  - cmd 'eb mob spawn PitBomber6 1 pit6' =death 1
+  - swarm zombie:3:4 =spawn 1
+  - swarm skeleton:2:4 =spawn 1
+  - swarm spider:2:4 =spawn 1
+  Equipment:
+  - Bomber
+PitBomber6:
+  Mobtype: villagezombie
+  Display: '&fBomber'
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 2
+  Skills:
+  - cmd 'area toggle -w dungeon-world 684,254,2409' =death 1
+  - cmd 'cast massive-explode $world,671,127,2429' =death 1
+  - cmd 'eb mob spawn PitBomber7 1 pit7' =death 1
+  - swarm zombie:3:4 =spawn 1
+  - swarm skeleton:3:4 =spawn 1
+  - swarm spider:2:4 =spawn 1
+  Equipment:
+  - Bomber
+PitBomber7:
+  Mobtype: villagezombie
+  Display: '&fBomber'
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 2
+  Skills:
+  - cmd 'area toggle -w dungeon-world 683,254,2409' =death 1
+  - cmd 'cast massive-explode $world,671,105,2429' =death 1
+  - cmd 'eb mob spawn PitBomber8 1 pit8' =death 1
+  - swarm zombie:4:4 =spawn 1
+  - swarm skeleton:3:4 =spawn 1
+  - swarm spider:2:4 =spawn 1
+  Equipment:
+  - Bomber
+PitBomber8:
+  Mobtype: villagezombie
+  Display: '&fBomber'
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 2
+  Skills:
+  - cmd 'area toggle -w dungeon-world 682,254,2409' =death 1
+  - cmd 'cast massive-explode $world,671,83,2429' =death 1
+  - cmd 'eb mob spawn PitBomber9 1 pit9' =death 1
+  - swarm zombie:4:4 =spawn 1
+  - swarm skeleton:4:4 =spawn 1
+  - swarm spider:2:4 =spawn 1
+  - swarm cave_spider:2:4 =spawn 1
+  Equipment:
+  - Bomber
+PitBomber9:
+  Mobtype: villagezombie
+  Display: '&fBomber'
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 2
+  Skills:
+  - cmd 'area toggle -w dungeon-world 681,254,2409' =death 1
+  - cmd 'cast massive-explode $world,671,61,2429' =death 1
+  - cmd 'eb mob spawn PitBomber10 1 pit10' =death 1
+  - swarm zombie:4:4 =spawn 1
+  - swarm skeleton:5:4 =spawn 1
+  - swarm spider:2:4 =spawn 1
+  - swarm cave_spider:2:4 =spawn 1
+  Equipment:
+  - Bomber
+PitBomber10:
+  Mobtype: villagezombie
+  Display: '&fBomber'
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 2
+  Skills:
+  - cmd 'area toggle -w dungeon-world 680,254,2409' =death 1
+  - cmd 'cast massive-explode $world,671,39,2429' =death 1
+  - cmd 'eb mob spawn PitBomber11 1 pit11' =death 1
+  - swarm zombie:5:4 =spawn 1
+  - swarm skeleton:5:4 =spawn 1
+  - swarm spider:2:4 =spawn 1
+  - swarm cave_spider:2:4 =spawn 1
+  Equipment:
+  - Bomber
+PitBomber11:
+  Mobtype: villagezombie
+  Display: '&fBomber'
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 1
+  Skills:
+  - cmd 'area toggle -w dungeon-world 679,254,2409' =death 1
+  - cmd 'cast massive-explode $world,671,17,2429' =death 1
+  - swarm zombie:6:4 =spawn 1
+  - swarm skeleton:6:4 =spawn 1
+  - swarm spider:2:4 =spawn 1
+  - swarm cave_spider:2:4 =spawn 1
+  - cmd 'eb mob spawn Undersludge 1 undersludge' =death 1
+  Equipment:
+  - Bomber
+Undersludge:
+  Mobtype: slime
+  Display: '&6Glowing Undersludge'
+  Health: 1000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 6
+  Skills:
+  - msg 100:'&4$boss &2SHLLLLIPPERY' o=1000 1
+  - msg 30:'&4$boss &2YOU ARE SHLO DEEP!' >0 0.005
+  - msg 30:'&4$boss &2SHLWOOPS!' >0 0.005
+  - msg 30:'&4$boss &2SHLWAT?' >0 0.005
+  - msg 30:'&4$boss &2WE GLOW SHLO BRIGHT' >0 0.005
+  - msg 30:'&4$boss &2YOU GOT GREEN YOU' >0 0.005
+  - msg 30:'&4$boss &2SHLUP YOU GO!' >0 0.005
+  - msg 30:'&4$boss &2DOWN YOU SHLAL COME!' >0 0.005
+  - msg 30:'&4$boss &2SHLLUPP!' >0 0.005
+  - msg 30:'&4$boss &2ARGFPPPPPPFPPPFPPFFFFFfffsss' =death 1
+  - swarm $Drip:5:1 o=1000 1
+  - swarm $Drip:1:1 >0 0.01
+  - fire 4:20 >0 0.02
+  - throw 12:0:35 >0 0.1
+  - throw 12:0:55 >0 0.05
+  - lightning 20:1 >0 0.01
+  - cmd 'eb mob kill drip' =death 1
+  - cmd 'area toggle -w dungeon-world 678,254,2409' =death 1
+  - cmd 'broad &7The Glowing Undersludge has been slain.' =death 1
+  Tags:
+    Size: 6
+Drip:
+  Mobtype: slime
+  Display: ''
+  Health: 20
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 2
+  Skills: []
+  Tags:
+    Size: 1

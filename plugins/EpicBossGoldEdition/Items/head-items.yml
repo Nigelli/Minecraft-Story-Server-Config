@@ -1,0 +1,174 @@
+DragonHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: EnderDragon
+WerewolfHead1:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: SomeWerewolf
+GrinchHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: red_ornament
+ShelfElfHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: elf_on_a_shelf
+YetiHead2:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: A_Yeti
+VizmodeusHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: BossFace1
+YetiHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: Yeti
+CryingChild:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: CryingChild
+ClownHead1:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: ScaryClown1
+ClownHead2:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: ScaryClown2
+ZombiemoldHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: Zombiemold
+EndermanHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: MHF_Enderman
+CakeHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: MHF_Cake
+RingleaderHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: Grandpa
+FloatingEyeHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: Eye
+BoogeyManHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: The_Boogey_Man
+HeadlessHorsemanHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: H_Horseman
+WickerManHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: Wicker_Man
+MagmaSlimeHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: MHF_LavaSlime
+EgyptianGuardianHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: MHF_Golem
+LumpkinHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: Lumpkin_Head
+GhastHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: MHF_Ghast
+BlazeHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: MHF_Blaze
+GhostHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: Ghost
+EvilSkullhead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: Skullhead
+Skellington:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: Skellington
+EvilWitherHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: Wither__
+MummyHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: A_MUMMY
+CandyManHead:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Tags:
+    Player: _TheCandyMan_

@@ -1,0 +1,8 @@
+AstarothSword:
+  Id: 279
+  Data: 0
+  Amount: 1
+  Display: '&5Decapitator of Astaroth'
+  Enchants:
+  - DAMAGE_ALL:15
+  - KNOCKBACK:2

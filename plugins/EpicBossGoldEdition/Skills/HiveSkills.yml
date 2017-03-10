@@ -1,0 +1,5 @@
+sqlcan:
+  Skills:
+  - msg 80:'&4$boss &2I will consume my own brood if I must!' >0 1
+  - msg 80:'&a[Enraged Spider Queen]&e The Spider Queen will cannibalize her young if she can reach them!' >0 1
+  - consume 10:10:300:40 BabySpider >0 1

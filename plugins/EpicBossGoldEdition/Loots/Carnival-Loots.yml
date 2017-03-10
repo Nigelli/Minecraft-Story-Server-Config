@@ -1,0 +1,46 @@
+Clown:
+  Loot:
+  - ClownHead1:4 1
+  - ClownHead2:4 0.5
+  - LightBlueCoat:3 1
+  - LightPurpleCoat:3 0.2
+  - OrangePants:2 1
+  - OffGreenPants:2 0.2
+  - 354:0:1:0 1
+  - CakeHead:0 0.3
+  - 46:0:1:0 0.3
+Sadisto:
+  Loot:
+  - ClownHead1:4 1
+  - ClownHead2:4 0.5
+  - LightBlueCoat:3 1
+  - LightPurpleCoat:3 0.2
+  - OrangePants:2 1
+  - OffGreenPants:2 0.2
+  - 398:0:1:0 1
+LostChild:
+  Loot:
+  - CryingChild:4 1
+  - LightGreyJacket:3 1
+  - LightGreyPants:2 1
+  - LightGreyBoots:1 1
+  - 0:0:1:0 1
+TicketCollector:
+  Loot:
+  - EvilSkullhead:4 1
+  - LightBlueCoat:3 1
+  - LightPurpleCoat:3 0.2
+  - OrangePants:2 1
+  - OffGreenPants:2 0.2
+  - 339:0:1:0 1
+Ringleader:
+  Loot:
+  - RingleaderHead:4 1
+  - BlackJacket:3 1
+  - DarkRedPants:2 1
+  - BlackBoots:1 1
+  - 398:0:1:0 1
+FloatingEye:
+  Loot:
+  - FloatingEyeHead:4 1
+  - 0:0:0:0 1

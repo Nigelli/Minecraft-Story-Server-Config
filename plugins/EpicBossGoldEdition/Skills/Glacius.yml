@@ -1,0 +1,105 @@
+GlaciusIntro:
+  Skills:
+  - msg 200:'&4$boss&f:&2 Who dares violate the sanctity of my domain?' >0 1
+  - title 200:_:&6Glacius&f_-_&2Who_dares_violate_the:4s:2s:1s >0 1
+  - delay 60
+  - title 200:_:&2sanctity_of_my_domain?:4s:2s:1s >0 1
+GlaciusGolems:
+  Skills:
+  - msg 80:'&4$boss &2Little golems... You look so tasty...' >0 1
+  - cmd 'cast scream dungeon-world,137,19,1936' >0 1
+  - msg 80:'&4**Glacius will heal himself if he eats too many snowmen!**' >0 1
+  - cmd 'eb mob spawn TastySnowgolem 4 icy-hollow-glacius' >0 1
+  - delay 300
+  - msg 80:'&4$boss &2MMMMM Delicious golems' >0 1
+  - cmd 'cast burp dungeon-world,137,19,1936' >0 1
+  - consume 80:80:500:300 TastySnowgolem >0 1
+GluttonSpawnMobs:
+  Skills:
+  - msg 80:'&4$boss &2THOSE LITTLE THINGS LOOK TASTY' >0 1
+  - cmd 'cast zombie-scream-aoe $world,$boss_x,$boss_y,$boss_z' 0 >0 1
+  - msg 80:'&4**Glutton will heal himself if he eats too many animals!**' >0 1
+  - swarm $TastyPig:1:1 >0 0.5
+  - swarm $TastyPig:1:1 >0 0.5
+  - swarm $TastyCow:1:1 >0 0.5
+  - swarm $TastyChicken:1:1 >0 0.5
+  - swarm $TastyChicken:1:1 >0 0.5
+  - swarm $TastySheep:1:1 >0 0.5
+  - swarm $TastySheep:1:1 >0 0.5
+  - delay 200
+  - msg 80:'&4$boss &2MMMMM DELICIOUS' >0 1
+  - cmd 'cast burp-aoe $world,$boss_x,$boss_y,$boss_z' 0 >0 0.01
+  - consume 80:60:300:120 TastyPig >0 1
+  - consume 80:60:300:200 TastyCow >0 1
+  - consume 80:60:300:120 TastySheep >0 1
+  - consume 80:60:300:80 TastyChicken >0 1
+GluttonConsume:
+  Skills:
+  - msg 80:'&4$boss &2MMMMM DELICIOUS' >0 1
+  - cmd 'cast burp-aoe $world,$boss_x,$boss_y,$boss_z' 0 >0 0.01
+  - consume 80:60:300:120 TastyPig >0 1
+  - consume 80:60:300:200 TastyCow >0 1
+  - consume 80:60:300:120 TastySheep >0 1
+  - consume 80:60:300:80 TastyChicken >0 1
+GluttonBitePlayer1:
+  Skills:
+  - msg 80:'&4$boss &2ILL TAKE A BITE' >0 1
+  - cmd 'cast burp-aoe $world,$boss_x,$boss_y,$boss_z' 0 >0 0.01
+  - heal 20 >2000 1
+  - heal 40 <2000 1
+RokkaPull:
+  Skills:
+  - msg 80:'&4$boss &2Rollzhar, what are you doing? Get over here and help me!' >0 0.02
+  - cmd 'cast zombie-scream-aoe $world,$boss_x,$boss_y,$boss_z' 0 >0 1 rokkagroan:60
+  - pullmob 190:$Rollzhar:12 >0 1
+RollzharPull:
+  Skills:
+  - msg 80:'&4$boss &2Rokka, they are killing me over here!' >0 0.02
+  - cmd 'cast zombie-scream-aoe $world,$boss_x,$boss_y,$boss_z' 0 >0 1 rollzhargroan:60
+  - pullmob 190:$Rokka_And_Rollzhar:12 >0 1
+RokkaHeal1:
+  Skills:
+  - healboss 40,$Rollzhar,50 >0 1
+  - success
+  - msg 80:'&4$boss &2Rollzhar, You feel that? Aww heal a duet!' >0 0.01
+  - msg 80:'&4Rokka is close to Rollzhar and has healed him!' >0 0.1
+  - cmd 'cast zombie-scream-aoe $world,$boss_x,$boss_y,$boss_z' 0 >0 0.1
+RokkaHeal2:
+  Skills:
+  - healboss 40,$Rollzhar,50 >0 1
+  - success
+  - msg 80:'&4$boss &2Rollzhar, Jam session!' >0 0.01
+  - msg 80:'&4Rokka is close to Rollzhar and has healed him!' >0 0.1
+  - cmd 'cast zombie-scream-aoe $world,$boss_x,$boss_y,$boss_z' 0 >0 0.1
+RollzharHeal1:
+  Skills:
+  - healboss 40,$Rokka_And_Rollzhar,50 >0 1
+  - success
+  - msg 80:'&4$boss &2Rokka! Lets rock them yeah?' >0 0.01
+  - msg 80:'&4Rollzhar is close to Rokka and has healed him!' >0 0.1
+  - cmd 'cast zombie-scream-aoe $world,$boss_x,$boss_y,$boss_z' 0 >0 0.1
+RollzharHeal2:
+  Skills:
+  - healboss 40,$Rokka_And_Rollzhar,50 >0 1
+  - success
+  - msg 80:'&4$boss &2Rokka, high five!!!' >0 0.01
+  - msg 80:'&4Rollzhar is close to Rokka and has healed him!' >0 0.1
+  - cmd 'cast zombie-scream-aoe $world,$boss_x,$boss_y,$boss_z' 0 >0 0.1
+VarkonDarkness1:
+  Skills:
+  - msg 80:'&4$boss &2Your eyes betray you!' >0 1
+  - potion 80:BLINDNESS:10:1 >0 1
+  - potion 80:SLOW:10:5 >0 1
+VarkonDarkness2:
+  Skills:
+  - msg 80:'&4$boss &2Choke on ETERNAL DARKNESS' >0 1
+  - potion 80:BLINDNESS:10:1 >0 1
+  - potion 80:SLOW:10:5 >0 1
+VarkonDarkness3:
+  Skills:
+  - msg 80:'&4$boss &2Darkness CONSUMES YOU!' >0 1
+  - potion 80:BLINDNESS:10:1 >0 1
+  - potion 80:SLOW:10:5 >0 1
+EndReset:
+  Skills:
+  - msg 80:'&4$boss &2You have failed!' >0 1

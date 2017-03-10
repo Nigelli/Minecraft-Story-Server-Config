@@ -1,0 +1,94 @@
+WandOfGorelock:
+  Id: 280
+  Data: 0
+  Amount: 1
+  Display: '&5Wand of Gorelock'
+  Enchants:
+  - DAMAGE_ALL:28
+PirateHat:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Display: '&5Skyhooks Pirate Cap'
+  Tags:
+    Color: 0,0,0
+PirateJacket:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Display: '&5Skyhooks Pirate Jacket'
+  Tags:
+    Color: 50,50,50
+PatchyPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Display: '&5Skyhooks Patchy Pants'
+Cutlass:
+  Id: 276
+  Data: 0
+  Amount: 1
+  Display: '&5Cutlass'
+  Enchants:
+  - DAMAGE_ALL:10
+IronCutlass:
+  Id: 267
+  Data: 0
+  Amount: 1
+  Display: '&9Iron Cutlass'
+BlackholmeHood:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Display: '&5Blackholme Slayer Hood'
+  Tags:
+    Color: 0,0,0
+BlackholmeRobe:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Display: '&9Blackholme Slayer Garb'
+  Tags:
+    Color: 0,0,0
+BlackholmePants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Display: '&9Blackholme Slayer Wraps'
+  Tags:
+    Color: 0,0,0
+BlackholmeBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Display: '&9Blackholme Slayer Pads'
+  Tags:
+    Color: 0,0,0
+GorelockHelm:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Display: '&5Gorelock Helm'
+  Tags:
+    Color: 0,0,0
+GorelockChest:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Display: '&9Gorelock Chestplate'
+  Tags:
+    Color: 0,0,0
+GorelockLegs:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Display: '&9Gorelock Leggings'
+  Tags:
+    Color: 0,0,0
+GorelockBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Display: '&9Gorelock Boots'
+  Tags:
+    Color: 0,0,0

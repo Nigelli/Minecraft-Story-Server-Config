@@ -1,0 +1,1950 @@
+HScarecrow:
+  Mobtype: armorstand
+  Display: '&9Scarecrow'
+  Health: 3000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 1
+  Skills:
+  - cmd 'cast scarecrowhit $world,$boss_x,$boss_y,$boss_z' >0 0.9 scnoise:3
+  - cmd 'cast hefireworks-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  - msg 140:'&a[Hallows Eve]&e $player has found a Scarecrow! Bust it open for Candies and goodies!' o=2990 1
+  Equipment:
+  - Scarecrow
+HHMiniLoot:
+  Mobtype: armorstand
+  Display: '&6Not the Headless Horseman'
+  Health: 2000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 1
+  Skills:
+  - cmd 'cast scarecrowhit $world,$boss_x,$boss_y,$boss_z' >0 0.9 scnoise:3
+  - cmd 'cast hefireworks-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'broadcast The Headless Horseman hes fled, but you still can get some loot! Locate his scarecrow, and bust it open for treasure!' =spawn 1
+  - cmd 'broadcast The Headless Horseman hes fled, but you still get some loot! Each participant has received a candy-filled pumpkin, as well as 1 conquest token. Try again next time!' =death 1
+  Equipment:
+  - HeadlessHorseman
+Zombiecrow:
+  Mobtype: armorstand
+  Display: '&4Zombiemold'
+  Health: 3000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 1
+  Skills:
+  - cmd 'cast scarecrowhit $world,$boss_x,$boss_y,$boss_z' >0 0.9 scnoise:3
+  - cmd 'cast hefireworks-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  Equipment:
+  - Zombiemold
+BoogeyMan:
+  Mobtype: witherskeleton
+  Display: '&6Boogey Man'
+  Health: 20000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 24
+  Skills:
+  - pack HHBossTalk1 =spawn 1
+  - msg 80:'&4$boss&f:&2 I have my eyes..... on you...!' >0 0.005
+  - msg 80:'&4$boss&f:&2 The crows will eat the morsels of your remains...' >0 0.005
+  - msg 80:'&4$boss&f:&2 I can smell the blood in your veins...' >0 0.005
+  - msg 80:'&4$boss&f:&2 You smell.......... tasty!' >0 0.005
+  - msg 80:'&4$boss&f:&2 Your blood runs down my face...' >0 0.005
+  - msg 80:'&4$boss&f:&2 Mind if I eat your fingers?' >0 0.005
+  - msg 80:'&4$boss&f:&2 Like a lamb to the slaughter' >0 0.005
+  - msg 80:'&4$boss&f:&2 You dont have much meat on you...' >0 0.005
+  - msg 80:'&4$boss&f:&2 You dont need that leg, do you?' >0 0.005
+  - msg 80:'&4$boss&f:&2 Ill just take cut of your flesh for my..... collection.' >0 0.005
+  - msg 80:'&4$boss&f:&2 Just a bite...' >0 0.005
+  - msg 80:'&4$boss&f:&2 Naahhhg! The light is too bright!!' =0 1
+  - throw 4:12:12 <1000 0.01
+  - throw 4:6:6 >0 0.01
+  - throw 4:4:4 >0 1
+  - swarm bat:5:5 0.3
+  - swarm $Pumpkin-Raider:1:5 <19950 0.3
+  - swarm $Pumpkin-Raider:12:17 =spawn 1
+  - potionboss SPEED:9999:8 =spawn 1
+  - potionboss SLOW:9999:1 >0 1
+  - consume 5:5:5:0 WOLVES >0 1
+  - consume 5:5:5:0 IRON_GOLEMS >0 1
+  - pack BMEye <19850 0.2 eyecall:900
+  - teleport >100 0.4
+  - cmd 'eb mob kill DarkEye' =death 1
+  - cmd 'eb mob kill Pumpkin-Raider' =death 1
+  - cmd 'cast generic-magic-intro $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - cmd 'cast generichit $world,$boss_x,$boss_y,$boss_z' >0 0.9
+  - cmd 'cast demonhit $world,$boss_x,$boss_y,$boss_z' >0 0.3
+  - cmd 'cast demonhit $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - cmd 'cast masscleanse-npc-aoe $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+  - cmd 'cast boss-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'broadcast The Boogey Man only has 75% hp left!' o=15000 1
+  - cmd 'broadcast The Boogey Man only has 50% hp left!' o=10000 1
+  - cmd 'broadcast The Boogey Man only has 25% hp left!' o=5000 1
+  - cmd 'broadcast The Boogey Man has been beaten, Good Job! Each participant has received a candy-filled pumpkin, as well as 1 conquest token.' =death 1
+  - cmd 'broadcast &6The Boogey Man&a has appeared at the Horsemans Haven, (Non-pvp). Difficulty &eMedium&a. Beating him will result in treasure and enchanted loot.' =spawn 1
+  Equipment:
+  - BoogeyMan2
+  Effects:
+    black:
+      particle-name: largesmoke
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.5
+      speed: 0.0
+      count: 7
+    white:
+      particle-name: explode
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.5
+      speed: 0.0
+      count: 2
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+DarkEye:
+  Mobtype: skeleton
+  Display: '&fDark Eye'
+  Health: 700
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 18
+  Skills:
+  - consume 100:100:1500:0 BoogeyMan =death 1
+  - potionboss INVISIBILITY:9999:1 =spawn 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - consume 4:4:1000:80 WOLF >0 0.3
+  - consume 5:5:5:0 WOLVES >0 1
+  - consume 5:5:5:0 IRON_GOLEMS >0 1
+  - throw 4:7:7 >0 1
+  - randomteleport 10 >100 0.3
+  - potionmobs 40:SPEED:2:2 skeleton,witherskeleton =death 1
+  - potionmobs 40:WEAKNESS:5:60 skeleton,witherskeleton =death 1
+  - potionmobs 20:SPEED:2:2 skeleton,witherskeleton =death 1
+  - cmd 'cast generichit $world,$boss_x,$boss_y,$boss_z' >0 0.9
+  - cmd 'cast alienthit $world,$boss_x,$boss_y,$boss_z' >0 0.5
+  - cmd 'cast masscleanse-npc-aoe $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+  - cmd 'cast eye-death-npc $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+  - msg 80:'&a[Boogey Man]&e A Dark Eye was slain, weakening the Boogey Man!' =0 1
+  Equipment:
+  - FloatingEye
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+  Effects:
+    black:
+      particle-name: largesmoke
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.5
+      speed: 0.0
+      count: 7
+    white:
+      particle-name: explode
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.5
+      speed: 0.0
+      count: 2
+Lumpkin:
+  Mobtype: witherskeleton
+  Display: '&6Lumpkin'
+  Health: 30000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 18
+  Skills:
+  - pack HHBossTalk2 =spawn 1
+  - msg 80:'&4$boss&f:&2 Ugh, you all so ugy!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Gross two-eye meat pumpkins!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Squash you and watch your bits come out!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Me will stop you!' >0 0.01
+  - msg 80:'&4$boss&f:&2 You mean! Die already!!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Hey! Stop that! You hurt me!' <25000 0.01
+  - msg 80:'&4$boss&f:&2 Ow ow ow! Hey! OW!!' <25000 0.01
+  - msg 80:'&4$boss&f:&2 Stop being mean!' <25000 0.01
+  - msg 80:'&4$boss&f:&2 Please no make me into... a pie...' =death 1
+  - cmd 'cast melongrabber-ground-npc $world,$player_x,$player_y,$player_z' <29900 1 mgrabr:440
+  - throw 4:12:12 <1000 0.01
+  - throw 4:6:6 >0 0.01
+  - throw 4:4:4 >0 1
+  - swarm $Little-Lumpkin:1:1 <25000 0.04
+  - swarm bat:2:15 0.2
+  - swarm bat:5:1 =spawn 1
+  - mount 5:player >0 0.1 lumpmnt:50
+  - unmount >0 0.2 lumpmnt:50
+  - potionboss SPEED:9999:2 =spawn 1
+  - potionboss SPEED:9999:2 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - swarm $Unripe-Raider:5:5 =spawn 1
+  - swarm $Pumpkin-Raider:5:5 =spawn 1
+  - swarm $Pumpkin-Gardener:1:5 <29990 0.03
+  - swarm $Pumpkin-Raider:1:18 <29990 0.03
+  - swarm $Unripe-Raider:2:18 <29990 0.03
+  - cmd 'eb mob kill Pumpkin-Raider' =death 1
+  - cmd 'eb mob kill Unripe-Raider' =death 1
+  - cmd 'cast generichit $world,$boss_x,$boss_y,$boss_z' >0 0.9
+  - cmd 'cast bigalienthit $world,$boss_x,$boss_y,$boss_z' >0 0.4
+  - cmd 'cast generic-magic-intro $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - cmd 'cast boss-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  Equipment:
+  - Lumpkin
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+  Effects:
+    pumpkins:
+      particle-name: blockcrack_18
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 15
+    melons:
+      particle-name: blockcrack_103
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 15
+    ambient:
+      particle-name: mobSpellAmbient
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 5
+Little-Lumpkin:
+  Mobtype: babypigzombie
+  Display: '&fLittleLumpkin'
+  Health: 500
+  Showtitle: true
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 18
+  Skills:
+  - throw 4:4:4 >0 1
+  - potionboss SPEED:9999:2 =spawn 1
+  - potionboss SPEED:9999:2 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - consume 30:30:200:0 $Lumpkin =death 1
+  Equipment:
+  - LittleLumpkin
+  Tags:
+    silent: true
+  Effects:
+    pumpkins:
+      particle-name: blockcrack_18
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 1
+    melons:
+      particle-name: blockcrack_103
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 1
+    ambient:
+      particle-name: mobSpellAmbient
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 1
+Little-Lumpkin2:
+  Mobtype: babypigzombie
+  Display: '&fLittleLumpkin'
+  Health: 500
+  Showtitle: true
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 18
+  Skills:
+  - throw 4:4:4 >0 1
+  - potionboss SPEED:9999:2 =spawn 1
+  - potionboss SPEED:9999:2 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - consume 30:30:200:0 $Lumpkin =death 1
+  Equipment:
+  - LittleLumpkin
+  Tags:
+    silent: true
+  Effects:
+    pumpkins:
+      particle-name: blockcrack_18
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 1
+    melons:
+      particle-name: blockcrack_103
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 1
+    ambient:
+      particle-name: mobSpellAmbient
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 1
+Pumpkin-Beast:
+  Mobtype: babypigzombie
+  Display: '&5Pumpkin Beast'
+  Health: 500
+  Showtitle: true
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 18
+  Skills:
+  - throw 4:4:4 >0 1
+  - potionboss SPEED:9999:2 =spawn 1
+  - potionboss SPEED:9999:2 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  Equipment:
+  - LittleLumpkin
+  Tags:
+    silent: true
+  Effects:
+    pumpkins:
+      particle-name: blockcrack_18
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 1
+    melons:
+      particle-name: blockcrack_103
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 1
+    ambient:
+      particle-name: mobSpellAmbient
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 1
+Unripe-Raider:
+  Mobtype: babypigzombie
+  Display: '&fUnripe Raider'
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 12
+  Skills:
+  - potionboss INVISIBILITY:9999:1 =spawn 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  Equipment:
+  - UnripeRaider
+  Tags:
+    silent: true
+Pumpkin-Gardener:
+  Mobtype: skeleton
+  Display: '&fSinister Gardener'
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 6
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  - msg 80:'&a[Lumpkin]&e That Gardener dropped some shears...' =death 1
+  Equipment:
+  - PumpkinGardener
+  Loot:
+  - Shears
+Wickerman:
+  Mobtype: witherskeleton
+  Display: '&6Wicker Man'
+  Health: 92000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 18
+  Skills:
+  - pack HHBossTalk3 =spawn 1
+  - msg 80:'&4$boss&f:&2 We will skin you and hang you out to dry!' >0 0.01
+  - msg 80:'&4$boss&f:&2 You understand nothing!' >0 0.01
+  - msg 80:'&4$boss&f:&2 You are all so brittle!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Your attacks are do so little...' >0 0.01
+  - msg 80:'&4$boss&f:&2 Not even a scratch!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Keep that fire away from me!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Your arrows simply make me stronger!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Wew ill add your corpses to the tinder!' >0 0.01
+  - msg 80:'&4$boss&f:&2 You can all stuff it!' >0 0.01
+  - msg 80:'&4$boss&f:&2 I have fulfilled... my purpose....' =0 1
+  - cmd 'cast 20damageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 wmphys:30
+  - cmd 'cast 20stompdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 wmphys2:65
+  - throw 4:12:12 <1000 0.01
+  - throw 4:6:6 >0 0.01
+  - throw 4:4:4 >0 1
+  - swarm bat:2:15 0.2
+  - potionboss SPEED:9999:2 =spawn 1
+  - potionboss SPEED:9999:2 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - swarm $Pumpkin-Soldier:5:12 =spawn 1
+  - swarm $Pumpkin-Soldier:1:5 <91000 0.03
+  - pack Wickermansummons <91999 0.2 wickcall:190
+  - cmd 'cast generic-magic-intro $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - cmd 'cast hayhit $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'cast biggolemhit $world,$boss_x,$boss_y,$boss_z' >0 0.5
+  - cmd 'cast boss-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'broadcast The Wicker Man only has 75% hp left!' o=69000 1
+  - cmd 'broadcast The Wicker Man only has 50% hp left!' o=46000 1
+  - cmd 'broadcast The Wicker Man only has 25% hp left!' o=23000 1
+  - cmd 'broadcast The Wicker Man has been beaten, Good Job! Each participant has received a candy-filled pumpkin, as well as 1 conquest token.' =death 1
+  - cmd 'broadcast &6The Wicker Man&a has appeared at the Horsemans Haven, (Non-pvp). Difficulty &eMedium&a. Beating him will result in treasure and enchanted loot.' =spawn 1
+  Equipment:
+  - WickerMan
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+Pumpkin-Soldier:
+  Mobtype: skeleton
+  Display: ''
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: true
+  Damage: 16
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  Equipment:
+  - PumpkinSoldier
+Mummy:
+  Mobtype: zombie
+  Display: ''
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: true
+  Damage: 16
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  Equipment:
+  - Mummy
+Shambling-Skeleton:
+  Mobtype: skeleton
+  Display: ''
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: true
+  Damage: 16
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  Equipment:
+  - Ghost
+Shambler:
+  Mobtype: skeleton
+  Display: ''
+  Health: 60
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: true
+  Damage: 16
+  Skills:
+  - swarm witch:1:1 =spawn 1
+  - swarm $Mummy:1:1 =spawn 1
+  - swarm bat:1:1 =spawn 1
+  - swarm $Pumpkin-Knight:2:2 =spawn 1
+  - swarm $WanderingScarecrow:1:12 =spawn 0.1 wscr:1700
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  Equipment:
+  - Ghost
+Pumpkin-Torch-Holder:
+  Mobtype: skeleton
+  Display: ''
+  Health: 70
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 16
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  - msg 80:'&a[Wicker Man]&e A Pumkin Knight dropped an &9Effigy Torch&e. Pick it up and burn the &6Wicker Man&e!' =0 1
+  Equipment:
+  - PumpkinTorchHolder
+  Loot:
+  - EffigyTorchLoot
+HHRBHead:
+  Mobtype: witherskeleton
+  Display: '&5Headless Horsemans Pumpkin Mask'
+  Health: 7000
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 6
+  Skills:
+  - potionboss INVISIBILITY:9999:1 =spawn 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - consume 15:15:400:0 HHRaidBoss >0 0.8
+  - consume 5:5:5:0 WOLVES >0 1
+  - consume 5:5:5:0 IRON_GOLEMS >0 1
+  - throw 4:7:7 >0 1
+  - voxeffect basichurt >0 1
+  Equipment:
+  - HHHead
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+HHRBIntro1:
+  Mobtype: skeleton
+  Display: '&6Headless Horseman'
+  MaxHealth: 7000
+  Health: 500
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 6
+  Skills:
+  - voxeffect withercreaturehit >0 0.3
+  - voxeffect basichurt >0 1
+  - pack HHRBIntro1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - swarm $HHRBIntro2:1:1 =death 1
+  - cmd 'eb mob move HHRBIntro1 hallows-eve-zone,1481,4,2082' >0 0.1
+  Equipment:
+  - HeadlessHorseman
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+  Effects:
+    shadow:
+      particle-name: smoke
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.2
+      count: 3
+    fire:
+      particle-name: flame
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.3
+      count: 3
+    magma:
+      particle-name: lava
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.0
+      count: 2
+    purple:
+      particle-name: witchMagic
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.0
+      count: 3
+HHRBIntro2:
+  Mobtype: armorstand
+  Display: '&6Not the Headless Horseman'
+  MaxHealth: 7000
+  Health: 500
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 1
+  Skills:
+  - pack HHRBIntro2 =spawn 1
+  - cmd 'cast scarecrowhit $world,$boss_x,$boss_y,$boss_z' >0 0.9 scnoise:3
+  - swarm $HHRaidBoss:1:1 =death 1
+  Equipment:
+  - HeadlessHorseman
+HHRB:
+  Bosslist: Daredevil,HHTest
+HHRaidBoss:
+  Mobtype: witherskeleton
+  Display: '&6Headless Horseman'
+  MaxHealth: 70000
+  Health: 70000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 10
+  Skills:
+  - pack HHRBIntro3 =spawn 1
+  - lightning 10:20 =spawn 1
+  - pack HHRBSkill1 25000-45000 0.02 hhrbskill:1500
+  - pack HHRBSkill2 25000-45000 0.02 hhrbskill:1500
+  - pack HHRBSkill3 25000-45000 0.02 hhrbskill:1500
+  - pack HHRBSkill4 25000-45000 0.02 hhrbskill:1500
+  - pack HHRBPumpkin 45000-69900 0.4 pumpmag:1610
+  - msg 80:'&4$boss&f:&2 Jump on my blade you spineless welp. Call your friends, but you will find no help.' >0 0.04 hhvoice:100
+  - msg 80:'&4$boss&f:&2 It is over, your search is done. Let fate choose now, the righteous one.' >0 0.04 hhvoice:100
+  - msg 80:'&4$boss&f:&2 Harken, cur! Tis you I spurn! Now feel... the burn!' >0 0.04 hhvoice:100
+  - msg 80:'&4$boss&f:&2 Your body lies beaten, battered and broken. Let my curse be your own, fate has spoken.' >0 0.04 hhvoice:100
+  - msg 80:'&4$boss&f:&2 I will slay you all with wounds cut deep. You will not escape, the twilight sleep.' >0 0.04 hhvoice:100
+  - msg 80:'&4$boss&f:&2 Death is close, no need to cower. I will rend this earth with my new found power.' >0 0.04 hhvoice:100
+  - msg 80:'&4$boss&f:&2 Heres my body, fit and pure! Now, your blackened souls Ill cure!!' >0 0.04 hhvoice:100
+  - msg 80:'&4$boss&f:&2 I... I WILL RETURN! AGAIN... I WILL... YOU WILL DIE.... YOU WILL SUFFER... AGAIN, I WILL ALWAYS BRING THE HALLOWED TO YOUR DOORSTEP! FOOLS! ALL OF YOU!' =0 1
+  - cmd 'cast generic-magic-intro $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - cmd 'cast 30lightningdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 0.1 HHRBL1:40
+  - cmd 'cast 20kickdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 hhs1phys2:85
+  - cmd 'cast forcecast $player hallowburn' >0 0.03 HHHFB:1500
+  - potionboss INCREASE_DAMAGE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:4 =spawn 1
+  - potionboss SPEED:9999:4 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - vampire 80:player:350 >0 1
+  - throw 5:3:3 >0 0.4
+  - throw 5:3:10 >0 0.02
+  - throw 5:10:10 >0 0.01
+  - pack HHRaidBossRespawnHorse <69990 0.04 hhs1h:2900
+  - pack HHRBLoseHead 10-65000 0.05 HHS1LH:1800
+  - swarm $Pumpkin-Knight:5:8 >0 0.01 HHS1PK:60
+  - voxeffect withercreaturehit2 >0 0.3
+  - voxeffect basichurt >0 1
+  - cmd 'eb mob move Daredevil $world,$boss_x,$boss_y,$boss_z' >0 0.01
+  - mount 10:Daredevil >0 0.8
+  - swarm bat:5:1 =spawn 1
+  - swarm bat:1:1 >0 0.1
+  - msg 350:'&a[Headless Horseman]&4 The Headless Horseman&d has entered Phase 2' o=46000 100
+  - msg 350:'&a[Headless Horseman]&4 The Headless Horseman&d has entered Phase 3' o=23000 100
+  - pack HHRBCallWickerman 1-22500 0.1 hhrbcallboss:1600
+  - pack HHRBCallLumpkin 1-22500 0.1 hhrbcallboss:1600
+  - pack HHRBCallBoogeyMan 1-22500 0.1 hhrbcallboss:1600
+  - pack HHRBGrab <45000 1 hhrbgrab:900
+  - pack HHRBLeash 46300-69950 0.1
+  - pack HHRBLeash 1-22900 0.1
+  - cmd 'cast boss-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'eb mob kill Daredevil' =death 1
+  - cmd 'eb mob kill HHRBBBoogeyMan' =death 1
+  - cmd 'eb mob kill HHRBWickerman' =death 1
+  - cmd 'eb mob kill HHRBLumpkin' =death 1
+  - cmd 'eb mob kill Pumpkin-Raider' =death 1
+  - cmd 'eb mob kill Pumpkin-Gardener' =death 1
+  - cmd 'eb mob kill Pumpkin-Soldier' =death 1
+  - cmd 'eb mob kill Unripe-Raider' =death 1
+  - msg 350:'&a[Headless Horseman]&c The golem is falling apart...' =death 1
+  - title 350:_:&cThe_golem_is_falling_apart...:4s:4s:4s =death 1
+  - cmd 'cast golemdestruction hallows-eve-zone,1481,22,2075' =death 1
+  - cmd 'area toggle -w hallows-eve-zone 1483,13,2191' =death 1
+  - cmd 'broadcast The Headless Horseman only has 75% hp left!' o=52500 1
+  - cmd 'broadcast The Headless Horseman only has 50% hp left!' o=35000 1
+  - cmd 'broadcast The Headless Horseman only has 25% hp left!' o=17500 1
+  - cmd 'broadcast The Headless Horseman has been beaten, Amazing Job! Each participant has received a cache of treasures! Be sure to save your Ticking Box, which will unlock later! The Headless Horseman will return next year....' =death 1
+  - cmd 'broadcast &6The Headless Horseman&a has appeared at the Horsemans Haven, (Non-pvp). Difficulty &4Hard&a. Beating him will result in a plethora of treasure!' =spawn 1
+  Equipment:
+  - HeadlessHorseman
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+  Effects:
+    shadow:
+      particle-name: smoke
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.2
+      count: 3
+    fire:
+      particle-name: flame
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.3
+      count: 3
+    magma:
+      particle-name: lava
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.0
+      count: 2
+    purple:
+      particle-name: witchMagic
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.0
+      count: 3
+Daredevil:
+  Mobtype: horse
+  Display: '&6Daredevil'
+  Health: 800
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 8
+  Skills:
+  - throw 5:3:3 >0 0.4
+  - throw 5:3:10 >0 0.02
+  - cmd 'cast hallowfires-ground-npc $world,$player_x,$player_y,$player_z' >0 0.1 HHSHFS:120
+  - cmd 'cast 30lightningdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 0.1 HHRBL1:40
+  - cmd 'cast 20kickdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 0.9 hhs1phys2:65
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:1 =spawn 1
+  - potionboss SPEED:9999:1 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - consume 4:4:5:0 WOLF >0 0.3
+  - consume 4:4:15:0 $HHRaidBoss <790 1 hurthhs1:20
+  Tags:
+    Speed: 0.4
+    Saddled: false
+    Tamed: false
+    PlayerRidable: false
+    HorseColor: BLACK
+    HorseType: UNDEAD_HORSE
+    HorseStyle: NONE
+HHRBBoogeyMan:
+  Mobtype: witherskeleton
+  Display: '&6Boogey Man'
+  MaxHealth: 20000
+  Health: 1500
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 24
+  Skills:
+  - pack HHRBBoogeyMan =spawn 1
+  - msg 80:'&4$boss&f:&2 I have my eyes..... on you...!' >0 0.005
+  - msg 80:'&4$boss&f:&2 The crows will eat the morsels of your remains...' >0 0.005
+  - msg 80:'&4$boss&f:&2 I can smell the blood in your veins...' >0 0.005
+  - msg 80:'&4$boss&f:&2 You smell.......... tasty!' >0 0.005
+  - msg 80:'&4$boss&f:&2 Your blood runs down my face...' >0 0.005
+  - msg 80:'&4$boss&f:&2 Mind if I eat your fingers?' >0 0.005
+  - msg 80:'&4$boss&f:&2 Like a lamb to the slaughter' >0 0.005
+  - msg 80:'&4$boss&f:&2 You dont have much meat on you...' >0 0.005
+  - msg 80:'&4$boss&f:&2 You dont need that leg, do you?' >0 0.005
+  - msg 80:'&4$boss&f:&2 Ill just take cut of your flesh for my..... collection.' >0 0.005
+  - msg 80:'&4$boss&f:&2 Just a bite...' >0 0.005
+  - throw 4:12:12 <1000 0.01
+  - throw 4:6:6 >0 0.01
+  - throw 4:4:4 >0 1
+  - swarm bat:5:5 0.3
+  - swarm $Pumpkin-Raider:1:5 <19950 0.3
+  - potionboss SPEED:9999:8 =spawn 1
+  - potionboss SLOW:9999:1 >0 1
+  - consume 5:5:5:0 WOLVES >0 1
+  - consume 5:5:5:0 IRON_GOLEMS >0 1
+  - pack BMEye <450 0.2 eyecall:900
+  - teleport >100 0.4
+  - cmd 'eb mob kill DarkEye' =death 1
+  - cmd 'eb mob kill Pumpkin-Raider' =death 1
+  - cmd 'cast generichit $world,$boss_x,$boss_y,$boss_z' >0 0.9
+  - cmd 'cast demonhit $world,$boss_x,$boss_y,$boss_z' >0 0.3
+  - cmd 'cast demonhit $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - cmd 'cast masscleanse-npc-aoe $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+  - cmd 'cast boss-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  - msg 80:'&a[Headless Horseman]&e The Boogey Man was stopped.' =death 1
+  Equipment:
+  - BoogeyMan2
+  Effects:
+    black:
+      particle-name: largesmoke
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.5
+      speed: 0.0
+      count: 7
+    white:
+      particle-name: explode
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.5
+      speed: 0.0
+      count: 2
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+HHRBWickerman:
+  Mobtype: witherskeleton
+  Display: '&6Wicker Man'
+  MaxHealth: 92000
+  Health: 3000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 18
+  Skills:
+  - pack HHRBWM =spawn 1
+  - msg 80:'&4$boss&f:&2 We will skin you and hang you out to dry!' >0 0.01
+  - msg 80:'&4$boss&f:&2 You understand nothing!' >0 0.01
+  - msg 80:'&4$boss&f:&2 You are all so brittle!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Your attacks are do so little...' >0 0.01
+  - msg 80:'&4$boss&f:&2 Not even a scratch!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Keep that fire away from me!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Your arrows simply make me stronger!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Wew ill add your corpses to the tinder!' >0 0.01
+  - msg 80:'&4$boss&f:&2 You can all stuff it!' >0 0.01
+  - cmd 'cast 20damageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 wmphys:30
+  - cmd 'cast 20stompdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 wmphys2:65
+  - throw 4:12:12 <1000 0.01
+  - throw 4:6:6 >0 0.01
+  - throw 4:4:4 >0 1
+  - swarm bat:2:15 0.2
+  - potionboss SPEED:9999:2 =spawn 1
+  - potionboss SPEED:9999:2 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - swarm $Pumpkin-Soldier:2:12 =spawn 1
+  - swarm $Pumpkin-Soldier:1:5 <2990 0.03
+  - pack Wickermansummons <2990 0.2 wickcall:190
+  - cmd 'cast hayhit $world,$boss_x,$boss_y,$boss_z' >0 1
+  - cmd 'cast biggolemhit $world,$boss_x,$boss_y,$boss_z' >0 0.5
+  - cmd 'cast boss-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  - msg 80:'&a[Headless Horseman]&e The Wicker Man was stopped.' =death 1
+  Equipment:
+  - WickerMan
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+HHRBLumpkin:
+  Mobtype: witherskeleton
+  Display: '&6Lumpkin'
+  MaxHealth: 30000
+  Health: 2500
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 18
+  Skills:
+  - pack HHRBLumpkin =spawn 1
+  - msg 80:'&4$boss&f:&2 Ugh, you all so ugy!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Gross two-eye meat pumpkins!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Squash you and watch your bits come out!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Me will stop you!' >0 0.01
+  - msg 80:'&4$boss&f:&2 You mean! Die already!!' >0 0.01
+  - cmd 'cast melongrabber-ground-npc $world,$player_x,$player_y,$player_z' <29900 1 mgrabr:440
+  - throw 4:12:12 <2490 0.01
+  - throw 4:6:6 >0 0.01
+  - throw 4:4:4 >0 1
+  - swarm $Little-Lumpkin:1:1 <2490 0.04
+  - swarm bat:2:15 0.2
+  - mount 5:player >0 0.1 lumpmnt:50
+  - unmount >0 0.2 lumpmnt:50
+  - potionboss SPEED:9999:2 =spawn 1
+  - potionboss SPEED:9999:2 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - swarm $Pumpkin-Gardener:1:5 <2490 0.03
+  - swarm $Pumpkin-Raider:1:18 <2490 0.03
+  - swarm $Unripe-Raider:2:18 <2490 0.03
+  - cmd 'eb mob kill Pumpkin-Raider' =death 1
+  - cmd 'eb mob kill Unripe-Raider' =death 1
+  - cmd 'cast generichit $world,$boss_x,$boss_y,$boss_z' >0 0.9
+  - cmd 'cast bigalienthit $world,$boss_x,$boss_y,$boss_z' >0 0.4
+  - cmd 'cast boss-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  - msg 80:'&a[Headless Horseman]&e Lumpkin was stopped.' =death 1
+  Equipment:
+  - Lumpkin
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+  Effects:
+    pumpkins:
+      particle-name: blockcrack_18
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 15
+    melons:
+      particle-name: blockcrack_103
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 15
+    ambient:
+      particle-name: mobSpellAmbient
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.7
+      vert-spread: 1.0
+      speed: 0.0
+      count: 5
+GolemBlaze:
+  Mobtype: blaze
+  Display: ''
+  Health: 300
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - swarm tnt:1:1 =spawn 0.3
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+Headless-Horseman:
+  Mobtype: skeleton
+  Display: '&6Headless Horseman'
+  Health: 6200
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 8
+  Skills:
+  - msg 80:'&4$boss&f:&2 I will take your head or you will run in fright, prepare now, for the endless night!' =6190 1 hhvoice:200
+  - msg 80:'&4$boss&f:&2 Jump on my blade you spineless welp. Call your friends, but you will find no help.' >0 0.01 hhvoice:200
+  - msg 80:'&4$boss&f:&2 It is over, your search is done. Let fate choose now, the righteous one.' >0 0.01 hhvoice:200
+  - msg 80:'&4$boss&f:&2 Harken, cur! Tis you I spurn! Now feel... the burn!' >0 0.01 hhvoice:200
+  - msg 80:'&4$boss&f:&2 Your body lies beaten, battered and broken. Let my curse be your own, fate has spoken.' >0 0.01 hhvoice:200
+  - msg 80:'&4$boss&f:&2 I will slay you all with wounds cut deep. You will not escape, the twilight sleep.' >0 0.01 hhvoice:200
+  - msg 80:'&4$boss&f:&2 Death is close, no need to cower. I will rend this earth with my new found power.' >0 0.01 hhvoice:200
+  - msg 80:'&4$boss&f:&2 Heres my body, fit and pure! Now, your blackened souls Ill cure!!' >0 0.01 hhvoice:200
+  - msg 80:'&4$boss&f:&2 This end have I reached before. What new adventure lies in store?' =0 1
+  - cmd 'cast slashaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 hh1aoes:160
+  - cmd 'cast slashaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 hh1aoem:165
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 >700 1 hh2aoes:65
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 <700 1 hh2aoes:60
+  - cmd 'cast fireaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 hh4aoem:85
+  - cmd 'cast fireaoel-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 hh3aoel:85
+  - cmd 'playsound mob.wither.hurts $player ~0 ~0 ~0 2 0.6' >0 0.3 hhscream:75
+  - potionboss INCREASE_DAMAGE:9999:3 o=spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 o=spawn 1
+  - potionboss SPEED:9999:4 o=spawn 1
+  - potionboss INCREASE_DAMAGE:9999:3 >0 1
+  - potionboss FIRE_RESISTANCE:9999:2 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss SPEED:60:1 >0 1
+  - swarm bat:10:2 =6200 1
+  - swarm bat:5:2 >0 0.05 hhbat:120
+  - pack CallPK <6100 1 callpk:950
+  - pack CallHH2 <5100 1 CallHH2:1220
+  - swarm $Pumpkin-Knight:5:10 =spawn 1
+  - swarm $Pumpkin-Knight:2:10 >0 0.1 pk:120
+  - cmd 'cast hallowfire-ground-npc $world,$boss_x,$boss_y,$boss_z' <6000 1 hallowfire:440
+  - lightning 60:1 >0 0.15 hhlightning:140
+  - cmd 'eb mob kill Daredevil' =0 1
+  - cmd 'eb mob kill Devildare' =0 1
+  - cmd 'eb mob kill Pumpkin-Knight' =0 1
+  - cmd 'eb mob kill Nearly-Headless-Horseman' =0 1
+  - lightning 60:1 =0 1
+  - vampire 80:player:30 >0 1 hhheal:220
+  Equipment:
+  - HeadlessHorseman
+Wraith:
+  Mobtype: witherskeleton
+  Display: '&9Wraith'
+  Health: 2500
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 18
+  Skills:
+  - msg 380:'&a[Hallows Eve]&e A Wraith has appeared in the Spider Cave.' =spawn 1
+  - msg 80:'&4$boss&f:&2 I will usssse your heart in my new recipe...' >0 0.01
+  - msg 80:'&4$boss&f:&2 Feel the darknesssss!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Our Massster is ssstrong!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Fear what you do not underssstand!' >0 0.01
+  - msg 80:'&4$boss&f:&2 *HISSES*' >0 0.01
+  - msg 80:'&4$boss&f:&2 Hard to hit what you cannot ssssee?' >0 0.01
+  - msg 80:'&4$boss&f:&2 GHHRA!!' =death 1
+  - pack HHTalk2 =spawn 1
+  - throw 4:6:6 >0 0.01
+  - throw 4:4:4 >0 1
+  - teleport >100 0.2
+  - swarm bat:3:2 =spawn 1
+  - potionboss SPEED:9999:5 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - potionboss INVISIBILITY:9999:1 =spawn 1
+  - potionboss INCREASE_DAMAGE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 =spawn 1
+  - potionboss INCREASE_DAMAGE:9999:1 =spawn 1
+  - potionboss SPEED:9999:5 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 etheriaaoes:60
+  - cmd 'eb mob kill Banshee' =spawn 1
+  - cmd 'cast boss-death-aoe $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+  Equipment:
+  - Wraith
+  Effects:
+    shadow:
+      particle-name: smoke
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 22
+Banshee2:
+  Mobtype: skeleton
+  Display: '&9Banshee'
+  Health: 2000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 28
+  Skills:
+  - msg 380:'&a[Hallows Eve]&e A Banshee has appeared in the Pumpkin Patch.' =spawn 1
+  - msg 80:'&4$boss&f:&2 Burn in our hallowed flame!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Burn! Burn! BURN!' >0 0.01
+  - msg 80:'&4$boss&f:&2 I will boil your heart from the inside!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Flames... can be... re-struck...' =death 1
+  - pack HHTalk1 =spawn 1
+  - swarm bat:3:2 =spawn 1
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 >700 1 bfaoes:60
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 <700 1 bfaoes:40
+  - cmd 'cast fireaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 bfaoes2:60
+  - cmd 'cast fireaoel-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 1 bfaoes2:40
+  - potionboss SPEED:9999:4 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - potionboss INCREASE_DAMAGE:9999:2 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss INCREASE_DAMAGE:9999:2 =spawn 1
+  - potionboss SPEED:9999:3 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - throw 4:6:6 >0 0.01
+  - throw 4:4:4 >0 1
+  - swarm $Pumpkin-Knight:6:2 =spawn 1
+  - swarm $Shambling-Skeleton:3:2 =spawn 1
+  - cmd 'eb mob kill Dreadbone' =spawn 1
+  - cmd 'eb mob kill DreadboneSteed' =spawn 1
+  - cmd 'eb mob kill Mummy' =spawn 1
+  - cmd 'eb mob kill Shambling-Skeleton' =spawn 1
+  - cmd 'cast boss-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  Equipment:
+  - BansheeGold
+  Effects:
+    flames:
+      particle-name: flame
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 3
+    puplemagic:
+      particle-name: lava
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 1
+PK:
+  Bosslist: DeadSteed,PhantomKnight
+PhantomKnight:
+  Mobtype: witherskeleton
+  Display: '&9Phantom Knight'
+  Health: 1500
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 18
+  Skills:
+  - msg 380:'&a[Hallows Eve]&e A Phantom Knight has appeared in the wheat field.' =spawn 1
+  - msg 380:'&4$boss&f:&2 I will slay every last one of you until you dont come back...' =spawn 1
+  - msg 80:'&4$boss&f:&2 I will cuteth thou down!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Survivors will faceth the guillotine!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Thou will maketh excellent mulch for mine minions.' >0 0.01
+  - msg 80:'&4$boss&f:&2 Killeth me a thousand times, I shal returneth again thou fools!' =death 1
+  - swarm $Pumpkin-Knight:5:15 =spawn 1
+  - potionboss SPEED:9999:3 >0 1
+  - swarm bat:3:2 =spawn 1
+  - potionboss INCREASE_DAMAGE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 =spawn 1
+  - potionboss INCREASE_DAMAGE:9999:1 =spawn 1
+  - potionboss SPEED:9999:3 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - throw 4:5:5 >0 0.01
+  - throw 4:3:3 >0 1
+  - cmd 'eb mob kill Wraith' =spawn 1
+  - cmd 'cast boss-death-aoe $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+  Equipment:
+  - AncientArmor
+  Effects:
+    shadow:
+      particle-name: smoke
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 22
+Hellion:
+  Mobtype: witherskeleton
+  Display: '&9Hellion'
+  Health: 1500
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 18
+  Skills:
+  - msg 380:'&a[Hallows Eve]&e A Hellion has appeared in the Foul Windmill.' =spawn 1
+  - cmd 'cast stinkbomb-npc $world,$player_x,$player_y,$player_z' >0 0.04
+  - cmd 'cast stinkbomb-npc $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - potionboss SPEED:9999:3 >0 1
+  - swarm $Pumpkin-Knight:5:15 =spawn 1
+  - swarm bat:3:2 =spawn 1
+  - pack HHTalk4 =spawn 1
+  - potionboss INCREASE_DAMAGE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 =spawn 1
+  - potionboss INCREASE_DAMAGE:9999:1 =spawn 1
+  - potionboss SPEED:9999:3 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - mount 5:DeadSteed >0 0.1
+  - throw 4:5:5 >0 0.01
+  - throw 4:3:3 >0 1
+  - cmd 'eb mob kill PhantomKnight' =spawn 1
+  - cmd 'eb mob kill DeadSteed' =spawn 1
+  - cmd 'cast boss-death-aoe $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+  Equipment:
+  - Hellion
+  Effects:
+    shadow:
+      particle-name: smoke
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 22
+DBD:
+  Bosslist: DreadboneSteed,Dreadbone
+Dreadbone:
+  Mobtype: witherskeleton
+  Display: '&9Dreadbone'
+  Health: 2580
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 20
+  Skills:
+  - msg 380:'&a[Hallows Eve]&e Dreadbone has appeared in Hallowed Town.' =spawn 1
+  - msg 380:'&4$boss&f:&2 The foulest stench is in the air!' =spawn 1
+  - swarm $Pumpkin-Knight:9:15 =spawn 1
+  - swarm $Mummy:15:15 =spawn 1
+  - swarm $Shambling-Skeleton:15:15 =spawn 1
+  - pack HHTalk5 =spawn 1
+  - swarm witch:4:15 =spawn 1
+  - swarm bat:3:2 =spawn 1
+  - swarm $Mummy:3:15 >0 1 callhorde:370
+  - swarm $Shambling-Skeleton:5:15 >0 1 callhorde:60
+  - cmd 'cast slashaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 0.9 hlslashaoe:60
+  - potionboss SPEED:99999:3 =spawn 1
+  - potionboss SPEED:99999:3 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 =spawn 1
+  - cmd 'eb mob kill Hellion' =spawn 1
+  - cmd 'cast boss-death-aoe $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+  Equipment:
+  - Dreadbone
+DreadboneSteed:
+  Mobtype: horse
+  Display: ''
+  Health: 500
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 8
+  Skills:
+  - throw 3:3:2 >0 1
+  - throw 3:5:2 >0 0.2
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  - forcepullranged 64:8 >0 1
+  - consume 4:4:5:0 WOLF >0 0.3
+  Tags:
+    Speed: 0.4
+    Saddled: false
+    Tamed: false
+    PlayerRidable: false
+    HorseColor: BLACK
+    HorseType: UNDEAD_HORSE
+    HorseStyle: NONE
+DeadSteed:
+  Mobtype: horse
+  Display: ''
+  Health: 20
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 8
+  Skills:
+  - throw 3:3:2 >0 1
+  - throw 3:5:2 >0 0.2
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  - forcepullranged 64:8 >0 1
+  - consume 4:4:5:0 WOLF >0 0.3
+  Tags:
+    Speed: 0.4
+    Saddled: false
+    Tamed: false
+    PlayerRidable: false
+    HorseColor: BLACK
+    HorseType: UNDEAD_HORSE
+    HorseStyle: NONE
+HH:
+  Bosslist: Daredevil,Headless-Horseman
+HH2:
+  Bosslist: Devildare,Nearly-Headless-Horseman
+Pumpkin-Raider:
+  Mobtype: babypigzombie
+  Display: '&fPumpkin Raider'
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 12
+  Skills:
+  - potionboss INVISIBILITY:9999:1 =spawn 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  Equipment:
+  - PumpkinRaider
+  Tags:
+    silent: true
+CandyMan:
+  Mobtype: skeleton
+  Display: '&aCandy Man'
+  Health: 10
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: true
+  Damage: 6
+  Skills:
+  - swarm bat:1:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  - potion 12:SPEED:200:4 =death 1
+  - potion 12:JUMP:200:7 =death 1
+  Equipment:
+  - CandyMan
+Pumpkin-Knight:
+  Mobtype: skeleton
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: true
+  Damage: 6
+  Skills:
+  - swarm bat:1:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  Equipment:
+  - PumpkinKnight
+SR:
+  Bosslist: Hallow-Spider,Pumpkin-Knight
+Hallow-Spider:
+  Mobtype: spider
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 6
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  Equipment:
+  - PumpkinKnight
+Nearly-Headless-Horseman:
+  Mobtype: skeleton
+  Display: '&6Nearly Headless Horseman'
+  Health: 100
+  Showtitle: true
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: true
+  Damage: 8
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  - swarm $Pumpkin-Knight:2 >0 0.1 pk:120
+  - consume 4:4:800:0 $Devildare =0 1
+  - cmd 'cast hallowfire-ground-npc $world,$boss_x,$boss_y,$boss_z' =0 1
+  Equipment:
+  - HeadlessHorseman
+Devildare:
+  Mobtype: horse
+  Display: '&6Devildare'
+  Health: 200
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: true
+  Damage: 8
+  Skills:
+  - throw 3:3:2 >0 1
+  - throw 3:5:2 >0 0.2
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  - forcepullranged 64:8 >0 1
+  - consume 4:4:5:0 WOLF >0 0.3
+  - consume 4:4:12:0 $Nearly-Headless-Horseman <7990 1 hurthh2:20
+  Tags:
+    Speed: 0.4
+    Saddled: false
+    Tamed: false
+    PlayerRidable: false
+    HorseColor: BLACK
+    HorseType: UNDEAD_HORSE
+    HorseStyle: NONE
+Wither-Pumpkin-Knight:
+  Mobtype: witherskeleton
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: true
+  Damage: 6
+  Skills:
+  - swarm bat:1:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  Equipment:
+  - WitherPumpkinKnight
+SSSkeletons:
+  Bosslist: SpookySkeleton,SpookySkeleton,SpookySkeleton,SpookySkeleton,SpookySkeleton
+SpookySkeleton:
+  Mobtype: skeleton
+  Display: '&fSpooky Skeleton'
+  Health: 200
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: true
+  Damage: 6
+  Skills:
+  - throw 4:7:7 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - mount 15:bat >0 0.03 lumpmnt:50
+  - mount 5:SpookyScarySkeleton >0 0.04 lumpmnt:50
+  - mount 5:SpookySkeleton >0 0.1 lumpmnt:50
+  - mount 5:player >0 0.1 lumpmnt:50
+  - unmount >0 0.2 lumpmnt:50
+  - potionboss SPEED:9999:4 =spawn 1
+  - potionboss SPEED:9999:4 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - cmd 'cast ghastyhit $world,$boss_x,$boss_y,$boss_z' >0 0.2
+  Equipment:
+  - SpookySkeleton
+  Effects:
+    personalmusic:
+      particle-name: note
+      y-offset: 1
+      ticks: 15
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.5
+      count: 1
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+SpookyScarySkeleton:
+  Mobtype: witherskeleton
+  Display: '&9Spooky Scary Skeleton'
+  Health: 5000
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: true
+  Damage: 6
+  Skills:
+  - cmd 'cast 20kickdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 0.9 sssphys2:85
+  - msg 380:'&4$boss&f:&2 Ooh! So spooky!' =spawn 1
+  - msg 80:'&4$boss&f:&2 Boo! Haha!' >0 0.01
+  - msg 80:'&4$boss&f:&2 We will shock your soul!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Sticks and stones will break your bones!' >0 0.01
+  - msg 80:'&4$boss&f:&2 We will drive you so insane!' >0 0.01
+  - cmd 'cast ghastyhit $world,$boss_x,$boss_y,$boss_z' >0 0.4
+  - swarm bat:5:1 =spawn 1
+  - potionboss SPEED:9999:4 =spawn 1
+  - potionboss SPEED:9999:4 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - throw 4:7:7 >0 1
+  - swarm $SSSkeletons:1:4 >0 0.04
+  - swarm $SpookySkeleton:1:4 >0 0.1
+  - swarm $SSSkeletons:1:4 =spawn 1
+  - swarm $SSSkeletons:1:4 =spawn 1
+  - swarm $SSSkeletons:1:4 =spawn 1
+  - swarm $SpookySkeleton:6:4 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - mount 5:SpookySkeleton >0 0.1 lumpmnt:50
+  - mount 5:player >0 0.1 lumpmnt:50
+  - unmount >0 0.2 lumpmnt:50
+  - teleport >100 0.2
+  Equipment:
+  - SpookyScarySkeleton
+  Effects:
+    personalmusic:
+      particle-name: note
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.5
+      count: 1
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+WanderingScarecrow:
+  Mobtype: skeleton
+  Display: '&9Wandering Scarecrow'
+  MaxHealth: 3000
+  Health: 1000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 1
+  Skills:
+  - cmd 'cast scarecrowhit $world,$boss_x,$boss_y,$boss_z' >0 0.9 scnoise:3
+  - cmd 'cast hefireworks-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  Equipment:
+  - Scarecrow
+HHS1:
+  Bosslist: DDSpecial1,HHSpecial1
+DDSpecial1:
+  Mobtype: horse
+  Display: '&6Daredevil'
+  Health: 300
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 8
+  Skills:
+  - throw 5:3:3 >0 0.4
+  - throw 5:3:10 >0 0.02
+  - cmd 'cast hallowfires-ground-npc $world,$player_x,$player_y,$player_z' >0 0.1 HHSHFS:120
+  - cmd 'cast 30lightningdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 0.1 HHS1Li:120
+  - cmd 'cast 20kickdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 0.9 hhs1phys2:65
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:1 =spawn 1
+  - potionboss SPEED:9999:1 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - consume 4:4:5:0 WOLF >0 0.3
+  - consume 4:4:15:0 $HHSpecial1 <499 1 hurthhs1:20
+  Tags:
+    Speed: 0.455
+    Saddled: false
+    KnockbackRes: 1.0
+    Tamed: false
+    PlayerRidable: false
+    HorseColor: BLACK
+    HorseType: UNDEAD_HORSE
+    HorseStyle: NONE
+HHTest:
+  Mobtype: skeleton
+  Display: '&6Headless Horseman'
+  Health: 100
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 6
+  Skills: []
+  Equipment:
+  - HeadlessHorseman
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+  Effects:
+    shadow:
+      particle-name: smoke
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.2
+      count: 3
+    fire:
+      particle-name: flame
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.3
+      count: 3
+    magma:
+      particle-name: lava
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.0
+      count: 2
+    purple:
+      particle-name: witchMagic
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.0
+      count: 3
+HHS1Head:
+  Mobtype: skeleton
+  Display: '&5Headless Horsemans Pumpkin Mask'
+  Health: 7000
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 6
+  Skills:
+  - potionboss INVISIBILITY:9999:1 =spawn 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - consume 15:15:100:0 HHSpecial1 >0 0.8
+  - consume 15:15:100:0 HHTest >0 0.8
+  - consume 5:5:5:0 WOLVES >0 1
+  - consume 5:5:5:0 IRON_GOLEMS >0 1
+  - throw 4:7:7 >0 1
+  - cmd 'cast generichit $world,$boss_x,$boss_y,$boss_z' >0 0.9
+  Equipment:
+  - HHHead
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+HHSpecial1:
+  Mobtype: skeleton
+  Display: '&6Headless Horseman'
+  Health: 7000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 6
+  Skills:
+  - pack HHSpecial1Countdown =spawn 1
+  - msg 80:'&4$boss&f:&2 Jump on my blade you spineless welp. Call your friends, but you will find no help.' >0 0.04 hhvoice:100
+  - msg 80:'&4$boss&f:&2 It is over, your search is done. Let fate choose now, the righteous one.' >0 0.04 hhvoice:100
+  - msg 80:'&4$boss&f:&2 Harken, cur! Tis you I spurn! Now feel... the burn!' >0 0.04 hhvoice:100
+  - msg 80:'&4$boss&f:&2 Your body lies beaten, battered and broken. Let my curse be your own, fate has spoken.' >0 0.04 hhvoice:100
+  - msg 80:'&4$boss&f:&2 I will slay you all with wounds cut deep. You will not escape, the twilight sleep.' >0 0.04 hhvoice:100
+  - msg 80:'&4$boss&f:&2 Death is close, no need to cower. I will rend this earth with my new found power.' >0 0.04 hhvoice:100
+  - msg 80:'&4$boss&f:&2 Heres my body, fit and pure! Now, your blackened souls Ill cure!!' >0 0.04 hhvoice:100
+  - msg 80:'&4$boss&f:&2 This end have I reached before. What new adventure lies in store?' =0 1
+  - cmd 'cast generic-magic-intro $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - cmd 'cast hallowfires-ground-npc $world,$player_x,$player_y,$player_z' >0 0.1 HHSHFS:120
+  - cmd 'cast 30lightningdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 0.1 HHS1Li:120
+  - cmd 'cast 20kickdamageaoe-npc $world,$boss_x,$boss_y,$boss_z' >0 0.8 hhs1phys2:85
+  - potionboss INCREASE_DAMAGE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:4 =spawn 1
+  - potionboss SPEED:9999:4 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - vampire 80:player:150 >0 1
+  - throw 5:3:3 >0 0.4
+  - throw 5:3:10 >0 0.02
+  - throw 5:10:10 >0 0.01
+  - pack HHS1LoseHead 10-5000 0.05 HHS1LH:1800
+  - swarm $Wither-Pumpkin-Knight:2:5 >0 0.01 HHS1WPK:120
+  - swarm $Pumpkin-Knight:3:5 >0 0.01 HHS1PK:80
+  - pack HHSpecial1RespawnHorse <6900 0.03 hhs1h:900
+  - pack HHSpecialMove1 1000-6500 0.1 HHMove:1220
+  - pack HHSpecialMove2 1000-6500 0.2 HHMove:1220
+  - pack HHSpecialMove3 1000-6500 0.3 HHMove:1220
+  - pack HHSpecialMove5 o=700 1
+  - cmd 'cast generichit $world,$boss_x,$boss_y,$boss_z' >0 0.9
+  - cmd 'cast withercreaturehit $world,$boss_x,$boss_y,$boss_z' >0 0.4
+  - cmd 'eb mob move DDSpecial1 $world,$boss_x,$boss_y,$boss_z' >0 0.01
+  - mount 10:DDSpecial1 >0 0.8
+  - cmd 'eb mob kill DDspecial1' =death 1
+  - cmd 'eb mob kill Devildare2' =death 1
+  - cmd 'eb mob kill HHSpecialIllusion' =death 1
+  - cmd 'eb mob kill HHS1Head' =death 1
+  - swarm bat:5:1 =spawn 1
+  - swarm bat:1:1 >0 0.1
+  - cmd 'cast boss-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'broadcast The Headless Horseman only has 75% hp left!' o=5250 1
+  - cmd 'broadcast The Headless Horseman only has 50% hp left!' o=3500 1
+  - cmd 'broadcast The Headless Horseman only has 15% hp left!' o=1750 1
+  - cmd 'broadcast The Headless Horseman has been beaten, Good Job! Each participant has received a &5Horseman's Strongbox&a, as well as a Candy-filled Pumpkin and conquest tokens.' =death 1
+  - cmd 'broadcast &6The Headless Horseman&a has appeared at the Horsemans Haven, (Non-pvp). Difficulty &4Hard&a. Beating him will result in epic treasure and enchanted loot. Let the time run out however... and he will flee!' =spawn 1
+  Equipment:
+  - HeadlessHorseman
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+  Effects:
+    shadow:
+      particle-name: smoke
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.0
+      count: 1
+    fire:
+      particle-name: flame
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.0
+      count: 1
+    magma:
+      particle-name: lava
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.0
+      count: 1
+    purple:
+      particle-name: witchMagic
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.0
+      count: 1
+HHSpecialIllusion:
+  Mobtype: skeleton
+  Display: '&6Headless Horseman'
+  Health: 5
+  Showtitle: true
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 2
+  Skills:
+  - potionboss DAMAGE_RESISTANCE:9999:2 =spawn 1
+  - potionboss INCREASE_DAMAGE:9999:2 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:2 >0 1
+  - potionboss SPEED:9999:4 =spawn 1
+  - potionboss SPEED:9999:4 >0 1
+  - potionboss SLOW:9999:1 >0 1
+  - throw 5:3:3 >0 0.4
+  - throw 5:3:10 >0 0.02
+  - cmd 'cast generichit $world,$boss_x,$boss_y,$boss_z' >0 0.9
+  - cmd 'cast withercreaturehit $world,$boss_x,$boss_y,$boss_z' >0 0.4
+  - cmd 'eb mob kill Devildare2' =death 1
+  - cmd 'eb mob kill HHSpecialIllusion' =death 1
+  - mount 10:Devildare2 >0 1
+  - title 50:_:&4Headless_Horseman&f_-_&2Ha_ha!_You_fell_for_my_illusion!:4s:4s:1s =death 1
+  Equipment:
+  - HeadlessHorseman
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+  Effects:
+    shadow:
+      particle-name: smoke
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.0
+      count: 1
+    fire:
+      particle-name: flame
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.0
+      count: 1
+    magma:
+      particle-name: lava
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.0
+      count: 1
+    purple:
+      particle-name: witchMagic
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.3
+      speed: 0.0
+      count: 1
+GolemEngineer1:
+  Mobtype: skeleton
+  Display: '&fGolem Engineer'
+  Health: 500
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - GolemEngineer
+GolemEngineer2:
+  Mobtype: zombie
+  Display: '&fGolem Engineer'
+  Health: 500
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - GolemEngineer
+GolemForeman2:
+  Mobtype: witherskeleton
+  Display: '&9Golem Foreman'
+  Health: 2500
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - msg 80:'&4$boss&f:&2 Get those chronoshards up to the core you fools!' >0 0.01
+  - msg 80:'&4$boss&f:&2 No, don't let them stop you. Load up the golem!' >0 0.01
+  - msg 80:'&4$boss&f:&2 We wont get many shots at this, get the supplies to the golem!' >0 0.01
+  - pack HHTalk6 =spawn 1
+  - throw 5:3:3 >0 0.4
+  - throw 5:3:10 >0 0.02
+  - swarm $CandyMan:3:3 =spawn 1
+  - swarm $GolemEngineer2:12:5 =spawn 1
+  - swarm $GolemEngineer1:12:5 =spawn 1
+  - swarm $WartFace:1:3 =spawn 1
+  - swarm $GolemEngineer2:1:5 >0 0.03
+  - swarm $GolemEngineer1:1:5 >0 0.03
+  - potionboss FIRE_RESISTANCE:9999:1 o=1000 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=1000 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - WitherPumpkinKnight
+GolemForeman:
+  Mobtype: witherskeleton
+  Display: '&9Golem Foreman'
+  Health: 1500
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - msg 80:'&4$boss&f:&2 Get those chronoshards up to the core you fools!' >0 0.01
+  - msg 80:'&4$boss&f:&2 No, don't let them stop you. Load up the golem!' >0 0.01
+  - msg 80:'&4$boss&f:&2 We wont get many shots at this, get the supplies to the golem!' >0 0.01
+  - msg 80:'&4$boss&f:&2 Boss is keeping them busy, get the golem loaded!' >0 0.01
+  - swarm $CandyMan:3:3 =spawn 1
+  - swarm $GolemEngineer2:3:3 =spawn 1
+  - swarm $GolemEngineer1:3:3 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 o=1000 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=1000 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - WitherPumpkinKnight
+WartFace:
+  Mobtype: villagezombie
+  Display: '&9Wart Face'
+  Health: 500
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=1000 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=1000 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - WartFace
+HHHead:
+  Mobtype: skeleton
+  Display: '&5Headless Horsemans Pumpkin Mask'
+  Health: 700
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 18
+  Skills:
+  - potionboss INVISIBILITY:9999:1 =spawn 1
+  - potionboss INVISIBILITY:9999:1 >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - consume 4:4:1000:80 WOLF >0 0.3
+  - consume 5:5:5:0 WOLVES >0 1
+  - consume 5:5:5:0 IRON_GOLEMS >0 1
+  - throw 4:7:7 >0 1
+  Equipment:
+  - HHHead
+GolemWorker1:
+  Mobtype: skeleton
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: true
+  Damage: 16
+  Skills:
+  - swarm bat:1:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  Equipment:
+  - GolemWorker1
+GolemWorker2:
+  Mobtype: pigzombie
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: true
+  Damage: 16
+  Skills:
+  - swarm bat:1:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:3 >0 1
+  Equipment:
+  - GolemWorker2

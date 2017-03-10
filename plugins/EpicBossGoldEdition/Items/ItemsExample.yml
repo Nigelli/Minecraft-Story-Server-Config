@@ -1,0 +1,213 @@
+FireBow:
+  Id: 261
+  Data: 0
+  Amount: 1
+  Display: '&9Fire Bow'
+  Enchants:
+  - ARROW_FIRE:2
+PunchBow:
+  Id: 261
+  Data: 0
+  Amount: 1
+  Display: '&9Punch Bow'
+  Enchants:
+  - ARROW_KNOCKBACK:5
+SnortAxe:
+  Id: 286
+  Data: 0
+  Amount: 1
+  Display: '&5Snorts Axe'
+  Enchants:
+  - DAMAGE_ALL:5
+  - KNOCKBACK:4
+  - FIRE_ASPECT:3
+SwordOfStr:
+  Id: 276
+  Data: 0
+  Amount: 1
+  Display: '&3Sword of Strength'
+  Tags:
+    Speed: 0.01
+    Health: 4
+  Lores:
+  - '&5This is a rare item'
+  - '&5that only the strongest'
+  - '&5players can get...'
+  Enchants:
+  - DAMAGE_ALL:5
+  - KNOCKBACK:2
+  - FIRE_ASPECT:2
+HoeOfSpeed:
+  Id: 292
+  Data: 0
+  Amount: 1
+  Display: '&cHoe of Speed'
+  Tags:
+    Speed: 0.04
+    Attack: 4
+  Lores:
+  - '&4Speeeed....'
+  Enchants:
+  - KNOCKBACK:2
+Mask:
+  Id: 397
+  Data: 3
+  Amount: 1
+  Display: '&dMask of ThaH3lper'
+  Lores:
+  - '&6Belongs to creator of'
+  - '&6EpicBoss Gold Edition!'
+  Enchants:
+  - PROTECTION_ENVIRONMENTAL:5
+  - PROTECTION_FIRE:5
+  - PROTECTION_EXPLOSIONS:5
+  - PROTECTION_PROJECTILE:5
+  - OXYGEN:5
+  - WATER_WORKER:5
+  - THORNS:1
+  Tags:
+    Speed: 0.05
+    Attack: 10
+    Health: 20
+    KnockbackRes: 10
+    Player: ThaH3lper
+Chest:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Display: '&4Blood Armor'
+  Lores:
+  - '&4Its red from all'
+  - '&4the blood splashes'
+  Enchants:
+  - PROTECTION_ENVIRONMENTAL:5
+  - PROTECTION_EXPLOSIONS:5
+  Tags:
+    Health: 5
+    Color: 255,0,0
+MaroonPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Display: '&aMaroon Pants'
+  Tags:
+    Color: 255,0,106
+TealPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Display: '&aTeal Pants'
+  Tags:
+    Color: 0,255,179
+BlackBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Display: '&aBlack Boots'
+  Tags:
+    Color: 0,0,0
+BlackBoots2:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Enchants:
+  - PROTECTION_ENVIRONMENTAL:5
+  Display: '&aBlack Boots'
+  Tags:
+    Color: 0,0,0
+PutridChest:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Display: '&9Putrid Chest'
+  Tags:
+    Color: 94,106,70
+PutridPants:
+  Id: 300
+  Data: 0
+  Amount: 1
+  Display: '&9Putrid Pants'
+  Tags:
+    Color: 94,106,70
+PutridBoots:
+  Id: 301
+  Data: 0
+  Amount: 1
+  Display: '&9Putrid Boots'
+  Tags:
+    Color: 94,106,70
+AncientHelm:
+  Id: 306
+  Data: 0
+  Amount: 1
+  Display: '&5Ancient Helm'
+  Enchants:
+  - PROTECTION_ENVIRONMENTAL:2
+AncientChest:
+  Id: 307
+  Data: 0
+  Amount: 1
+  Display: '&5Ancient Chest'
+  Enchants:
+  - PROTECTION_ENVIRONMENTAL:2
+AncientLegs:
+  Id: 308
+  Data: 0
+  Amount: 1
+  Display: '&5Ancient Legs'
+  Enchants:
+  - PROTECTION_ENVIRONMENTAL:2
+AncientBoots:
+  Id: 309
+  Data: 0
+  Amount: 1
+  Display: '&5Ancient Boots'
+  Enchants:
+  - PROTECTION_ENVIRONMENTAL:2
+VarkonSword:
+  Id: 276
+  Data: 0
+  Amount: 1
+  Display: '&5Sanguine Greatsword'
+  Enchants:
+  - DAMAGE_ALL:3
+  - KNOCKBACK:2
+  - FIRE_ASPECT:2
+VoltroxSword:
+  Id: 286
+  Data: 0
+  Amount: 1
+  Display: '&eDark Lord''s Vengeance'
+  Enchants:
+  - DAMAGE_ALL:3
+  - KNOCKBACK:2
+  - FIRE_ASPECT:2
+VarkonChest:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Display: '&9Varkon Jacket'
+  Tags:
+    Color: 0,0,0
+  Enchants:
+  - PROTECTION_ENVIRONMENTAL:1
+DarkLordSword:
+  Id: 276
+  Data: 0
+  Amount: 1
+  Display: '&eDark Lord''s Blessing'
+  Enchants:
+  - DAMAGE_ALL:9
+  - KNOCKBACK:4
+  - FIRE_ASPECT:2
+effigytorchitem:
+  Id: 50
+  Data: 0
+  Amount: 1
+  Display: '&9Effigy Torch'
+  Lores:
+  - '&6Left click the ground while'
+  - '&6holding the effigy torch to'
+  - '&6create a sacrificial bonfire'
+  - '&6within the Horseman''s Haven.'
+  - '&5Hallow''s Eve MMXV'

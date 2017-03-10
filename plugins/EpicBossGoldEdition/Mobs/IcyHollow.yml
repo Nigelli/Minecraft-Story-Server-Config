@@ -1,0 +1,364 @@
+Sabrewulf:
+  Mobtype: pigzombie
+  Display: '&6Sabrewulf'
+  Health: 1700
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 22
+  Despawn: false
+  Skills:
+  - cmd 'area toggle -w dungeon-world -20,51,1989' o=1700 1
+  - msg 100:'&4$boss &2*growl* Intruders!*growl* Invading the Icy Hollow!' o=1699 1
+  - msg 20:'&4$boss &2*growl* This ends now!' >0 0.003
+  - msg 20:'&4$boss &2I Hunger...!' >0 0.003
+  - msg 20:'&4$boss &2I smell your stench!' >0 0.003
+  - msg 20:'&4$boss &2*growl* AWOOOO!' >0 0.003
+  - msg 20:'&4$boss &2I rip...your flesh!' >0 0.003
+  - msg 20:'&4$boss &2Rip *growl* asunder!' >0 0.003
+  - msg 20:'&4$boss &2In savage fury!' >0 0.003
+  - msg 20:'&4$boss &2*graawr*!' >0 0.003
+  - msg 20:'&4$boss &2Lupine attack!' >0 0.003
+  - msg 20:'&4$boss &2Tooth and nail!' >0 0.003
+  - msg 20:'&4$boss &2*growl* I will rip your throat!' >0 0.003
+  - msg 20:'&4$boss &2Wolves *growl* need no armor!' >0 0.003
+  - msg 20:'&4$boss &2I *growl* am the last of my pack...' o=100 1
+  - msg 20:'&4$boss &2I will feast *growl* on your bones...' >0 0.003
+  - msg 30:'&4$boss &2Arff?!' =death 1
+  - cmd 'cast damageaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 sabrewulfaoes:40
+  - consume 4:4:10:0 WOLF >0 0.3
+  - consume 12:12:10:0 IRON_GOLEM >0 1
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 =spawn 1
+  - potionboss SPEED:30:3 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - throw 1:0.4:0.4 >0 0.05
+  - swarm skeleton:1:2 >0 0.01 sbrewulfsummon:40
+  - swarm $FrozenMiner:1:1 >0 0.1 sbrewulfsummon:40
+  - swarm $FrozenSkeleton:1:1 >0 0.1 sbrewulfsummon2:40
+  - potionboss SPEED:30:3 >0 1
+  - potion 5:SLOW:30:3 >0 0.01
+  - potion 5:HUNGER:40:1 >0 0.01
+  - teleport >0 0.2
+  - potion 5:SLOW:20:4 >0 0.01
+  - cmd 'area toggle -w dungeon-world -21,51,1989' =death 1
+  - cmd 'eb mob kill Glacius' 15 o=1700 1
+  - cmd 'eb mob kill Spinal' 12 o=1700 1
+  - cmd 'eb mob kill Glacius' 13 =death 1
+  - cmd 'eb mob spawn FrozenMiner 4 icyhollow-start' 16 o=1700 1
+  - cmd 'eb mob spawn FrozenSkeleton 2 icyhollow-start' 11 o=1700 1
+  - cmd 'eb mob spawn FrozenSkeleton 2 icyhollow-2' 8 =death 1
+  - cmd 'eb mob spawn FrozenMiner 2 icyhollow-2' 9 =death 1
+  - cmd 'eb mob spawn Spinal 1 icy-hollow-spinal' 8 =death 1
+  - cmd 'broad &7A frigid air bellows from the icy hollow.' 10 o=1700 1
+  - swarm $LG:1:1 =spawn 0.1 gremlincd:4200
+  - voxeffect werewolfhowl o=1698 1
+  - voxeffect werewolfhit >0 0.3
+  - voxeffect basichurt >0 1
+  Tags:
+    Color: 10
+    silent: true
+  Equipment:
+  - Sabrewulf
+FrozenMiner:
+  Mobtype: zombie
+  Display: ''
+  Health: 80
+  ShowHealth: false
+  Despawn: true
+  use-boss-bar: false
+  Damage: 6
+  Skills:
+  - teleport >0 0.2
+  - potionboss SPEED:99999:3 o=80 1
+  - cmd 'cast icymobspawn $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - potionboss SPEED:99999:3 >0 1
+  Equipment:
+  - FrozenMiner
+FrozenSkeleton:
+  Mobtype: skeleton
+  Display: ''
+  Health: 80
+  ShowHealth: false
+  Despawn: true
+  use-boss-bar: false
+  Damage: 6
+  Skills:
+  - potionboss SPEED:99999:3 o=80 1
+  - potionboss SPEED:99999:3 >0 1
+  Equipment:
+  - FrozenSkeleton
+FrozenCaptain1:
+  Mobtype: zombie
+  Display: Frozen Captain
+  Health: 150
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 12
+  Skills:
+  - potionboss SPEED:99999:3 o=80 1
+  - swarm $FrozenMiner:7:1 =spawn 1
+  - swarm $FrozenSkeleton:4:1 =spawn 1
+  - cmd 'area toggle -w dungeon-world -21,53,1989' =spawn 1
+  - cmd 'area toggle -w dungeon-world -21,52,1989' =death 1
+  - cmd 'cast icymobspawn $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - cmd 'cast icyicewallbreak dungeon-world,-65,36,1799' =death 1
+  - potionboss SPEED:99999:3 >0 1
+  Equipment:
+  - FrozenCaptain
+FrozenCaptain2:
+  Mobtype: zombie
+  Display: Frozen Captain
+  Health: 150
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 12
+  Skills:
+  - potionboss SPEED:99999:3 o=80 1
+  - swarm $FrozenMiner:7:1 =spawn 1
+  - swarm $FrozenSkeleton:4:1 =spawn 1
+  - cmd 'area toggle -w dungeon-world -20,53,1989' =spawn 1
+  - cmd 'area toggle -w dungeon-world -20,52,1989' =death 1
+  - cmd 'cast icymobspawn $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - cmd 'cast icyicewallbreak dungeon-world,-32,54,1857' =death 1
+  - potionboss SPEED:99999:3 >0 1
+  Equipment:
+  - FrozenCaptain
+FrozenCaptain3:
+  Mobtype: zombie
+  Display: Frozen Captain
+  Health: 150
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 12
+  Skills:
+  - potionboss SPEED:99999:3 o=80 1
+  - swarm $FrozenMiner:17:1 =spawn 1
+  - swarm $FrozenSkeleton:4:1 =spawn 1
+  - cmd 'area toggle -w dungeon-world -19,53,1989' =spawn 1
+  - cmd 'area toggle -w dungeon-world -19,52,1989' =death 1
+  - cmd 'cast icymobspawn $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - cmd 'cast icyicewallbreak dungeon-world,12,75,1897' =death 1
+  - potionboss SPEED:99999:3 >0 1
+  Equipment:
+  - FrozenCaptain
+FrozenCaptain4:
+  Mobtype: zombie
+  Display: Frozen Captain
+  Health: 150
+  ShowHealth: false
+  use-boss-bar: false
+  Despawn: false
+  Damage: 12
+  Skills:
+  - potionboss SPEED:99999:3 o=80 1
+  - swarm $FrozenMiner:27:1 =spawn 1
+  - swarm $FrozenSkeleton:4:1 =spawn 1
+  - cmd 'area toggle -w dungeon-world -18,53,1989' =spawn 1
+  - cmd 'area toggle -w dungeon-world -18,52,1989' =death 1
+  - cmd 'cast icymobspawn $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - cmd 'cast icyicewallbreak dungeon-world,95,81,1930' =death 1
+  - potionboss SPEED:99999:3 >0 1
+  Equipment:
+  - FrozenCaptain
+Spinal:
+  Mobtype: skeleton
+  Display: '&6Spinal'
+  Health: 3000
+  ShowHealth: true
+  Despawn: false
+  use-boss-bar: true
+  Damage: 14
+  Skills:
+  - msg 100:'&4$boss &2Men, keep sending these golems to Glacius, I will take care of the intruders!' =spawn 1
+  - msg 20:'&4$boss &2Glacius will crush you!' >0 0.003
+  - msg 20:'&4$boss &2C-C-C-C-COMBO BREAKER!' >0 0.003
+  - msg 20:'&4$boss &2ULTRA COMBO!' >0 0.003
+  - msg 20:'&4$boss &2I grow tired of you!' >0 0.003
+  - msg 20:'&4$boss &2I will bash your skulls into oblivion!' >0 0.003
+  - msg 20:'&4$boss &2You have no idea what horror lies ahead!' >0 0.003
+  - msg 20:'&4$boss &2I shall await my eternal reward for destroying you!' >0 0.003
+  - msg 20:'&4$boss &2Be warned! All who trespass here are doomed!' >0 0.003
+  - msg 20:'&4$boss &2I will cut you up!' >0 0.003
+  - msg 20:'&4$boss &2Your Recklessness will be the death of you!' >0 0.003
+  - msg 20:'&4$boss &2Why do fight for these mindless golems?...' o=400 1
+  - msg 30:'&4$boss &2*cough* you are fools...FOOLS!! The frozen heart of my master awaits you...' =death 1
+  - cmd 'cast slashaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 spinalaoes:30
+  - cmd 'cast slashaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 spinalaoem:30
+  - potionboss FIRE_RESISTANCE:9999:1 o=1700 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - voxeffect skeletonbeast >0 0.3
+  - cmd 'cast skele-death-aoe $world,$boss_x,$boss_y,$boss_z' =spawn 1
+  - throw 3:1:1 >0 1
+  - throw 5:8:8 >0 0.3
+  - teleport >0 0.2
+  - swarm $FrozenMiner:4:1 =spawn 1
+  - consume 4:4:2:0 WOLF >0 0.3
+  - consume 4:4:2:0 IRON_GOLEMS >0 0.3
+  - swarm snowman:4:1 =spawn 1
+  - swarm $FrozenMiner:2:18 >0 0.4 spinalsummon1:120
+  - potion 5:WITHER:20:1 >0 0.3
+  - consume 4:4:10:0 WOLVES >0 0.3
+  - consume 4:4:10:0 WOLF >0 0.3
+  - consume 6:12:10:0 IRON_GOLEM >0 1
+  - consume 6:12:10:0 IRON_GOLEMS >0 1
+  - swarm skeleton:1:18 >0 0.4 spinalsummon2:145
+  - potionboss SPEED:30:3 >0 1
+  - potion 2:SLOW:30:3 >0 0.03
+  - potion 2:HUNGER:40:1 >0 0.03
+  - potion 2:SLOW:20:4 >0 0.03
+  - cmd 'area toggle -w dungeon-world -18,51,1989' 0 =spawn 1
+  - cmd 'area toggle -w dungeon-world -19,51,1989' 0 =death 1
+  - cmd 'eb mob kill Sabrewulf' 6 =death 1
+  - cmd 'eb mob kill Glacius' o=1500 1
+  - cmd 'eb mob kill Glacius' =spawn 1
+  - swarm $LG:1:1 =spawn 0.1 gremlincd:4200
+  - cmd 'eb mob spawn FrozenCaptain1 1 icyhollow-captain1' =death 1
+  - cmd 'eb mob spawn FrozenCaptain2 1 icyhollow-captain2' =death 1
+  - cmd 'eb mob spawn FrozenCaptain3 1 icyhollow-captain3' =death 1
+  - cmd 'eb mob spawn FrozenCaptain4 1 icyhollow-captain4' =death 1
+  - cmd 'eb mob leashspawn Glacius dungeon-world,143,19,1931' =death 1
+  Equipment:
+  - Spinal
+  Effects:
+    snowshovel:
+      particle-name: snowshovel
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.2
+      speed: 0.0
+      count: 3
+  Tags:
+    KnockbackRes: 1
+Glacius:
+  Mobtype: zombie
+  Display: '&6Glacius'
+  Health: 5000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 16
+  Despawn: false
+  Skills:
+  - pack GlaciusIntro =spawn 1
+  - msg 30:'&4$boss &2Who dares violate the sanctity of my domain?!' o=4980 1
+  - msg 30:'&4$boss &2Feed me more golems!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2This world has not yet forgotten of my power!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2Flesh is not resistant to frost!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2Fall to the frost!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2The cold will numb your senses!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2Your time is up!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2You cannot stop an avalanche!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2Embrace the freeze!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2Feel the power of deep ice!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2Close your eyes, and let the cold take you!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2You will be a delicious frozen snack!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2I will crunch on your brittle bones!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2Another frozen corpse!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2There will be no thaw!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2Your limbs will rot from the frost!' >0 0.003 glaciustalk:5
+  - msg 20:'&4$boss &2FREEZE!' >0 0.003 glaciustalk:5
+  - msg 30:'&4$boss &2No, no no NOOOO!' =death 1
+  - cmd 'cast iceaoes-npc $world,$boss_x,$boss_y,$boss_z' >2000 1 glaciusaoes:70
+  - cmd 'cast iceaoes-npc $world,$boss_x,$boss_y,$boss_z' <2000 1 glaciusaoes:50
+  - cmd 'cast iceaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 glaciusaoem:160
+  - cmd 'cast iceaoel-npc $world,$boss_x,$boss_y,$boss_z' >0 1 glaciusaoel:60
+  - cmd 'cast iceaoesnipe-npc $world,$boss_x,$boss_y,$boss_z' >0 1 glaciusaoesnipe:70
+  - cmd 'cast grinch-blizzard $world,$player_x,$player_y,$player_z' <3950 1 glaciusblizzard:370
+  - cmd 'cast icy-entomb $world,$boss_x,$boss_y,$boss_z' <3950 1 glaciusentomb:240
+  - pack GlaciusGolems <4990 1 gspawnmobs:500
+  - consume 5:5:8:0 WOLF >0 0.3
+  - consume 5:5:8:0 IRON_GOLEMS >0 0.3
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:3 >0 1
+  - potionboss SPEED:9999:1 =spawn 1
+  - potionboss SPEED:9999:2 <3500 1
+  - potionboss SPEED:9999:1 >3500 1
+  - potionboss SLOW:9999:1 >0 1
+  - throw 17:2:2 >0 1
+  - throw 45:100:6 >0 0.03
+  - throw 55:100:6 >0 0.05
+  - potion 30:WITHER:1200:2 o=200 1
+  - swarm $FrozenMiner:5:25 o=4000 1
+  - swarm $FrozenMiner:5:25 o=3000 1
+  - swarm $FrozenMiner:5:25 o=2000 1
+  - swarm $FrozenMiner:5:25 o=1000 1
+  - swarm $FrozenMiner:4:25 >0 1 glaciusminer:360
+  - swarm skeleton:2:25 >0 0.01 glaciusskeleton:40
+  - swarm skeleton:3:25 >0 0.005 glaciusskeleton:40
+  - swarm skeleton:4:25 >0 0.0025 glaciusskeleton:40
+  - cmd 'eb mob kill Sabrewulf' =death 1
+  - cmd 'eb mob kill Spinal' =death 1
+  - cmd 'eb mob kill FrozenMiner' =death 1
+  - cmd 'broad &7Glacius has been slain.' =death 1
+  - swarm $LG:1:1 =spawn 0.1 gremlincd:4200
+  - voxeffect bigzombie >0 0.3
+  - voxeffect basichurt >0 1
+  - cmd 'area toggle -w dungeon-world 181,70,1936' =death 1
+  - cmd 'area toggle -w dungeon-world 181,70,1937' =spawn 1
+  Equipment:
+  - Glacius
+  Effects:
+    snowshovel:
+      particle-name: snowshovel
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.2
+      speed: 0.0
+      count: 5
+    snowshovel2:
+      particle-name: snowshovel
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.2
+      speed: 0.7
+      count: 5
+    magiccrit:
+      particle-name: magicCrit
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.3
+      vert-spread: 0.2
+      speed: 0.7
+      count: 5
+  Tags:
+    KnockbackRes: 1.0
+    Followrange: 100.0
+    silent: true
+TastySnowgolem:
+  Mobtype: snowman
+  Display: '&fTasty Snowgolem'
+  Health: 50
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 0
+  Skills: []
+IHTester:
+  Mobtype: snowman
+  Display: '&fSuspicious Zombie'
+  Health: 30
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 0
+  Skills:
+  - cmd 'area toggle -w dungeon-world -20,51,1989' o=30 1
+  - potionboss SPEED:99999:3 o=80 1
+  - potionboss SPEED:99999:3 >0 1
+  - cmd 'area toggle -w dungeon-world -21,51,1989' =death 1
+  Equipment:
+  - FrozenMiner

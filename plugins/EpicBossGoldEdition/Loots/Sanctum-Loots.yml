@@ -1,0 +1,18 @@
+DeathSoldier:
+  Loot:
+  - TatteredHood:4 1
+  - BlackRags:3 1
+  - WoodScythe:0 1
+ShardSoldier:
+  Loot:
+  - BoneSword:0 1
+  - 310:0:1:4 1
+  - 312:0:1:2 1
+  - 313:0:1:1 1
+ShardKeeper:
+  Loot:
+  - DarkDiamondHelmet:4 1
+  - DarkDiamondChestplate:3 1
+  - DarkDiamondLeggings:2 1
+  - DarkDiamondBoots:1 1
+  - 272:0:1:0 1

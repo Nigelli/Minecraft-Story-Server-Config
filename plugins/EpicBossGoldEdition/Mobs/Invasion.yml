@@ -1,0 +1,701 @@
+Shade-of-Gorelock2:
+  Mobtype: wither
+  Display: '&6Shade of Gorelock'
+  Health: 20000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 22
+  Skills:
+  - msg 20:'&4$boss &2BOW DOWN BEFORE THE GREAT AND POWERFUL DARK FORCE!!!' =spawn 1
+  - msg 20:'&4$boss &2My god's will flows through me!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2We will consume your world in darkness!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2A thousand deaths wouldn't be enough to take me down!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2Our power is overwhelming!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2Your mages are trying to escape, they are abandoning you!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2Look at your wonderous city, in RUIN!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2Our banners will claim this city!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2All your works, IN RUIN!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2We will add you to our army in the end!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2Your valor is pathetic!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2There is no where to hide!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2Where is your goddess now?!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2&kDeath&2!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2No one will escape!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2No one is safe!' >0 0.3 shadeofgorelock2talk:20
+  - msg 20:'&4$boss &2I WILL BE BACK, AND IN THE FLESH NEXT TIME. YOU WILL LOSE, AGAIN AND AGAIN!' =death 1
+  - potion 20:WITHER:1200:2 >0 1
+  - cmd 'cast doom-npc $world,$player_x,$player_y,$player_z' 0 <5000 0.3 astarothdoom:300
+  - cmd 'cast single-darkforce-npc $world,$player_x,$player_y,$player_z' >0 1 shadeofgorelocksingle:5
+  - shootfireball 0:true:100 <8150 1 gorelockfireball:40
+  - cmd 'cast forcecast $player blessing-of-the-great-goddess' <12000 1 blessingofgoddess:800
+  - potionboss DAMAGE_RESISTANCE:9999:3 =spawn 1
+  - fire 20:2 >0 0.5
+  - throw 5:0:1 >0 0.01
+  - swarm $Blackholme-Captain:1:12 >0 0.005
+  - swarm $MirrorGorelock:1:12 >0 0.01
+  - swarm $Blackholme-Slayer:1:12 >0 0.005
+  - lightning 15:1 >0 0.01 gorelocklightning:80
+  - throw 10:0:2 >0 0.15
+  - cmd 'broadcast &4Shade of Gorelock&d has entered Phase 2' o=5000 1
+  - msg 20:'&4$boss &2Behold! Minions under our POWER!!!!' o=5000 1
+  - swarm $MirrorCaptainSkyhook:3:1 o=5000 1
+  - swarm $MirrorProfessorPutrid:3:1 o=5000 1
+  - swarm $MirrorSpiderQueen:3:1 o=5000 1
+  - swarm $MirrorLordVarkon:3:1 o=5000 1
+  - swarm $MirrorNecrodancer:3:1 o=5000 1
+  - swarm $MirrorSigilus:3:1 o=5000 1
+  - swarm $MirrorEtheria:3:1 o=5000 1
+  - swarm $MirrorVoltrox:3:1 o=5000 1
+  - swarm $MirrorAstaroth:3:1 o=5000 1
+  - cmd 'cast witherskele-death-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  - cmd 'broadcast The Shade of Gorelock only has 75% hp left!' o=15000 1
+  - cmd 'broadcast The Shade of Gorelock only has 50% hp left!' o=10000 1
+  - cmd 'broadcast The Shade of Gorelock only has 25% hp left!' o=5000 1
+  - cmd 'broadcast Gorelock has retreated to the void realm. Each participant has received a cut of the treasure as well as 1 conquest token and 1 Emblem of the Dark Force.' =death 1
+  - cmd 'broad &7The Dark Force is angered...' =death 1
+  Effects:
+    shadow:
+      particle-name: smoke
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 72
+    ambient:
+      particle-name: mobSpellAmbient
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 32
+MirrorGorelock:
+  Mobtype: pigzombie
+  Display: '&6Gorelock Illusion'
+  Health: 60
+  Showtitle: true
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 14
+  Skills:
+  - cmd 'cast generic-magic-ability-effect-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  Equipment:
+  - Gorelock
+MirrorAstaroth:
+  Mobtype: witherskeleton
+  Display: '&6Astaroth'
+  Health: 160
+  ShowHealth: true
+  use-boss-bar: true
+  Despawn: false
+  Damage: 12
+  Skills:
+  - cmd 'cast generic-magic-ability-effect-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  Equipment:
+  - Astaroth
+MirrorCaptainSkyhook:
+  Mobtype: witherskeleton
+  Display: '&6Captain Skyhook Illusion'
+  Health: 160
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 12
+  Skills:
+  - cmd 'cast generic-magic-ability-effect-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  Equipment:
+  - Skyhook
+MirrorProfessorPutrid:
+  Mobtype: villagezombie
+  Display: '&6Professor Putrid Illusion'
+  Health: 160
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 8
+  Skills:
+  - cmd 'cast generic-magic-ability-effect-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  Equipment:
+  - Putrid
+MirrorSpiderQueen:
+  Mobtype: spider
+  Display: '&6The Spider Queen Illusion'
+  Health: 160
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 14
+  regen:
+    interval-seconds: 3
+    amount: 10
+  Skills:
+  - cmd 'cast generic-magic-ability-effect-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  Tags:
+    KnockbackRes: 1
+  Effects:
+    angry:
+      particle-name: angryVillager
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 1
+    crit:
+      particle-name: crit
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 3
+MirrorLordVarkon:
+  Mobtype: villagezombie
+  Display: '&6Lord Varkon Illusion'
+  Health: 160
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 8
+  Skills:
+  - cmd 'cast generic-magic-ability-effect-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  Equipment:
+  - Varkon
+MirrorNecrodancer:
+  Mobtype: villagezombie
+  Display: '&6The Necrodancer Illusion'
+  Health: 160
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 16
+  Skills:
+  - cmd 'cast generic-magic-ability-effect-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  Equipment:
+  - Rollzhar
+  Effects:
+    personalmusic:
+      particle-name: note
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.3
+      count: 2
+    personalmagma:
+      particle-name: lava
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.3
+      count: 2
+    othersmusic:
+      particle-name: note
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 12.5
+      vert-spread: 12.5
+      speed: 0.3
+      count: 50
+    otherscolors:
+      particle-name: reddust
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 12.5
+      vert-spread: 12.5
+      speed: 1.3
+      count: 150
+MirrorSigilus:
+  Mobtype: skeleton
+  Display: '&6Sigilus Illusion'
+  Health: 160
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 20
+  Skills:
+  - cmd 'cast generic-magic-ability-effect-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  Effects:
+    mystic:
+      particle-name: witchMagic
+      y-offset: 1
+      ticks: 5
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.4
+      vert-spread: 0.2
+      speed: 0.0
+      count: 5
+    smoke:
+      particle-name: portal
+      y-offset: 1
+      ticks: 5
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 1.2
+      vert-spread: 0.7
+      speed: 0.0
+      count: 12
+  Equipment:
+  - Sigilus
+MirrorEtheria:
+  Mobtype: witherskeleton
+  Display: '&6Etheria Illusion'
+  Health: 160
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 20
+  Skills:
+  - cmd 'cast generic-magic-ability-effect-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  Equipment:
+  - Etheria
+  Effects:
+    shadow:
+      particle-name: smoke
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 72
+    ambient:
+      particle-name: mobSpellAmbient
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 32
+MirrorVoltrox:
+  Mobtype: witherskeleton
+  Display: '&6Voltrox Illusion'
+  Health: 160
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 20
+  Skills:
+  - cmd 'cast generic-magic-ability-effect-aoe $world,$boss_x,$boss_y,$boss_z' =death 1
+  Equipment:
+  - Voltrox
+  Effects:
+    portal:
+      particle-name: portal
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 12
+    crit2:
+      particle-name: magicCrit
+      y-offset: 1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.0
+      count: 22
+    largesmoke:
+      particle-name: largesmoke
+      y-offset: 2.1
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.1
+      speed: 0.0
+      count: 12
+    flame:
+      particle-name: flame
+      y-offset: 2.2
+      ticks: 4
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.2
+      vert-spread: 0.2
+      speed: 0.0
+      count: 32
+Blackholme-Leader2:
+  Mobtype: witherskeleton
+  Display: ''
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=150 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=150 1
+  - potionboss SPEED:9999:2 o=150 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:2 >0 1
+  - swarm $GhastBomber:1:35 =spawn 1
+  - swarm $Blackholme-Captain:7:35 =spawn 1
+  - swarm $Blackholme-Assassin:7:35 =spawn 1
+  - swarm $Blackholme-Recruit:3:35 =spawn 1
+  - swarm $Blackholme-Pirate1:2:35 =spawn 1
+  - swarm $Blackholme-Pirate2:2:35 =spawn 1
+  - swarm skeleton:15:35 =spawn 1
+  - swarm witherskeleton:15:35 =spawn 1
+  - swarm blaze:15:35 =spawn 1
+  - swarm creeper:15:35 =spawn 1
+  - swarm $Infected-Citizen:5:35 =spawn 1
+  Equipment:
+  - BlackholmeGearSkele
+Blackholme-Assassin:
+  Mobtype: pigzombie
+  Display: '&fBlackholme Assassin'
+  Health: 40
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 22
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - potionboss INVISIBILITY:9999:1 =spawn 1
+  - potionboss SPEED:9999:2 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - Nothing
+Blackholme-Captain:
+  Mobtype: pigzombie
+  Display: '&fBlackholme Captain'
+  Health: 100
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 =spawn 1
+  - throw 6:2:2 >0 1
+  - swarm $Blackholme-Assassin:1:35 >0 0.02
+  - swarm $Blackholme-Pirate1:1:35 >0 0.02
+  - swarm $Blackholme-Pirate2:1:35 >0 0.02
+  - swarm $Blackholme-Bruiser:1:35 >0 0.02
+  - swarm $Blackholme-Recruit:1:35 >0 0.02
+  - swarm $Blackholme-Slayer:1:35 >0 0.02
+  - potionboss SPEED:9999:1 =spawn 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 =spawn 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - swarm tnt:1:1 >0 0.05
+  Equipment:
+  - BlackholmeBanner
+GhastBomber:
+  Mobtype: ghast
+  Display: ''
+  Health: 200
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 16
+  Skills:
+  - swarm tnt:16:25 >0 1
+Necrodancer:
+  Mobtype: villagezombie
+  Display: '&6The Necrodancer'
+  Health: 16000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 16
+  Skills:
+  - msg 80:'&4$boss &2We are driven mad by music!' >0 0.05 necrodancertalk:20
+  - msg 80:'&4$boss &2My twisted soul is bound to the beat!' >0 0.05 necrodancertalk:20
+  - msg 80:'&4$boss &2Feel the music in your bones!' >0 0.05 necrodancertalk:20
+  - msg 80:'&4$boss &2Dance the life away!' >0 0.05 necrodancertalk:20
+  - msg 80:'&4$boss &2Let the music take your breath away!' >0 0.05 necrodancertalk:20
+  - msg 80:'&4$boss &2Do you feel the music penetrating your very soul!' >0 0.05 necrodancertalk:20
+  - msg 80:'&4$boss &2You will all dance until you die, then you will dance for me!' >0 0.05 necrodancertalk:20
+  - msg 80:'&4$boss &2Wave em around like you just dont care!' >0 0.05 necrodancertalk:20
+  - msg 80:'&4$boss &2Throw your hands up in the air!' >0 0.05 necrodancertalk:20
+  - msg 80:'&4$boss &2Dance, dance, dance, dance, dance!' >0 0.05 necrodancertalk:20
+  - msg 80:'&4$boss &2Get get, get get down on this beat!' >0 0.05 necrodancertalk:20
+  - msg 80:'&4$boss &2Ill dance on all your graves in the end!' =death 1
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 >1500 0.05 necrodanceraoes1:80
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 <1500 0.1 necrodanceraoes2:90
+  - cmd 'cast shadowaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.01 necrodanceraoem:70
+  - cmd 'cast shadowaoel-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.006  necrodanceraoel:80
+  - cmd 'cast musicaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 necrodancermusics:50
+  - cmd 'cast musicaoel-npc $world,$boss_x,$boss_y,$boss_z' >0 1 necrodancermusicl:60
+  - cmd 'cast necrodancer-music $world,$boss_x,$boss_y,$boss_z' >0 1 necrodancersong:500
+  - cmd 'forceemote $player dance' >0 1 necroforcedance:30
+  - cmd 'cast single-musicaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 sigilusaoesmall:10
+  - cmd 'eb mob kill Dancing' =death 1
+  - fire 20:2 >0 0.5
+  - throw 5:5:6 >0 1
+  - throw 5:25:25 >0 0.02
+  - teleport >100 0.3
+  - swarm bat:5:1 >0 0.01
+  - swarm $DancingCorpse:20:15 =spawn 1
+  - swarm $DancingBones:20:15 =spawn 1
+  - swarm $DancingCorpse:4:15 >0 1 necrodancercall1:90
+  - swarm $DancingBones:4:15 >0 1 necrodancercall2:90
+  - swarm bat:10:1 =death 1
+  - swarm skeleton:2:15 >0 0.05
+  - lightning 6:1 >0 0.01
+  - lightning 6:1 >0 0.001
+  - cmd 'broadcast The Necrodancer only has 50% hp left!' o=8000 1
+  - cmd 'broadcast The Necrodancer has been slain, Good Job! Each participant has received a cut of the treasure as well as 1 conquest token and 1 Emblem of the Dark Force.' =death 1
+  Equipment:
+  - Rollzhar
+  Effects:
+    personalmusic:
+      particle-name: note
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.3
+      count: 2
+    personalmagma:
+      particle-name: lava
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.3
+      count: 2
+    othersmusic:
+      particle-name: note
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 12.5
+      vert-spread: 12.5
+      speed: 0.3
+      count: 50
+    otherscolors:
+      particle-name: reddust
+      y-offset: 1
+      ticks: 6
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 12.5
+      vert-spread: 12.5
+      speed: 1.3
+      count: 150
+DancingCorpse:
+  Mobtype: zombie
+  Display: ''
+  Health: 5
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 1
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=100 1
+  - potionboss SPEED:9999:1 o=100 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - Disco
+  Effects:
+    personalmusic:
+      particle-name: note
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.5
+      count: 1
+DancingBones:
+  Mobtype: skeleton
+  Display: ''
+  Health: 5
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 1
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=100 1
+  - potionboss SPEED:9999:1 o=100 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  Equipment:
+  - Disco
+  Effects:
+    personalmusic:
+      particle-name: note
+      y-offset: 1
+      ticks: 10
+      render-distance: 32
+      player-distance: 32
+      horiz-spread: 0.5
+      vert-spread: 0.5
+      speed: 0.5
+      count: 1
+Captain-Skyhook2:
+  Mobtype: witherskeleton
+  Display: '&6Captain Skyhook'
+  Health: 16000
+  Showtitle: true
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 12
+  Skills:
+  - msg 30:'&4$boss aims his ship cannons towards Valeria Beach...' =spawn 1
+  - msg 30:'&4$boss &2Look out below! HAHAHAHA!' =spawn 1
+  - msg 30:'&4$boss &2Yar! Haha!' >0 0.003 skyhookmsg:5
+  - msg 30:'&4$boss &2Dont you know who I am? What Ive done?' >0 0.003 skyhookmsg:5
+  - msg 30:'&4$boss &2Yer after me hook? I think not!' >0 0.003 skyhookmsg:5
+  - msg 30:'&4$boss &2Ill scratch your pretty little eyeballs out!' >0 0.003 skyhookmsg:5
+  - msg 30:'&4$boss &2You cant kill me twice, er, three times!' >0 0.003 skyhookmsg:5
+  - msg 30:'&4$boss &2Come get em-boys!' >0 0.003 skyhookmsg:5
+  - msg 30:'&4$boss &2Keep them off the ship!' >0 0.003 skyhookmsg:5
+  - msg 30:'&4$boss &2He made me a deal I couldnt refuse!' >0 0.003 skyhookmsg:5
+  - msg 30:'&4$boss &2Our Airship fleet is endless!' >0 0.003 skyhookmsg:5
+  - msg 30:'&4$boss &2Dont touch my ship!' >0 0.003 skyhookmsg:5
+  - msg 30:'&4$boss &2Get over here! Haha!' >0 0.003 skyhookmsg:5
+  - msg 30:'&4$boss &2He brought me back hundreds of times, he will do it again until you are all dead!!' =death 1
+  - cmd 'cast explosion-bomb-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.004
+  - cmd 'cast explosion-bomb-npc $world,$boss_x,$boss_y,$boss_z' 0 =death 1
+  - cmd 'cast slashaoes-npc $world,$boss_x,$boss_y,$boss_z' >0 1 skyhookaoes:60
+  - cmd 'cast slashaoem-npc $world,$boss_x,$boss_y,$boss_z' >0 1 skyhookaoem:60
+  - msg 30:'&4$boss &2Get back here!' o=50 1
+  - swarm $Blackholme-Bruiser:2:1 =spawn 1
+  - swarm $Blackholme-Pirate1:5:15 =spawn 1
+  - swarm $Blackholme-Pirate2:5:15 2000 1
+  - cmd 'cast sky-bomb-npc $world,$player_x,$player_y,$player_z' >0 1 shipcannons:150
+  - cmd 'cast sky-bomb-aoe $world,$player_x,$player_y,$player_z' >0 0.5
+  - swarm $Blackholme-Pirate1:8:15 >0 1 skyhookcall1:90
+  - swarm $Blackholme-Pirate2:8:15 >0 1 skyhookcall2:90
+  - swarm $Blackholme-Pirate1:5:15 o=600 1
+  - swarm $Blackholme-Pirate2:5:15 o=600 1
+  - msg 30:'&4$boss &2Come get em-boys!' o=600 1
+  - swarm $Blackholme-Pirate1:5:2 o=300 1
+  - swarm $Blackholme-Pirate2:5:2 o=300 1
+  - msg 30:'&4$boss &2Come get em-boys!' o=300 1
+  - swarm tnt:1:2 >0 0.1
+  - potion 5:HARM:1:1 >0 0.05
+  - consume 4:4:5:0 WOLF >0 1
+  - consume 4:4:5:0 IRON_GOLEMS >0 1
+  - throw 5:5:6 >0 1
+  - throw 5:25:25 >0 0.02
+  - swarm $LG:1:1 =spawn 0.1 gremlincd:4200
+  - cmd 'broadcast Captain Skyhook only has 50% hp left!' o=8000 1
+  - cmd 'broadcast Captain Skyhook has been slain, Good Job! Each participant has received a cut of the treasure as well as 1 conquest token and 1 Emblem of the Dark Force.' =death 1
+  Equipment:
+  - Skyhook
+Omen:
+  Mobtype: wither
+  Display: '&6Omen'
+  Health: 16000
+  ShowHealth: true
+  use-boss-bar: true
+  Damage: 16
+  Skills:
+  - msg 80:'&4$boss &2Death!' >0 0.05 omentalk:20
+  - msg 80:'&4$boss &2Your city will be ours!' >0 0.05 omentalk:20
+  - msg 80:'&4$boss &2You grew complacent with your greed!' >0 0.05 omentalk:20
+  - msg 80:'&4$boss &2Your short sightedness will cost you your lives!' >0 0.05 omentalk:20
+  - msg 80:'&4$boss &2You will drown in the blackness!' >0 0.05 omentalk:20
+  - msg 80:'&4$boss &2Look at what remains of your poord city!' >0 0.05 omentalk:20
+  - msg 80:'&4$boss &2WE WILL TAKE OVER THIS CITY' >0 0.05 omentalk:20
+  - msg 80:'&4$boss &2Our banners will cover every inch of this place when we are through!' >0 0.05 omentalk:20
+  - msg 80:'&4$boss &2Destruction!' >0 0.05 omentalk:20
+  - msg 80:'&4$boss &2Suffering!!' >0 0.05 omentalk:20
+  - msg 80:'&4$boss &2Valeria beach will be taken once again!!' >0 0.05 omentalk:20
+  - msg 80:'&4$boss &2Anguish!' >0 0.05 omentalk:20
+  - msg 80:'&4$boss &2No one will escape!' >0 0.05 omentalk:20
+  - msg 80:'&4$boss &2IMPOSSIBLE!' =death 1
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 >1500 0.05 omenshadowaoes:20
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 <1500 0.1 omenshadowaoes:10
+  - cmd 'cast shadowaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.01 omenshadowaoem:20
+  - cmd 'cast shadowaoel-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.006  omenshadowaoel:20
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 >1500 0.05 omenfireaoes:20
+  - cmd 'cast fireaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 <1500 0.1 omenfireaoes:10
+  - cmd 'cast fireaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.01 omenfireaoem:20
+  - cmd 'cast fireaoel-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.006 omenfireaoem:20
+  - fire 20:2 >0 0.5
+  - swarm bat:5:1 >0 0.01
+  - swarm bat:10:1 =death 1
+  - swarm skeleton:2:15 >0 0.05
+  - lightning 7:1 >0 0.01
+  - potion 5:WITHER:5:2 >0 0.15
+  - potion 20:SLOW:30:3 >0 0.15
+  - lightning 7:1 >0 0.001
+  - cmd 'broadcast Omen only has 50% hp left!' o=8000 1
+  - cmd 'broadcast Omen has been slain, Good Job! Each participant has received a cut of the treasure as well as 1 conquest token and 1 Emblem of the Dark Force.' =death 1
+LivingFlame:
+  Mobtype: blaze
+  Display: '&fLiving Flame'
+  Health: 1000
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 8
+  Skills:
+  - cmd 'cast flame-ground-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.002
+  - cmd 'cast forcecast $player livingbomb' 0 >0 0.01
+  - vampire 80:player:20 >0 1
+  - throw 5:1:1 >0 1
+  - throw 8:2:2 >0 0.005
+  - fire 5:1 >0 1
+  - fire 5:3 >0 0.05
+  - fire 5:15 >0 0.05
+  - swarm blaze:5:1 >0 0.005
+  - swarm blaze:1:1 >0 0.008
+  - swarm $Sindling:1:1 o=1370 1
+  - swarm $Sindling:1:1 >0 0.005
+  - swarm $Sindling:4:1 o=100 1
+Blackholme-Leader1:
+  Mobtype: witherskeleton
+  Display: ''
+  Health: 500
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - potionboss FIRE_RESISTANCE:9999:1 o=150 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 o=150 1
+  - potionboss SPEED:9999:2 o=150 1
+  - potionboss FIRE_RESISTANCE:9999:1 >0 1
+  - potionboss DAMAGE_RESISTANCE:9999:1 >0 1
+  - potionboss SPEED:9999:2 >0 1
+  - swarm $Blackholme-Bruiser:7:35 =spawn 1
+  - swarm $Blackholme-Slayer:7:35 =spawn 1
+  - swarm $Blackholme-Recruit:7:35 =spawn 1
+  - swarm skeleton:15:35 =spawn 1
+  - swarm witherskeleton:15:35 =spawn 1
+  - swarm blaze:15:35 =spawn 1
+  - swarm creeper:15:35 =spawn 1
+  - swarm $Blackholme-Pirate1:5:35 =spawn 1
+  - swarm $Blackholme-Pirate2:5:35 =spawn 1
+  Equipment:
+  - BlackholmeGearSkele
+StrongWither:
+  Mobtype: wither
+  Display: ''
+  Health: 2000
+  ShowHealth: false
+  use-boss-bar: false
+  Damage: 12
+  Skills:
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 >1500 0.05 omenshadowaoes:20
+  - cmd 'cast shadowaoes-npc $world,$boss_x,$boss_y,$boss_z' 0 <1500 0.1 omenshadowaoes:10
+  - cmd 'cast shadowaoem-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.01 omenshadowaoem:20
+  - cmd 'cast shadowaoel-npc $world,$boss_x,$boss_y,$boss_z' 0 >0 0.006  omenshadowaoel:20

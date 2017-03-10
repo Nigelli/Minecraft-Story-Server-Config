@@ -1,0 +1,5 @@
+MorggotKillPlayer:
+  Skills:
+  - msg 80:'&4$boss &chas has eaten a heart, has healed, and has created more heartless.' >0 1
+  - heal 500 >0 1
+  - swarm $Heartless:2:2 >0 1

@@ -1,0 +1,55 @@
+DeathScythe:
+  Id: 278
+  Data: 0
+  Amount: 1
+  Display: '&eDeaths Unholy Scythe'
+  Enchants:
+  - DAMAGE_ALL:5
+WoodScythe:
+  Id: 270
+  Data: 0
+  Amount: 1
+  Display: '&9Wood Scythe'
+  Enchants:
+  - DAMAGE_ALL:2
+BoneSword:
+  Id: 272
+  Data: 0
+  Amount: 1
+  Display: '&9Bone Sword'
+  Enchants:
+  - DAMAGE_ALL:2
+BlackRags:
+  Id: 299
+  Data: 0
+  Amount: 1
+  Display: '&9Black Rags'
+  Tags:
+    Color: 30,30,30
+TatteredHood:
+  Id: 298
+  Data: 0
+  Amount: 1
+  Display: '&9Tattered Robe'
+  Tags:
+    Color: 30,30,30
+DarkDiamondHelmet:
+  Id: 310
+  Data: 0
+  Amount: 1
+  Display: '&9Dark Diamond Helmet'
+DarkDiamondChestplate:
+  Id: 311
+  Data: 0
+  Amount: 1
+  Display: '&9Dark Diamond Chestplate'
+DarkDiamondLeggings:
+  Id: 312
+  Data: 0
+  Amount: 1
+  Display: '&9Dark Diamond Leggings'
+DarkDiamondBoots:
+  Id: 312
+  Data: 0
+  Amount: 1
+  Display: '&9Dark Diamond Leggings'
