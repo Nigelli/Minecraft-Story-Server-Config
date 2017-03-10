@@ -32,13 +32,11 @@ hs_err_pid*
 /world/
 /world_nether/
 /world_the_end/
-+/plugins/WorldGuard/
-+/plugins/Essentials/userdata/
-+/mcMMO/flatfile/
+/plugins/WorldGuard/
+/plugins/Essentials/userdata/
+/mcMMO/flatfile/
 *.gz
--/data-storage/
-\ No newline at end of file
-+/data-storage/
-+usercache.json
-+spigot.yml
-+server.properties
+/data-storage/
+usercache.json
+spigot.yml
+server.properties
